@@ -4,4 +4,4 @@ deployment:
         - export DEPLOYPATH=/home/u8832552/public_html
         - export PRIVATEPATH=/home/u8832552/private
         - /bin/cp -r * $PRIVATEPATH
-        - /bin/cp public/* $DEPLOYPATH
+        - /bin/cp -rf public/* $DEPLOYPATH
