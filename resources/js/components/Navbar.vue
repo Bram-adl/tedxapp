@@ -11,30 +11,6 @@
       <template #left>
         <img src="/img/tedx.png" class="w-24 md:w-48" />
       </template>
-      <vs-navbar-item
-        :active="navbar == 'guide'" id="guide"
-        class="focus:outline-none"
-      >
-        Home
-      </vs-navbar-item>
-      <vs-navbar-item
-        :active="navbar == 'about'" id="about"
-        class="focus:outline-none"
-      >
-        About
-      </vs-navbar-item>
-      <vs-navbar-item
-        :active="navbar == 'store'" id="store"
-        class="focus:outline-none"
-      >
-        Store
-      </vs-navbar-item>
-      <vs-navbar-item
-        :active="navbar == 'faqs'" id="faqs"
-        class="focus:outline-none"
-      >
-        FAQs
-      </vs-navbar-item>
       <template #right>
         <vs-button
           class="focus:outline-none"
