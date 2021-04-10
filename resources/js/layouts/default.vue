@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="h-screen relative">
+    <header class="relative">
       <Navbar />
       <slot />
     </header>

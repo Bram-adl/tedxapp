@@ -1,8 +1,5 @@
 <template>
   <default-layout>
-    <LoginForm />
-    <RegisterForm />
-
     <!-- Main Section -->
     <main
       class="h-screen flex items-center justify-center"
@@ -97,9 +94,7 @@
 <script>
 import DefaultLayout from "../layouts/default";
 import FAQs from "../components/FAQs";
-import LoginForm from "../components/LoginForm";
 import Products from "../components/Products";
-import RegisterForm from "../components/RegisterForm";
 import TermsCondition from "../components/TermsCondition"
 
 export default {
@@ -107,9 +102,7 @@ export default {
   components: {
     DefaultLayout,
     FAQs,
-    LoginForm,
     Products,
-    RegisterForm,
     TermsCondition
   },
   data() {

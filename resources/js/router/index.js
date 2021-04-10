@@ -9,6 +9,11 @@ const routes = [
     path: '/',
     name: 'index',
     component: require('../pages/Home.vue').default
+  },
+  {
+    path: '/products/detail',
+    name: 'product.details',
+    component: require('../pages/Products.vue').default
   }
 ]
 

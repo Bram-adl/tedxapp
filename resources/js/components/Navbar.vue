@@ -1,5 +1,8 @@
 <template>
   <div class="center absolute left-0 top-0 w-full">
+    <LoginForm />
+    <RegisterForm />
+    
     <vs-navbar
       v-model="navbar"
       center-collapsed
@@ -33,8 +36,15 @@
 </template>
 
 <script>
+import LoginForm from "../components/LoginForm";
+import RegisterForm from "../components/RegisterForm";
+
 export default {
   name: 'Navbar',
+  components: {
+    LoginForm,
+    RegisterForm,
+  },
   data: () => ({
     navbar: "guide",
   }),
