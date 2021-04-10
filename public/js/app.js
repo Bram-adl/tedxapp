@@ -1914,12 +1914,399 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'App',
+  name: "App",
   data: function data() {
     return {
-      active: 0
+      active: false
     };
+  },
+  mounted: function mounted() {
+    this.pageLoading();
+  },
+  methods: {
+    pageLoading: function pageLoading() {
+      var _this = this;
+
+      var loading = this.$vs.loading({
+        background: '#000',
+        color: '#fff',
+        type: 'circles'
+      });
+      setTimeout(function () {
+        loading.close();
+        _this.active = true;
+      }, 3000);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/LoginForm.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/LoginForm.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _mixins_dialogMixins__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../mixins/dialogMixins */ "./resources/js/mixins/dialogMixins.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'LoginForm',
+  mixins: [_mixins_dialogMixins__WEBPACK_IMPORTED_MODULE_0__["default"]]
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Navbar.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Navbar.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'Navbar',
+  data: function data() {
+    return {
+      navbar: "guide"
+    };
+  },
+  methods: {
+    openDialog: function openDialog(target) {
+      $eventBus.$emit('openDialog', target);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RegisterForm.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/RegisterForm.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _mixins_dialogMixins__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../mixins/dialogMixins */ "./resources/js/mixins/dialogMixins.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'RegisterForm',
+  mixins: [_mixins_dialogMixins__WEBPACK_IMPORTED_MODULE_0__["default"]]
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/layouts/default.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/layouts/default.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Navbar */ "./resources/js/components/Navbar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Default",
+  components: {
+    Navbar: _components_Navbar__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Home.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Home.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _layouts_default__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../layouts/default */ "./resources/js/layouts/default.vue");
+/* harmony import */ var _components_LoginForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/LoginForm */ "./resources/js/components/LoginForm.vue");
+/* harmony import */ var _components_RegisterForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/RegisterForm */ "./resources/js/components/RegisterForm.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Home",
+  components: {
+    DefaultLayout: _layouts_default__WEBPACK_IMPORTED_MODULE_0__["default"],
+    LoginForm: _components_LoginForm__WEBPACK_IMPORTED_MODULE_1__["default"],
+    RegisterForm: _components_RegisterForm__WEBPACK_IMPORTED_MODULE_2__["default"]
+  },
+  data: function data() {
+    return {
+      animationDone: false
+    };
+  },
+  mounted: function mounted() {
+    this.runAnimation();
+  },
+  methods: {
+    runAnimation: function runAnimation() {
+      var _this = this;
+
+      var title = document.querySelector(".ml1 .letters");
+      title.innerHTML = title.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+      var subtitle = document.querySelector('.ml12');
+      subtitle.innerHTML = subtitle.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+      anime.timeline({
+        loop: false
+      }).add({
+        targets: ".ml1 .letter",
+        scale: [0.3, 1],
+        opacity: [0, 1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 1000,
+        delay: function delay(el, i) {
+          return 70 * (i + 1);
+        }
+      }).add({
+        targets: ".ml1 .line",
+        scaleX: [0, 1],
+        opacity: [0.5, 1],
+        easing: "easeOutExpo",
+        duration: 800,
+        offset: "-=875",
+        delay: function delay(el, i, l) {
+          return 80 * (l - i);
+        }
+      });
+      anime.timeline({
+        loop: false
+      }).add({
+        targets: ".ml12 .letter",
+        translateX: [40, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1000,
+        delay: function delay(el, i) {
+          return 10 * i;
+        },
+        complete: function complete() {
+          _this.animationDone = !_this.animationDone;
+        }
+      });
+    }
   }
 });
 
@@ -1937,7 +2324,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, ".app {\n  min-height: 100vh;\n  background: #18191c;\n}", ""]);
+exports.push([module.i, ".app {\n  background: #18191c;\n  font-family: \"Poppins\", sans-serif;\n  min-height: 100vh;\n}\n.not-margin {\n  margin: 0px;\n  font-weight: normal;\n  padding: 10px;\n}\n.con-form {\n  width: 100%;\n}\n.con-form .flex {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n.con-form .flex a {\n  font-size: 0.8rem;\n  opacity: 0.7;\n}\n.con-form .flex a:hover {\n  opacity: 1;\n}\n.con-form .vs-checkbox-label {\n  font-size: 0.8rem;\n}\n.con-form .vs-input-content {\n  margin: 10px 0px;\n  width: calc(100%);\n}\n.con-form .vs-input-content .vs-input {\n  width: 100%;\n}\n.footer-dialog {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  width: calc(100%);\n}\n.footer-dialog .new {\n  margin: 0px;\n  margin-top: 20px;\n  padding: 0px;\n  font-size: 0.7rem;\n}\n.footer-dialog .new a {\n  color: rgba(var(--vs-primary), 1) !important;\n  margin-left: 6px;\n}\n.footer-dialog .new a:hover {\n  text-decoration: underline;\n}\n.footer-dialog .vs-button {\n  margin: 0px;\n}\n.fade-enter-active,\n.fade-leave-active {\n  transition: 0.4s ease-out;\n}\n.fade-enter,\n.fade-leave-to {\n  opacity: 0;\n}", ""]);
 
 // exports
 
@@ -1956,7 +2343,26 @@ exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base
 
 
 // module
-exports.push([module.i, "/*!\n  * Vuesax v4.0.1-alpha.24 🖖 (https://lusaxweb.github.io/vuesax/)\n  * Forged by Luis Daniel Rovira\n  * Released under the MIT License.\n  * Donate: https://www.patreon.com/bePatron?c=1567892\n  * © 2019, Lusaxweb. (https://lusaxweb.net)\n  */\n.vs-button {\n  --vs-color: \"\";\n  --vs-color-rotate: var(--vs-primary);\n  --vs-color-darken: var(--vs-primary);\n  --vs-button-padding: 8px 12px;\n  --vs-button-margin: 5px;\n  --vs-button-border-radius: 12px;\n  --vs-button-text-color: #fff;\n}\n\n.vs-button {\n  border: 0px;\n  margin: var(--vs-button-margin);\n  border-radius: var(--vs-button-border-radius);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  position: relative;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  z-index: 1;\n  overflow: hidden;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding: 0px;\n  outline: none;\n  font-size: 0.8rem;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.vs-button.vs-component-dark.vs-button--transparent {\n  color: rgba(var(--vs-text), 1) !important;\n}\n.vs-button--fff:focus {\n  color: #1e1e1e !important;\n}\n.vs-button__content {\n  padding: var(--vs-button-padding);\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-button--active-disabled {\n  pointer-events: none;\n  opacity: 0.6;\n}\n.vs-button:disabled {\n  pointer-events: none;\n  opacity: 0.35;\n}\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive) .vs-button__content i {\n  font-size: 1.15rem;\n}\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive):hover .vs-button__content {\n  -webkit-transform: translate(-100%);\n          transform: translate(-100%);\n}\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive):hover .vs-button__animate {\n  -webkit-transform: translate(0%);\n          transform: translate(0%);\n}\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive).vs-button--animate-vertical:hover .vs-button__content {\n  -webkit-transform: translate(0, -100%) !important;\n          transform: translate(0, -100%) !important;\n  opacity: 0;\n}\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive).vs-button--animate-vertical:hover .vs-button__animate {\n  -webkit-transform: translate(0%) !important;\n          transform: translate(0%) !important;\n}\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive).vs-button--animate-scale:hover .vs-button__content {\n  -webkit-transform: scale(1.4) !important;\n          transform: scale(1.4) !important;\n  opacity: 0;\n}\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive).vs-button--animate-scale:hover .vs-button__animate {\n  opacity: 1;\n  -webkit-transform: scale(1);\n          transform: scale(1);\n}\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive).vs-button--animate-rotate:hover .vs-button__content {\n  -webkit-transform: rotate(180deg) !important;\n          transform: rotate(180deg) !important;\n  opacity: 0;\n}\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive).vs-button--animate-rotate:hover .vs-button__animate {\n  opacity: 1;\n  -webkit-transform: rotate(0);\n          transform: rotate(0);\n}\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive) .vs-button__content {\n  -webkit-transition: -webkit-transform 0.25s ease;\n  transition: -webkit-transform 0.25s ease;\n  transition: transform 0.25s ease;\n  transition: transform 0.25s ease, -webkit-transform 0.25s ease;\n}\n.vs-button__animate {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  top: 0px;\n  left: 0px;\n  -webkit-transition: -webkit-transform 0.25s ease;\n  transition: -webkit-transform 0.25s ease;\n  transition: transform 0.25s ease;\n  transition: transform 0.25s ease, -webkit-transform 0.25s ease;\n  -webkit-transform: translate(100%);\n          transform: translate(100%);\n  pointer-events: none;\n}\n.vs-button__animate--vertical {\n  -webkit-transform: translate(0, 100%);\n          transform: translate(0, 100%);\n}\n.vs-button__animate--scale {\n  -webkit-transform: scale(0.5);\n          transform: scale(0.5);\n  opacity: 0;\n}\n.vs-button__animate--rotate {\n  -webkit-transform: rotate(-180deg);\n          transform: rotate(-180deg);\n  opacity: 0;\n}\n.vs-button--block {\n  width: 100%;\n  display: block;\n}\n.vs-button--upload:after {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: rgba(var(--vs-color), 0.4);\n  top: 0px;\n  left: 0px;\n  z-index: 1200;\n  -webkit-animation: btnupload 0.7s ease infinite;\n          animation: btnupload 0.7s ease infinite;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.vs-button--loading {\n  pointer-events: none;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.vs-button .vs-button__loading {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background: rgba(var(--vs-color), 0.8);\n  border-radius: inherit;\n}\n.vs-button .vs-button__loading:after {\n  content: \"\";\n  width: 17px;\n  height: 17px;\n  border: 2px dotted rgba(255, 255, 255, 0.6);\n  border-top: 2px solid rgba(255, 255, 255, 0);\n  border-bottom: 2px solid rgba(255, 255, 255, 0);\n  border-right: 2px solid rgba(255, 255, 255, 0);\n  border-radius: 50%;\n  position: absolute;\n  -webkit-animation: btnload 0.6s linear infinite;\n          animation: btnload 0.6s linear infinite;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.vs-button .vs-button__loading:before {\n  position: absolute;\n  content: \"\";\n  width: 17px;\n  height: 17px;\n  border: 2px solid white;\n  border-top: 2px solid rgba(255, 255, 255, 0);\n  border-bottom: 2px solid rgba(255, 255, 255, 0);\n  border-right: 2px solid rgba(255, 255, 255, 0);\n  border-radius: 50%;\n  -webkit-animation: btnload 0.6s ease infinite;\n          animation: btnload 0.6s ease infinite;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.vs-button--size-xl {\n  border-radius: 20px;\n}\n.vs-button--size-xl .vs-button__content {\n  padding: 15px 20px;\n  font-size: 1.1rem;\n}\n.vs-button--size-large {\n  font-size: 1rem;\n  border-radius: 15px;\n}\n.vs-button--size-large .vs-button__content {\n  padding: 10px 15px;\n}\n.vs-button--size-small {\n  font-size: 0.75rem;\n  border-radius: 9px;\n}\n.vs-button--size-small .vs-button__content {\n  padding: 5px 10px;\n}\n.vs-button--size-mini {\n  font-size: 0.6rem;\n  border-radius: 7px;\n}\n.vs-button--size-mini .vs-button__content {\n  padding: 3px 8px;\n}\n.vs-button--circle {\n  border-radius: 25px;\n}\n.vs-button--square {\n  border-radius: 0px;\n}\n.vs-button--icon {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-button--icon .vs-button__content {\n  padding: 8px 8px;\n}\n.vs-button--icon i {\n  font-size: 1.15rem;\n}\n\n.vs-button--default {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n}\n.vs-button--default.vs-button--active {\n  -webkit-box-shadow: 0px 10px 20px -10px rgba(var(--vs-color), 1);\n          box-shadow: 0px 10px 20px -10px rgba(var(--vs-color), 1);\n  -webkit-transform: translate(0, -3px);\n          transform: translate(0, -3px);\n}\n.vs-button--default:hover {\n  -webkit-box-shadow: 0px 10px 20px -10px rgba(var(--vs-color), 1);\n          box-shadow: 0px 10px 20px -10px rgba(var(--vs-color), 1);\n  -webkit-transform: translate(0, -3px);\n          transform: translate(0, -3px);\n}\n\n.vs-button--flat {\n  background: rgba(var(--vs-color), 0.15);\n  color: rgba(var(--vs-color), 1);\n}\n.vs-button--flat.vs-button--dark {\n  color: rgba(var(--vs-text), 1);\n}\n.vs-button--flat:hover {\n  background: rgba(var(--vs-color), 0.25);\n}\n.vs-button--flat:focus {\n  color: #fff;\n  background: rgba(var(--vs-color), 1);\n  -webkit-transition: all 0.25s ease, background 0.25s ease 0.25s;\n  transition: all 0.25s ease, background 0.25s ease 0.25s;\n}\n.vs-button--flat.vs-button--active {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n}\n\n.vs-button--floating {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n  -webkit-box-shadow: 0px 8px 20px -6px rgba(var(--vs-color), 1);\n          box-shadow: 0px 8px 20px -6px rgba(var(--vs-color), 1);\n  -webkit-transform: translate(0, -3px);\n          transform: translate(0, -3px);\n}\n.vs-button--floating:hover {\n  -webkit-box-shadow: 0px 8px 20px -6px rgba(var(--vs-color), 1);\n          box-shadow: 0px 8px 20px -6px rgba(var(--vs-color), 1);\n  -webkit-transform: translate(0, -6px);\n          transform: translate(0, -6px);\n}\n.vs-button--floating:focus {\n  -webkit-transform: translate(0, 0px);\n          transform: translate(0, 0px);\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n          box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n}\n.vs-button--floating.vs-button--active {\n  -webkit-transform: translate(0, 0px);\n          transform: translate(0, 0px);\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n          box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n}\n\n.vs-button--border {\n  background: rgba(var(--vs-color), 0);\n  color: rgba(var(--vs-color), 1);\n}\n.vs-button--border:before {\n  content: \"\";\n  border: 2px solid rgba(var(--vs-color), 1);\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  background: transparent;\n  pointer-events: none;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.vs-button--border:hover:before {\n  border: 2px solid rgba(var(--vs-color), 0.5);\n}\n.vs-button--border:focus {\n  color: #fff;\n  background: rgba(var(--vs-color), 1);\n}\n.vs-button--border.vs-button--active {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n}\n\n.vs-button--gradient {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n  overflow: hidden;\n}\n.vs-button--gradient.vs-button--primary::before, .vs-button--gradient.vs-button--success::before {\n  -webkit-filter: hue-rotate(40deg);\n          filter: hue-rotate(40deg);\n}\n.vs-button--gradient::before {\n  content: \"\";\n  background: linear-gradient(30deg, rgba(var(--vs-color), 0) 33%, rgba(var(--vs-color), 1) 100%);\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  pointer-events: none;\n  -webkit-transition: all 0.4s ease;\n  transition: all 0.4s ease;\n  z-index: -1;\n  -webkit-filter: hue-rotate(-40deg);\n          filter: hue-rotate(-40deg);\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.vs-button--gradient:hover {\n  -webkit-transform: translate(0, -3px);\n          transform: translate(0, -3px);\n  -webkit-box-shadow: 0px 10px 20px -10px rgba(var(--vs-color), 0.7);\n          box-shadow: 0px 10px 20px -10px rgba(var(--vs-color), 0.7);\n}\n.vs-button--gradient:hover::before {\n  opacity: 0;\n}\n.vs-button--gradient.vs-button--active {\n  -webkit-transform: translate(0, -3px);\n          transform: translate(0, -3px);\n  -webkit-box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.35);\n          box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.35);\n}\n\n.vs-button--relief {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n  overflow: hidden;\n  -webkit-transform: translate(0) scale(1, 1);\n          transform: translate(0) scale(1, 1);\n}\n.vs-button--relief .vs-button__content {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-button--relief.vs-button--icon.vs-button--active {\n  height: auto;\n}\n.vs-button--relief::before {\n  content: \"\";\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: calc(100% - 3px);\n  border-radius: inherit;\n  pointer-events: none;\n  -webkit-transition: all 0.4s ease;\n  transition: all 0.4s ease;\n  z-index: -1;\n  -webkit-filter: contrast(2) grayscale(0.4);\n          filter: contrast(2) grayscale(0.4);\n  border-bottom: 3px solid rgba(var(--vs-color), 1);\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.vs-button--relief:active {\n  -webkit-transform: translate(0, 1px);\n          transform: translate(0, 1px);\n}\n.vs-button--relief:active .vs-button__content {\n  padding-bottom: 6px;\n}\n.vs-button--relief:active::before {\n  border-bottom: 0px solid rgba(var(--vs-color), 1);\n}\n.vs-button--relief.vs-button--active {\n  -webkit-transform: translate(0, 1px);\n          transform: translate(0, 1px);\n}\n.vs-button--relief.vs-button--active .vs-button__content {\n  padding-bottom: 6px;\n}\n.vs-button--relief.vs-button--active::before {\n  border-bottom: 0px solid rgba(var(--vs-color), 1);\n}\n\n.vs-button--transparent {\n  background: transparent;\n  color: rgba(var(--vs-color), 1);\n  overflow: hidden;\n}\n.vs-button--transparent::before {\n  content: \"\";\n  background: rgba(var(--vs-color), 0.1);\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  pointer-events: none;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  z-index: -1;\n  -webkit-transform: scale(0.5);\n          transform: scale(0.5);\n  opacity: 0;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.vs-button--transparent:active:not(.vs-button--active)::before {\n  -webkit-transform: scale(0.9) !important;\n          transform: scale(0.9) !important;\n}\n.vs-button--transparent:hover::before {\n  opacity: 1;\n  -webkit-transform: scale(1);\n          transform: scale(1);\n}\n.vs-button--transparent.vs-button--active::before {\n  background: rgba(var(--vs-color), 0.2);\n  opacity: 1;\n  -webkit-transform: scale(1);\n          transform: scale(1);\n}\n\n.vs-button--shadow {\n  background: rgba(var(--vs-background), 1);\n  color: rgba(var(--vs-text), 1);\n  overflow: hidden;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n.vs-button--shadow:active:not(.vs-button--active) {\n  -webkit-transform: translate(0, -1px);\n          transform: translate(0, -1px);\n  -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, var(--vs-shadow-opacity)) !important;\n          box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, var(--vs-shadow-opacity)) !important;\n}\n.vs-button--shadow:hover {\n  -webkit-transform: translate(0, -3px);\n          transform: translate(0, -3px);\n  -webkit-box-shadow: 0px 8px 25px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 8px 25px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n.vs-button--shadow.vs-button--active {\n  -webkit-transform: translate(0, -3px);\n          transform: translate(0, -3px);\n  -webkit-box-shadow: 0px 8px 25px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 8px 25px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n@-webkit-keyframes btnload {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@keyframes btnload {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n@-webkit-keyframes btnupload {\n  0% {\n    -webkit-transform: translate(0, 110%);\n            transform: translate(0, 110%);\n  }\n  100% {\n    -webkit-transform: translate(0, -110%);\n            transform: translate(0, -110%);\n  }\n}\n@keyframes btnupload {\n  0% {\n    -webkit-transform: translate(0, 110%);\n            transform: translate(0, 110%);\n  }\n  100% {\n    -webkit-transform: translate(0, -110%);\n            transform: translate(0, -110%);\n  }\n}\n.vs-ripple-content {\n  --vs-color: inherit;\n  width: 100px;\n  height: 100px;\n  position: absolute;\n  width: 100%;\n  pointer-events: none;\n  overflow: hidden;\n  height: 100%;\n  top: 0px;\n  right: 0px;\n  border-radius: inherit;\n  z-index: -1;\n}\n.vs-ripple-content .vs-ripple {\n  width: 0px;\n  height: 0px;\n  border-radius: 50%;\n  opacity: 0;\n  position: absolute;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  -webkit-transition: all 0.5s ease;\n  transition: all 0.5s ease;\n  background: radial-gradient(circle, rgba(var(--vs-color), 0.05), rgba(var(--vs-color), 0.6));\n}\n.vs-ripple-content .vs-ripple--solid {\n  background: rgba(var(--vs-color), 1);\n  opacity: 1;\n}\n.vs-ripple-content .vs-ripple-invert {\n  width: 0px;\n  height: 0px;\n  border-radius: 50%;\n  opacity: 0;\n  position: absolute;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  -webkit-transition: all 0.5s ease;\n  transition: all 0.5s ease;\n  background-image: radial-gradient(circle, rgba(var(--vs-color), 0.5), rgba(var(--vs-color), 0));\n}\n.vs-ripple-content .vs-ripple-cut-1 {\n  width: 0px;\n  height: 0px;\n  opacity: 0;\n  position: absolute;\n  -webkit-transform: translate(-100%, -50%) skew(20deg);\n          transform: translate(-100%, -50%) skew(20deg);\n  -webkit-transition: all 0.6s ease;\n  transition: all 0.6s ease;\n  background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));\n  background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);\n}\n.vs-ripple-content .vs-ripple-cut-2 {\n  width: 0px;\n  height: 0px;\n  opacity: 0;\n  position: absolute;\n  -webkit-transform: translate(0%, -50%) skew(20deg);\n          transform: translate(0%, -50%) skew(20deg);\n  -webkit-transition: all 0.6s ease;\n  transition: all 0.6s ease;\n  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));\n  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);\n}\n.vs-button-group {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-button-group .vs-button {\n  margin: 0px;\n}\n.vs-button-group .vs-button:not(:last-of-type):not(:first-of-type) {\n  border-radius: 0px;\n  border: 0px;\n}\n.vs-button-group .vs-button:not(:last-of-type):not(:first-of-type).vs-button--border:before {\n  border-left: 0px;\n  width: 100%;\n}\n.vs-button-group .vs-button:not(:last-of-type):not(:first-of-type).vs-button--border + .vs-button--border:not(:last-of-type):before {\n  border-right: 0px;\n  width: calc(100%);\n}\n.vs-button-group .vs-button:last-of-type {\n  border-radius: 0px 12px 12px 0px;\n}\n.vs-button-group .vs-button:first-of-type {\n  border-radius: 12px 0px 0px 12px;\n}\n.vs-alert {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-alert {\n  background: rgba(var(--vs-color), 0.1);\n  color: rgba(var(--vs-color), 1);\n  width: 100%;\n  padding: 0px 20px;\n  border-radius: 0px 12px 12px 0px;\n  position: relative;\n  font-size: 0.9rem;\n  z-index: 10;\n  -webkit-transition: height 0.25s ease;\n  transition: height 0.25s ease;\n  overflow: hidden;\n}\n.vs-alert::-moz-selection {\n  background: rgba(var(--vs-color), 0.15);\n}\n.vs-alert::selection {\n  background: rgba(var(--vs-color), 0.15);\n}\n.vs-alert *::-moz-selection {\n  background: rgba(var(--vs-color), 0.15);\n}\n.vs-alert *::selection {\n  background: rgba(var(--vs-color), 0.15);\n}\n.vs-alert b {\n  font-weight: 600;\n}\n.vs-alert a {\n  color: inherit !important;\n  text-decoration: underline;\n}\n.vs-alert a:hover {\n  opacity: 0.6;\n}\n.vs-alert::after {\n  content: \"\";\n  background: rgba(var(--vs-color), 1);\n  left: 0px;\n  top: 0px;\n  width: 2px;\n  height: 100%;\n  position: absolute;\n}\n.vs-alert--solid {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n}\n.vs-alert--solid .vs-alert__icon i {\n  color: #fff;\n}\n.vs-alert--solid .vs-alert__icon svg {\n  fill: #fff;\n}\n.vs-alert--solid .vs-alert__close {\n  color: #fff;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);\n          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);\n}\n.vs-alert--solid .vs-alert__close:hover {\n  -webkit-transform: translate(0, -2px);\n          transform: translate(0, -2px);\n  -webkit-box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.15);\n          box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.15);\n}\n.vs-alert--solid .vs-alert__close svg {\n  fill: #fff;\n}\n.vs-alert--solid::after {\n  background: rgba(255, 255, 255, 0.4);\n}\n.vs-alert--border {\n  background: transparent;\n}\n.vs-alert--border::before {\n  border: 1px solid rgba(var(--vs-color), 1);\n  border-left: 0px;\n  width: calc(100% - 2px);\n  content: \"\";\n  position: absolute;\n  height: calc(100% - 2px);\n  top: 0px;\n  left: 0px;\n  z-index: -1;\n  border-radius: inherit;\n}\n.vs-alert--shadow {\n  background: transparent;\n  -webkit-box-shadow: 0px 4px 15px 0px rgba(var(--vs-color), 0.12);\n          box-shadow: 0px 4px 15px 0px rgba(var(--vs-color), 0.12);\n}\n.vs-alert--gradient {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n  border-radius: 12px;\n}\n.vs-alert--gradient .vs-alert__icon i {\n  color: #fff;\n}\n.vs-alert--gradient .vs-alert__icon svg {\n  fill: #fff;\n}\n.vs-alert--gradient .vs-alert__close {\n  color: #fff;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);\n          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);\n}\n.vs-alert--gradient .vs-alert__close:hover {\n  -webkit-transform: translate(0, -2px);\n          transform: translate(0, -2px);\n  -webkit-box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.15);\n          box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.15);\n}\n.vs-alert--gradient .vs-alert__close svg {\n  fill: #fff;\n}\n.vs-alert--gradient::after {\n  display: none;\n}\n.vs-alert--gradient::before {\n  background: linear-gradient(30deg, rgba(var(--vs-color), 0) 33%, rgba(var(--vs-color), 1) 100%);\n  -webkit-filter: hue-rotate(-50deg);\n          filter: hue-rotate(-50deg);\n  width: 100%;\n  content: \"\";\n  position: absolute;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n  z-index: -1;\n  border-radius: inherit;\n}\n.vs-alert--flat {\n  background: rgba(0, 0, 0, 0.03);\n}\n.vs-alert--relief {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n  border-radius: 12px;\n  -webkit-box-shadow: 6px 6px 0px 0px rgba(var(--vs-color), 0.3);\n          box-shadow: 6px 6px 0px 0px rgba(var(--vs-color), 0.3);\n}\n.vs-alert--relief .vs-alert__icon i {\n  color: #fff;\n}\n.vs-alert--relief .vs-alert__icon svg {\n  fill: #fff;\n}\n.vs-alert--relief .vs-alert__close {\n  color: #fff;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);\n          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);\n}\n.vs-alert--relief .vs-alert__close:hover {\n  -webkit-transform: translate(0, -2px);\n          transform: translate(0, -2px);\n  background: rgba(0, 0, 0, 0.2);\n  -webkit-box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.15);\n          box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.15);\n}\n.vs-alert--relief .vs-alert__close svg {\n  fill: #fff;\n}\n.vs-alert--relief::after {\n  display: none;\n}\n\n.vs-alert__title {\n  font-weight: 600;\n  font-size: 1rem;\n  padding: 15px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.vs-alert__title--clickHidden {\n  cursor: pointer;\n  padding-right: 0px;\n}\n.vs-alert__title ~ .vs-alert__content .vs-alert__content__text {\n  padding-top: 0px;\n}\n\n.vs-alert__content {\n  -webkit-transition: height 0.25s ease;\n  transition: height 0.25s ease;\n  overflow: hidden;\n}\n.vs-alert__content__text {\n  padding: 15px 15px;\n  padding-top: 20px;\n  padding-bottom: 20px;\n}\n\n.vs-alert__close {\n  position: absolute;\n  top: 9px;\n  right: 6px;\n  background: transparent;\n  border: 0px;\n  color: rgba(var(--vs-color), 1);\n  width: 30px;\n  height: 30px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.3);\n          box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.3);\n  border-radius: 10px;\n  padding: 0px;\n}\n.vs-alert__close:hover {\n  -webkit-transform: translate(0, -2px);\n          transform: translate(0, -2px);\n  -webkit-box-shadow: 0px 5px 18px 0px rgba(var(--vs-color), 0.3);\n          box-shadow: 0px 5px 18px 0px rgba(var(--vs-color), 0.3);\n}\n.vs-alert__close svg {\n  fill: rgba(var(--vs-color), 1);\n}\n\n.vs-alert__footer {\n  position: relative;\n  width: 100%;\n  padding: 10px 15px;\n  padding-top: 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n}\n\n.vs-alert__icon {\n  position: absolute;\n  width: 50px;\n  height: 100%;\n  left: 0px;\n  top: 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding-left: 2px;\n}\n.vs-alert__icon i {\n  font-size: 1.3rem;\n  color: rgba(var(--vs-color), 1);\n}\n.vs-alert__icon svg {\n  width: 24px;\n  height: 24px;\n  fill: rgba(var(--vs-color), 1);\n}\n.vs-alert__icon ~ .vs-alert__footer {\n  padding-left: 35px;\n}\n.vs-alert__icon ~ .vs-alert__content {\n  padding-left: 20px;\n}\n.vs-alert__icon ~ .vs-alert__title {\n  padding-left: 35px;\n}\n\n.vs-alert__progress {\n  width: 100%;\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  height: 2px;\n  background: rgba(var(--vs-color), 0.2);\n}\n.vs-alert__progress__bar {\n  width: 30%;\n  left: 0px;\n  position: relative;\n  height: 100%;\n  background: rgba(var(--vs-color), 1);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-alert__pagination {\n  position: relative;\n  padding: 0px 20px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  margin-bottom: 10px;\n}\n.vs-alert__pagination span {\n  font-size: 0.8rem;\n  margin: 0px 8px;\n  min-width: 28px;\n  text-align: center;\n}\n.vs-alert__pagination button {\n  border: 0px;\n  background: transparent;\n  color: rgba(var(--vs-color), 1);\n  padding: 0px 7px;\n  font-size: 1rem;\n  background: rgba(var(--vs-color), 0.1);\n  border-radius: 8px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-alert__pagination button:hover {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n}\n.vs-icon-close {\n  width: 30px;\n  height: 30px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: relative;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-icon-close:before {\n  background: rgba(var(--vs-color), 1);\n  content: \"\";\n  position: absolute;\n  width: 16px;\n  -webkit-transform: rotate(-45deg);\n          transform: rotate(-45deg);\n  height: 2px;\n  border-radius: 2px;\n  -webkit-transition: all 0.3s ease;\n  transition: all 0.3s ease;\n}\n.vs-icon-close:after {\n  background: rgba(var(--vs-color), 1);\n  content: \"\";\n  position: absolute;\n  width: 16px;\n  height: 2px;\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n  border-radius: 2px;\n  -webkit-transition: all 0.3s ease;\n  transition: all 0.3s ease;\n}\n.vs-icon-close.vs-icon-hover-less:hover:after {\n  width: 12px;\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n.vs-icon-close.vs-icon-hover-less:hover:before {\n  width: 12px;\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n\n.vs-icon-plus {\n  width: 30px;\n  height: 30px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: relative;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  cursor: pointer;\n}\n.vs-icon-plus:before {\n  background: rgba(var(--vs-color), 1);\n  content: \"\";\n  position: absolute;\n  width: 14px;\n  -webkit-transform: rotate(0deg);\n          transform: rotate(0deg);\n  height: 2px;\n  border-radius: 2px;\n  -webkit-transition: all 0.3s ease;\n  transition: all 0.3s ease;\n}\n.vs-icon-plus:after {\n  background: rgba(var(--vs-color), 1);\n  content: \"\";\n  position: absolute;\n  width: 14px;\n  height: 2px;\n  -webkit-transform: rotate(90deg);\n          transform: rotate(90deg);\n  border-radius: 2px;\n  -webkit-transition: all 0.4s ease;\n  transition: all 0.4s ease;\n}\n.vs-icon-plus:hover:not(.less) {\n  -webkit-transform: rotate(-90deg);\n          transform: rotate(-90deg);\n}\n.vs-icon-plus.less:hover {\n  -webkit-transform: scale(0.75);\n          transform: scale(0.75);\n}\n.vs-icon-plus.less:after {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n\n.vs-icon-check {\n  width: 23px;\n  height: 23px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  border-radius: inherit;\n}\n.vs-icon-check span {\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n  display: block;\n  position: relative;\n  width: 8px;\n  height: 13px;\n  margin-top: -4px;\n}\n.vs-icon-check span .line1 {\n  background: transparent;\n  content: \"\";\n  position: absolute;\n  height: 2px;\n  border-radius: 2px;\n  -webkit-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n  border-radius: 5px;\n  z-index: 100;\n  width: 8px;\n  bottom: 0px;\n}\n.vs-icon-check span .line1:after {\n  content: \"\";\n  position: absolute;\n  width: 0%;\n  height: 2px;\n  background: #fff;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  border-radius: 5px 0px 0px 5px;\n}\n.vs-icon-check span .line2 {\n  bottom: 0px;\n  right: 0rem;\n  z-index: 100;\n  border-radius: 5px;\n  background: transparent;\n  content: \"\";\n  position: absolute;\n  height: 13px;\n  border-radius: 5px;\n  -webkit-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n  width: 2px;\n}\n.vs-icon-check span .line2:after {\n  content: \"\";\n  position: absolute;\n  width: 2px;\n  height: 0%;\n  background: #fff;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  bottom: 0px;\n  border-radius: 5px 5px 0px 0px;\n}\n.vs-icon-check.active:before {\n  width: 8px;\n}\n.vs-icon-check.active:after {\n  width: 4px;\n}\n.vs-icon-check.indeterminate span {\n  -webkit-transform: rotate(0);\n          transform: rotate(0);\n  height: auto;\n  margin: 0px;\n  width: auto;\n}\n.vs-icon-check.indeterminate span:after {\n  position: relative;\n  content: \"\";\n  width: 10px;\n  height: 2px;\n  background: #fff;\n  display: block;\n}\n.vs-icon-check.indeterminate span .line1 {\n  -webkit-transform: rotate(-45deg);\n          transform: rotate(-45deg);\n  bottom: 0px;\n  right: -1px;\n  opacity: 0;\n  display: none;\n}\n.vs-icon-check.indeterminate span .line2 {\n  right: 0px !important;\n  bottom: -0.14rem !important;\n  -webkit-transform: rotate(45deg) !important;\n          transform: rotate(45deg) !important;\n  -webkit-transition: all 0.25s ease !important;\n  transition: all 0.25s ease !important;\n  height: 11px !important;\n  display: none;\n}\n\n.vs-icon-arrow {\n  pointer-events: none;\n  width: 7px;\n  height: 7px;\n  -webkit-transform: rotate(-135deg);\n          transform: rotate(-135deg);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-transform-origin: center;\n          transform-origin: center;\n}\n.vs-icon-arrow:after {\n  content: \"\";\n  width: 100%;\n  height: 1px;\n  background: rgba(var(--vs-text), 1);\n  position: absolute;\n  display: block;\n  top: 0px;\n}\n.vs-icon-arrow:before {\n  top: 0px;\n  content: \"\";\n  width: 1px;\n  height: 100%;\n  background: rgba(var(--vs-text), 1);\n  position: absolute;\n  display: block;\n}\n.vs-input-parent {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-input-parent {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-item-align: center;\n      align-self: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  position: relative;\n}\n.vs-input-parent.square .vs-input-content {\n  border-radius: 0px !important;\n}\n.vs-input-parent.textWhite .vs-input {\n  color: #fff;\n}\n.vs-input-parent.transparent .vs-input {\n  background: transparent !important;\n}\n.vs-input-parent.block {\n  width: 100%;\n}\n.vs-input-parent.block .vs-input {\n  width: 100%;\n}\n.vs-input-parent--has-label {\n  margin-top: 20px !important;\n}\n.vs-input-parent--state-success .vs-input {\n  background: rgba(var(--vs-success), 0.1) !important;\n  color: rgba(var(--vs-success), 1);\n}\n.vs-input-parent--state-success .vs-input__label {\n  color: rgba(var(--vs-success), 1);\n}\n.vs-input-parent--state-success .vs-input__icon {\n  color: rgba(var(--vs-success), 1);\n  background: rgba(var(--vs-success), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-success), 0.1);\n          box-shadow: -15px 10px 10px -10px rgba(var(--vs-success), 0.1);\n}\n.vs-input-parent--state-danger .vs-input {\n  background: rgba(var(--vs-danger), 0.1) !important;\n  color: rgba(var(--vs-danger), 1);\n}\n.vs-input-parent--state-danger .vs-input__label {\n  color: rgba(var(--vs-danger), 1);\n}\n.vs-input-parent--state-danger .vs-input__icon {\n  color: rgba(var(--vs-danger), 1);\n  background: rgba(var(--vs-danger), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-danger), 0.1);\n          box-shadow: -15px 10px 10px -10px rgba(var(--vs-danger), 0.1);\n}\n.vs-input-parent--state-warn .vs-input {\n  background: rgba(var(--vs-warn), 0.1) !important;\n  color: rgba(var(--vs-warn), 1);\n}\n.vs-input-parent--state-warn .vs-input__label {\n  color: rgba(var(--vs-warn), 1);\n}\n.vs-input-parent--state-warn .vs-input__icon {\n  color: rgba(var(--vs-warn), 1);\n  background: rgba(var(--vs-warn), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-warn), 0.1);\n          box-shadow: -15px 10px 10px -10px rgba(var(--vs-warn), 0.1);\n}\n.vs-input-parent--state-dark .vs-input {\n  background: rgba(var(--vs-dark), 0.1) !important;\n  color: rgba(var(--vs-dark), 1);\n}\n.vs-input-parent--state-dark .vs-input__label {\n  color: rgba(var(--vs-dark), 1);\n}\n.vs-input-parent--state-dark .vs-input__icon {\n  color: rgba(var(--vs-dark), 1);\n  background: rgba(var(--vs-dark), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-dark), 0.1);\n          box-shadow: -15px 10px 10px -10px rgba(var(--vs-dark), 0.1);\n}\n.vs-input-parent--state-primary .vs-input {\n  background: rgba(var(--vs-primary), 0.1) !important;\n  color: rgba(var(--vs-primary), 1);\n}\n.vs-input-parent--state-primary .vs-input__label {\n  color: rgba(var(--vs-primary), 1);\n}\n.vs-input-parent--state-primary .vs-input__icon {\n  color: rgba(var(--vs-primary), 1);\n  background: rgba(var(--vs-primary), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-primary), 0.1);\n          box-shadow: -15px 10px 10px -10px rgba(var(--vs-primary), 0.1);\n}\n\n.vs-input-content {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  position: relative;\n  border-radius: 12px;\n}\n.vs-input-content + .vs-input__message {\n  padding-top: 2px;\n}\n.vs-input-content--has-color .vs-input:focus {\n  border-bottom: 2px solid rgba(var(--vs-color), 1);\n}\n.vs-input-content--has-color .vs-input:focus ~ .vs-input__icon {\n  color: rgba(var(--vs-color), 1);\n}\n.vs-input-content--has-color .vs-input:focus ~ .vs-input__label {\n  color: rgba(var(--vs-color), 1);\n}\n.vs-input-content--has-color .vs-input:focus ~ .vs-input__label--placeholder {\n  color: rgba(var(--vs-color), 1);\n}\n\n.vs-input {\n  border: 2px solid transparent;\n  background: rgba(var(--vs-gray-2), 1);\n  color: rgba(var(--vs-text), 1);\n  padding: 7px 13px;\n  border-radius: inherit;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  padding-left: 10px;\n  width: 200px;\n}\n.vs-input:focus {\n  background: rgba(var(--vs-gray-3), 1);\n  padding-left: 15px;\n}\n.vs-input:focus.vs-input--has-icon:not(.vs-input--has-icon--after) {\n  padding-left: 40px;\n}\n.vs-input:focus.vs-input--has-icon:not(.vs-input--has-icon--after) ~ .vs-input__icon {\n  -webkit-box-shadow: 15px 10px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 15px 10px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n.vs-input:focus.vs-input--has-icon:not(.vs-input--has-icon--after) ~ .vs-input__label:not(.vs-input__label--placeholder):not(.vs-input__label--label) {\n  left: 44px;\n}\n.vs-input:focus ~ .vs-input__icon {\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: -15px 10px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(-6px, -6px);\n          transform: translate(-6px, -6px);\n  background: rgba(var(--vs-gray-1), 1);\n}\n.vs-input:focus ~ .vs-input__icon--after {\n  -webkit-transform: translate(6px, -6px);\n          transform: translate(6px, -6px);\n}\n.vs-input:focus ~ .vs-input__label:not(.vs-input__label--placeholder):not(.vs-input__label--label) {\n  opacity: 0;\n  left: 20px;\n}\n.vs-input:focus ~ .vs-input__label--placeholder {\n  opacity: 1;\n  visibility: visible;\n  pointer-events: auto;\n  -webkit-transform: translate(-3%, -77%);\n          transform: translate(-3%, -77%);\n  font-size: 0.75rem;\n}\n.vs-input__label {\n  position: absolute;\n  left: 13px;\n  font-size: 0.8rem;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  cursor: text;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  pointer-events: none;\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  opacity: 0.4;\n}\n.vs-input__label--hidden {\n  opacity: 0;\n  visibility: hidden;\n}\n.vs-input__label--hidden.vs-input__label--placeholder {\n  opacity: 1;\n  visibility: visible;\n  pointer-events: auto;\n  -webkit-transform: translate(-3px, -80%);\n          transform: translate(-3px, -80%);\n  font-size: 0.75rem;\n}\n.vs-input__label--label {\n  opacity: 1;\n  visibility: visible;\n  pointer-events: auto;\n  -webkit-transform: translate(-2px, -77%);\n          transform: translate(-2px, -77%);\n  font-size: 0.75rem;\n}\n.vs-input--has-icon {\n  padding-left: 38px;\n}\n.vs-input--has-icon ~ .vs-input__label {\n  left: 44px;\n}\n.vs-input--has-icon--after {\n  padding-left: 7px;\n  padding-right: 38px;\n}\n.vs-input--has-icon--after ~ .vs-input__label {\n  left: 13px;\n}\n.vs-input--has-icon--after.vs-input__label--label {\n  -webkit-transform: translate(calc(-3px - 22px), -80%) !important;\n          transform: translate(calc(-3px - 22px), -80%) !important;\n}\n.vs-input--has-icon:focus--has-icon--after ~ .vs-input__label {\n  left: 44px;\n}\n.vs-input--has-icon:focus--has-icon--after ~ .vs-input__label--placeholder {\n  -webkit-transform: translate(calc(-3px - 22px), -80%) !important;\n          transform: translate(calc(-3px - 22px), -80%) !important;\n}\n.vs-input--has-icon:focus--has-icon--after ~ .vs-input__label {\n  left: 44px;\n}\n.vs-input__icon {\n  position: absolute;\n  right: auto;\n  width: 36px;\n  height: 36px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-shadow: 12px 0px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 12px 0px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  border-radius: inherit;\n  background: rgba(var(--vs-gray-2), 1);\n  pointer-events: none;\n  left: 0px;\n}\n.vs-input__icon--after {\n  left: auto;\n  right: 0px;\n  -webkit-box-shadow: -12px 0px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: -12px 0px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n.vs-input__icon--click {\n  pointer-events: auto !important;\n  cursor: pointer;\n}\n.vs-input__icon--click:hover {\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: -15px 10px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(-6px, -6px);\n          transform: translate(-6px, -6px);\n  background: rgba(var(--vs-gray-1), 1);\n}\n.vs-input__icon--click:hover.vs-input__icon--after {\n  -webkit-transform: translate(6px, -6px);\n          transform: translate(6px, -6px);\n}\n.vs-input__message {\n  font-size: 0.7rem;\n  position: relative;\n  padding: 0px 7px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  overflow: hidden;\n}\n.vs-input__message--success {\n  color: rgba(var(--vs-success), 1);\n}\n.vs-input__message--danger {\n  color: rgba(var(--vs-danger), 1);\n}\n.vs-input__message--warn {\n  color: rgba(var(--vs-warn), 1);\n}\n.vs-input__message--dark {\n  color: rgba(var(--vs-dark), 1);\n}\n.vs-input__message--primary {\n  color: rgba(var(--vs-primary), 1);\n}\n.vs-input__progress {\n  width: 95%;\n  left: 2.5%;\n  position: relative;\n  height: 2px;\n  background: rgba(var(--vs-gray-2), 1);\n  margin-top: 5px;\n  overflow: hidden;\n  border-radius: 5px;\n}\n.vs-input__progress--danger .vs-input__progress__bar {\n  background: rgba(var(--vs-danger), 1);\n}\n.vs-input__progress--warn .vs-input__progress__bar {\n  background: rgba(var(--vs-warn), 1);\n}\n.vs-input__progress--success .vs-input__progress__bar {\n  background: rgba(var(--vs-success), 1);\n}\n.vs-input__progress__bar {\n  width: 32%;\n  height: 2px;\n  max-width: 100%;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  border-radius: 5px;\n}\n.vs-input__loading {\n  position: absolute;\n  width: 22px;\n  height: 22px;\n  right: 7px;\n  pointer-events: none;\n  border-radius: 50%;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  background: inherit;\n  cursor: default;\n}\n.vs-input__loading:after {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px solid rgba(var(--vs-primary), 1);\n  border-radius: inherit;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n  -webkit-animation: rotateInputLoading 0.8s ease infinite;\n          animation: rotateInputLoading 0.8s ease infinite;\n  top: 0px;\n  content: \"\";\n}\n.vs-input__loading:before {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  top: 0px;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px dashed rgba(var(--vs-primary), 1);\n  border-radius: inherit;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n  -webkit-animation: rotateInputLoading 0.8s linear infinite;\n          animation: rotateInputLoading 0.8s linear infinite;\n  opacity: 0.2;\n  content: \"\";\n}\n\n.vs-input-parent--border .vs-input__icon {\n  background: transparent !important;\n  -webkit-box-shadow: none !important;\n          box-shadow: none !important;\n}\n.vs-input-parent--border .vs-input-content {\n  border-radius: 0px;\n}\n.vs-input-parent--border .vs-input-content .vs-input__affects {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  pointer-events: none;\n}\n.vs-input-parent--border .vs-input-content .vs-input__affects__1 {\n  border-bottom: 2px solid rgba(var(--vs-gray-3), 1);\n  width: 100%;\n  height: 2px;\n  position: absolute;\n  bottom: 0px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-input-parent--border .vs-input-content .vs-input__affects__2 {\n  border-bottom: 2px solid rgba(var(--vs-color), 1);\n  width: 0%;\n  height: 2px;\n  position: absolute;\n  bottom: 0px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  left: 50%;\n  -webkit-transform: translate(-50%);\n          transform: translate(-50%);\n}\n.vs-input-parent--border .vs-input-content .vs-input {\n  background: transparent;\n  border-radius: 0px;\n}\n.vs-input-parent--border .vs-input-content .vs-input:focus ~ .vs-input__affects .vs-input__affects__2 {\n  width: 100%;\n}\n.vs-input-parent--shadow .vs-input__icon {\n  background: transparent;\n  z-index: 100;\n}\n.vs-input-parent--shadow .vs-input-content .vs-input__affects {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  border-radius: inherit;\n  pointer-events: none;\n  z-index: 10;\n}\n.vs-input-parent--shadow .vs-input-content .vs-input__affects__1 {\n  -webkit-box-shadow: 0px 6px 25px -6px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 6px 25px -6px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  z-index: 200;\n  border-radius: inherit;\n}\n.vs-input-parent--shadow .vs-input-content .vs-input {\n  background: transparent;\n  border-radius: 0px;\n  border: 2px solid transparent;\n}\n.vs-input-parent--shadow .vs-input-content .vs-input:focus {\n  -webkit-transform: translate(0, 3px);\n          transform: translate(0, 3px);\n}\n.vs-input-parent--shadow .vs-input-content .vs-input:focus ~ .vs-input__icon {\n  background: rgba(var(--vs-background), 1) !important;\n  opacity: 1;\n  -webkit-box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, var(--vs-shadow-opacity)) !important;\n          box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, var(--vs-shadow-opacity)) !important;\n}\n.vs-input-parent--shadow .vs-input-content .vs-input:focus ~ .vs-input__affects .vs-input__affects__1 {\n  -webkit-transform: translate(0, 3px);\n          transform: translate(0, 3px);\n  -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n@-webkit-keyframes rotateInputLoading {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@keyframes rotateInputLoading {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n.vs-checkbox-content {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-checkbox-content {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n}\n\n.vs-checkbox-con {\n  width: 23px;\n  height: 23px;\n  border-radius: 9px;\n  position: relative;\n  z-index: 1;\n}\n\n.vs-checkbox-mask {\n  border-radius: 32%;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  z-index: 50;\n  cursor: pointer;\n  pointer-events: none;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  z-index: -1;\n  box-sizing: border-box;\n}\n.vs-checkbox-mask i:not(.vs-icon-check) {\n  opacity: 0;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  color: #fff;\n  font-size: 1.1em;\n  -webkit-transform: scale(0.5);\n          transform: scale(0.5);\n}\n.vs-checkbox-mask:after {\n  content: \"\";\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  background: rgba(var(--vs-color), 1);\n  -webkit-transform: scale(0.5);\n          transform: scale(0.5);\n  border-radius: inherit;\n  opacity: 0;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  z-index: -1;\n}\n.vs-checkbox-mask:before {\n  content: \"\";\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  z-index: -1;\n  border: 2px solid rgba(var(--vs-gray-4), 1);\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.vs-checkbox-mask .vs-icon-check {\n  opacity: 0;\n  z-index: 200;\n}\n\n.vs-checkbox {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n  margin: 0px;\n  padding: 0px;\n  opacity: 0;\n  z-index: 100;\n  cursor: pointer;\n}\n.vs-checkbox:disabled {\n  opacity: 0;\n  pointer-events: none;\n}\n.vs-checkbox:active ~ .vs-checkbox-mask {\n  background: rgba(var(--vs-gray-4), 1) !important;\n}\n.vs-checkbox:hover ~ .vs-checkbox-mask {\n  background: rgba(var(--vs-gray-3), 1);\n}\n.vs-checkbox:hover ~ .vs-checkbox-mask:before {\n  border: 2px solid rgba(var(--vs-gray-4), 0);\n}\n.vs-checkbox:checked:hover ~ .vs-checkbox-mask {\n  -webkit-box-shadow: 0px 3px 15px 0px rgba(var(--vs-color), 0.35);\n          box-shadow: 0px 3px 15px 0px rgba(var(--vs-color), 0.35);\n}\n.vs-checkbox:checked ~ .vs-checkbox-mask {\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.35);\n          box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.35);\n}\n.vs-checkbox:checked ~ .vs-checkbox-mask i:not(.vs-icon-check) {\n  opacity: 1;\n  -webkit-transform: scale(1);\n          transform: scale(1);\n  -webkit-transition: all 0.25s ease 0.15s;\n  transition: all 0.25s ease 0.15s;\n}\n.vs-checkbox:checked ~ .vs-checkbox-mask .vs-icon-check {\n  opacity: 1;\n}\n.vs-checkbox:checked ~ .vs-checkbox-mask .vs-icon-check span .line1:after {\n  width: 100%;\n  -webkit-transition: all 0.25s ease 0.1s;\n  transition: all 0.25s ease 0.1s;\n}\n.vs-checkbox:checked ~ .vs-checkbox-mask .vs-icon-check span .line2:after {\n  -webkit-transition: all 0.2s ease 0.3s;\n  transition: all 0.2s ease 0.3s;\n  height: 100%;\n}\n.vs-checkbox:checked ~ .vs-checkbox-mask:after {\n  opacity: 1;\n  -webkit-transform: scale(1);\n          transform: scale(1);\n}\n.vs-checkbox:checked ~ .vs-checkbox-mask:before {\n  opacity: 0;\n  -webkit-transform: scale(1.2);\n          transform: scale(1.2);\n}\n\n.vs-checkbox-label {\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  cursor: pointer;\n  padding: 7px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-size: 0.9rem;\n}\n.vs-checkbox-label:before {\n  position: absolute;\n  width: 0px;\n  height: 2px;\n  background: rgba(var(--vs-text), 0.6);\n  content: \"\";\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-checkbox--disabled {\n  pointer-events: none;\n}\n.vs-checkbox--disabled .vs-checkbox-label {\n  opacity: 0.5;\n}\n.vs-checkbox--disabled .vs-checkbox-mask {\n  opacity: 0.6;\n  background: transparent !important;\n}\n\n.vs-checkbox--checked .lineThrough {\n  opacity: 0.4;\n}\n.vs-checkbox--checked .lineThrough:before {\n  width: calc(100% - 10px);\n}\n\n.vs-checkbox--loading {\n  pointer-events: none;\n}\n.vs-checkbox--loading.vs-checkbox--checked .vs-checkbox-mask {\n  background: transparent !important;\n}\n.vs-checkbox--loading.vs-checkbox--checked .vs-checkbox-mask:before {\n  border-radius: 50%;\n  border: 2px solid rgba(var(--vs-color), 1) !important;\n  border-top: 2px solid transparent !important;\n  -webkit-animation: rotateCheckboxLoading 0.6s linear infinite;\n          animation: rotateCheckboxLoading 0.6s linear infinite;\n  opacity: 1 !important;\n}\n.vs-checkbox--loading.vs-checkbox--checked .vs-checkbox-mask:after {\n  opacity: 0;\n  -webkit-transform: scale(0.5);\n          transform: scale(0.5);\n}\n.vs-checkbox--loading .vs-checkbox-mask {\n  background: transparent !important;\n}\n.vs-checkbox--loading .vs-checkbox-mask:before {\n  border-radius: 50%;\n  border: 2px solid rgba(var(--vs-gray-4), 1) !important;\n  border-top: 2px solid transparent !important;\n  -webkit-animation: rotateCheckboxLoading 0.6s linear infinite;\n          animation: rotateCheckboxLoading 0.6s linear infinite;\n}\n\n@-webkit-keyframes rotateCheckboxLoading {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@keyframes rotateCheckboxLoading {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n.vs-checkbox--label-before .vs-checkbox-label {\n  -webkit-box-ordinal-group: 0;\n      -ms-flex-order: -1;\n          order: -1;\n}\n.vs-switch {\n  --vs-color: var(--vs-primary);\n}\n\n@-webkit-keyframes rotateSwitch {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@keyframes rotateSwitch {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n.vs-switch {\n  color: #fff;\n  padding: 5px;\n  border-radius: 20px;\n  min-width: 48px;\n  height: 28px;\n  border: 0px;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background: rgba(var(--vs-gray-3), 1);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  overflow: hidden;\n}\n.vs-switch--icon .vs-switch__input:checked ~ .vs-switch__circle {\n  color: #fff !important;\n}\n.vs-switch--icon .vs-switch__circle {\n  background: transparent !important;\n  -webkit-box-shadow: none !important;\n          box-shadow: none !important;\n}\n.vs-switch--icon .vs-switch__circle i {\n  opacity: 1;\n  font-size: 1.3rem;\n}\n.vs-switch--indeterminate .vs-switch__input {\n  pointer-events: none;\n}\n.vs-switch--indeterminate .vs-switch__circle {\n  left: 50% !important;\n  -webkit-transform: translate(-50%);\n          transform: translate(-50%);\n}\n.vs-switch--square {\n  border-radius: 5px;\n}\n.vs-switch--square .vs-switch__background {\n  border-radius: 5px !important;\n}\n.vs-switch--square .vs-switch__circle {\n  border-radius: 5px !important;\n}\n.vs-switch:after {\n  -webkit-transition: all 0s ease 0s;\n  transition: all 0s ease 0s;\n  opacity: 0;\n  visibility: hidden;\n  content: \"\";\n  position: absolute;\n  width: calc(100% - 8px);\n  height: calc(100% - 8px);\n  border: 3px dashed rgba(var(--vs-color), 1);\n  z-index: 200;\n  border-radius: 50%;\n  border-top: 3px solid transparent;\n  border-right: 3px solid transparent;\n  -webkit-animation: rotateSwitch 0.6s linear infinite 0.25s;\n          animation: rotateSwitch 0.6s linear infinite 0.25s;\n  pointer-events: none;\n}\n.vs-switch:before {\n  pointer-events: none;\n  -webkit-transition: all 0s ease 0s;\n  transition: all 0s ease 0s;\n  opacity: 0;\n  visibility: hidden;\n  content: \"\";\n  position: absolute;\n  width: calc(100% - 8px);\n  height: calc(100% - 8px);\n  border: 3px solid rgba(var(--vs-color), 1);\n  z-index: 200;\n  border-radius: 50%;\n  border-top: 3px solid transparent;\n  border-right: 3px solid transparent;\n  -webkit-animation: rotateSwitch 0.6s ease infinite 0.25s;\n          animation: rotateSwitch 0.6s ease infinite 0.25s;\n}\n.vs-switch--loading {\n  width: 28px !important;\n  min-width: 28px !important;\n  pointer-events: none;\n  border-radius: 20px !important;\n}\n.vs-switch--loading .vs-switch__circle {\n  border-radius: 50% !important;\n}\n.vs-switch--loading .vs-switch__background {\n  opacity: 0 !important;\n}\n.vs-switch--loading:after {\n  opacity: 1;\n  visibility: visible;\n  -webkit-transition: all 0.25s ease 0.3s;\n  transition: all 0.25s ease 0.3s;\n}\n.vs-switch--loading:before {\n  opacity: 1;\n  visibility: visible;\n  -webkit-transition: all 0.25s ease 0.3s;\n  transition: all 0.25s ease 0.3s;\n}\n.vs-switch:hover {\n  background: rgba(var(--vs-gray-4), 1);\n}\n.vs-switch:active {\n  -webkit-transform: scale(0.9);\n          transform: scale(0.9);\n}\n.vs-switch__background {\n  width: 100%;\n  height: auto;\n  position: absolute;\n  background: rgba(var(--vs-color), 1);\n  border-radius: inherit;\n  z-index: 2;\n  -webkit-transition: all 0.25s ease-out;\n  transition: all 0.25s ease-out;\n  -webkit-transform: scale(1);\n          transform: scale(1);\n  left: -100%;\n  border-radius: 50%;\n  padding-bottom: 100%;\n}\n.vs-switch__text {\n  font-size: 0.7rem;\n  padding: 5px;\n  padding-left: 25px;\n  -webkit-transition: all 0.25s ease 0.05s;\n  transition: all 0.25s ease 0.05s;\n  color: rgba(var(--vs-text), 1);\n  z-index: 9;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: relative;\n  overflow: hidden;\n  white-space: nowrap;\n}\n.vs-switch__text.on {\n  -webkit-transform: translate(-100%);\n          transform: translate(-100%);\n  position: absolute;\n  opacity: 0;\n}\n.vs-switch__text i {\n  font-size: 1rem;\n  opacity: 0.7;\n}\n.vs-switch__circle {\n  width: 20px;\n  height: 20px;\n  background: rgba(var(--vs-background), 1);\n  border-radius: 20px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  position: absolute;\n  z-index: 10;\n  left: 4px;\n  color: rgba(var(--vs-text), 1);\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-switch__circle i {\n  font-size: 0.8rem;\n}\n.vs-switch__input {\n  position: absolute;\n  width: 100%;\n  opacity: 0 !important;\n  height: 100%;\n  border-radius: inherit;\n  z-index: 100;\n  top: 0px;\n  left: 0px;\n  margin: 0px;\n  cursor: pointer;\n}\n.vs-switch__input:active:checked ~ .vs-switch__circle {\n  left: calc(100% - 30px);\n}\n.vs-switch__input:active ~ .vs-switch__circle {\n  width: 25px;\n}\n.vs-switch__input:checked ~ .vs-switch__background {\n  opacity: 1;\n  -webkit-transform: scale(1);\n          transform: scale(1);\n  width: 100%;\n  padding-bottom: 100%;\n  left: 0px;\n  border-radius: 50%;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-switch__input:checked ~ .vs-switch__text {\n  padding-left: 5px;\n  padding-right: 25px;\n  color: #fff;\n}\n.vs-switch__input:checked ~ .vs-switch__text i {\n  opacity: 1;\n}\n.vs-switch__input:checked ~ .vs-switch__text.on {\n  -webkit-transform: translate(0);\n          transform: translate(0);\n  position: relative;\n  opacity: 1;\n}\n.vs-switch__input:checked ~ .vs-switch__text.off {\n  -webkit-transform: translate(100%);\n          transform: translate(100%);\n  position: absolute;\n  opacity: 0;\n}\n.vs-switch__input:checked ~ .vs-switch__circle {\n  left: calc(100% - 24px);\n  -webkit-box-shadow: -5px 0px 25px 0px rgba(var(--vs-background), 0.6);\n          box-shadow: -5px 0px 25px 0px rgba(var(--vs-background), 0.6);\n  color: rgba(var(--vs-color), 1);\n}\n.vs-select {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-select__options .vs-checkbox-content {\n  --vs-color: inherit;\n}\n\n.vs-select-enter-active {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-select-enter {\n  opacity: 0;\n  -webkit-transform: translate(0, -10px);\n          transform: translate(0, -10px);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n.vs-select-enter:after {\n  opacity: 0 !important;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-select-leave-active {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-select-leave-to {\n  opacity: 0;\n  -webkit-transform: translate(0, -10px);\n          transform: translate(0, -10px);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n.vs-select-leave-to.top {\n  -webkit-transform: translate(0, 10px) !important;\n          transform: translate(0, 10px) !important;\n}\n.vs-select-leave-to:after {\n  opacity: 0 !important;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-select-content {\n  width: 100%;\n  max-width: 200px;\n}\n.vs-select-content.block.block {\n  max-width: 100%;\n}\n\n.vs-select {\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  min-height: 38px;\n  width: 100%;\n}\n.vs-select--state-success .vs-select__input {\n  background: rgba(var(--vs-success), 0.05);\n  color: rgba(var(--vs-success), 1);\n}\n.vs-select--state-success .vs-select__input:hover {\n  color: rgba(var(--vs-text), 1);\n}\n.vs-select--state-success .vs-select__chips {\n  background: rgba(var(--vs-success), 0.05);\n  color: rgba(var(--vs-success), 1);\n}\n.vs-select--state-success .vs-select__chips:hover:after {\n  opacity: 0;\n}\n.vs-select--state-success .vs-select__chips:after {\n  width: calc(100% - 4px);\n  height: calc(100% - 4px);\n  content: \"\";\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  border: 2px solid rgba(var(--vs-success), 0.5);\n  border-radius: inherit;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-select--state-success .vs-select__label {\n  color: rgba(var(--vs-success), 1);\n}\n.vs-select--state-success .vs-select__icon {\n  color: rgba(var(--vs-success), 1);\n  background: rgba(var(--vs-success), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-success), 0.1);\n          box-shadow: -15px 10px 10px -10px rgba(var(--vs-success), 0.1);\n}\n.vs-select--state-success .vs-icon-arrow:after {\n  background: rgba(var(--vs-success), 1);\n}\n.vs-select--state-success .vs-icon-arrow:before {\n  background: rgba(var(--vs-success), 1);\n}\n.vs-select--state-danger .vs-select__input {\n  background: rgba(var(--vs-danger), 0.05);\n  color: rgba(var(--vs-danger), 1);\n}\n.vs-select--state-danger .vs-select__input:hover {\n  color: rgba(var(--vs-text), 1);\n}\n.vs-select--state-danger .vs-select__chips {\n  background: rgba(var(--vs-danger), 0.05);\n  color: rgba(var(--vs-danger), 1);\n}\n.vs-select--state-danger .vs-select__chips:hover:after {\n  opacity: 0;\n}\n.vs-select--state-danger .vs-select__chips:after {\n  width: calc(100% - 4px);\n  height: calc(100% - 4px);\n  content: \"\";\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  border: 2px solid rgba(var(--vs-danger), 0.5);\n  border-radius: inherit;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-select--state-danger .vs-select__label {\n  color: rgba(var(--vs-danger), 1);\n}\n.vs-select--state-danger .vs-select__icon {\n  color: rgba(var(--vs-danger), 1);\n  background: rgba(var(--vs-danger), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-danger), 0.1);\n          box-shadow: -15px 10px 10px -10px rgba(var(--vs-danger), 0.1);\n}\n.vs-select--state-danger .vs-icon-arrow:after {\n  background: rgba(var(--vs-danger), 1);\n}\n.vs-select--state-danger .vs-icon-arrow:before {\n  background: rgba(var(--vs-danger), 1);\n}\n.vs-select--state-warn .vs-select__input {\n  background: rgba(var(--vs-warn), 0.05);\n  color: rgba(var(--vs-warn), 1);\n}\n.vs-select--state-warn .vs-select__input:hover {\n  color: rgba(var(--vs-text), 1);\n}\n.vs-select--state-warn .vs-select__chips {\n  background: rgba(var(--vs-warn), 0.05);\n  color: rgba(var(--vs-warn), 1);\n}\n.vs-select--state-warn .vs-select__chips:hover:after {\n  opacity: 0;\n}\n.vs-select--state-warn .vs-select__chips:after {\n  width: calc(100% - 4px);\n  height: calc(100% - 4px);\n  content: \"\";\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  border: 2px solid rgba(var(--vs-warn), 0.5);\n  border-radius: inherit;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-select--state-warn .vs-select__label {\n  color: rgba(var(--vs-warn), 1);\n}\n.vs-select--state-warn .vs-select__icon {\n  color: rgba(var(--vs-warn), 1);\n  background: rgba(var(--vs-warn), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-warn), 0.1);\n          box-shadow: -15px 10px 10px -10px rgba(var(--vs-warn), 0.1);\n}\n.vs-select--state-warn .vs-icon-arrow:after {\n  background: rgba(var(--vs-warn), 1);\n}\n.vs-select--state-warn .vs-icon-arrow:before {\n  background: rgba(var(--vs-warn), 1);\n}\n.vs-select--state-dark .vs-select__input {\n  background: rgba(var(--vs-dark), 0.05);\n  color: rgba(var(--vs-dark), 1);\n}\n.vs-select--state-dark .vs-select__input:hover {\n  color: rgba(var(--vs-text), 1);\n}\n.vs-select--state-dark .vs-select__chips {\n  background: rgba(var(--vs-dark), 0.05);\n  color: rgba(var(--vs-dark), 1);\n}\n.vs-select--state-dark .vs-select__chips:hover:after {\n  opacity: 0;\n}\n.vs-select--state-dark .vs-select__chips:after {\n  width: calc(100% - 4px);\n  height: calc(100% - 4px);\n  content: \"\";\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  border: 2px solid rgba(var(--vs-dark), 0.5);\n  border-radius: inherit;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-select--state-dark .vs-select__label {\n  color: rgba(var(--vs-dark), 1);\n}\n.vs-select--state-dark .vs-select__icon {\n  color: rgba(var(--vs-dark), 1);\n  background: rgba(var(--vs-dark), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-dark), 0.1);\n          box-shadow: -15px 10px 10px -10px rgba(var(--vs-dark), 0.1);\n}\n.vs-select--state-dark .vs-icon-arrow:after {\n  background: rgba(var(--vs-dark), 1);\n}\n.vs-select--state-dark .vs-icon-arrow:before {\n  background: rgba(var(--vs-dark), 1);\n}\n.vs-select--state-primary .vs-select__input {\n  background: rgba(var(--vs-primary), 0.05);\n  color: rgba(var(--vs-primary), 1);\n}\n.vs-select--state-primary .vs-select__input:hover {\n  color: rgba(var(--vs-text), 1);\n}\n.vs-select--state-primary .vs-select__chips {\n  background: rgba(var(--vs-primary), 0.05);\n  color: rgba(var(--vs-primary), 1);\n}\n.vs-select--state-primary .vs-select__chips:hover:after {\n  opacity: 0;\n}\n.vs-select--state-primary .vs-select__chips:after {\n  width: calc(100% - 4px);\n  height: calc(100% - 4px);\n  content: \"\";\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  border: 2px solid rgba(var(--vs-primary), 0.5);\n  border-radius: inherit;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-select--state-primary .vs-select__label {\n  color: rgba(var(--vs-primary), 1);\n}\n.vs-select--state-primary .vs-select__icon {\n  color: rgba(var(--vs-primary), 1);\n  background: rgba(var(--vs-primary), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-primary), 0.1);\n          box-shadow: -15px 10px 10px -10px rgba(var(--vs-primary), 0.1);\n}\n.vs-select--state-primary .vs-icon-arrow:after {\n  background: rgba(var(--vs-primary), 1);\n}\n.vs-select--state-primary .vs-icon-arrow:before {\n  background: rgba(var(--vs-primary), 1);\n}\n.vs-select.loading {\n  pointer-events: none;\n}\n.vs-select.loading *:not(.vs-select__loading):not(.vs-select__label) {\n  opacity: 0.6;\n}\n.vs-select.loading .vs-select__label {\n  pointer-events: none !important;\n}\n.vs-select.top.activeOptions .vs-select__input, .vs-select.top.activeOptions .vs-select__chips {\n  border-radius: 0px 0px 12px 12px !important;\n  -webkit-box-shadow: 0px -5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity)) !important;\n          box-shadow: 0px -5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity)) !important;\n}\n.vs-select--disabled {\n  opacity: 0.6;\n  pointer-events: none;\n}\n.vs-select--disabled label {\n  pointer-events: none;\n}\n.vs-select .vs-icon-arrow {\n  z-index: 600;\n  position: absolute;\n  right: 15px;\n  margin-top: -2px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  pointer-events: auto;\n  cursor: pointer;\n}\n.vs-select.activeOptions .vs-icon-arrow {\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n  margin-top: -2px !important;\n}\n.vs-select.activeOptions .vs-select__input {\n  border-radius: 12px 12px 0px 0px;\n  background: rgba(var(--vs-background), 1);\n  -webkit-box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(0, -4px);\n          transform: translate(0, -4px);\n  -webkit-transition: all 0.25s ease, height 0s;\n  transition: all 0.25s ease, height 0s;\n  border: 2px solid transparent;\n  color: rgba(var(--vs-text), 1);\n}\n.vs-select.activeOptions .vs-select__chips {\n  border-radius: 12px 12px 0px 0px;\n  background: rgba(var(--vs-background), 1);\n  -webkit-box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(0, -4px);\n          transform: translate(0, -4px);\n  -webkit-transition: all 0.25s ease, height 0s;\n  transition: all 0.25s ease, height 0s;\n}\n.vs-select.activeOptions .vs-select__chips:after {\n  opacity: 0;\n}\n.vs-select.activeOptions .vs-select__label--placeholder {\n  opacity: 1;\n  visibility: visible;\n  pointer-events: auto;\n  -webkit-transform: translate(-3%, -28px) !important;\n          transform: translate(-3%, -28px) !important;\n  font-size: 0.75rem;\n  margin-top: 0px !important;\n}\n.vs-select.activeOptions .vs-select__label {\n  margin-top: -4px;\n}\n.vs-select__input {\n  opacity: 1;\n  background: transparent;\n  padding: 7px 13px;\n  border: 2px solid transparent;\n  border-radius: 12px;\n  cursor: pointer;\n  -webkit-transition: all 0.25s ease, height 0s;\n  transition: all 0.25s ease, height 0s;\n  background: rgba(var(--vs-gray-2), 1);\n  color: rgba(var(--vs-text), 1);\n  min-height: 38px;\n  padding-right: 30px;\n  width: 100%;\n}\n.vs-select__input.multiple {\n  color: transparent;\n  background: transparent;\n  pointer-events: none;\n}\n.vs-select__input.simple {\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.vs-select__input:focus {\n  border-radius: 12px 12px 0px 0px;\n  background: rgba(var(--vs-background), 1);\n  -webkit-box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(0, -4px);\n          transform: translate(0, -4px);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-select__input:focus ~ .vs-select__label--placeholder {\n  opacity: 1;\n  visibility: visible;\n  pointer-events: auto;\n  -webkit-transform: translate(-3%, -28px) !important;\n          transform: translate(-3%, -28px) !important;\n  font-size: 0.75rem;\n  margin-top: 0px !important;\n}\n.vs-select__input:hover {\n  background: rgba(var(--vs-background), 1);\n  -webkit-box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(0, -4px);\n          transform: translate(0, -4px);\n}\n.vs-select__input:hover ~ .vs-select__label {\n  margin-top: -4px;\n}\n.vs-select__input:hover ~ .vs-icon-arrow {\n  margin-top: -6px;\n}\n.vs-select__chips {\n  width: 100%;\n  height: auto;\n  position: absolute;\n  left: 0px;\n  background: rgba(var(--vs-gray-2), 1);\n  z-index: 300;\n  border-radius: 12px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  border: 0px;\n  display: flex;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  padding: 5px;\n  min-height: 38px;\n  -webkit-transition: all 0.25s ease, height 0s;\n  transition: all 0.25s ease, height 0s;\n  padding-right: 26px;\n}\n.vs-select__chips:focus {\n  border-radius: 12px 12px 0px 0px;\n  background: rgba(var(--vs-background), 1);\n  -webkit-box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(0, -4px);\n          transform: translate(0, -4px);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-select__chips:hover {\n  background: rgba(var(--vs-background), 1);\n  -webkit-box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(0, -4px);\n          transform: translate(0, -4px);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-select__chips:hover ~ .vs-icon-arrow {\n  margin-top: -6px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-select__chips__input {\n  width: auto;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  max-width: 100%;\n  position: relative;\n  min-width: 0px;\n  border: 0px solid transparent;\n  background: transparent;\n  margin: 2px 3px;\n  min-width: 30px;\n}\n.vs-select__chips__input::-webkit-input-placeholder {\n  color: rgba(var(--vs-text), 0.4);\n}\n.vs-select__chips__input::-moz-placeholder {\n  color: rgba(var(--vs-text), 0.4);\n}\n.vs-select__chips__input:-ms-input-placeholder {\n  color: rgba(var(--vs-text), 0.4);\n}\n.vs-select__chips__input::-ms-input-placeholder {\n  color: rgba(var(--vs-text), 0.4);\n}\n.vs-select__chips__input::placeholder {\n  color: rgba(var(--vs-text), 0.4);\n}\n.vs-select__chips__chip {\n  -webkit-box-flex: 0;\n      -ms-flex: 0 1 auto;\n          flex: 0 1 auto;\n  position: relative;\n  background: rgba(var(--vs-background), 1);\n  border-radius: 10px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding: 0px 6px;\n  margin: 2px 3px;\n  padding-right: 10px;\n  font-size: 0.84rem;\n  border: 2px solid rgba(var(--vs-gray-2), 1);\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  color: rgba(var(--vs-text), 1);\n}\n.vs-select__chips__chip.isCollapse {\n  padding-right: 6px !important;\n}\n.vs-select__chips__chip__close {\n  position: absolute;\n  top: -4px;\n  right: -4px;\n  width: 15px;\n  height: 15px;\n  background: rgba(var(--vs-gray-4), 1);\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  border-radius: 50%;\n  font-size: 0.75rem;\n  cursor: pointer;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-select__chips__chip__close:hover {\n  background: rgba(var(--vs-danger), 1);\n}\n.vs-select__chips__chip__close:hover .vs-icon-close {\n  --vs-color: var(--vs-background);\n}\n.vs-select__chips__chip__close:hover .vs-icon-close:after {\n  width: 12px;\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n.vs-select__chips__chip__close:hover .vs-icon-close:before {\n  width: 12px;\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n.vs-select__chips__chip__close .vs-icon-close {\n  --vs-color: var(--vs-text);\n  -webkit-transform: scale(0.5);\n          transform: scale(0.5);\n}\n.vs-select__options {\n  --vs-color: var(--vs-primary);\n  position: absolute;\n  z-index: 99999;\n  background: rgba(var(--vs-background), 1);\n  padding: 5px;\n  border-radius: 0px 0px 12px 12px;\n  overflow: hidden;\n  -webkit-box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n.vs-select__options.top {\n  border-radius: 12px 12px 0px 0px;\n  -webkit-box-shadow: 0px -10px 20px -5px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px -10px 20px -5px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n.vs-select__options.top:after {\n  top: auto;\n  bottom: -10px;\n}\n.vs-select__options:after {\n  content: \"\";\n  position: absolute;\n  top: -10px;\n  width: 80%;\n  margin-left: 10%;\n  left: 0px;\n  height: 10px;\n  background: rgba(var(--vs-background), 1);\n  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  z-index: 200;\n  -webkit-transition: all 0.25s ease 0.05s;\n  transition: all 0.25s ease 0.05s;\n  opacity: 1;\n}\n.vs-select__options__content {\n  max-height: 200px;\n  overflow: auto;\n  height: auto;\n  z-index: 100;\n  -webkit-transform: scale(1);\n          transform: scale(1);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  position: relative;\n  scroll-behavior: smooth;\n}\n.vs-select__options__content__not-data {\n  font-size: 0.8rem;\n  text-align: center;\n  padding: 6px 10px;\n}\n.vs-select__options__content::-webkit-scrollbar {\n  width: 5px;\n  height: 5px;\n  display: block;\n  background: transparent;\n}\n.vs-select__options__content::-webkit-scrollbar-thumb {\n  background: rgba(var(--vs-gray-3), 1);\n  border-radius: 5px;\n}\n.vs-select__label {\n  position: absolute;\n  left: 14px;\n  font-size: 0.8rem;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  cursor: text;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  pointer-events: none;\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  opacity: 0.4;\n  z-index: 500;\n}\n.vs-select__label--hidden {\n  opacity: 0;\n  visibility: hidden;\n}\n.vs-select__label--hidden.vs-select__label--placeholder {\n  opacity: 1;\n  visibility: visible;\n  pointer-events: auto;\n  -webkit-transform: translate(-3%, -28px) !important;\n          transform: translate(-3%, -28px) !important;\n  font-size: 0.75rem;\n  margin-top: 0px !important;\n}\n.vs-select__label--label {\n  opacity: 1;\n  visibility: visible;\n  pointer-events: auto;\n  -webkit-transform: translate(-3%, -28px) !important;\n          transform: translate(-3%, -28px) !important;\n  font-size: 0.75rem;\n  margin-top: 0px !important;\n}\n.vs-select__loading {\n  position: absolute;\n  width: 22px;\n  height: 22px;\n  right: 7px;\n  pointer-events: none;\n  border-radius: 50%;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  background: inherit;\n  cursor: default;\n  z-index: 600;\n}\n.vs-select__loading:after {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px solid rgba(var(--vs-primary), 1);\n  border-radius: inherit;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n  -webkit-animation: rotateInputLoading 0.8s ease infinite;\n          animation: rotateInputLoading 0.8s ease infinite;\n  top: 0px;\n  content: \"\";\n}\n.vs-select__loading:before {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  top: 0px;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px dashed rgba(var(--vs-primary), 1);\n  border-radius: inherit;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n  -webkit-animation: rotateInputLoading 0.8s linear infinite;\n          animation: rotateInputLoading 0.8s linear infinite;\n  opacity: 0.2;\n  content: \"\";\n}\n.vs-select__loading ~ .vs-icon-arrow {\n  opacity: 0 !important;\n}\n.vs-select__message {\n  font-size: 0.7rem;\n  position: relative;\n  padding: 0px 7px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  overflow: hidden;\n}\n.vs-select__message--success {\n  color: rgba(var(--vs-success), 1);\n}\n.vs-select__message--danger {\n  color: rgba(var(--vs-danger), 1);\n}\n.vs-select__message--warn {\n  color: rgba(var(--vs-warn), 1);\n}\n.vs-select__message--dark {\n  color: rgba(var(--vs-dark), 1);\n}\n.vs-select__message--primary {\n  color: rgba(var(--vs-primary), 1);\n}\n\n.vs-darken .vs-select__options.isColorDark {\n  --vs-color: 0, 0, 0 !important;\n}\n.vs-darken .vs-select__options.isColorDark .vs-select__option:hover {\n  background: rgba(var(--vs-color), 0.2);\n  color: rgba(var(--vs-text), 1);\n}\n.vs-darken .vs-select__options.isColorDark .activeOption {\n  color: rgba(var(--vs-text), 1);\n  background: rgba(var(--vs-color), 0.6);\n}\n.vs-select__option {\n  border: 0px;\n  width: 100%;\n  padding: 6px 10px;\n  text-align: left;\n  background: transparent;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  color: rgba(var(--vs-text), 1);\n  border-radius: 5px;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  margin: 2px 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: cneter;\n      -ms-flex-align: cneter;\n          align-items: cneter;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  overflow: hidden;\n  opacity: 1;\n  visibility: visible;\n  max-height: 40px;\n}\n.vs-select__option.hiddenOption {\n  opacity: 0;\n  visibility: hidden;\n  max-height: 0px;\n  padding-top: 0px;\n  padding-bottom: 0px;\n  border: 0px;\n  margin: 0px;\n}\n.vs-select__option.isMultiple {\n  padding: 0px;\n  padding-left: 5px;\n}\n.vs-select__option.isMultiple .vs-select__option-group {\n  padding-left: 0px;\n}\n.vs-select__option.isMultiple.isHover {\n  background: rgba(var(--vs-gray-2), 1) !important;\n}\n.vs-select__option.isMultiple:disabled .vs-checkbox-content {\n  pointer-events: none;\n}\n.vs-select__option.isMultiple:hover {\n  padding-left: 5px !important;\n}\n.vs-select__option.isMultiple .vs-checkbox-content {\n  width: 100%;\n  pointer-events: none;\n}\n.vs-select__option.isMultiple .vs-checkbox-content .vs-checkbox-con {\n  -webkit-transform: scale(0.85);\n          transform: scale(0.85);\n}\n.vs-select__option.isMultiple .vs-checkbox-content .vs-checkbox-label {\n  width: calc(100% - 23px);\n  text-align: left;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n}\n.vs-select__option.isMultiple.activeOption {\n  pointer-events: auto !important;\n}\n.vs-select__option.isHover {\n  background: rgba(var(--vs-gray-2), 1);\n}\n.vs-select__option.activeOption {\n  background: rgba(var(--vs-color), 0.05);\n  color: rgba(var(--vs-color), 1);\n  pointer-events: none;\n}\n.vs-select__option:hover:not(:disabled) {\n  color: rgba(var(--vs-color), 1);\n  padding-left: 14px;\n}\n.vs-select__option-group {\n  padding-left: 10px;\n  border-bottom: 2px solid rgba(var(--vs-gray-1), 1);\n  position: relative;\n  overflow: hidden;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-select__option-group:last-child {\n  border: 0px;\n}\n.vs-select__option-group.hiddenOptionGroup {\n  border-bottom: 0px solid rgba(var(--vs-gray-1), 1);\n}\n.vs-select__option-group.hiddenOptionGroup h5 {\n  padding: 0px;\n  max-height: 0px;\n}\n.vs-select__option-group h5 {\n  max-height: 28px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  opacity: 0.5;\n  margin: 0px;\n  padding: 0px;\n  padding: 7px 0px;\n  font-size: 0.7rem;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  overflow: hidden;\n}\n.vs-select__option-group h5 * {\n  pointer-events: none;\n}\n.vs-avatar-content {\n  --vs-color: var(--vs-gray-2);\n  --vs-badge: var(--vs-primary);\n}\n\n.vs-avatar-content {\n  border-radius: 35%;\n  z-index: 1;\n  width: 44px;\n  height: 44px;\n  position: relative;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.vs-avatar-content.vs-change-color-badge .vs-avatar__badge .vs-avatar__points__point {\n  background: rgba(var(--vs-background), 1);\n}\n.vs-avatar-content.vs-change-color:hover .vs-avatar {\n  -webkit-box-shadow: inset 0px 0px 40px 0px rgba(0, 0, 0, 0.1);\n          box-shadow: inset 0px 0px 40px 0px rgba(0, 0, 0, 0.1);\n}\n.vs-avatar-content:hover .vs-avatar {\n  -webkit-box-shadow: inset 0px 0px 40px 0px rgba(0, 0, 0, 0.04);\n          box-shadow: inset 0px 0px 40px 0px rgba(0, 0, 0, 0.04);\n}\n.vs-avatar-content:hover img {\n  -webkit-transform: scale(1.1);\n          transform: scale(1.1);\n}\n.vs-avatar-content--size.history:after {\n  top: -2px !important;\n}\n.vs-avatar-content--hasIcons {\n  margin-right: 20px;\n}\n.vs-avatar-content--hidden {\n  display: none;\n}\n.vs-avatar-content--circle {\n  border-radius: 50% !important;\n}\n.vs-avatar-content--circle .vs-avatar__badge {\n  right: -2px;\n  bottom: -2px;\n}\n.vs-avatar-content--circle .vs-avatar__badge.top-right {\n  top: -2px;\n  bottom: auto;\n}\n.vs-avatar-content--circle .vs-avatar__badge.top-left {\n  top: -2px;\n  left: -2px;\n  bottom: auto;\n  right: auto;\n}\n.vs-avatar-content--circle .vs-avatar__badge.bottom-left {\n  left: -2px;\n  right: auto;\n}\n.vs-avatar-content--square {\n  border-radius: 0% !important;\n}\n.vs-avatar-content.history--gradient:after {\n  background-image: linear-gradient(40deg, #f99b4a 0%, #df376b 74%, #c52d91 74%) !important;\n}\n.vs-avatar-content.history .vs-avatar {\n  width: calc(100% - 4px);\n  height: calc(100% - 4px);\n  border: 2px solid rgba(var(--vs-background), 1);\n  margin: 2px;\n}\n.vs-avatar-content.history:after {\n  content: \"\";\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  background-color: #FFE53B;\n  z-index: -1;\n  background: rgba(var(--vs-color), 1);\n}\n.vs-avatar-content.vs-component--is-color .vs-avatar {\n  color: rgba(var(--vs-background), 1);\n}\n.vs-avatar-content.vs-component--is-color .vs-avatar__points .vs-avatar__points__point {\n  background: rgba(var(--vs-background), 1);\n}\n\n.vs-avatar {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n  overflow: hidden;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color: rgba(var(--vs-text), 1);\n  border-radius: inherit;\n  width: 100%;\n  height: 100%;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.05);\n          box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.05);\n}\n.vs-avatar i {\n  font-size: 1.4rem;\n}\n.vs-avatar img {\n  width: 100%;\n  height: auto;\n  display: block;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  border-radius: inherit;\n}\n.vs-avatar__loading {\n  position: absolute;\n  width: 100%;\n  top: 0px;\n  left: 0px;\n  background: rgba(0, 0, 0, 0.5);\n  z-index: 100;\n  height: 100%;\n  border-radius: inherit;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-avatar__loading__animate {\n  height: 60%;\n  width: 60%;\n  border-radius: 50%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: relative;\n}\n.vs-avatar__loading__animate:after {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px solid #fff;\n  border-radius: inherit;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n  -webkit-animation: rotateInputLoading 0.8s ease infinite;\n          animation: rotateInputLoading 0.8s ease infinite;\n  top: 0px;\n  content: \"\";\n}\n.vs-avatar__loading__animate:before {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  top: 0px;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px dashed #fff;\n  border-radius: inherit;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n  -webkit-animation: rotateInputLoading 0.8s linear infinite;\n          animation: rotateInputLoading 0.8s linear infinite;\n  opacity: 0.2;\n  content: \"\";\n}\n.vs-avatar--letter--3 {\n  font-size: 0.9rem;\n}\n.vs-avatar--letter--4 {\n  font-size: 0.8rem;\n}\n.vs-avatar--letter--5 {\n  font-size: 0.7rem;\n}\n.vs-avatar--letter--6 {\n  font-size: 0.6rem;\n}\n.vs-avatar__badge {\n  position: absolute;\n  width: 13px;\n  height: 13px;\n  background: rgba(var(--vs-badge), 1);\n  border-radius: 50%;\n  border: 2px solid rgba(var(--vs-background), 1) !important;\n  right: -4px;\n  bottom: -4px;\n  font-size: 0.6rem;\n  font-weight: bold;\n  z-index: 200;\n  color: rgba(var(--vs-text), 1);\n}\n.vs-avatar__badge.isSlot, .vs-avatar__badge.writing {\n  width: auto;\n  height: auto;\n  border-radius: 7px;\n  min-width: 18px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color: rgba(var(--vs-background), 1);\n  line-height: 0.9rem;\n  padding: 0px 3px;\n  min-height: 18px;\n}\n.vs-avatar__badge.top-right {\n  top: -4px;\n  bottom: auto;\n}\n.vs-avatar__badge.top-left {\n  top: -4px;\n  left: -4px;\n  bottom: auto;\n  right: auto;\n}\n.vs-avatar__badge.bottom-left {\n  left: -4px;\n  right: auto;\n}\n.vs-avatar__points {\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-avatar__points__point {\n  width: 5px;\n  height: 5px;\n  background: rgba(var(--vs-text), 1);\n  margin: 0px 2px;\n  border-radius: 50%;\n}\n.vs-avatar__points__point:nth-child(1) {\n  -webkit-animation: point 1.2s ease infinite;\n          animation: point 1.2s ease infinite;\n}\n.vs-avatar__points__point:nth-child(2) {\n  -webkit-animation: point 1.2s ease infinite 0.4s;\n          animation: point 1.2s ease infinite 0.4s;\n}\n.vs-avatar__points__point:nth-child(3) {\n  -webkit-animation: point 1.2s ease infinite 0.8s;\n          animation: point 1.2s ease infinite 0.8s;\n}\n.vs-avatar__latest {\n  background: rgba(0, 0, 0, 0.5);\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  z-index: 300;\n  border-radius: inherit;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color: #fff;\n  font-weight: 600;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.vs-avatar__icons {\n  position: absolute;\n  width: auto;\n  height: auto;\n  min-height: 90%;\n  background: rgba(var(--vs-gray-3), 1);\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n          transform: translate(0, -50%);\n  right: -20px;\n  padding: 3px;\n  padding-left: 5px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  z-index: -1;\n  border-radius: 5px 5px 5px 5px;\n  font-size: 1rem;\n}\n.vs-avatar__icons i {\n  cursor: pointer;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-avatar__icons i:hover {\n  opacity: 0.7;\n}\n\n@-webkit-keyframes point {\n  0% {\n    opacity: 1;\n  }\n  50% {\n    opacity: 0.4;\n    -webkit-transform: scale(0.5);\n            transform: scale(0.5);\n  }\n  100% {\n    opacity: 1;\n  }\n}\n\n@keyframes point {\n  0% {\n    opacity: 1;\n  }\n  50% {\n    opacity: 0.4;\n    -webkit-transform: scale(0.5);\n            transform: scale(0.5);\n  }\n  100% {\n    opacity: 1;\n  }\n}\n.vs-avatar__group {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding-left: 18px;\n}\n.vs-avatar__group.float {\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  padding-left: 0px;\n}\n.vs-avatar__group.float .vs-avatar-content {\n  position: relative;\n  z-index: 2;\n  border: 3px solid vs-color(\"background\");\n  margin: 0px;\n}\n.vs-avatar__group:not(.float) .vs-avatar-content {\n  margin-left: -18px;\n  position: relative;\n  z-index: 2;\n}\n.vs-avatar__group:not(.float) .vs-avatar-content:hover .vs-avatar {\n  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.1);\n          box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.1);\n}\n.vs-avatar__group:not(.float) .vs-avatar-content:hover img {\n  -webkit-transform: scale(1);\n          transform: scale(1);\n}\n.vs-avatar__group:not(.float) .vs-avatar-content .vs-avatar__latest {\n  width: calc(100% - 6px);\n  height: calc(100% - 6px);\n  margin: 3px;\n}\n.vs-avatar__group:not(.float) .vs-avatar-content:not(.vs-change-color) .vs-avatar {\n  background: vs-color(\"background\");\n}\n.vs-avatar__group:not(.float) .vs-avatar-content img {\n  width: calc(100% - 6px);\n}\n.vs-avatar__group:not(.float) .vs-avatar-content:hover:not(.vs-avatar-content--hasIcons) {\n  -webkit-transform: translate(-10px);\n          transform: translate(-10px);\n}\n.vs-avatar__group:not(.float) .vs-avatar-content:hover:not(.vs-avatar-content--hasIcons) .vs-avatar {\n  -webkit-transform: scale(1);\n          transform: scale(1);\n}\n.vs-avatar__group:not(.float) .vs-avatar-content--hasIcons {\n  margin-right: 0px;\n}\n.vs-avatar__group:not(.float) .vs-avatar-content--hasIcons:hover {\n  -webkit-transform: translate(-34px) !important;\n          transform: translate(-34px) !important;\n}\n.vs-radio-content {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-radio-content {\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-radio-content.active .vs-radio__effect__icon {\n  opacity: 0;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-transform: scale(1.3);\n          transform: scale(1.3);\n}\n.vs-radio-content.active .vs-radio__effect:after {\n  border: 7px solid rgba(var(--vs-color), 1);\n  -webkit-box-shadow: 0px 3px 12px 0px rgba(var(--vs-color), 0.3);\n          box-shadow: 0px 3px 12px 0px rgba(var(--vs-color), 0.3);\n}\n.vs-radio-content:not(.active) .vs-radio input:hover ~ .vs-radio__effect .vs-radio__effect__icon {\n  opacity: 0.7;\n}\n.vs-radio-content:not(.active) .vs-radio input:hover ~ .vs-radio__effect::after {\n  border: 2px solid rgba(var(--vs-text), 0.2);\n}\n.vs-radio-content.loading {\n  pointer-events: none;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.vs-radio-content.loading .vs-radio__effect:after {\n  opacity: 0.1;\n}\n.vs-radio-content.loading .vs-radio__effect__loading {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n}\n.vs-radio-content.loading .vs-radio__effect__loading:after {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  border: 2px solid rgba(var(--vs-text), 0.4);\n  border-top: 2px solid rgba(var(--vs-text), 0);\n  border-left: 2px solid rgba(var(--vs-text), 0);\n  border-bottom: 2px solid rgba(var(--vs-text), 0);\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.4);\n          box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.4);\n  -webkit-animation: loadingRadio 0.6s ease infinite;\n          animation: loadingRadio 0.6s ease infinite;\n}\n.vs-radio-content.loading .vs-radio__effect__loading:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  border: 2px dashed rgba(var(--vs-text), 0.4);\n  border-top: 2px solid rgba(var(--vs-text), 0);\n  border-left: 2px solid rgba(var(--vs-text), 0);\n  border-bottom: 2px solid rgba(var(--vs-text), 0);\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.4);\n          box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.4);\n  -webkit-animation: loadingRadio 0.6s linear infinite;\n          animation: loadingRadio 0.6s linear infinite;\n}\n.vs-radio-content label {\n  cursor: pointer;\n}\n.vs-radio-content.disabled {\n  opacity: 0.5;\n  pointer-events: none;\n}\n.vs-radio-content.disabled .vs-radio__effect {\n  background: rgba(var(--vs-gray-3), 1);\n}\n.vs-radio-content.disabled label {\n  pointer-events: none;\n}\n\n.vs-radio {\n  width: 20px;\n  height: 20px;\n  min-width: 20px;\n  min-height: 20px;\n  margin: 0px;\n  padding: 0px;\n  border-radius: 50%;\n  position: relative;\n  z-index: 10;\n}\n.vs-radio__label {\n  margin: 0px 6px;\n}\n.vs-radio__effect {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  left: 0px;\n  top: 0px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  z-index: 10;\n}\n.vs-radio__effect__icon {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-radio__effect__icon i {\n  font-size: 0.75rem;\n}\n.vs-radio__effect:after {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  border: 2px solid rgba(var(--vs-text), 0.4);\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.4);\n          box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.4);\n}\n.vs-radio input {\n  margin: 0px;\n  padding: 0px;\n  width: 100%;\n  height: 100%;\n  position: relative;\n  z-index: 100;\n  opacity: 0;\n  cursor: pointer;\n}\n.vs-radio input:active ~ .vs-radio__effect:after {\n  -webkit-transform: scale(0.9);\n          transform: scale(0.9);\n}\n@-webkit-keyframes loadingRadio {\n  0% {\n    -webkit-transform: rotate(0);\n            transform: rotate(0);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n@keyframes loadingRadio {\n  0% {\n    -webkit-transform: rotate(0);\n            transform: rotate(0);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n.vs-tooltip {\n  --vs-color: var(--vs-text);\n}\n\n.vs-tooltip-enter-active, .vs-tooltip-leave-active {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-tooltip-enter, .vs-tooltip-leave-to {\n  opacity: 0;\n}\n.vs-tooltip-enter.top, .vs-tooltip-leave-to.top {\n  -webkit-transform: translate(0, 5px);\n          transform: translate(0, 5px);\n}\n.vs-tooltip-enter.bottom, .vs-tooltip-leave-to.bottom {\n  -webkit-transform: translate(0, -5px);\n          transform: translate(0, -5px);\n}\n.vs-tooltip-enter.left, .vs-tooltip-leave-to.left {\n  -webkit-transform: translate(5px);\n          transform: translate(5px);\n}\n.vs-tooltip-enter.right, .vs-tooltip-leave-to.right {\n  -webkit-transform: translate(-5px);\n          transform: translate(-5px);\n}\n\n.darken .vs-tooltip {\n  --vs-color: var(--vs-gray-3);\n  color: #fff;\n}\n.darken .vs-tooltip:not(.vs-change-color) {\n  color: #fff !important;\n}\n\n.vs-tooltip {\n  background: rgba(var(--vs-color), 1);\n  color: rgba(var(--vs-background), 1);\n  position: absolute;\n  z-index: 1000000;\n  text-align: center;\n  padding: 5px 10px;\n  border-radius: 12px;\n  font-size: 0.85rem;\n  max-width: 350px;\n  min-width: 30px;\n  min-height: 30px;\n}\n.vs-tooltip.loading {\n  color: rgba(var(--vs-background), 0.2);\n}\n.vs-tooltip.loading * {\n  opacity: 0.5;\n  pointer-events: none;\n}\n.vs-tooltip__loading {\n  width: 22px;\n  height: 22px;\n  position: absolute;\n  display: block;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  border-radius: 50%;\n  opacity: 1 !important;\n}\n.vs-tooltip__loading:after {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  border: 2px solid rgba(var(--vs-background), 1);\n  border-top: 2px solid rgba(var(--vs-background), 0);\n  border-left: 2px solid rgba(var(--vs-background), 0);\n  border-bottom: 2px solid rgba(var(--vs-background), 0);\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n          box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  -webkit-animation: loadingTooltip 0.6s ease infinite;\n          animation: loadingTooltip 0.6s ease infinite;\n}\n.vs-tooltip__loading:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  border: 2px dashed rgba(var(--vs-background), 1);\n  border-top: 2px solid rgba(var(--vs-background), 0);\n  border-left: 2px solid rgba(var(--vs-background), 0);\n  border-bottom: 2px solid rgba(var(--vs-background), 0);\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n          box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  -webkit-animation: loadingTooltip 0.6s linear infinite;\n          animation: loadingTooltip 0.6s linear infinite;\n}\n.vs-tooltip.borderThick {\n  background: rgba(var(--vs-background), 1);\n  color: rgba(var(--vs-color), 1);\n  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n.vs-tooltip.borderThick.top {\n  border-bottom: 4px solid rgba(var(--vs-color), 1);\n}\n.vs-tooltip.borderThick.top:after {\n  bottom: -7px;\n}\n.vs-tooltip.borderThick.left {\n  border-right: 4px solid rgba(var(--vs-color), 1);\n}\n.vs-tooltip.borderThick.left:after {\n  right: -7px;\n}\n.vs-tooltip.borderThick.right {\n  border-left: 4px solid rgba(var(--vs-color), 1);\n}\n.vs-tooltip.borderThick.right:after {\n  left: -7px;\n}\n.vs-tooltip.borderThick.bottom {\n  border-top: 4px solid rgba(var(--vs-color), 1);\n}\n.vs-tooltip.borderThick.bottom:after {\n  top: -7px;\n}\n.vs-tooltip.borderThick:before {\n  width: 100%;\n  height: 100%;\n  z-index: -1;\n  background: inherit;\n  border-radius: inherit;\n  top: 0px;\n  left: 0px;\n  content: \"\";\n  position: absolute;\n}\n.vs-tooltip.borderThick:after {\n  background: rgba(var(--vs-color), 1) !important;\n}\n.vs-tooltip.border {\n  background: rgba(var(--vs-background), 1);\n  color: rgba(var(--vs-color), 1);\n  border: 2px solid rgba(var(--vs-color), 1);\n}\n.vs-tooltip.border:before {\n  width: 100%;\n  height: 100%;\n  z-index: -1;\n  background: inherit;\n  border-radius: inherit;\n  top: 0px;\n  left: 0px;\n  content: \"\";\n  position: absolute;\n}\n.vs-tooltip.border:after {\n  border: 2px solid rgba(var(--vs-color), 1);\n  width: 12px !important;\n  height: 12px !important;\n}\n.vs-tooltip.circle {\n  border-radius: 20px;\n}\n.vs-tooltip.square {\n  border-radius: 0px;\n}\n.vs-tooltip.notArrow:after {\n  display: none;\n}\n.vs-tooltip.shadow {\n  background: rgba(var(--vs-background), 1);\n  color: rgba(var(--vs-color), 1);\n  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n.vs-tooltip.shadow:before {\n  width: 100%;\n  height: 100%;\n  z-index: -1;\n  background: inherit;\n  border-radius: inherit;\n  top: 0px;\n  left: 0px;\n  content: \"\";\n  position: absolute;\n}\n.vs-tooltip.shadow:after {\n  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n.vs-tooltip.isDark {\n  --vs-color: var(--vs-gray-3);\n  color: #fff;\n}\n.vs-tooltip.top:after {\n  content: \"\";\n  position: absolute;\n  bottom: -3px;\n  background: inherit;\n  width: 10px;\n  height: 10px;\n  left: 50%;\n  -webkit-transform: translate(-50%) rotate(45deg);\n          transform: translate(-50%) rotate(45deg);\n  z-index: -2;\n  border-radius: 0px 0px 2px 0px;\n}\n.vs-tooltip.bottom:after {\n  content: \"\";\n  position: absolute;\n  top: -3px;\n  background: inherit;\n  width: 10px;\n  height: 10px;\n  left: 50%;\n  -webkit-transform: translate(-50%) rotate(45deg);\n          transform: translate(-50%) rotate(45deg);\n  z-index: -2;\n  border-radius: 2px 0px 0px 0px;\n}\n.vs-tooltip.left:after {\n  content: \"\";\n  position: absolute;\n  right: -3px;\n  background: inherit;\n  width: 10px;\n  height: 10px;\n  top: 50%;\n  -webkit-transform: translate(0, -50%) rotate(45deg);\n          transform: translate(0, -50%) rotate(45deg);\n  z-index: -2;\n  border-radius: 0px 2px 0px 0px;\n}\n.vs-tooltip.right:after {\n  content: \"\";\n  position: absolute;\n  left: -3px;\n  background: inherit;\n  width: 10px;\n  height: 10px;\n  top: 50%;\n  -webkit-transform: translate(0, -50%) rotate(45deg);\n          transform: translate(0, -50%) rotate(45deg);\n  z-index: -2;\n  border-radius: 0px 0px 0px 2px;\n}\n\n@-webkit-keyframes loadingTooltip {\n  0% {\n    -webkit-transform: rotate(0);\n            transform: rotate(0);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@keyframes loadingTooltip {\n  0% {\n    -webkit-transform: rotate(0);\n            transform: rotate(0);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n.vs-dialog-content {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-dialog-enter-active {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-dialog-enter-active .vs-dialog:not(.vs-dialog--fullScreen) {\n  -webkit-animation: rebound 0.4s;\n          animation: rebound 0.4s;\n}\n\n.vs-dialog-leave-active {\n  -webkit-transition: all 0.15s ease;\n  transition: all 0.15s ease;\n}\n.vs-dialog-leave-active .vs-dialog {\n  -webkit-transition: all 0.15s ease;\n  transition: all 0.15s ease;\n}\n\n.vs-dialog-enter, .vs-dialog-leave-to {\n  opacity: 0;\n}\n.vs-dialog-enter .vs-dialog, .vs-dialog-leave-to .vs-dialog {\n  -webkit-transform: scale(0.7);\n          transform: scale(0.7);\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n.vs-dialog-enter .vs-dialog--fullScreen, .vs-dialog-leave-to .vs-dialog--fullScreen {\n  -webkit-transform: translate(0, 8%) !important;\n          transform: translate(0, 8%) !important;\n}\n\n@-webkit-keyframes rebound {\n  0% {\n    -webkit-transform: scale(0.8);\n            transform: scale(0.8);\n  }\n  40% {\n    -webkit-transform: scale(1.08);\n            transform: scale(1.08);\n  }\n  80% {\n    -webkit-transform: scale(0.98);\n            transform: scale(0.98);\n  }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n  }\n}\n\n@keyframes rebound {\n  0% {\n    -webkit-transform: scale(0.8);\n            transform: scale(0.8);\n  }\n  40% {\n    -webkit-transform: scale(1.08);\n            transform: scale(1.08);\n  }\n  80% {\n    -webkit-transform: scale(0.98);\n            transform: scale(0.98);\n  }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n  }\n}\n@-webkit-keyframes reboundClick {\n  0% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n  }\n  40% {\n    -webkit-transform: scale(1.05);\n            transform: scale(1.05);\n  }\n  80% {\n    -webkit-transform: scale(0.96);\n            transform: scale(0.96);\n  }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n  }\n}\n@keyframes reboundClick {\n  0% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n  }\n  40% {\n    -webkit-transform: scale(1.05);\n            transform: scale(1.05);\n  }\n  80% {\n    -webkit-transform: scale(0.96);\n            transform: scale(0.96);\n  }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n  }\n}\n.vs-dialog-content {\n  background: rgba(0, 0, 0, var(--vs-background-opacity));\n  position: fixed;\n  left: 0px;\n  top: 0px;\n  z-index: var(--vs-zindex-2);\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  width: 100%;\n  height: 100%;\n  max-height: 100vh;\n  overflow-y: auto;\n  overflow-x: hidden;\n  padding-top: 80px;\n  padding-bottom: 80px;\n}\n.vs-dialog-content.fullScreen {\n  padding: 0px;\n  overflow: hidden;\n}\n.vs-dialog-content.blur {\n  -webkit-backdrop-filter: saturate(180%) blur(15px);\n          backdrop-filter: saturate(180%) blur(15px);\n}\n\n.vs-dialog {\n  background: rgba(var(--vs-background), 1);\n  color: rgba(var(--vs-text), 1);\n  position: relative;\n  min-width: 400px;\n  border-radius: var(--vs-radius);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  max-width: 800px;\n  margin: auto;\n}\n.vs-dialog--notCenter .vs-dialog__header {\n  display: block;\n}\n.vs-dialog__loading {\n  width: 100%;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  height: 100%;\n  border-radius: inherit;\n  background: rgba(var(--vs-background), 0.8);\n  z-index: 100;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-dialog__loading:after {\n  content: \"\";\n  position: absolute;\n  width: 30px;\n  height: 30px;\n  border-radius: inherit;\n  border: 2px solid rgba(var(--vs-color), 1);\n  border-top: 2px solid rgba(var(--vs-color), 0);\n  border-left: 2px solid rgba(var(--vs-color), 0);\n  border-bottom: 2px solid rgba(var(--vs-color), 0);\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n          box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  -webkit-animation: loadingDialog 0.6s ease infinite;\n          animation: loadingDialog 0.6s ease infinite;\n}\n.vs-dialog__loading:before {\n  content: \"\";\n  position: absolute;\n  width: 30px;\n  height: 30px;\n  border-radius: inherit;\n  border: 2px dashed rgba(var(--vs-color), 1);\n  border-top: 2px solid rgba(var(--vs-color), 0);\n  border-left: 2px solid rgba(var(--vs-color), 0);\n  border-bottom: 2px solid rgba(var(--vs-color), 0);\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n          box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  -webkit-animation: loadingDialog 0.6s linear infinite;\n          animation: loadingDialog 0.6s linear infinite;\n}\n.vs-dialog--scroll .vs-dialog__content {\n  max-height: calc(80vh - 200px);\n  overflow: auto;\n}\n.vs-dialog--autoWidth {\n  width: auto !important;\n  min-width: auto !important;\n  max-width: auto !important;\n}\n.vs-dialog--square {\n  border-radius: 0px;\n}\n.vs-dialog--square .vs-dialog__close {\n  border-radius: 0px;\n}\n.vs-dialog--notPadding .vs-dialog__footer {\n  padding: 0px;\n}\n.vs-dialog--notPadding .vs-dialog__content {\n  padding: 0px;\n  margin-bottom: 0px !important;\n}\n.vs-dialog--notPadding .vs-dialog__header {\n  padding: 0px;\n}\n.vs-dialog--rebound {\n  -webkit-animation: reboundClick 0.3s !important;\n          animation: reboundClick 0.3s !important;\n}\n.vs-dialog--fullScreen {\n  width: calc(100% - 30px) !important;\n  height: calc(100% - 30px) !important;\n  max-width: none !important;\n  max-height: none !important;\n}\n.vs-dialog__footer {\n  padding: 10px 16px;\n  padding-top: 0px;\n}\n.vs-dialog__header {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding: 10px 16px;\n}\n.vs-dialog__content {\n  padding: 10px 16px;\n  width: 100%;\n  position: relative;\n  border-radius: inherit;\n}\n.vs-dialog__content.notFooter {\n  margin-bottom: 20px;\n}\n.vs-dialog__close {\n  --vs-color: var(--vs-text);\n  position: absolute;\n  top: -6px;\n  right: -6px;\n  padding: 0px;\n  margin: 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background: inherit;\n  border-radius: 12px;\n  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  z-index: 200;\n  border: 0px;\n}\n.vs-dialog__close i {\n  width: 34px;\n  height: 34px;\n  opacity: 0.7;\n}\n.vs-dialog__close i:after {\n  width: 14px;\n}\n.vs-dialog__close i:before {\n  width: 14px;\n}\n.vs-dialog__close:hover {\n  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(-2px, 2px);\n          transform: translate(-2px, 2px);\n}\n.vs-dialog__close:hover i {\n  opacity: 1;\n}\n\n@-webkit-keyframes loadingDialog {\n  0% {\n    -webkit-transform: rotate(0);\n            transform: rotate(0);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@keyframes loadingDialog {\n  0% {\n    -webkit-transform: rotate(0);\n            transform: rotate(0);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n@media (max-width: 600px) {\n  .vs-dialog {\n    min-width: calc(100vw - 20px);\n    max-width: calc(100vw - 20px);\n    margin: auto 10px;\n  }\n}\n.vs-pagination-content {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-pagination-content {\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-item-align: center;\n      align-self: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-pagination-content.notMargin .vs-pagination__dotted {\n  background: rgba(var(--vs-gray-3), 1);\n  margin: 0px;\n}\n.vs-pagination-content.notMargin .vs-pagination__arrow {\n  margin: 0px !important;\n  border-radius: 0px;\n}\n.vs-pagination-content.notMargin .vs-pagination__arrow:first-of-type {\n  border-radius: 12px 0px 0px 12px;\n}\n.vs-pagination-content.notMargin .vs-pagination__arrow:last-of-type {\n  border-radius: 0px 12px 12px 0px;\n}\n.vs-pagination-content.notMargin .vs-pagination__button {\n  border-radius: 0px;\n  margin: 0px !important;\n}\n.vs-pagination-content.disabled {\n  opacity: 0.5;\n  pointer-events: none;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.vs-pagination-content.square .vs-pagination__active {\n  border-radius: 0px;\n}\n.vs-pagination-content.square .vs-pagination__button {\n  border-radius: 0px;\n}\n.vs-pagination-content.square .vs-pagination__arrow {\n  border-radius: 0px;\n}\n.vs-pagination-content.circle .vs-pagination__active {\n  border-radius: 50%;\n}\n.vs-pagination-content.circle .vs-pagination__button {\n  border-radius: 50%;\n}\n.vs-pagination-content.circle .vs-pagination__arrow {\n  border-radius: 50%;\n}\n.vs-pagination-content.buttonsDotted .vs-pagination__arrow {\n  width: 15px;\n  height: 12px;\n  min-width: 15px;\n  padding: 0px;\n  background: transparent;\n}\n.vs-pagination-content.buttonsDotted .vs-pagination__arrow i {\n  width: 6px;\n  height: 6px;\n}\n.vs-pagination-content.buttonsDotted .vs-pagination__arrow i:before {\n  width: 1px;\n}\n.vs-pagination-content.buttonsDotted .vs-pagination__arrow i:after {\n  height: 1px;\n}\n.vs-pagination-content.buttonsDotted .vs-pagination__dotted {\n  width: 12px;\n  height: 12px;\n  font-size: 0.9rem;\n  letter-spacing: 1px;\n}\n.vs-pagination-content.buttonsDotted .vs-pagination__button {\n  width: 12px;\n  height: 12px;\n}\n.vs-pagination-content.buttonsDotted .vs-pagination__button.active {\n  -webkit-transform: scale(1);\n          transform: scale(1);\n}\n.vs-pagination-content.buttonsDotted .vs-pagination__active {\n  width: 12px;\n  height: 12px;\n  -webkit-box-shadow: 0px 2px 10px 0px rgba(var(--vs-color), 0.4);\n          box-shadow: 0px 2px 10px 0px rgba(var(--vs-color), 0.4);\n  -webkit-transform: scale(1);\n          transform: scale(1);\n}\n.vs-pagination-content.buttonsDotted .vs-pagination__active.move {\n  -webkit-transform: scale(1.2);\n          transform: scale(1.2);\n}\n\n.vs-pagination {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-item-align: center;\n      align-self: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: relative;\n}\n.vs-pagination__progress {\n  width: calc(100% - 16px);\n  height: 3px;\n  background: rgba(var(--vs-gray-3), 1);\n  position: absolute;\n  bottom: -8px;\n  border-radius: 10px;\n}\n.vs-pagination__progress .progress {\n  width: 0px;\n  background: rgba(var(--vs-color), 1);\n  height: 100%;\n  position: relative;\n  border-radius: inherit;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  max-width: 100%;\n}\n.vs-pagination__slot {\n  min-height: 36px;\n  min-width: 36px;\n  position: relative;\n  display: block;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-pagination__arrow {\n  position: relative;\n  width: auto;\n  height: 36px;\n  min-width: 36px;\n  border-radius: 12px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  margin: 0px 2px;\n  background: rgba(var(--vs-gray-3), 1);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  border: 0px;\n}\n.vs-pagination__arrow:disabled {\n  opacity: 0.4;\n  pointer-events: none;\n}\n.vs-pagination__arrow:hover {\n  background: rgba(var(--vs-gray-4), 1);\n}\n.vs-pagination__arrow i {\n  width: 10px;\n  height: 10px;\n  position: relative;\n  display: block;\n  margin-left: 4px;\n  -webkit-transform: rotate(-45deg) scale(0.8);\n          transform: rotate(-45deg) scale(0.8);\n}\n.vs-pagination__arrow i:before {\n  width: 2px;\n}\n.vs-pagination__arrow i:after {\n  height: 2px;\n}\n.vs-pagination__arrow.next i {\n  margin-left: -4px;\n  -webkit-transform: rotate(135deg) scale(0.8);\n          transform: rotate(135deg) scale(0.8);\n}\n.vs-pagination__active {\n  position: absolute;\n  left: 50%;\n  top: 0px;\n  width: 36px;\n  height: 36px;\n  background: rgba(var(--vs-color), 1);\n  border-radius: 12px;\n  z-index: 100;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-size: 0.9rem;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  color: #fff;\n  -webkit-box-shadow: 0px 5px 20px 0px rgba(var(--vs-color), 0.3);\n          box-shadow: 0px 5px 20px 0px rgba(var(--vs-color), 0.3);\n  cursor: default;\n}\n.vs-pagination__active.move {\n  -webkit-transform: scale(1.1);\n          transform: scale(1.1);\n}\n.vs-pagination__dotted {\n  width: 36px;\n  height: 36px;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-size: 1.4rem;\n  letter-spacing: 2px;\n  margin: 0px 2px;\n  cursor: pointer;\n}\n.vs-pagination__dotted:hover span.dotted {\n  opacity: 0;\n  margin-left: -1px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-pagination__dotted:hover .con-arrows {\n  opacity: 1;\n  margin-left: -1px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-pagination__dotted.next:hover span.dotted {\n  opacity: 0;\n  margin-left: 1px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-pagination__dotted.next:hover .con-arrows {\n  opacity: 1;\n  margin-left: 1px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-pagination__dotted span.dotted {\n  margin-right: -2px;\n  text-align: center;\n}\n.vs-pagination__dotted.next .con-arrows {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n  margin-left: -5px;\n}\n.vs-pagination__dotted .con-arrows {\n  width: 10px;\n  height: 10px;\n  position: absolute;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  margin-left: 5px;\n  opacity: 0;\n  -webkit-transition: all 0.1s ease;\n  transition: all 0.1s ease;\n}\n.vs-pagination__dotted .con-arrows i {\n  width: 10px;\n  height: 10px;\n  position: relative;\n  display: block;\n  -webkit-transform: rotate(-45deg) scale(0.8);\n          transform: rotate(-45deg) scale(0.8);\n}\n.vs-pagination__dotted .con-arrows i:before {\n  width: 2px;\n}\n.vs-pagination__dotted .con-arrows i:after {\n  height: 2px;\n}\n.vs-pagination__dotted .con-arrows i:last-child {\n  position: absolute;\n  top: 0px;\n  margin-left: 6px;\n}\n.vs-pagination__button {\n  width: 36px;\n  height: 36px;\n  border-radius: 12px;\n  padding: 0px;\n  background: rgba(var(--vs-gray-3), 1);\n  margin: 0px 2px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-size: 0.9rem;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  color: rgba(var(--vs-text), 1);\n  position: relative;\n  border: 0px;\n}\n.vs-pagination__button.loading {\n  border-radius: 50%;\n  opacity: 0.5;\n  pointer-events: none;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.vs-pagination__button.loading:after {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  border: 2px solid rgba(var(--vs-color), 1);\n  border-top: 2px solid rgba(var(--vs-background), 0);\n  border-left: 2px solid rgba(var(--vs-background), 0);\n  border-bottom: 2px solid rgba(var(--vs-background), 0);\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n          box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  -webkit-animation: loadingPagination 0.6s ease infinite;\n          animation: loadingPagination 0.6s ease infinite;\n}\n.vs-pagination__button.loading:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  border: 2px dashed rgba(var(--vs-color), 1);\n  border-top: 2px solid rgba(var(--vs-background), 0);\n  border-left: 2px solid rgba(var(--vs-background), 0);\n  border-bottom: 2px solid rgba(var(--vs-background), 0);\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n          box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  -webkit-animation: loadingPagination 0.6s linear infinite;\n          animation: loadingPagination 0.6s linear infinite;\n}\n.vs-pagination__button.disabled {\n  opacity: 0.4;\n  pointer-events: none;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.vs-pagination__button:hover {\n  background: rgba(var(--vs-gray-4), 1);\n}\n.vs-pagination__button:active {\n  -webkit-transform: scale(0.9);\n          transform: scale(0.9);\n}\n\n@-webkit-keyframes loadingPagination {\n  0% {\n    -webkit-transform: rotate(0);\n            transform: rotate(0);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@keyframes loadingPagination {\n  0% {\n    -webkit-transform: rotate(0);\n            transform: rotate(0);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n.vs-table-content {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-table-content {\n  width: 100%;\n  border-radius: 16px;\n}\n\n.vs-table {\n  width: 100%;\n  font-size: 0.9rem;\n  margin: 0px;\n  overflow: auto;\n}\n.vs-table table {\n  margin: 0px;\n  border-collapse: collapse;\n  width: 100%;\n  min-width: 500px;\n  border: 0px;\n}\n.vs-table.striped .vs-table__tr:nth-child(2n) {\n  background: rgba(var(--vs-gray-1), 1) !important;\n}\n.vs-table_not-found {\n  display: none;\n  padding: 20px;\n  text-align: center;\n  width: 100%;\n}\n.vs-table_not-found tr {\n  text-align: center;\n}\n.vs-table_not-found tr td {\n  padding: 20px;\n  border: 0px;\n}\n.vs-table__tbody:empty {\n  display: none;\n  background: #000;\n}\n.vs-table__tbody:empty ~ .vs-table_not-found {\n  display: table-row-group;\n}\n.vs-table.isSelectedValue tr {\n  cursor: pointer;\n}\n.vs-table__footer {\n  padding: 8px 10px;\n  background: rgba(var(--vs-gray-2), 1);\n  border-radius: 0px 0px 14px 14px;\n}\n.vs-table__header {\n  width: 100%;\n  padding: 10px;\n  background: rgba(var(--vs-gray-2), 1);\n  border-radius: 14px 14px 0px 0px;\n}\n.vs-table__header ~ .vs-table .vs-table__th:first-child {\n  border-radius: 0px;\n}\n.vs-table__header ~ .vs-table .vs-table__th:last-child {\n  border-radius: 0px;\n}\n.vs-table__thead {\n  width: 100%;\n}\n.vs-table__thead .vs-table__th {\n  background: rgba(var(--vs-gray-2), 1);\n}\n.vs-table__thead .vs-table__th:first-child {\n  border-radius: 14px 0px 0px 0px;\n}\n.vs-table__thead .vs-table__th:last-child {\n  border-radius: 0px 14px 0px 0px;\n}\n.isMultipleSelected .vs-table__tr .vs-table__td {\n  border-radius: 0px !important;\n}\n\n.vs-table__tr {\n  padding: 5px;\n  border: 0px;\n}\n.vs-table__tr.expand {\n  cursor: pointer;\n}\n.vs-table__tr.vs-change-color .vs-table__td {\n  background: rgba(var(--vs-color), 0.1) !important;\n  color: rgba(var(--vs-color), 1) !important;\n}\n.vs-table__tr.vs-change-color .vs-table__td:hover {\n  background: rgba(var(--vs-color), 0.2) !important;\n}\n.vs-table__tr:first-of-type .vs-table__td:last-child {\n  border-radius: 0px 0px 15px 0px;\n}\n.vs-table__tr:first-of-type .vs-table__td:first-child {\n  border-radius: 0px 0px 0px 15px;\n}\n.vs-table__tr.isExpand:first-of-type .vs-table__td {\n  background: rgba(var(--vs-gray-1), 1) !important;\n  border-radius: 0px;\n}\n.vs-table__tr.isExpand:not(:first-of-type) .vs-table__td {\n  background: rgba(var(--vs-gray-1), 1) !important;\n}\n.vs-table__tr.isExpand:not(:first-of-type) .vs-table__td:last-child {\n  border-radius: 0px 15px 0px 0px;\n}\n.vs-table__tr.isExpand:not(:first-of-type) .vs-table__td:first-child {\n  border-radius: 15px 0px 0px 0px;\n}\n.vs-table__tr.isExpand:not(:first-of-type) + .vs-table__tr__expand td {\n  border-radius: 0px 0px 15px 15px !important;\n}\n.vs-table__tr.selected .vs-table__td {\n  background: rgba(var(--vs-color), 0.1) !important;\n  color: rgba(var(--vs-color), 1) !important;\n}\n.vs-table__tr .vs-table__td {\n  background: rgba(var(--vs-bg), 0.1);\n  color: rgba(var(--vs-bg), 1);\n}\n.vs-table__tr.vs-change-color:hover .vs-table__td {\n  background: rgba(var(--vs-color), 0.2) !important;\n}\n.vs-table__tr:hover .vs-table__td {\n  background: rgba(var(--vs-gray-1), 1);\n}\n\n.vs-table__tr__expand {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  border: 0px;\n}\n.vs-table__tr__expand td {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  padding: 0px;\n  background: rgba(var(--vs-gray-1), 1) !important;\n  border: 0px;\n}\n.vs-table__tr__expand td .vs-table__expand__td__content {\n  overflow: hidden;\n  display: block;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-table__tr__expand td .vs-table__expand__td__content__sub {\n  padding: 10px 15px;\n  z-index: 1;\n  position: relative;\n}\n\n.fade-expand-enter-active, .fade-expand-leave-active {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.fade-expand-enter, .fade-expand-leave-to {\n  opacity: 0;\n}\n.fade-expand-enter td .vs-table__expand__td__content, .fade-expand-leave-to td .vs-table__expand__td__content {\n  height: 0px !important;\n}\n.vs-table__th {\n  padding: 10px 12px;\n  text-align: left;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  font-size: 0.8rem;\n  border: 0px;\n}\n.vs-table__th.sort .vs-table__th__content {\n  pointer-events: none;\n}\n.vs-table__th.sort:hover {\n  background: rgba(var(--vs-gray-3), 1);\n}\n.vs-table__th[data-sort-type=asc] .icon-sort-2 {\n  margin-top: -7px;\n  -webkit-transform: rotate(45deg) !important;\n          transform: rotate(45deg) !important;\n}\n.vs-table__th[data-sort-type=asc] .icon-sort-1 {\n  margin-top: -1px;\n  -webkit-transform: rotate(45deg) !important;\n          transform: rotate(45deg) !important;\n}\n.vs-table__th[data-sort-type=desc] .icon-sort-2 {\n  margin-top: -7px;\n}\n.vs-table__th[data-sort-type=desc] .icon-sort-1 {\n  margin-top: -1px;\n  -webkit-transform: rotate(-135deg) !important;\n          transform: rotate(-135deg) !important;\n}\n.vs-table__th__content {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-table__th__content__icons {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin-left: 7px;\n  -webkit-transform: scale(0.8);\n          transform: scale(0.8);\n}\n.vs-table__th__content .vs-icon-arrow {\n  position: relative;\n  display: block;\n}\n.vs-table__th__content .vs-icon-arrow.icon-sort-1 {\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n}\n.vs-table__th__content .vs-icon-arrow.icon-sort-2 {\n  -webkit-transform: rotate(-135deg);\n          transform: rotate(-135deg);\n}\n.vs-table__td {\n  padding: 10px 12px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  font-size: 0.8rem;\n  border: 0px;\n}\n.vs-table__td:last-child {\n  border-radius: 0px 15px 15px 0px;\n}\n.vs-table__td:first-child {\n  border-radius: 15px 0px 0px 15px;\n}\n.vs-table__td.isCheckbox {\n  width: 23px;\n}\n.vs-table__td.isEdit {\n  text-decoration: underline;\n  cursor: pointer;\n}\n.vs-navbar-content {\n  --vs-color: var(--vs-background);\n}\n\n.vs-navbar-content {\n  width: 100%;\n  position: absolute;\n  z-index: 9000;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  border-radius: 0px 0px 15px 15px;\n  background: rgba(var(--vs-color), 1);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  color: rgba(var(--vs-text), 1);\n}\n.vs-navbar-content.paddingScroll:not(.paddingScrollActive) {\n  padding-top: 20px;\n  padding-bottom: 20px;\n}\n.vs-navbar-content.paddingScroll:not(.paddingScrollActive) .vs-navbar__group__items {\n  margin-bottom: -30px;\n}\n.vs-navbar-content.vsNavbarSquare {\n  border-radius: 0px;\n}\n.vs-navbar-content.textWhite {\n  color: #fff;\n}\n.vs-navbar-content.textWhite .vs-navbar__line {\n  background: #fff;\n}\n.vs-navbar-content.textWhite .vs-navbar__item:before {\n  background: #fff;\n}\n.vs-navbar-content.fixed {\n  position: fixed !important;\n}\n.vs-navbar-content.shadow, .vs-navbar-content.shadowActive {\n  -webkit-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n.vs-navbar-content.hidden {\n  -webkit-transform: translate(0, -100%);\n          transform: translate(0, -100%);\n}\n\n.vs-navbar {\n  width: 100%;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  padding: 0px 15px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  min-height: 44px;\n}\n.vs-navbar__left {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n}\n.vs-navbar__right {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n}\n.vs-navbar__center {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-navbar__line {\n  position: absolute;\n  left: 0px;\n  bottom: 0px;\n  width: 100px;\n  background: rgba(var(--vs-text), 1);\n  height: 3px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-navbar__line.notTransition {\n  -webkit-transition: none !important;\n  transition: none !important;\n}\n.vs-navbar__item {\n  padding: 10px 15px;\n  margin: 0px;\n  border: 0px;\n  background: transparent;\n  font-size: 0.85rem;\n  opacity: 0.7;\n  -webkit-transition: all 0.25s ease, color 0s;\n  transition: all 0.25s ease, color 0s;\n  font-weight: bold;\n  color: inherit;\n}\n.vs-navbar__item.active {\n  opacity: 1;\n}\n.vs-navbar__item:hover {\n  opacity: 1;\n}\n.vs-navbar__group {\n  position: relative;\n}\n.vs-navbar__group:hover .vs-navbar__group__item {\n  opacity: 1;\n}\n.vs-navbar__group:hover .vs-navbar__group__items {\n  opacity: 1;\n  visibility: visible;\n  -webkit-transform: translate(0, 100%);\n          transform: translate(0, 100%);\n}\n.vs-navbar__group__item {\n  padding: 10px 15px;\n  background: transparent;\n  color: inherit;\n  font-weight: bold;\n  -webkit-transition: all 0.25s ease, color 0s;\n  transition: all 0.25s ease, color 0s;\n  opacity: 0.7;\n  border: 0px;\n}\n.vs-navbar__group__items {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin-bottom: -12px;\n  -webkit-transform: translate(0, 90%);\n          transform: translate(0, 90%);\n  background: rgba(var(--vs-color), 1);\n  border-radius: 5px 18px 18px 18px;\n  padding: 10px;\n  min-width: 160px;\n  opacity: 0;\n  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  color: inherit;\n  visibility: hidden;\n}\n.vs-navbar__group__items:after {\n  content: \"\";\n  left: 0px;\n  top: -13px;\n  background: transparent;\n  width: 100%;\n  height: 14px;\n  position: absolute;\n  z-index: -1;\n}\n.vs-navbar__group__items .vs-navbar__item {\n  text-align: left;\n  width: 100%;\n  position: relative;\n  padding: 5px 10px;\n}\n.vs-navbar__group__items .vs-navbar__item:before {\n  content: \"\";\n  left: 0px;\n  top: 0px;\n  width: 4px;\n  height: 4px;\n  background: rgba(var(--vs-text), 1);\n  position: absolute;\n  border-radius: 50%;\n  top: calc(50% - 2px);\n  opacity: 0;\n  -webkit-transform: translate(-10px);\n          transform: translate(-10px);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-navbar__group__items .vs-navbar__item.active:before {\n  opacity: 1;\n  -webkit-transform: translate(0px);\n          transform: translate(0px);\n}\n.vs-sidebar-content {\n  --vs-color: var(--vs-primary);\n}\n\n@-webkit-keyframes delayOpacity {\n  0% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n\n@keyframes delayOpacity {\n  0% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n.vs-sidebar-content {\n  position: fixed;\n  left: 0px;\n  top: 0px;\n  width: calc(100% - 50px);\n  max-width: 260px;\n  height: 100vh;\n  border-radius: 0px 30px 30px 0px;\n  color: rgba(var(--vs-text), 1);\n  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  z-index: 21000;\n  background: rgba(var(--vs-background), 1);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-transform: translate(-110%);\n          transform: translate(-110%);\n}\n.vs-sidebar-content.right {\n  left: auto;\n  right: 0px;\n  -webkit-transform: translate(110%);\n          transform: translate(110%);\n}\n.vs-sidebar-content.right.open {\n  -webkit-transform: translate(0);\n          transform: translate(0);\n}\n.vs-sidebar-content.right.reduce .vs-sidebar__item:hover .vs-sidebar__item__text-tooltip {\n  opacity: 1;\n  left: auto !important;\n  right: 60px !important;\n}\n.vs-sidebar-content.absolute {\n  position: absolute !important;\n  z-index: 9001;\n  height: 100%;\n}\n.vs-sidebar-content.relative {\n  position: relative !important;\n  z-index: 9001;\n  height: 100%;\n}\n.vs-sidebar-content.textWhite .vs-sidebar__group__content:after {\n  background: rgba(255, 255, 255, 0.4);\n}\n.vs-sidebar-content.textWhite .vs-sidebar__item:after {\n  background: #fff !important;\n}\n.vs-sidebar-content.textWhite .vs-sidebar__item.active {\n  color: #fff !important;\n}\n.vs-sidebar-content.notShadow {\n  -webkit-box-shadow: none !important;\n          box-shadow: none !important;\n}\n.vs-sidebar-content.square {\n  border-radius: 0px;\n}\n.vs-sidebar-content.notLineActive .vs-sidebar .vs-sidebar__item:after {\n  display: none;\n}\n.vs-sidebar-content.open {\n  -webkit-transform: translate(0%);\n          transform: translate(0%);\n}\n.vs-sidebar-content.reduce .vs-sidebar__footer {\n  padding: 10px 0px;\n}\n.vs-sidebar-content.reduce .vs-sidebar__header .vs-avatar-content {\n  width: 44px !important;\n  height: 44px !important;\n}\n.vs-sidebar-content.reduce .vs-sidebar__logo img {\n  width: 80%;\n}\n.vs-sidebar-content.reduce .vs-sidebar__item {\n  padding-left: 16px !important;\n  min-height: 47px;\n}\n.vs-sidebar-content.reduce .vs-sidebar__item:not(.hasIcon) .vs-sidebar__item__text {\n  font-size: 0.5rem;\n}\n.vs-sidebar-content.reduce .vs-sidebar__item.hasIcon .vs-sidebar__item__text {\n  -webkit-transform: translate(-10px);\n          transform: translate(-10px);\n  margin-left: -50px;\n}\n.vs-sidebar-content.reduce .vs-sidebar__item__arrow {\n  position: absolute;\n  left: 36px;\n  top: 10px;\n  -webkit-animation: delayOpacity 0.6s ease;\n          animation: delayOpacity 0.6s ease;\n  width: 5px;\n  height: 5px;\n}\n.vs-sidebar-content.reduce .vs-sidebar__item:hover .vs-sidebar__item__text-tooltip {\n  opacity: 1;\n  left: 60px;\n}\n.vs-sidebar-content.reduce .vs-sidebar__item.hasIcon {\n  padding: 0px !important;\n}\n.vs-sidebar-content.reduce .vs-sidebar__item.hasIcon:after {\n  left: -6px;\n}\n.vs-sidebar-content .vs-sidebar__logo {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  width: 100%;\n  padding: 25px 0px;\n  min-height: 80px;\n}\n.vs-sidebar-content .vs-sidebar__logo img {\n  max-width: 120px;\n  max-height: 35px;\n}\n.vs-sidebar-content .vs-sidebar {\n  overflow-x: hidden;\n  width: 100%;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.vs-sidebar-content .vs-sidebar::-webkit-scrollbar {\n  width: 0px;\n}\n.vs-sidebar-content .vs-sidebar__header {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  width: 100%;\n  padding: 10px;\n}\n.vs-sidebar-content .vs-sidebar__footer {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  justify-self: flex-start;\n  width: 100%;\n  padding: 10px;\n}\n.vs-sidebar__item {\n  width: 100%;\n  padding: 14px 16px;\n  padding-top: 15px;\n  text-align: left;\n  background: transparent;\n  font-size: 1rem;\n  font-weight: bold;\n  opacity: 0.7;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  position: relative;\n  color: rgba(var(--vs-text), 1);\n  border: 0px;\n}\n.vs-sidebar__item.hasIcon {\n  padding: 0px;\n}\n.vs-sidebar__item.hasIcon.active {\n  padding-left: 8px;\n}\n.vs-sidebar__item.hasIcon:hover {\n  padding-left: 8px;\n  opacity: 1;\n}\n.vs-sidebar__item:after {\n  content: \"\";\n  position: absolute;\n  left: -4px;\n  top: 0px;\n  width: 10px;\n  height: 100%;\n  background: rgba(var(--vs-color), 1);\n  border-radius: 0px 20px 20px 0px;\n  -webkit-transform: translate(-6px);\n          transform: translate(-6px);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  z-index: 60;\n}\n.vs-sidebar__item.active:not(.hasIcon) {\n  padding-left: 25px;\n}\n.vs-sidebar__item.active {\n  opacity: 1;\n  color: rgba(var(--vs-color), 1);\n}\n.vs-sidebar__item.active:after {\n  -webkit-transform: translate(0px);\n          transform: translate(0px);\n}\n.vs-sidebar__item__icon {\n  min-width: 50px;\n  height: 47px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-size: 1.2rem;\n  z-index: 50;\n  background: rgba(var(--vs-background), 1);\n}\n.vs-sidebar__item:hover:not(.hasIcon) {\n  opacity: 1;\n  padding-left: 25px;\n}\n.vs-sidebar__item__text {\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  z-index: 10;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  font-size: 0.9rem;\n}\n.vs-sidebar__item__arrow {\n  width: 7px;\n  height: 7px;\n  position: relative;\n  justify-self: flex-end;\n  margin-left: auto;\n  margin-right: 15px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-transform: rotate(-135deg) !important;\n          transform: rotate(-135deg) !important;\n  z-index: 80;\n}\n.vs-sidebar__item__arrow .vs-icon-arrow:before {\n  width: 2px;\n}\n.vs-sidebar__item__arrow .vs-icon-arrow:after {\n  height: 2px;\n}\n.vs-sidebar__item__text-tooltip {\n  position: fixed;\n  left: 50px;\n  opacity: 0;\n  pointer-events: none;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  font-size: 0.85rem;\n  white-space: nowrap;\n}\n.vs-sidebar__group {\n  padding: 0px;\n  width: 100%;\n  min-width: 260px;\n  position: relative;\n}\n.vs-sidebar__group.open .vs-sidebar__group__content:after {\n  -webkit-transform: translate(0);\n          transform: translate(0);\n  opacity: 1;\n}\n.vs-sidebar__group.open > .vs-sidebar__group__header .vs-sidebar__item {\n  opacity: 1;\n}\n.vs-sidebar__group.open > .vs-sidebar__group__header .vs-sidebar__item__arrow {\n  -webkit-transform: rotate(45deg) !important;\n          transform: rotate(45deg) !important;\n}\n.vs-sidebar__group__header {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-sidebar__group__content {\n  overflow: hidden;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  position: relative;\n}\n.vs-sidebar__group__content:after {\n  content: \"\";\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  background: rgba(var(--vs-color), 0.3);\n  width: 4px;\n  height: 100%;\n  opacity: 0;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-transform: translate(-100%);\n          transform: translate(-100%);\n  border-radius: 0px 10px 10px 0px;\n  z-index: 60;\n}\n.vs-sidebar__group__content .vs-sidebar__item {\n  background: rgba(var(--vs-background), 1);\n}\n.vs-sidebar__group > .vs-sidebar__group__header .vs-sidebar__item:hover {\n  padding-left: 0px;\n}\n.vs-card-content {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-card-content.type-5 .vs-card {\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.vs-card-content.type-5 .vs-card:hover .vs-card__interactions {\n  bottom: 50px;\n}\n.vs-card-content.type-5 .vs-card:hover .vs-card__text {\n  -webkit-transform: translate(0);\n          transform: translate(0);\n  opacity: 1;\n  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n.vs-card-content.type-5 .vs-card:hover .vs-card__img {\n  border-radius: 6px 40px 6px 40px;\n}\n.vs-card-content.type-5 .vs-card:hover .vs-card__img img {\n  -webkit-transform: scale(1.1);\n          transform: scale(1.1);\n}\n.vs-card-content.type-5 .vs-card__img {\n  border-radius: 6px 20px 6px 20px;\n}\n.vs-card-content.type-5 .vs-card__interactions {\n  bottom: 6px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  z-index: 20;\n}\n.vs-card-content.type-5 .vs-card__text {\n  background: rgba(var(--vs-background), 1);\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  border-radius: 6px 20px 6px 20px;\n  margin-top: -50px;\n  z-index: 10;\n  position: relative;\n  width: calc(100% - 30px);\n  padding-top: 10px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-transform: translate(0, 25px);\n          transform: translate(0, 25px);\n  opacity: 0;\n}\n.vs-card-content.type-4 .vs-card {\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  max-width: 300px;\n}\n.vs-card-content.type-4 .vs-card:hover {\n  -webkit-transform: translate(0, -5px);\n          transform: translate(0, -5px);\n}\n.vs-card-content.type-4 .vs-card:hover .vs-card__img img {\n  -webkit-transform: scale(1);\n          transform: scale(1);\n}\n.vs-card-content.type-4 .vs-card:hover .vs-card__text {\n  padding-top: 15px;\n  padding-bottom: 25px;\n}\n.vs-card-content.type-4 .vs-card__img {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  max-height: 600px;\n}\n.vs-card-content.type-4 .vs-card__img img {\n  -webkit-transform: scale(1.2);\n          transform: scale(1.2);\n}\n.vs-card-content.type-4 .vs-card__interactions {\n  top: 0px;\n  bottom: auto;\n}\n.vs-card-content.type-4 .vs-card__text {\n  background: rgba(var(--vs-background), 0.8);\n  position: absolute;\n  bottom: 0px;\n  -webkit-backdrop-filter: saturate(180%) blur(20px);\n          backdrop-filter: saturate(180%) blur(20px);\n  border-radius: 0px 0px 20px 20px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-card-content.type-4 .vs-card__text p {\n  opacity: 1;\n}\n.vs-card-content.type-3 .vs-card {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  max-width: 400px;\n}\n.vs-card-content.type-3 .vs-card:hover {\n  -webkit-transform: scale(1.04);\n          transform: scale(1.04);\n}\n.vs-card-content.type-3 .vs-card__img img {\n  min-width: 200px;\n}\n.vs-card-content.type-3 .vs-card__text {\n  padding-top: 15px;\n}\n.vs-card-content.type-3 .vs-card__title h2, .vs-card-content.type-3 .vs-card__title h3, .vs-card-content.type-3 .vs-card__title h4, .vs-card-content.type-3 .vs-card__title h5, .vs-card-content.type-3 .vs-card__title h6 {\n  padding: 0px;\n}\n.vs-card-content.type-2 .vs-card {\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  overflow: hidden;\n}\n.vs-card-content.type-2 .vs-card:hover {\n  -webkit-transform: scale(0.95);\n          transform: scale(0.95);\n}\n.vs-card-content.type-2 .vs-card:hover .vs-card__img img {\n  -webkit-transform: scale(1.15);\n          transform: scale(1.15);\n}\n.vs-card-content.type-2 .vs-card:hover .vs-card__text {\n  -webkit-transform: translate(0);\n          transform: translate(0);\n  opacity: 1;\n  color: #fff;\n}\n.vs-card-content.type-2 .vs-card__interactions {\n  right: 0px;\n  top: 0px;\n  left: auto;\n  bottom: auto;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n}\n.vs-card-content.type-2 .vs-card__title {\n  position: relative;\n  color: inherit;\n  padding: 0px;\n}\n.vs-card-content.type-2 .vs-card__title h2, .vs-card-content.type-2 .vs-card__title h3, .vs-card-content.type-2 .vs-card__title h4, .vs-card-content.type-2 .vs-card__title h5, .vs-card-content.type-2 .vs-card__title h6 {\n  padding: 0px;\n  padding-bottom: 5px;\n}\n.vs-card-content.type-2 .vs-card__text {\n  position: absolute;\n  bottom: 0px;\n  background: rgba(var(--vs-background), 0.9);\n  padding-top: 30px;\n  border-radiu: 0px 0px 20px 20px;\n  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5)));\n  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.5) 100%);\n  color: transparent;\n  font-size: 0.9rem;\n  -webkit-transform: translate(0, 45%);\n          transform: translate(0, 45%);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-card-content.type-2 .vs-card__text p {\n  opacity: 1;\n}\n.vs-card-content.type-1 .vs-card:hover {\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(0, 5px);\n          transform: translate(0, 5px);\n}\n.vs-card-content.type-1 .vs-card:hover .vs-card__img img {\n  -webkit-transform: scale(1.15);\n          transform: scale(1.15);\n}\n\n.vs-card {\n  background: rgba(var(--vs-background), 1);\n  color: rgba(var(--vs-text), 1);\n  width: 100%;\n  max-width: 350px;\n  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  border-radius: 20px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  cursor: pointer;\n  position: relative;\n}\n.vs-card__text {\n  font-size: 0.85rem;\n  padding: 0px 15px;\n  padding-bottom: 15px;\n}\n.vs-card__text p {\n  font-size: inherit;\n  margin: 0px;\n  opacity: 0.8;\n}\n.vs-card__title {\n  padding-top: 10px;\n  padding-bottom: 5px;\n}\n.vs-card__title h2, .vs-card__title h3, .vs-card__title h4, .vs-card__title h5, .vs-card__title h6 {\n  padding: 0px;\n  margin: 0px;\n  font-size: 1.1rem;\n}\n.vs-card__interactions {\n  position: absolute;\n  bottom: 0px;\n  padding: 5px 10px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  left: 0px;\n}\n.vs-card__img {\n  position: relative;\n  max-height: 250px;\n  overflow: hidden;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  border-radius: 20px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-card__img img {\n  width: 100%;\n  border-radius: 20px;\n  display: block;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-card__group {\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  position: relative;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.vs-card__group-space {\n  min-width: 20px;\n  position: relative;\n  height: 20px;\n}\n.vs-card__group .vs-card__group-cards {\n  position: relative;\n  z-index: 1;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  overflow: hidden;\n  overflow-x: auto;\n  scroll-behavior: smooth;\n  padding-top: 20px;\n  padding-bottom: 20px;\n  border-radius: 20px;\n}\n.vs-card__group .vs-card__group-cards .vs-card-content {\n  min-width: 350px;\n  margin-left: 20px;\n}\n.vs-card__group .vs-card__group-prev {\n  z-index: 2;\n  position: relative;\n  left: 0px;\n  width: 50px;\n  height: 50px;\n  min-width: 50px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background: transparent;\n  border: 0px;\n}\n.vs-card__group .vs-card__group-prev .vs-icon-arrow {\n  width: 15px;\n  height: 15px;\n  display: block;\n  -webkit-transform: rotate(-45deg);\n          transform: rotate(-45deg);\n}\n.vs-card__group .vs-card__group-prev .vs-icon-arrow:before {\n  width: 2px;\n}\n.vs-card__group .vs-card__group-prev .vs-icon-arrow:after {\n  height: 2px;\n}\n.vs-card__group .vs-card__group-next {\n  border: 0px;\n  z-index: 2;\n  position: relative;\n  left: 0px;\n  width: 50px;\n  height: 50px;\n  min-width: 50px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background: transparent;\n}\n.vs-card__group .vs-card__group-next .vs-icon-arrow {\n  width: 15px;\n  height: 15px;\n  display: block;\n  -webkit-transform: rotate(135deg);\n          transform: rotate(135deg);\n}\n.vs-card__group .vs-card__group-next .vs-icon-arrow:before {\n  width: 2px;\n}\n.vs-card__group .vs-card__group-next .vs-icon-arrow:after {\n  height: 2px;\n}\n.loading-enter-active, .loading-leave-active {\n  -webkit-transition: opacity 0.5s;\n  transition: opacity 0.5s;\n}\n\n.loading-enter, .loading-leave-to {\n  opacity: 0;\n}\n\n.vs-loading {\n  --vs-color: var(--vs-primary);\n  --vs-background: 255,255,255;\n  --vs-opacity: .6;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  z-index: 100000;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background: rgba(var(--vs-background), var(--vs-opacity));\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  padding: 20px;\n  border-radius: inherit;\n}\n.vs-loading--target {\n  position: absolute;\n}\n.vs-loading__load {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.vs-loading__load__text {\n  font-size: 0.75em;\n  margin: 7px;\n  font-weight: bold;\n  color: rgba(var(--vs-color), 1);\n}\n.vs-loading__load__percent {\n  position: relative;\n  font-size: 0.65rem;\n  font-weight: bold;\n  color: rgba(var(--vs-color), 1);\n  margin-top: 1px;\n  z-index: 200;\n}\n.vs-loading__load__animation {\n  width: 40px;\n  height: 40px;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n\n.vs-loading__progress {\n  width: 100%;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  height: 4px;\n  background: rgba(var(--vs-color), 0.2);\n}\n.vs-loading__progress__bar {\n  background: rgba(var(--vs-color), 1);\n  height: 100%;\n  position: relative;\n  border-radius: 0px 10px 10px 0px;\n}\n\n.vs-loading--default .vs-loading__load__animation {\n  border-radius: 50%;\n}\n.vs-loading--default .vs-loading__load__animation__1 {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 3px solid rgba(var(--vs-color), 1);\n  border-radius: inherit;\n  border-top: 3px solid transparent;\n  border-left: 3px solid transparent;\n  border-right: 3px solid transparent;\n  -webkit-animation: rotate 0.8s ease infinite;\n          animation: rotate 0.8s ease infinite;\n  top: 0px;\n}\n.vs-loading--default .vs-loading__load__animation__2 {\n  top: 0px;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 3px dashed rgba(var(--vs-color), 1);\n  border-radius: inherit;\n  border-top: 3px solid transparent;\n  border-left: 3px solid transparent;\n  border-right: 3px solid transparent;\n  -webkit-animation: rotate 0.8s linear infinite;\n          animation: rotate 0.8s linear infinite;\n  opacity: 0.2;\n}\n.vs-loading--default .vs-loading__load__animation__3 {\n  display: none;\n}\n\n@-webkit-keyframes rotate {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@keyframes rotate {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n.vs-loading--waves .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-loading--waves .vs-loading__load__animation__1 {\n  width: 0px;\n  background: transparent;\n  height: 0px;\n  position: absolute;\n  -webkit-animation: waves 0.7s ease infinite;\n          animation: waves 0.7s ease infinite;\n  -webkit-box-shadow: 0px 0px 10px 0px rgba(var(--vs-color), 0.5);\n          box-shadow: 0px 0px 10px 0px rgba(var(--vs-color), 0.5);\n  border-radius: 50%;\n}\n.vs-loading--waves .vs-loading__load__animation__2 {\n  width: 0px;\n  background: transparent;\n  height: 0px;\n  position: absolute;\n  -webkit-animation: waves 1.4s linear infinite;\n          animation: waves 1.4s linear infinite;\n  -webkit-box-shadow: 0px 0px 10px 0px rgba(var(--vs-color), 0.5);\n          box-shadow: 0px 0px 10px 0px rgba(var(--vs-color), 0.5);\n  border-radius: 50%;\n}\n.vs-loading--waves .vs-loading__load__animation__3 {\n  width: 0px;\n  background: transparent;\n  height: 0px;\n  position: absolute;\n  -webkit-animation: waves 1.75s ease infinite;\n          animation: waves 1.75s ease infinite;\n  -webkit-box-shadow: 0px 0px 10px 0px rgba(var(--vs-color), 0.5);\n          box-shadow: 0px 0px 10px 0px rgba(var(--vs-color), 0.5);\n  border-radius: 50%;\n}\n\n@-webkit-keyframes waves {\n  0% {\n    width: 0px;\n    height: 0px;\n  }\n  100% {\n    height: 50px;\n    width: 50px;\n    opacity: 0;\n  }\n}\n\n@keyframes waves {\n  0% {\n    width: 0px;\n    height: 0px;\n  }\n  100% {\n    height: 50px;\n    width: 50px;\n    opacity: 0;\n  }\n}\n.vs-loading--corners .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-loading--corners .vs-loading__load__animation__1 {\n  width: 100%;\n  background: transparent;\n  height: 100%;\n  position: absolute;\n  -webkit-animation: corners 1s ease infinite;\n          animation: corners 1s ease infinite;\n  border-radius: 50%;\n  border: 2px solid rgba(var(--vs-color), 1);\n}\n.vs-loading--corners .vs-loading__load__animation__2 {\n  display: none;\n}\n.vs-loading--corners .vs-loading__load__animation__3 {\n  display: none;\n}\n\n@-webkit-keyframes corners {\n  0% {\n    border-radius: 50%;\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  25% {\n    border-radius: 50% 50% 50% 15%;\n  }\n  50% {\n    border-radius: 50% 50% 15% 30%;\n  }\n  75% {\n    border-radius: 50% 15% 30% 30%;\n  }\n  100% {\n    border-radius: 50%;\n    -webkit-transform: rotate(-180deg);\n            transform: rotate(-180deg);\n  }\n}\n\n@keyframes corners {\n  0% {\n    border-radius: 50%;\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  25% {\n    border-radius: 50% 50% 50% 15%;\n  }\n  50% {\n    border-radius: 50% 50% 15% 30%;\n  }\n  75% {\n    border-radius: 50% 15% 30% 30%;\n  }\n  100% {\n    border-radius: 50%;\n    -webkit-transform: rotate(-180deg);\n            transform: rotate(-180deg);\n  }\n}\n.vs-loading--border .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  border-radius: 50%;\n}\n.vs-loading--border .vs-loading__load__animation__1 {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 1px solid rgba(var(--vs-color), 1);\n  border-radius: inherit;\n  border-top: 1px solid transparent;\n  border-left: 1px solid transparent;\n  border-right: 1px solid transparent;\n  -webkit-animation: rotate 1s linear infinite;\n          animation: rotate 1s linear infinite;\n  top: 0px;\n}\n.vs-loading--border .vs-loading__load__animation__2 {\n  top: 0px;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 1px dashed rgba(var(--vs-color), 1);\n  border-radius: inherit;\n  border-top: 1px solid transparent;\n  border-left: 1px solid transparent;\n  border-right: 1px solid transparent;\n  -webkit-animation: rotate 1s linear infinite 0.2s;\n          animation: rotate 1s linear infinite 0.2s;\n}\n.vs-loading--border .vs-loading__load__animation__3 {\n  top: 0px;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 1px dashed rgba(var(--vs-color), 1);\n  border-radius: inherit;\n  -webkit-animation: rotate 1s linear infinite 0.4s;\n          animation: rotate 1s linear infinite 0.4s;\n  opacity: 0.2;\n}\n\n.vs-loading--points .vs-loading__load__percent {\n  position: absolute;\n  top: -10px;\n}\n.vs-loading--points .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  width: auto;\n}\n.vs-loading--points .vs-loading__load__animation__1 {\n  width: 8px;\n  height: 8px;\n  background: rgba(var(--vs-color), 1);\n  border-radius: 50%;\n  margin: 3px;\n  -webkit-animation: points 0.75s ease infinite;\n          animation: points 0.75s ease infinite;\n}\n.vs-loading--points .vs-loading__load__animation__2 {\n  width: 8px;\n  height: 8px;\n  background: rgba(var(--vs-color), 1);\n  border-radius: 50%;\n  margin: 3px;\n  -webkit-animation: points 0.75s ease infinite 0.25s;\n          animation: points 0.75s ease infinite 0.25s;\n}\n.vs-loading--points .vs-loading__load__animation__3 {\n  width: 8px;\n  height: 8px;\n  background: rgba(var(--vs-color), 1);\n  border-radius: 50%;\n  margin: 3px;\n  -webkit-animation: points 0.75s ease infinite 0.5s;\n          animation: points 0.75s ease infinite 0.5s;\n}\n\n@-webkit-keyframes points {\n  0% {\n    -webkit-transform: translate(0px, 0px);\n            transform: translate(0px, 0px);\n  }\n  50% {\n    -webkit-transform: translate(0, -15px);\n            transform: translate(0, -15px);\n  }\n  100% {\n    -webkit-transform: translate(0px, 0px);\n            transform: translate(0px, 0px);\n  }\n}\n\n@keyframes points {\n  0% {\n    -webkit-transform: translate(0px, 0px);\n            transform: translate(0px, 0px);\n  }\n  50% {\n    -webkit-transform: translate(0, -15px);\n            transform: translate(0, -15px);\n  }\n  100% {\n    -webkit-transform: translate(0px, 0px);\n            transform: translate(0px, 0px);\n  }\n}\n.vs-loading--square .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-loading--square .vs-loading__load__animation__1 {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px solid rgba(var(--vs-color), 1);\n  border-radius: inherit;\n  -webkit-animation: rotateSquare 4s ease infinite;\n          animation: rotateSquare 4s ease infinite;\n  top: 0px;\n}\n.vs-loading--square .vs-loading__load__animation__2 {\n  top: 0px;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px solid rgba(var(--vs-color), 1);\n  border-radius: inherit;\n  animation: rotateSquare 4s ease infinite reverse;\n  background: rgba(var(--vs-background), 1);\n}\n.vs-loading--square .vs-loading__load__animation__3 {\n  display: none;\n}\n\n@-webkit-keyframes rotateSquare {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  50% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n  100% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n}\n\n@keyframes rotateSquare {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  50% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n  100% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n}\n.vs-loading--gradient .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  width: 60px;\n  height: 60px;\n}\n.vs-loading--gradient .vs-loading__load__animation__1 {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 0px;\n  border-radius: inherit;\n  -webkit-animation: rotate 1s linear infinite;\n          animation: rotate 1s linear infinite;\n  top: 0px;\n  background: -webkit-gradient(linear, left bottom, left top, color-stop(33%, rgba(var(--vs-background), 0)), to(rgba(var(--vs-color), 1)));\n  background: linear-gradient(0deg, rgba(var(--vs-background), 0) 33%, rgba(var(--vs-color), 1) 100%);\n  border-radius: 50%;\n}\n.vs-loading--gradient .vs-loading__load__animation__2 {\n  top: 2px;\n  position: absolute;\n  width: calc(100% - 4px);\n  height: calc(100% - 4px);\n  border: 0px;\n  border-radius: inherit;\n  background: rgba(var(--vs-background), 1);\n  border-radius: 50%;\n}\n.vs-loading--gradient .vs-loading__load__animation__3 {\n  display: none;\n}\n\n.vs-loading--rectangle .vs-loading__load__percent {\n  position: absolute;\n  bottom: -2px;\n}\n.vs-loading--rectangle .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-loading--rectangle .vs-loading__load__animation__1 {\n  position: absolute;\n  width: 15px;\n  height: 15px;\n  border: 0px;\n  border-radius: inherit;\n  -webkit-animation: rectangle 1s ease infinite;\n          animation: rectangle 1s ease infinite;\n  background: rgba(var(--vs-color), 1);\n}\n.vs-loading--rectangle .vs-loading__load__animation__2 {\n  position: absolute;\n  width: 15px;\n  height: 15px;\n  border: 0px;\n  border-radius: inherit;\n  -webkit-animation: rectangle 1s ease-out infinite;\n          animation: rectangle 1s ease-out infinite;\n  background: rgba(var(--vs-color), 0.2);\n}\n.vs-loading--rectangle .vs-loading__load__animation__3 {\n  display: none;\n}\n\n@-webkit-keyframes rectangle {\n  0% {\n    -webkit-transform: translate(-50px);\n            transform: translate(-50px);\n  }\n  50% {\n    -webkit-transform: translate(50px);\n            transform: translate(50px);\n  }\n  100% {\n    -webkit-transform: translate(-50px);\n            transform: translate(-50px);\n  }\n}\n\n@keyframes rectangle {\n  0% {\n    -webkit-transform: translate(-50px);\n            transform: translate(-50px);\n  }\n  50% {\n    -webkit-transform: translate(50px);\n            transform: translate(50px);\n  }\n  100% {\n    -webkit-transform: translate(-50px);\n            transform: translate(-50px);\n  }\n}\n.vs-loading--circles .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  width: 60px;\n  height: 60px;\n}\n.vs-loading--circles .vs-loading__load__animation__1 {\n  position: absolute;\n  width: 40px;\n  height: 40px;\n  -webkit-animation: rotate 1s ease infinite;\n          animation: rotate 1s ease infinite;\n  border-radius: 50%;\n  border: 2px solid rgba(var(--vs-color), 1);\n  border-top: 3px solid transparent;\n  border-left: 3px solid transparent;\n  border-right: 3px solid transparent;\n}\n.vs-loading--circles .vs-loading__load__animation__2 {\n  position: absolute;\n  width: 50px;\n  height: 50px;\n  -webkit-animation: rotate 1s ease-in-out infinite;\n          animation: rotate 1s ease-in-out infinite;\n  border-radius: 50%;\n  border: 2px dashed rgba(var(--vs-color), 1);\n  border-top: 3px solid transparent;\n  border-left: 3px solid transparent;\n  border-right: 3px solid transparent;\n}\n.vs-loading--circles .vs-loading__load__animation__3 {\n  position: absolute;\n  width: 60px;\n  height: 60px;\n  animation: rotate 1s linear infinite reverse;\n  border-radius: 50%;\n  border: 2px solid rgba(var(--vs-color), 1);\n  border-top: 3px solid transparent;\n  border-left: 3px solid transparent;\n  border-right: 3px solid transparent;\n}\n\n.vs-loading--square-rotate .vs-loading__load__percent {\n  position: absolute;\n  bottom: 30px;\n}\n.vs-loading--square-rotate .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  width: 60px;\n  height: 60px;\n}\n.vs-loading--square-rotate .vs-loading__load__animation__1 {\n  position: absolute;\n  width: 25px;\n  height: 25px;\n  -webkit-animation: squareRotate 3s ease infinite;\n          animation: squareRotate 3s ease infinite;\n  background: rgba(var(--vs-color), 1);\n}\n.vs-loading--square-rotate .vs-loading__load__animation__2 {\n  display: none;\n}\n.vs-loading--square-rotate .vs-loading__load__animation__3 {\n  display: none;\n}\n\n@-webkit-keyframes squareRotate {\n  0% {\n    -webkit-transform: rotateX(0deg) rotateY(0deg);\n            transform: rotateX(0deg) rotateY(0deg);\n  }\n  25% {\n    -webkit-transform: rotateX(180deg) rotateY(0deg);\n            transform: rotateX(180deg) rotateY(0deg);\n  }\n  50% {\n    -webkit-transform: rotateX(180deg) rotateY(180deg);\n            transform: rotateX(180deg) rotateY(180deg);\n  }\n  75% {\n    -webkit-transform: rotateX(0deg) rotateY(180deg);\n            transform: rotateX(0deg) rotateY(180deg);\n  }\n  100% {\n    -webkit-transform: rotateX(0deg) rotateY(0deg);\n            transform: rotateX(0deg) rotateY(0deg);\n  }\n}\n\n@keyframes squareRotate {\n  0% {\n    -webkit-transform: rotateX(0deg) rotateY(0deg);\n            transform: rotateX(0deg) rotateY(0deg);\n  }\n  25% {\n    -webkit-transform: rotateX(180deg) rotateY(0deg);\n            transform: rotateX(180deg) rotateY(0deg);\n  }\n  50% {\n    -webkit-transform: rotateX(180deg) rotateY(180deg);\n            transform: rotateX(180deg) rotateY(180deg);\n  }\n  75% {\n    -webkit-transform: rotateX(0deg) rotateY(180deg);\n            transform: rotateX(0deg) rotateY(180deg);\n  }\n  100% {\n    -webkit-transform: rotateX(0deg) rotateY(0deg);\n            transform: rotateX(0deg) rotateY(0deg);\n  }\n}\n.vs-loading--scale .vs-loading__load__percent {\n  position: absolute;\n  bottom: 40px;\n}\n.vs-loading--scale .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: cneter;\n      -ms-flex-align: cneter;\n          align-items: cneter;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  width: 40px;\n  height: 40px;\n}\n.vs-loading--scale .vs-loading__load__animation__1 {\n  position: relative;\n  width: 5px;\n  height: 5px;\n  background: rgba(var(--vs-color), 1);\n  margin: 3px;\n  -webkit-animation: scale 0.8s ease infinite;\n          animation: scale 0.8s ease infinite;\n  border-radius: 5px;\n}\n.vs-loading--scale .vs-loading__load__animation__2 {\n  position: relative;\n  width: 5px;\n  height: 5px;\n  background: rgba(var(--vs-color), 1);\n  margin: 3px;\n  -webkit-animation: scale 0.8s ease infinite 0.2s;\n          animation: scale 0.8s ease infinite 0.2s;\n  border-radius: 5px;\n}\n.vs-loading--scale .vs-loading__load__animation__3 {\n  position: relative;\n  width: 5px;\n  height: 5px;\n  background: rgba(var(--vs-color), 1);\n  margin: 3px;\n  -webkit-animation: scale 0.8s ease infinite 0.4s;\n          animation: scale 0.8s ease infinite 0.4s;\n  border-radius: 5px;\n}\n\n@-webkit-keyframes scale {\n  0% {\n    height: 5px;\n  }\n  50% {\n    height: 25px;\n  }\n  0% {\n    height: 5px;\n  }\n}\n\n@keyframes scale {\n  0% {\n    height: 5px;\n  }\n  50% {\n    height: 25px;\n  }\n  0% {\n    height: 5px;\n  }\n}\n.notification-enter-active {\n  -webkit-transition: all 0.3s ease 0.05s, margin 0.25s ease, -webkit-transform 0.3s ease, -webkit-clip-path 8s ease 0.8s;\n  transition: all 0.3s ease 0.05s, margin 0.25s ease, -webkit-transform 0.3s ease, -webkit-clip-path 8s ease 0.8s;\n  transition: all 0.3s ease 0.05s, transform 0.3s ease, margin 0.25s ease, clip-path 8s ease 0.8s;\n  transition: all 0.3s ease 0.05s, transform 0.3s ease, margin 0.25s ease, clip-path 8s ease 0.8s, -webkit-transform 0.3s ease, -webkit-clip-path 8s ease 0.8s;\n}\n\n.notification-leave-to {\n  max-height: 0px !important;\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n  margin-top: 0px !important;\n  margin-bottom: 0px !important;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);\n          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);\n  opacity: 0 !important;\n  -webkit-clip-path: circle(0% at 80% 35%) !important;\n          clip-path: circle(0% at 80% 35%) !important;\n}\n\n.notification-enter {\n  -webkit-transform: translate(25%);\n          transform: translate(25%);\n  -webkit-clip-path: circle(0% at 80% 35%) !important;\n          clip-path: circle(0% at 80% 35%) !important;\n}\n.notification-enter .vs-notification__content {\n  opacity: 0;\n  -webkit-transform: translate(10%);\n          transform: translate(10%);\n}\n\n.vs-notification-parent {\n  position: fixed;\n  right: 0px;\n  bottom: 0px;\n  z-index: 200000;\n  -webkit-transition: all 25s ease;\n  transition: all 25s ease;\n  padding: 10px 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n}\n.vs-notification-parent--top-right {\n  bottom: auto;\n  top: 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: reverse;\n      -ms-flex-direction: column-reverse;\n          flex-direction: column-reverse;\n}\n.vs-notification-parent--top-center {\n  bottom: auto;\n  top: 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: reverse;\n      -ms-flex-direction: column-reverse;\n          flex-direction: column-reverse;\n  left: 50%;\n  right: auto;\n  -webkit-transform: translate(-50%);\n          transform: translate(-50%);\n}\n.vs-notification-parent--top-center .vs-notification--sticky {\n  margin: 3px 20px;\n  border-radius: 20px;\n}\n.vs-notification-parent--top-center .vs-notification--sticky:last-child {\n  border-radius: 0px 0px 20px 20px;\n  margin-top: -10px;\n}\n.vs-notification-parent--top-center .vs-notification {\n  -webkit-clip-path: circle(120% at 50% 0%);\n          clip-path: circle(120% at 50% 0%);\n  -webkit-transition: all 0.25s ease, max-height 0.25s ease, -webkit-transform 0.3s ease, -webkit-clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, max-height 0.25s ease, -webkit-transform 0.3s ease, -webkit-clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, transform 0.3s ease, max-height 0.25s ease, clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, transform 0.3s ease, max-height 0.25s ease, clip-path 0.5s ease 0.1s, -webkit-transform 0.3s ease, -webkit-clip-path 0.5s ease 0.1s;\n}\n.vs-notification-parent--top-center .vs-notification.vs-notification--border {\n  border: 3px solid transparent;\n  border-top: 3px solid rgba(var(--vs-border), 1);\n}\n.vs-notification-parent--top-center .notification-enter {\n  -webkit-transform: translate(0, -25%);\n          transform: translate(0, -25%);\n  -webkit-clip-path: circle(0% at 50% 0%) !important;\n          clip-path: circle(0% at 50% 0%) !important;\n}\n.vs-notification-parent--top-center .notification-enter .vs-notification__content {\n  opacity: 0;\n  -webkit-transform: translate(0, -10%);\n          transform: translate(0, -10%);\n}\n.vs-notification-parent--bottom-center {\n  left: 50%;\n  right: auto;\n  -webkit-transform: translate(-50%);\n          transform: translate(-50%);\n}\n.vs-notification-parent--bottom-center .vs-notification--sticky {\n  margin: 3px 20px;\n  border-radius: 20px;\n}\n.vs-notification-parent--bottom-center .vs-notification--sticky:last-child {\n  border-radius: 20px 20px 0px 0px;\n  margin-bottom: -10px;\n}\n.vs-notification-parent--bottom-center .vs-notification {\n  -webkit-clip-path: circle(120% at 50% 100%);\n          clip-path: circle(120% at 50% 100%);\n  -webkit-transition: all 0.25s ease, max-height 0.25s ease, -webkit-transform 0.3s ease, -webkit-clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, max-height 0.25s ease, -webkit-transform 0.3s ease, -webkit-clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, transform 0.3s ease, max-height 0.25s ease, clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, transform 0.3s ease, max-height 0.25s ease, clip-path 0.5s ease 0.1s, -webkit-transform 0.3s ease, -webkit-clip-path 0.5s ease 0.1s;\n}\n.vs-notification-parent--bottom-center .vs-notification.vs-notification--border {\n  border: 3px solid transparent;\n  border-bottom: 3px solid rgba(var(--vs-border), 1);\n}\n.vs-notification-parent--bottom-center .notification-enter {\n  -webkit-transform: translate(0, 25%);\n          transform: translate(0, 25%);\n  -webkit-clip-path: circle(0% at 50% 100%) !important;\n          clip-path: circle(0% at 50% 100%) !important;\n}\n.vs-notification-parent--bottom-center .notification-enter .vs-notification__content {\n  opacity: 0;\n  -webkit-transform: translate(0, 10%);\n          transform: translate(0, 10%);\n}\n.vs-notification-parent--top-left {\n  bottom: auto;\n  top: 0px;\n  left: 0px;\n  right: auto;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: reverse;\n      -ms-flex-direction: column-reverse;\n          flex-direction: column-reverse;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n}\n.vs-notification-parent--top-left .vs-notification--sticky {\n  margin-left: 0px;\n  border-radius: 0px 20px 20px 0px;\n}\n.vs-notification-parent--top-left .vs-notification {\n  -webkit-clip-path: circle(145% at 0% 50%);\n          clip-path: circle(145% at 0% 50%);\n}\n.vs-notification-parent--top-left .vs-notification.vs-notification--border {\n  border: 3px solid transparent;\n  border-left: 3px solid rgba(var(--vs-border), 1);\n}\n.vs-notification-parent--top-left .notification-enter {\n  -webkit-transform: translate(-25%);\n          transform: translate(-25%);\n  -webkit-clip-path: circle(0% at 20% 35%) !important;\n          clip-path: circle(0% at 20% 35%) !important;\n}\n.vs-notification-parent--top-left .notification-enter .vs-notification__content {\n  opacity: 0;\n  -webkit-transform: translate(-10%);\n          transform: translate(-10%);\n}\n.vs-notification-parent--bottom-left {\n  left: 0px;\n  right: auto;\n}\n.vs-notification-parent--bottom-left .vs-notification--sticky {\n  margin-left: 0px;\n  border-radius: 0px 20px 20px 0px;\n}\n.vs-notification-parent--bottom-left .vs-notification {\n  -webkit-clip-path: circle(145% at 0% 50%);\n          clip-path: circle(145% at 0% 50%);\n}\n.vs-notification-parent--bottom-left .vs-notification.vs-notification--border {\n  border: 3px solid transparent;\n  border-left: 3px solid rgba(var(--vs-border), 1);\n}\n.vs-notification-parent--bottom-left .notification-enter {\n  -webkit-transform: translate(-25%);\n          transform: translate(-25%);\n  -webkit-clip-path: circle(0% at 20% 35%) !important;\n          clip-path: circle(0% at 20% 35%) !important;\n}\n.vs-notification-parent--bottom-left .notification-enter .vs-notification__content {\n  opacity: 0;\n  -webkit-transform: translate(-10%);\n          transform: translate(-10%);\n}\n\n.vs-notification {\n  --vs-color: var(--vs-background);\n  --vs-border: var(--vs-background);\n  --vs-opacity: .6;\n  position: relative;\n  max-width: 340px;\n  width: 100%;\n  height: auto;\n  border-radius: 20px;\n  -webkit-box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  overflow: hidden;\n  -webkit-clip-path: circle(145% at 100% 50%);\n          clip-path: circle(145% at 100% 50%);\n  background: rgba(var(--vs-color), 1);\n  color: rgba(var(--vs-text), 1);\n  margin: 3px 10px;\n  -webkit-transition: all 0.25s ease, max-height 0.25s ease, -webkit-transform 0.3s ease 0.1s, -webkit-clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, max-height 0.25s ease, -webkit-transform 0.3s ease 0.1s, -webkit-clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, transform 0.3s ease 0.1s, max-height 0.25s ease, clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, transform 0.3s ease 0.1s, max-height 0.25s ease, clip-path 0.5s ease 0.1s, -webkit-transform 0.3s ease 0.1s, -webkit-clip-path 0.5s ease 0.1s;\n}\n.vs-notification:hover:not(.vs-notification--flat) {\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(0, 3px);\n          transform: translate(0, 3px);\n}\n.vs-notification--notPadding {\n  padding: 0px !important;\n}\n.vs-notification.vs-notification--icon {\n  padding-left: 50px !important;\n}\n.vs-notification.vs-notification--loading {\n  width: 100px !important;\n  max-height: 100px !important;\n  min-height: 100px !important;\n  padding: 0px !important;\n  padding-left: 0px !important;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-notification--width-auto {\n  width: auto;\n  max-width: none;\n}\n.vs-notification--width-all {\n  max-width: calc(100vw - 50px);\n  width: calc(100vw - 50px);\n}\n.vs-notification--square {\n  border-radius: 0px !important;\n}\n.vs-notification--sticky {\n  margin-right: 0px;\n  margin-bottom: 0px;\n  border-radius: 20px 0px 0px 20px;\n}\n.vs-notification--flat {\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  background: rgba(var(--vs-background), 1);\n  color: rgba(var(--vs-color), 1) !important;\n}\n.vs-notification--flat:hover::after {\n  background: rgba(var(--vs-color), 0.15);\n}\n.vs-notification--flat .vs-notification__progress {\n  background: rgba(var(--vs-color), 1);\n}\n.vs-notification--flat .vs-notification__close {\n  --vs-color: inherit;\n}\n.vs-notification--flat .vs-notification__content {\n  color: rgba(var(--vs-color), 1) !important;\n}\n.vs-notification--flat.vs-notification--border {\n  border: 0px solid transparent !important;\n  border-right: 3px solid rgba(var(--vs-border), 1) !important;\n}\n.vs-notification--flat:after {\n  content: \"\";\n  background: rgba(var(--vs-color), 0.1);\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  z-index: -1;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-notification.vs-notification--onClick {\n  cursor: pointer;\n}\n.vs-notification.vs-notification--color:not(.vs-notification--flat) {\n  color: #fff;\n}\n.vs-notification.vs-notification--color:not(.vs-notification--flat) .vs-notification__progress {\n  background: #fff;\n}\n.vs-notification.vs-notification--color:not(.vs-notification--flat) .vs-notification__close {\n  --vs-color: 255,255,255;\n}\n.vs-notification.vs-notification--color:not(.vs-notification--flat) .vs-notification__loading:after {\n  border: 2px solid #fff;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n}\n.vs-notification.vs-notification--color:not(.vs-notification--flat) .vs-notification__loading:before {\n  border: 2px dashed #fff;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n}\n.vs-notification.vs-notification--border {\n  border: 3px solid transparent;\n  border-right: 3px solid rgba(var(--vs-border), 1);\n}\n.vs-notification__progress {\n  width: 0%;\n  height: 3px;\n  background: rgba(var(--vs-text), 1);\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n.vs-notification__loading {\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  position: absolute;\n}\n.vs-notification__loading:after {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px solid rgba(var(--vs-text), 1);\n  border-radius: inherit;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n  -webkit-animation: loadingNoti 0.8s ease infinite;\n          animation: loadingNoti 0.8s ease infinite;\n  top: 0px;\n  content: \"\";\n}\n.vs-notification__loading:before {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  top: 0px;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px dashed rgba(var(--vs-text), 1);\n  border-radius: inherit;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n  -webkit-animation: loadingNoti 0.8s linear infinite;\n          animation: loadingNoti 0.8s linear infinite;\n  opacity: 0.2;\n  content: \"\";\n}\n.vs-notification__close {\n  --vs-color: var(--vs-text);\n  position: absolute;\n  border: 0px;\n  background: transparent;\n  top: 2px;\n  right: 2px;\n  -webkit-transform: scale(0.75);\n          transform: scale(0.75);\n  padding: 0px;\n}\n.vs-notification__icon {\n  position: absolute;\n  top: calc(50% - 22px);\n  background: transparent;\n  width: 45px;\n  height: 45px;\n  left: 2px;\n  border-radius: 0px 35% 35% 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.vs-notification__icon i {\n  font-size: 1.2rem;\n}\n.vs-notification__content {\n  position: relative;\n  width: auto;\n  height: auto;\n  -webkit-transition: all 0.25s ease 0.2s;\n  transition: all 0.25s ease 0.2s;\n  opacity: 1;\n}\n.vs-notification__content__text {\n  width: 100%;\n}\n.vs-notification__content__text p {\n  margin: 0px;\n  padding: 0px;\n  font-size: 0.75rem;\n  line-height: 1rem;\n}\n.vs-notification__content__header {\n  width: 100%;\n  margin: 0px;\n  padding: 0px;\n  padding-bottom: 6px;\n}\n.vs-notification__content__header h4 {\n  width: 100%;\n  margin: 0px;\n  padding: 0px;\n  font-size: 0.9rem;\n}\n\n.darken .vs-notification--dark {\n  color: #fff !important;\n}\n.darken .vs-notification--dark .vs-notification__close {\n  --vs-color: 255,255,255 !important;\n}\n.darken .vs-notification--dark h4 {\n  color: #fff !important;\n}\n.darken .vs-notification--dark p {\n  color: #fff !important;\n}\n\n@-webkit-keyframes loadingNoti {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@keyframes loadingNoti {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n@-webkit-keyframes progressNoti {\n  0% {\n    width: 0%;\n  }\n  100% {\n    width: 100%;\n  }\n}\n@keyframes progressNoti {\n  0% {\n    width: 0%;\n  }\n  100% {\n    width: 100%;\n  }\n}\n@media (max-width: 600px) {\n  .vs-notification {\n    margin: 3px 0px !important;\n    border-radius: 0px !important;\n    width: 100% !important;\n    max-width: 100% !important;\n    min-width: 100% !important;\n  }\n  .vs-notification:hover {\n    -webkit-transform: translate(0) !important;\n            transform: translate(0) !important;\n  }\n  .vs-notification:last-child {\n    margin-bottom: 0px !important;\n  }\n\n  .vs-notification-parent {\n    padding: 0px;\n    width: 100% !important;\n    max-width: 100% !important;\n  }\n  .vs-notification-parent .vs-notification--sticky {\n    margin-bottom: 0px !important;\n  }\n  .vs-notification-parent.vs-notification-parent--top-center .vs-notification:last-child {\n    margin-bottom: 3px;\n    margin-top: 0px !important;\n  }\n}\n.vs-row {\n  width: 100%;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n\n.vs-col {\n  width: 100%;\n  position: relative;\n}\n.vs-col--w-1 {\n  width: 8.33%;\n}\n.vs-col--w-2 {\n  width: 16.66%;\n}\n.vs-col--w-3 {\n  width: 25%;\n}\n.vs-col--w-4 {\n  width: 33.33%;\n}\n.vs-col--w-5 {\n  width: 41.66%;\n}\n.vs-col--w-6 {\n  width: 50%;\n}\n.vs-col--w-7 {\n  width: 58.33%;\n}\n.vs-col--w-8 {\n  width: 66.66%;\n}\n.vs-col--w-9 {\n  width: 75%;\n}\n.vs-col--w-10 {\n  width: 83.33%;\n}\n.vs-col--w-11 {\n  width: 91.66%;\n}\n.vs-col--w-12 {\n  width: 100%;\n}\n.vs-col--offset-1 {\n  margin-left: 8.33%;\n}\n.vs-col--offset-2 {\n  margin-left: 16.66%;\n}\n.vs-col--offset-3 {\n  margin-left: 25%;\n}\n.vs-col--offset-4 {\n  margin-left: 33.33%;\n}\n.vs-col--offset-5 {\n  margin-left: 41.66%;\n}\n.vs-col--offset-6 {\n  margin-left: 50%;\n}\n.vs-col--offset-7 {\n  margin-left: 58.33%;\n}\n.vs-col--offset-8 {\n  margin-left: 66.66%;\n}\n.vs-col--offset-9 {\n  margin-left: 75%;\n}\n.vs-col--offset-10 {\n  margin-left: 83.33%;\n}\n.vs-col--offset-11 {\n  margin-left: 91.66%;\n}\n.vs-col--offset-12 {\n  margin-left: 100%;\n}\n.vs-col--lg-1 {\n  width: 8.33%;\n}\n.vs-col--lg-2 {\n  width: 16.66%;\n}\n.vs-col--lg-3 {\n  width: 25%;\n}\n.vs-col--lg-4 {\n  width: 33.33%;\n}\n.vs-col--lg-5 {\n  width: 41.66%;\n}\n.vs-col--lg-6 {\n  width: 50%;\n}\n.vs-col--lg-7 {\n  width: 58.33%;\n}\n.vs-col--lg-8 {\n  width: 66.66%;\n}\n.vs-col--lg-9 {\n  width: 75%;\n}\n.vs-col--lg-10 {\n  width: 83.33%;\n}\n.vs-col--lg-11 {\n  width: 91.66%;\n}\n.vs-col--lg-12 {\n  width: 100%;\n}\n@media (max-width: 900px) {\n  .vs-col--sm-1 {\n    width: 8.33%;\n  }\n  .vs-col--sm-2 {\n    width: 16.66%;\n  }\n  .vs-col--sm-3 {\n    width: 25%;\n  }\n  .vs-col--sm-4 {\n    width: 33.33%;\n  }\n  .vs-col--sm-5 {\n    width: 41.66%;\n  }\n  .vs-col--sm-6 {\n    width: 50%;\n  }\n  .vs-col--sm-7 {\n    width: 58.33%;\n  }\n  .vs-col--sm-8 {\n    width: 66.66%;\n  }\n  .vs-col--sm-9 {\n    width: 75%;\n  }\n  .vs-col--sm-10 {\n    width: 83.33%;\n  }\n  .vs-col--sm-11 {\n    width: 91.66%;\n  }\n  .vs-col--sm-12 {\n    width: 100%;\n  }\n}\n@media (max-width: 600px) {\n  .vs-col--xs-1 {\n    width: 8.33%;\n  }\n  .vs-col--xs-2 {\n    width: 16.66%;\n  }\n  .vs-col--xs-3 {\n    width: 25%;\n  }\n  .vs-col--xs-4 {\n    width: 33.33%;\n  }\n  .vs-col--xs-5 {\n    width: 41.66%;\n  }\n  .vs-col--xs-6 {\n    width: 50%;\n  }\n  .vs-col--xs-7 {\n    width: 58.33%;\n  }\n  .vs-col--xs-8 {\n    width: 66.66%;\n  }\n  .vs-col--xs-9 {\n    width: 75%;\n  }\n  .vs-col--xs-10 {\n    width: 83.33%;\n  }\n  .vs-col--xs-11 {\n    width: 91.66%;\n  }\n  .vs-col--xs-12 {\n    width: 100%;\n  }\n}\n:root {\n  --vs-primary: 25, 91, 255;\n  --vs-warn: 255, 186, 0;\n  --vs-danger: 255,71,87;\n  --vs-success: 70,201,58;\n  --vs-dark: 30,30,30;\n  --vs-light: 244,247,248;\n  --vs-color: 17,18,20;\n  --vs-facebook: 59, 89, 153;\n  --vs-twitter: 29, 161, 242;\n  --vs-youtube: 255, 0, 0;\n  --vs-pinterest: 189, 8, 28;\n  --vs-linkedin: 0, 119, 181;\n  --vs-snapchat: 255, 252, 0;\n  --vs-whatsapp: 37, 211, 102;\n  --vs-tumblr: 54, 70, 93;\n  --vs-reddit: 255, 69, 0;\n  --vs-spotify: 30, 215, 96;\n  --vs-amazon: 255, 153, 0;\n  --vs-medium: 2, 184, 117;\n  --vs-vimeo: 26, 183, 234;\n  --vs-skype: 0, 175, 240;\n  --vs-dribbble: 234, 76, 137;\n  --vs-slack: 74, 21, 75;\n  --vs-yahoo: 67, 2, 151;\n  --vs-twitch: 100, 65, 164;\n  --vs-discord: 114, 137, 218;\n  --vs-telegram: 0, 136, 204;\n  --vs-google-plus: 219, 68, 55;\n  --vs-messenger: 0, 132, 255;\n  --vs-background: 255, 255, 255;\n  --vs-text: 44, 62, 80;\n  --vs-gray-1: 249, 252, 253;\n  --vs-gray-2: 244, 247, 248;\n  --vs-gray-3: 240, 243, 244;\n  --vs-gray-4: 230, 233, 234;\n}\n\n[class*=\"--primary\"] {\n  --vs-color: var(--vs-primary);\n}\n\n[class*=\"--default\"] {\n  --vs-color: var(--vs-primary);\n}\n\n[class*=\"--danger\"] {\n  --vs-color: var(--vs-danger);\n}\n\n[class*=\"--success\"] {\n  --vs-color: var(--vs-success);\n}\n\n[class*=\"--dark\"] {\n  --vs-color: var(--vs-dark);\n}\n\n[class*=\"--warn\"] {\n  --vs-color: var(--vs-warn);\n}\n\n:root {\n  --vs-shadow-opacity: .05;\n  --vs-radius: 20px;\n  --vs-zindex-1: 100000;\n  --vs-zindex-2: 99000;\n  --vs-zindex-3: 98000;\n  --vs-zindex-4: 97000;\n  --vs-background-opacity: .2;\n}\n\n[vs-theme=dark] {\n  --vs-background: 30, 32, 35;\n  --vs-text: 255, 255, 255;\n  --vs-gray-1: 24, 25, 28;\n  --vs-gray-2: 20, 20, 23;\n  --vs-gray-3: 15, 16, 19;\n  --vs-gray-4: 10, 11, 14;\n  --vs-shadow-opacity: .3;\n  --vs-dark: 0, 0, 0;\n  --vs-background-opacity: .6;\n}\n[vs-theme=dark] .vs-pagination-content.vs-component-dark .vs-pagination__active {\n  --vs-color: 255, 255, 255;\n  color: rgba(var(--vs-gray-3), 1);\n}\n[vs-theme=dark] .vs-button.vs-component-dark.vs-button--transparent {\n  color: rgba(var(--vs-text), 1) !important;\n}\n[vs-theme=dark] .vs-button.vs-component-dark.vs-button--transparent:hover:before {\n  background: rgba(var(--vs-color), 0.2);\n}\n[vs-theme=dark] .vs-button.vs-component-dark.vs-button--transparent.vs-button--active:before {\n  background: rgba(var(--vs-color), var(--vs-background-opacity));\n}\n[vs-theme=dark] .vs-ripple, [vs-theme=dark] .vs-ripple-invert, [vs-theme=dark] .vs-ripple-content {\n  --vs-color: 0,0,0;\n}\n[vs-theme=dark] .vs-loading {\n  --vs-background: 0, 0, 0;\n}\n[vs-theme=dark] .vs-input-parent--state-dark {\n  --vs-dark: 255, 255, 255 !important;\n}\n[vs-theme=dark] .vs-input-parent--state-dark .vs-input {\n  background: #000 !important;\n}\n[vs-theme=dark] .vs-component-dark {\n  --vs-color: 0, 0, 0 !important;\n}\n[vs-theme=dark] .vs-component-dark .vs-avatar {\n  color: #fff !important;\n}\n[vs-theme=dark] .vs-component-dark.vs-alert {\n  --vs-color: 0, 0, 0 !important;\n  background: rgba(var(--vs-color), 1) !important;\n  color: rgba(var(--vs-text), 1) !important;\n}\n\nbutton {\n  cursor: pointer;\n  outline: none;\n}\n\n[disabled] {\n  opacity: 0.6;\n}\n\ninput {\n  outline: none;\n}\n\ninput, textarea, button, select, a {\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n}\n\n[class*=vs-] {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  outline: none;\n  list-style: none;\n}\n\n.vs-ripple-content {\n  --vs-color: inherit;\n  width: 100px;\n  height: 100px;\n  position: absolute;\n  width: 100%;\n  pointer-events: none;\n  overflow: hidden;\n  height: 100%;\n  top: 0px;\n  right: 0px;\n  border-radius: inherit;\n  z-index: -1;\n}\n.vs-ripple-content .vs-ripple {\n  width: 0px;\n  height: 0px;\n  border-radius: 50%;\n  opacity: 0;\n  position: absolute;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  -webkit-transition: all 0.5s ease;\n  transition: all 0.5s ease;\n  background: radial-gradient(circle, rgba(var(--vs-color), 0.05), rgba(var(--vs-color), 0.6));\n}\n.vs-ripple-content .vs-ripple--solid {\n  background: rgba(var(--vs-color), 1);\n  opacity: 1;\n}\n.vs-ripple-content .vs-ripple-invert {\n  width: 0px;\n  height: 0px;\n  border-radius: 50%;\n  opacity: 0;\n  position: absolute;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  -webkit-transition: all 0.5s ease;\n  transition: all 0.5s ease;\n  background-image: radial-gradient(circle, rgba(var(--vs-color), 0.5), rgba(var(--vs-color), 0));\n}\n.vs-ripple-content .vs-ripple-cut-1 {\n  width: 0px;\n  height: 0px;\n  opacity: 0;\n  position: absolute;\n  -webkit-transform: translate(-100%, -50%) skew(20deg);\n          transform: translate(-100%, -50%) skew(20deg);\n  -webkit-transition: all 0.6s ease;\n  transition: all 0.6s ease;\n  background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));\n  background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);\n}\n.vs-ripple-content .vs-ripple-cut-2 {\n  width: 0px;\n  height: 0px;\n  opacity: 0;\n  position: absolute;\n  -webkit-transform: translate(0%, -50%) skew(20deg);\n          transform: translate(0%, -50%) skew(20deg);\n  -webkit-transition: all 0.6s ease;\n  transition: all 0.6s ease;\n  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));\n  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);\n}\n\n.vs-remove-transition *, .vs-remove-transition *:after, .vs-remove-transition *:before {\n  -webkit-transition: all 0s !important;\n  transition: all 0s !important;\n}\n", ""]);
+exports.push([module.i, "/*!\n  * Vuesax v4.0.1-alpha.24 🖖 (https://lusaxweb.github.io/vuesax/)\n  * Forged by Luis Daniel Rovira\n  * Released under the MIT License.\n  * Donate: https://www.patreon.com/bePatron?c=1567892\n  * © 2019, Lusaxweb. (https://lusaxweb.net)\n  */\n\n.vs-button {\n  --vs-color: \"\";\n  --vs-color-rotate: var(--vs-primary);\n  --vs-color-darken: var(--vs-primary);\n  --vs-button-padding: 8px 12px;\n  --vs-button-margin: 5px;\n  --vs-button-border-radius: 12px;\n  --vs-button-text-color: #fff;\n}\n\n.vs-button {\n  border: 0px;\n  margin: var(--vs-button-margin);\n  border-radius: var(--vs-button-border-radius);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  position: relative;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  z-index: 1;\n  overflow: hidden;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  padding: 0px;\n  outline: none;\n  font-size: 0.8rem;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.vs-button.vs-component-dark.vs-button--transparent {\n  color: rgba(var(--vs-text), 1) !important;\n}\n\n.vs-button--fff:focus {\n  color: #1e1e1e !important;\n}\n\n.vs-button__content {\n  padding: var(--vs-button-padding);\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-button--active-disabled {\n  pointer-events: none;\n  opacity: 0.6;\n}\n\n.vs-button:disabled {\n  pointer-events: none;\n  opacity: 0.35;\n}\n\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive) .vs-button__content i {\n  font-size: 1.15rem;\n}\n\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive):hover .vs-button__content {\n  -webkit-transform: translate(-100%);\n  transform: translate(-100%);\n}\n\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive):hover .vs-button__animate {\n  -webkit-transform: translate(0%);\n  transform: translate(0%);\n}\n\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive).vs-button--animate-vertical:hover .vs-button__content {\n  -webkit-transform: translate(0, -100%) !important;\n  transform: translate(0, -100%) !important;\n  opacity: 0;\n}\n\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive).vs-button--animate-vertical:hover .vs-button__animate {\n  -webkit-transform: translate(0%) !important;\n  transform: translate(0%) !important;\n}\n\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive).vs-button--animate-scale:hover .vs-button__content {\n  -webkit-transform: scale(1.4) !important;\n  transform: scale(1.4) !important;\n  opacity: 0;\n}\n\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive).vs-button--animate-scale:hover .vs-button__animate {\n  opacity: 1;\n  -webkit-transform: scale(1);\n  transform: scale(1);\n}\n\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive).vs-button--animate-rotate:hover .vs-button__content {\n  -webkit-transform: rotate(180deg) !important;\n  transform: rotate(180deg) !important;\n  opacity: 0;\n}\n\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive).vs-button--animate-rotate:hover .vs-button__animate {\n  opacity: 1;\n  -webkit-transform: rotate(0);\n  transform: rotate(0);\n}\n\n.vs-button.vs-button--animate:not(.vs-button--animate-inactive) .vs-button__content {\n  -webkit-transition: -webkit-transform 0.25s ease;\n  transition: -webkit-transform 0.25s ease;\n  transition: transform 0.25s ease;\n  transition: transform 0.25s ease, -webkit-transform 0.25s ease;\n}\n\n.vs-button__animate {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  top: 0px;\n  left: 0px;\n  -webkit-transition: -webkit-transform 0.25s ease;\n  transition: -webkit-transform 0.25s ease;\n  transition: transform 0.25s ease;\n  transition: transform 0.25s ease, -webkit-transform 0.25s ease;\n  -webkit-transform: translate(100%);\n  transform: translate(100%);\n  pointer-events: none;\n}\n\n.vs-button__animate--vertical {\n  -webkit-transform: translate(0, 100%);\n  transform: translate(0, 100%);\n}\n\n.vs-button__animate--scale {\n  -webkit-transform: scale(0.5);\n  transform: scale(0.5);\n  opacity: 0;\n}\n\n.vs-button__animate--rotate {\n  -webkit-transform: rotate(-180deg);\n  transform: rotate(-180deg);\n  opacity: 0;\n}\n\n.vs-button--block {\n  width: 100%;\n  display: block;\n}\n\n.vs-button--upload:after {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: rgba(var(--vs-color), 0.4);\n  top: 0px;\n  left: 0px;\n  z-index: 1200;\n  -webkit-animation: btnupload 0.7s ease infinite;\n  animation: btnupload 0.7s ease infinite;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.vs-button--loading {\n  pointer-events: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n.vs-button .vs-button__loading {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  background: rgba(var(--vs-color), 0.8);\n  border-radius: inherit;\n}\n\n.vs-button .vs-button__loading:after {\n  content: \"\";\n  width: 17px;\n  height: 17px;\n  border: 2px dotted rgba(255, 255, 255, 0.6);\n  border-top: 2px solid rgba(255, 255, 255, 0);\n  border-bottom: 2px solid rgba(255, 255, 255, 0);\n  border-right: 2px solid rgba(255, 255, 255, 0);\n  border-radius: 50%;\n  position: absolute;\n  -webkit-animation: btnload 0.6s linear infinite;\n  animation: btnload 0.6s linear infinite;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.vs-button .vs-button__loading:before {\n  position: absolute;\n  content: \"\";\n  width: 17px;\n  height: 17px;\n  border: 2px solid white;\n  border-top: 2px solid rgba(255, 255, 255, 0);\n  border-bottom: 2px solid rgba(255, 255, 255, 0);\n  border-right: 2px solid rgba(255, 255, 255, 0);\n  border-radius: 50%;\n  -webkit-animation: btnload 0.6s ease infinite;\n  animation: btnload 0.6s ease infinite;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.vs-button--size-xl {\n  border-radius: 20px;\n}\n\n.vs-button--size-xl .vs-button__content {\n  padding: 15px 20px;\n  font-size: 1.1rem;\n}\n\n.vs-button--size-large {\n  font-size: 1rem;\n  border-radius: 15px;\n}\n\n.vs-button--size-large .vs-button__content {\n  padding: 10px 15px;\n}\n\n.vs-button--size-small {\n  font-size: 0.75rem;\n  border-radius: 9px;\n}\n\n.vs-button--size-small .vs-button__content {\n  padding: 5px 10px;\n}\n\n.vs-button--size-mini {\n  font-size: 0.6rem;\n  border-radius: 7px;\n}\n\n.vs-button--size-mini .vs-button__content {\n  padding: 3px 8px;\n}\n\n.vs-button--circle {\n  border-radius: 25px;\n}\n\n.vs-button--square {\n  border-radius: 0px;\n}\n\n.vs-button--icon {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-button--icon .vs-button__content {\n  padding: 8px 8px;\n}\n\n.vs-button--icon i {\n  font-size: 1.15rem;\n}\n\n.vs-button--default {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n}\n\n.vs-button--default.vs-button--active {\n  -webkit-box-shadow: 0px 10px 20px -10px rgba(var(--vs-color), 1);\n  box-shadow: 0px 10px 20px -10px rgba(var(--vs-color), 1);\n  -webkit-transform: translate(0, -3px);\n  transform: translate(0, -3px);\n}\n\n.vs-button--default:hover {\n  -webkit-box-shadow: 0px 10px 20px -10px rgba(var(--vs-color), 1);\n  box-shadow: 0px 10px 20px -10px rgba(var(--vs-color), 1);\n  -webkit-transform: translate(0, -3px);\n  transform: translate(0, -3px);\n}\n\n.vs-button--flat {\n  background: rgba(var(--vs-color), 0.15);\n  color: rgba(var(--vs-color), 1);\n}\n\n.vs-button--flat.vs-button--dark {\n  color: rgba(var(--vs-text), 1);\n}\n\n.vs-button--flat:hover {\n  background: rgba(var(--vs-color), 0.25);\n}\n\n.vs-button--flat:focus {\n  color: #fff;\n  background: rgba(var(--vs-color), 1);\n  -webkit-transition: all 0.25s ease, background 0.25s ease 0.25s;\n  transition: all 0.25s ease, background 0.25s ease 0.25s;\n}\n\n.vs-button--flat.vs-button--active {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n}\n\n.vs-button--floating {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n  -webkit-box-shadow: 0px 8px 20px -6px rgba(var(--vs-color), 1);\n  box-shadow: 0px 8px 20px -6px rgba(var(--vs-color), 1);\n  -webkit-transform: translate(0, -3px);\n  transform: translate(0, -3px);\n}\n\n.vs-button--floating:hover {\n  -webkit-box-shadow: 0px 8px 20px -6px rgba(var(--vs-color), 1);\n  box-shadow: 0px 8px 20px -6px rgba(var(--vs-color), 1);\n  -webkit-transform: translate(0, -6px);\n  transform: translate(0, -6px);\n}\n\n.vs-button--floating:focus {\n  -webkit-transform: translate(0, 0px);\n  transform: translate(0, 0px);\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n}\n\n.vs-button--floating.vs-button--active {\n  -webkit-transform: translate(0, 0px);\n  transform: translate(0, 0px);\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n}\n\n.vs-button--border {\n  background: rgba(var(--vs-color), 0);\n  color: rgba(var(--vs-color), 1);\n}\n\n.vs-button--border:before {\n  content: \"\";\n  border: 2px solid rgba(var(--vs-color), 1);\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  background: transparent;\n  pointer-events: none;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.vs-button--border:hover:before {\n  border: 2px solid rgba(var(--vs-color), 0.5);\n}\n\n.vs-button--border:focus {\n  color: #fff;\n  background: rgba(var(--vs-color), 1);\n}\n\n.vs-button--border.vs-button--active {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n}\n\n.vs-button--gradient {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n  overflow: hidden;\n}\n\n.vs-button--gradient.vs-button--primary::before, .vs-button--gradient.vs-button--success::before {\n  -webkit-filter: hue-rotate(40deg);\n  filter: hue-rotate(40deg);\n}\n\n.vs-button--gradient::before {\n  content: \"\";\n  background: linear-gradient(30deg, rgba(var(--vs-color), 0) 33%, rgba(var(--vs-color), 1) 100%);\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  pointer-events: none;\n  -webkit-transition: all 0.4s ease;\n  transition: all 0.4s ease;\n  z-index: -1;\n  -webkit-filter: hue-rotate(-40deg);\n  filter: hue-rotate(-40deg);\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.vs-button--gradient:hover {\n  -webkit-transform: translate(0, -3px);\n  transform: translate(0, -3px);\n  -webkit-box-shadow: 0px 10px 20px -10px rgba(var(--vs-color), 0.7);\n  box-shadow: 0px 10px 20px -10px rgba(var(--vs-color), 0.7);\n}\n\n.vs-button--gradient:hover::before {\n  opacity: 0;\n}\n\n.vs-button--gradient.vs-button--active {\n  -webkit-transform: translate(0, -3px);\n  transform: translate(0, -3px);\n  -webkit-box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.35);\n  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.35);\n}\n\n.vs-button--relief {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n  overflow: hidden;\n  -webkit-transform: translate(0) scale(1, 1);\n  transform: translate(0) scale(1, 1);\n}\n\n.vs-button--relief .vs-button__content {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-button--relief.vs-button--icon.vs-button--active {\n  height: auto;\n}\n\n.vs-button--relief::before {\n  content: \"\";\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: calc(100% - 3px);\n  border-radius: inherit;\n  pointer-events: none;\n  -webkit-transition: all 0.4s ease;\n  transition: all 0.4s ease;\n  z-index: -1;\n  -webkit-filter: contrast(2) grayscale(0.4);\n  filter: contrast(2) grayscale(0.4);\n  border-bottom: 3px solid rgba(var(--vs-color), 1);\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.vs-button--relief:active {\n  -webkit-transform: translate(0, 1px);\n  transform: translate(0, 1px);\n}\n\n.vs-button--relief:active .vs-button__content {\n  padding-bottom: 6px;\n}\n\n.vs-button--relief:active::before {\n  border-bottom: 0px solid rgba(var(--vs-color), 1);\n}\n\n.vs-button--relief.vs-button--active {\n  -webkit-transform: translate(0, 1px);\n  transform: translate(0, 1px);\n}\n\n.vs-button--relief.vs-button--active .vs-button__content {\n  padding-bottom: 6px;\n}\n\n.vs-button--relief.vs-button--active::before {\n  border-bottom: 0px solid rgba(var(--vs-color), 1);\n}\n\n.vs-button--transparent {\n  background: transparent;\n  color: rgba(var(--vs-color), 1);\n  overflow: hidden;\n}\n\n.vs-button--transparent::before {\n  content: \"\";\n  background: rgba(var(--vs-color), 0.1);\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  pointer-events: none;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  z-index: -1;\n  -webkit-transform: scale(0.5);\n  transform: scale(0.5);\n  opacity: 0;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.vs-button--transparent:active:not(.vs-button--active)::before {\n  -webkit-transform: scale(0.9) !important;\n  transform: scale(0.9) !important;\n}\n\n.vs-button--transparent:hover::before {\n  opacity: 1;\n  -webkit-transform: scale(1);\n  transform: scale(1);\n}\n\n.vs-button--transparent.vs-button--active::before {\n  background: rgba(var(--vs-color), 0.2);\n  opacity: 1;\n  -webkit-transform: scale(1);\n  transform: scale(1);\n}\n\n.vs-button--shadow {\n  background: rgba(var(--vs-background), 1);\n  color: rgba(var(--vs-text), 1);\n  overflow: hidden;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-button--shadow:active:not(.vs-button--active) {\n  -webkit-transform: translate(0, -1px);\n  transform: translate(0, -1px);\n  -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, var(--vs-shadow-opacity)) !important;\n  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, var(--vs-shadow-opacity)) !important;\n}\n\n.vs-button--shadow:hover {\n  -webkit-transform: translate(0, -3px);\n  transform: translate(0, -3px);\n  -webkit-box-shadow: 0px 8px 25px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 8px 25px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-button--shadow.vs-button--active {\n  -webkit-transform: translate(0, -3px);\n  transform: translate(0, -3px);\n  -webkit-box-shadow: 0px 8px 25px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 8px 25px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n@-webkit-keyframes btnload {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes btnload {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@-webkit-keyframes btnupload {\n  0% {\n    -webkit-transform: translate(0, 110%);\n    transform: translate(0, 110%);\n  }\n\n  100% {\n    -webkit-transform: translate(0, -110%);\n    transform: translate(0, -110%);\n  }\n}\n\n@keyframes btnupload {\n  0% {\n    -webkit-transform: translate(0, 110%);\n    transform: translate(0, 110%);\n  }\n\n  100% {\n    -webkit-transform: translate(0, -110%);\n    transform: translate(0, -110%);\n  }\n}\n\n.vs-ripple-content {\n  --vs-color: inherit;\n  width: 100px;\n  height: 100px;\n  position: absolute;\n  width: 100%;\n  pointer-events: none;\n  overflow: hidden;\n  height: 100%;\n  top: 0px;\n  right: 0px;\n  border-radius: inherit;\n  z-index: -1;\n}\n\n.vs-ripple-content .vs-ripple {\n  width: 0px;\n  height: 0px;\n  border-radius: 50%;\n  opacity: 0;\n  position: absolute;\n  -webkit-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  -webkit-transition: all 0.5s ease;\n  transition: all 0.5s ease;\n  background: radial-gradient(circle, rgba(var(--vs-color), 0.05), rgba(var(--vs-color), 0.6));\n}\n\n.vs-ripple-content .vs-ripple--solid {\n  background: rgba(var(--vs-color), 1);\n  opacity: 1;\n}\n\n.vs-ripple-content .vs-ripple-invert {\n  width: 0px;\n  height: 0px;\n  border-radius: 50%;\n  opacity: 0;\n  position: absolute;\n  -webkit-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  -webkit-transition: all 0.5s ease;\n  transition: all 0.5s ease;\n  background-image: radial-gradient(circle, rgba(var(--vs-color), 0.5), rgba(var(--vs-color), 0));\n}\n\n.vs-ripple-content .vs-ripple-cut-1 {\n  width: 0px;\n  height: 0px;\n  opacity: 0;\n  position: absolute;\n  -webkit-transform: translate(-100%, -50%) skew(20deg);\n  transform: translate(-100%, -50%) skew(20deg);\n  -webkit-transition: all 0.6s ease;\n  transition: all 0.6s ease;\n  background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));\n  background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);\n}\n\n.vs-ripple-content .vs-ripple-cut-2 {\n  width: 0px;\n  height: 0px;\n  opacity: 0;\n  position: absolute;\n  -webkit-transform: translate(0%, -50%) skew(20deg);\n  transform: translate(0%, -50%) skew(20deg);\n  -webkit-transition: all 0.6s ease;\n  transition: all 0.6s ease;\n  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));\n  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);\n}\n\n.vs-button-group {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-button-group .vs-button {\n  margin: 0px;\n}\n\n.vs-button-group .vs-button:not(:last-of-type):not(:first-of-type) {\n  border-radius: 0px;\n  border: 0px;\n}\n\n.vs-button-group .vs-button:not(:last-of-type):not(:first-of-type).vs-button--border:before {\n  border-left: 0px;\n  width: 100%;\n}\n\n.vs-button-group .vs-button:not(:last-of-type):not(:first-of-type).vs-button--border + .vs-button--border:not(:last-of-type):before {\n  border-right: 0px;\n  width: calc(100%);\n}\n\n.vs-button-group .vs-button:last-of-type {\n  border-radius: 0px 12px 12px 0px;\n}\n\n.vs-button-group .vs-button:first-of-type {\n  border-radius: 12px 0px 0px 12px;\n}\n\n.vs-alert {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-alert {\n  background: rgba(var(--vs-color), 0.1);\n  color: rgba(var(--vs-color), 1);\n  width: 100%;\n  padding: 0px 20px;\n  border-radius: 0px 12px 12px 0px;\n  position: relative;\n  font-size: 0.9rem;\n  z-index: 10;\n  -webkit-transition: height 0.25s ease;\n  transition: height 0.25s ease;\n  overflow: hidden;\n}\n\n.vs-alert::-moz-selection {\n  background: rgba(var(--vs-color), 0.15);\n}\n\n.vs-alert::selection {\n  background: rgba(var(--vs-color), 0.15);\n}\n\n.vs-alert *::-moz-selection {\n  background: rgba(var(--vs-color), 0.15);\n}\n\n.vs-alert *::selection {\n  background: rgba(var(--vs-color), 0.15);\n}\n\n.vs-alert b {\n  font-weight: 600;\n}\n\n.vs-alert a {\n  color: inherit !important;\n  text-decoration: underline;\n}\n\n.vs-alert a:hover {\n  opacity: 0.6;\n}\n\n.vs-alert::after {\n  content: \"\";\n  background: rgba(var(--vs-color), 1);\n  left: 0px;\n  top: 0px;\n  width: 2px;\n  height: 100%;\n  position: absolute;\n}\n\n.vs-alert--solid {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n}\n\n.vs-alert--solid .vs-alert__icon i {\n  color: #fff;\n}\n\n.vs-alert--solid .vs-alert__icon svg {\n  fill: #fff;\n}\n\n.vs-alert--solid .vs-alert__close {\n  color: #fff;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);\n}\n\n.vs-alert--solid .vs-alert__close:hover {\n  -webkit-transform: translate(0, -2px);\n  transform: translate(0, -2px);\n  -webkit-box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.15);\n  box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.15);\n}\n\n.vs-alert--solid .vs-alert__close svg {\n  fill: #fff;\n}\n\n.vs-alert--solid::after {\n  background: rgba(255, 255, 255, 0.4);\n}\n\n.vs-alert--border {\n  background: transparent;\n}\n\n.vs-alert--border::before {\n  border: 1px solid rgba(var(--vs-color), 1);\n  border-left: 0px;\n  width: calc(100% - 2px);\n  content: \"\";\n  position: absolute;\n  height: calc(100% - 2px);\n  top: 0px;\n  left: 0px;\n  z-index: -1;\n  border-radius: inherit;\n}\n\n.vs-alert--shadow {\n  background: transparent;\n  -webkit-box-shadow: 0px 4px 15px 0px rgba(var(--vs-color), 0.12);\n  box-shadow: 0px 4px 15px 0px rgba(var(--vs-color), 0.12);\n}\n\n.vs-alert--gradient {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n  border-radius: 12px;\n}\n\n.vs-alert--gradient .vs-alert__icon i {\n  color: #fff;\n}\n\n.vs-alert--gradient .vs-alert__icon svg {\n  fill: #fff;\n}\n\n.vs-alert--gradient .vs-alert__close {\n  color: #fff;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);\n}\n\n.vs-alert--gradient .vs-alert__close:hover {\n  -webkit-transform: translate(0, -2px);\n  transform: translate(0, -2px);\n  -webkit-box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.15);\n  box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.15);\n}\n\n.vs-alert--gradient .vs-alert__close svg {\n  fill: #fff;\n}\n\n.vs-alert--gradient::after {\n  display: none;\n}\n\n.vs-alert--gradient::before {\n  background: linear-gradient(30deg, rgba(var(--vs-color), 0) 33%, rgba(var(--vs-color), 1) 100%);\n  -webkit-filter: hue-rotate(-50deg);\n  filter: hue-rotate(-50deg);\n  width: 100%;\n  content: \"\";\n  position: absolute;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n  z-index: -1;\n  border-radius: inherit;\n}\n\n.vs-alert--flat {\n  background: rgba(0, 0, 0, 0.03);\n}\n\n.vs-alert--relief {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n  border-radius: 12px;\n  -webkit-box-shadow: 6px 6px 0px 0px rgba(var(--vs-color), 0.3);\n  box-shadow: 6px 6px 0px 0px rgba(var(--vs-color), 0.3);\n}\n\n.vs-alert--relief .vs-alert__icon i {\n  color: #fff;\n}\n\n.vs-alert--relief .vs-alert__icon svg {\n  fill: #fff;\n}\n\n.vs-alert--relief .vs-alert__close {\n  color: #fff;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);\n}\n\n.vs-alert--relief .vs-alert__close:hover {\n  -webkit-transform: translate(0, -2px);\n  transform: translate(0, -2px);\n  background: rgba(0, 0, 0, 0.2);\n  -webkit-box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.15);\n  box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.15);\n}\n\n.vs-alert--relief .vs-alert__close svg {\n  fill: #fff;\n}\n\n.vs-alert--relief::after {\n  display: none;\n}\n\n.vs-alert__title {\n  font-weight: 600;\n  font-size: 1rem;\n  padding: 15px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: justify;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n}\n\n.vs-alert__title--clickHidden {\n  cursor: pointer;\n  padding-right: 0px;\n}\n\n.vs-alert__title ~ .vs-alert__content .vs-alert__content__text {\n  padding-top: 0px;\n}\n\n.vs-alert__content {\n  -webkit-transition: height 0.25s ease;\n  transition: height 0.25s ease;\n  overflow: hidden;\n}\n\n.vs-alert__content__text {\n  padding: 15px 15px;\n  padding-top: 20px;\n  padding-bottom: 20px;\n}\n\n.vs-alert__close {\n  position: absolute;\n  top: 9px;\n  right: 6px;\n  background: transparent;\n  border: 0px;\n  color: rgba(var(--vs-color), 1);\n  width: 30px;\n  height: 30px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.3);\n  box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.3);\n  border-radius: 10px;\n  padding: 0px;\n}\n\n.vs-alert__close:hover {\n  -webkit-transform: translate(0, -2px);\n  transform: translate(0, -2px);\n  -webkit-box-shadow: 0px 5px 18px 0px rgba(var(--vs-color), 0.3);\n  box-shadow: 0px 5px 18px 0px rgba(var(--vs-color), 0.3);\n}\n\n.vs-alert__close svg {\n  fill: rgba(var(--vs-color), 1);\n}\n\n.vs-alert__footer {\n  position: relative;\n  width: 100%;\n  padding: 10px 15px;\n  padding-top: 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: end;\n  -ms-flex-pack: end;\n  justify-content: flex-end;\n}\n\n.vs-alert__icon {\n  position: absolute;\n  width: 50px;\n  height: 100%;\n  left: 0px;\n  top: 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  padding-left: 2px;\n}\n\n.vs-alert__icon i {\n  font-size: 1.3rem;\n  color: rgba(var(--vs-color), 1);\n}\n\n.vs-alert__icon svg {\n  width: 24px;\n  height: 24px;\n  fill: rgba(var(--vs-color), 1);\n}\n\n.vs-alert__icon ~ .vs-alert__footer {\n  padding-left: 35px;\n}\n\n.vs-alert__icon ~ .vs-alert__content {\n  padding-left: 20px;\n}\n\n.vs-alert__icon ~ .vs-alert__title {\n  padding-left: 35px;\n}\n\n.vs-alert__progress {\n  width: 100%;\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  height: 2px;\n  background: rgba(var(--vs-color), 0.2);\n}\n\n.vs-alert__progress__bar {\n  width: 30%;\n  left: 0px;\n  position: relative;\n  height: 100%;\n  background: rgba(var(--vs-color), 1);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-alert__pagination {\n  position: relative;\n  padding: 0px 20px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  margin-bottom: 10px;\n}\n\n.vs-alert__pagination span {\n  font-size: 0.8rem;\n  margin: 0px 8px;\n  min-width: 28px;\n  text-align: center;\n}\n\n.vs-alert__pagination button {\n  border: 0px;\n  background: transparent;\n  color: rgba(var(--vs-color), 1);\n  padding: 0px 7px;\n  font-size: 1rem;\n  background: rgba(var(--vs-color), 0.1);\n  border-radius: 8px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-alert__pagination button:hover {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n}\n\n.vs-icon-close {\n  width: 30px;\n  height: 30px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  position: relative;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-icon-close:before {\n  background: rgba(var(--vs-color), 1);\n  content: \"\";\n  position: absolute;\n  width: 16px;\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n  height: 2px;\n  border-radius: 2px;\n  -webkit-transition: all 0.3s ease;\n  transition: all 0.3s ease;\n}\n\n.vs-icon-close:after {\n  background: rgba(var(--vs-color), 1);\n  content: \"\";\n  position: absolute;\n  width: 16px;\n  height: 2px;\n  -webkit-transform: rotate(45deg);\n  transform: rotate(45deg);\n  border-radius: 2px;\n  -webkit-transition: all 0.3s ease;\n  transition: all 0.3s ease;\n}\n\n.vs-icon-close.vs-icon-hover-less:hover:after {\n  width: 12px;\n  -webkit-transform: rotate(180deg);\n  transform: rotate(180deg);\n}\n\n.vs-icon-close.vs-icon-hover-less:hover:before {\n  width: 12px;\n  -webkit-transform: rotate(180deg);\n  transform: rotate(180deg);\n}\n\n.vs-icon-plus {\n  width: 30px;\n  height: 30px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  position: relative;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  cursor: pointer;\n}\n\n.vs-icon-plus:before {\n  background: rgba(var(--vs-color), 1);\n  content: \"\";\n  position: absolute;\n  width: 14px;\n  -webkit-transform: rotate(0deg);\n  transform: rotate(0deg);\n  height: 2px;\n  border-radius: 2px;\n  -webkit-transition: all 0.3s ease;\n  transition: all 0.3s ease;\n}\n\n.vs-icon-plus:after {\n  background: rgba(var(--vs-color), 1);\n  content: \"\";\n  position: absolute;\n  width: 14px;\n  height: 2px;\n  -webkit-transform: rotate(90deg);\n  transform: rotate(90deg);\n  border-radius: 2px;\n  -webkit-transition: all 0.4s ease;\n  transition: all 0.4s ease;\n}\n\n.vs-icon-plus:hover:not(.less) {\n  -webkit-transform: rotate(-90deg);\n  transform: rotate(-90deg);\n}\n\n.vs-icon-plus.less:hover {\n  -webkit-transform: scale(0.75);\n  transform: scale(0.75);\n}\n\n.vs-icon-plus.less:after {\n  -webkit-transform: rotate(180deg);\n  transform: rotate(180deg);\n}\n\n.vs-icon-check {\n  width: 23px;\n  height: 23px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  border-radius: inherit;\n}\n\n.vs-icon-check span {\n  -webkit-transform: rotate(45deg);\n  transform: rotate(45deg);\n  display: block;\n  position: relative;\n  width: 8px;\n  height: 13px;\n  margin-top: -4px;\n}\n\n.vs-icon-check span .line1 {\n  background: transparent;\n  content: \"\";\n  position: absolute;\n  height: 2px;\n  border-radius: 2px;\n  -webkit-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n  border-radius: 5px;\n  z-index: 100;\n  width: 8px;\n  bottom: 0px;\n}\n\n.vs-icon-check span .line1:after {\n  content: \"\";\n  position: absolute;\n  width: 0%;\n  height: 2px;\n  background: #fff;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  border-radius: 5px 0px 0px 5px;\n}\n\n.vs-icon-check span .line2 {\n  bottom: 0px;\n  right: 0rem;\n  z-index: 100;\n  border-radius: 5px;\n  background: transparent;\n  content: \"\";\n  position: absolute;\n  height: 13px;\n  border-radius: 5px;\n  -webkit-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n  width: 2px;\n}\n\n.vs-icon-check span .line2:after {\n  content: \"\";\n  position: absolute;\n  width: 2px;\n  height: 0%;\n  background: #fff;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  bottom: 0px;\n  border-radius: 5px 5px 0px 0px;\n}\n\n.vs-icon-check.active:before {\n  width: 8px;\n}\n\n.vs-icon-check.active:after {\n  width: 4px;\n}\n\n.vs-icon-check.indeterminate span {\n  -webkit-transform: rotate(0);\n  transform: rotate(0);\n  height: auto;\n  margin: 0px;\n  width: auto;\n}\n\n.vs-icon-check.indeterminate span:after {\n  position: relative;\n  content: \"\";\n  width: 10px;\n  height: 2px;\n  background: #fff;\n  display: block;\n}\n\n.vs-icon-check.indeterminate span .line1 {\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n  bottom: 0px;\n  right: -1px;\n  opacity: 0;\n  display: none;\n}\n\n.vs-icon-check.indeterminate span .line2 {\n  right: 0px !important;\n  bottom: -0.14rem !important;\n  -webkit-transform: rotate(45deg) !important;\n  transform: rotate(45deg) !important;\n  -webkit-transition: all 0.25s ease !important;\n  transition: all 0.25s ease !important;\n  height: 11px !important;\n  display: none;\n}\n\n.vs-icon-arrow {\n  pointer-events: none;\n  width: 7px;\n  height: 7px;\n  -webkit-transform: rotate(-135deg);\n  transform: rotate(-135deg);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-transform-origin: center;\n  transform-origin: center;\n}\n\n.vs-icon-arrow:after {\n  content: \"\";\n  width: 100%;\n  height: 1px;\n  background: rgba(var(--vs-text), 1);\n  position: absolute;\n  display: block;\n  top: 0px;\n}\n\n.vs-icon-arrow:before {\n  top: 0px;\n  content: \"\";\n  width: 1px;\n  height: 100%;\n  background: rgba(var(--vs-text), 1);\n  position: absolute;\n  display: block;\n}\n\n.vs-input-parent {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-input-parent {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-item-align: center;\n  align-self: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  position: relative;\n}\n\n.vs-input-parent.square .vs-input-content {\n  border-radius: 0px !important;\n}\n\n.vs-input-parent.textWhite .vs-input {\n  color: #fff;\n}\n\n.vs-input-parent.transparent .vs-input {\n  background: transparent !important;\n}\n\n.vs-input-parent.block {\n  width: 100%;\n}\n\n.vs-input-parent.block .vs-input {\n  width: 100%;\n}\n\n.vs-input-parent--has-label {\n  margin-top: 20px !important;\n}\n\n.vs-input-parent--state-success .vs-input {\n  background: rgba(var(--vs-success), 0.1) !important;\n  color: rgba(var(--vs-success), 1);\n}\n\n.vs-input-parent--state-success .vs-input__label {\n  color: rgba(var(--vs-success), 1);\n}\n\n.vs-input-parent--state-success .vs-input__icon {\n  color: rgba(var(--vs-success), 1);\n  background: rgba(var(--vs-success), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-success), 0.1);\n  box-shadow: -15px 10px 10px -10px rgba(var(--vs-success), 0.1);\n}\n\n.vs-input-parent--state-danger .vs-input {\n  background: rgba(var(--vs-danger), 0.1) !important;\n  color: rgba(var(--vs-danger), 1);\n}\n\n.vs-input-parent--state-danger .vs-input__label {\n  color: rgba(var(--vs-danger), 1);\n}\n\n.vs-input-parent--state-danger .vs-input__icon {\n  color: rgba(var(--vs-danger), 1);\n  background: rgba(var(--vs-danger), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-danger), 0.1);\n  box-shadow: -15px 10px 10px -10px rgba(var(--vs-danger), 0.1);\n}\n\n.vs-input-parent--state-warn .vs-input {\n  background: rgba(var(--vs-warn), 0.1) !important;\n  color: rgba(var(--vs-warn), 1);\n}\n\n.vs-input-parent--state-warn .vs-input__label {\n  color: rgba(var(--vs-warn), 1);\n}\n\n.vs-input-parent--state-warn .vs-input__icon {\n  color: rgba(var(--vs-warn), 1);\n  background: rgba(var(--vs-warn), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-warn), 0.1);\n  box-shadow: -15px 10px 10px -10px rgba(var(--vs-warn), 0.1);\n}\n\n.vs-input-parent--state-dark .vs-input {\n  background: rgba(var(--vs-dark), 0.1) !important;\n  color: rgba(var(--vs-dark), 1);\n}\n\n.vs-input-parent--state-dark .vs-input__label {\n  color: rgba(var(--vs-dark), 1);\n}\n\n.vs-input-parent--state-dark .vs-input__icon {\n  color: rgba(var(--vs-dark), 1);\n  background: rgba(var(--vs-dark), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-dark), 0.1);\n  box-shadow: -15px 10px 10px -10px rgba(var(--vs-dark), 0.1);\n}\n\n.vs-input-parent--state-primary .vs-input {\n  background: rgba(var(--vs-primary), 0.1) !important;\n  color: rgba(var(--vs-primary), 1);\n}\n\n.vs-input-parent--state-primary .vs-input__label {\n  color: rgba(var(--vs-primary), 1);\n}\n\n.vs-input-parent--state-primary .vs-input__icon {\n  color: rgba(var(--vs-primary), 1);\n  background: rgba(var(--vs-primary), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-primary), 0.1);\n  box-shadow: -15px 10px 10px -10px rgba(var(--vs-primary), 0.1);\n}\n\n.vs-input-content {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  position: relative;\n  border-radius: 12px;\n}\n\n.vs-input-content + .vs-input__message {\n  padding-top: 2px;\n}\n\n.vs-input-content--has-color .vs-input:focus {\n  border-bottom: 2px solid rgba(var(--vs-color), 1);\n}\n\n.vs-input-content--has-color .vs-input:focus ~ .vs-input__icon {\n  color: rgba(var(--vs-color), 1);\n}\n\n.vs-input-content--has-color .vs-input:focus ~ .vs-input__label {\n  color: rgba(var(--vs-color), 1);\n}\n\n.vs-input-content--has-color .vs-input:focus ~ .vs-input__label--placeholder {\n  color: rgba(var(--vs-color), 1);\n}\n\n.vs-input {\n  border: 2px solid transparent;\n  background: rgba(var(--vs-gray-2), 1);\n  color: rgba(var(--vs-text), 1);\n  padding: 7px 13px;\n  border-radius: inherit;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  padding-left: 10px;\n  width: 200px;\n}\n\n.vs-input:focus {\n  background: rgba(var(--vs-gray-3), 1);\n  padding-left: 15px;\n}\n\n.vs-input:focus.vs-input--has-icon:not(.vs-input--has-icon--after) {\n  padding-left: 40px;\n}\n\n.vs-input:focus.vs-input--has-icon:not(.vs-input--has-icon--after) ~ .vs-input__icon {\n  -webkit-box-shadow: 15px 10px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 15px 10px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-input:focus.vs-input--has-icon:not(.vs-input--has-icon--after) ~ .vs-input__label:not(.vs-input__label--placeholder):not(.vs-input__label--label) {\n  left: 44px;\n}\n\n.vs-input:focus ~ .vs-input__icon {\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: -15px 10px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(-6px, -6px);\n  transform: translate(-6px, -6px);\n  background: rgba(var(--vs-gray-1), 1);\n}\n\n.vs-input:focus ~ .vs-input__icon--after {\n  -webkit-transform: translate(6px, -6px);\n  transform: translate(6px, -6px);\n}\n\n.vs-input:focus ~ .vs-input__label:not(.vs-input__label--placeholder):not(.vs-input__label--label) {\n  opacity: 0;\n  left: 20px;\n}\n\n.vs-input:focus ~ .vs-input__label--placeholder {\n  opacity: 1;\n  visibility: visible;\n  pointer-events: auto;\n  -webkit-transform: translate(-3%, -77%);\n  transform: translate(-3%, -77%);\n  font-size: 0.75rem;\n}\n\n.vs-input__label {\n  position: absolute;\n  left: 13px;\n  font-size: 0.8rem;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  cursor: text;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  pointer-events: none;\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  opacity: 0.4;\n}\n\n.vs-input__label--hidden {\n  opacity: 0;\n  visibility: hidden;\n}\n\n.vs-input__label--hidden.vs-input__label--placeholder {\n  opacity: 1;\n  visibility: visible;\n  pointer-events: auto;\n  -webkit-transform: translate(-3px, -80%);\n  transform: translate(-3px, -80%);\n  font-size: 0.75rem;\n}\n\n.vs-input__label--label {\n  opacity: 1;\n  visibility: visible;\n  pointer-events: auto;\n  -webkit-transform: translate(-2px, -77%);\n  transform: translate(-2px, -77%);\n  font-size: 0.75rem;\n}\n\n.vs-input--has-icon {\n  padding-left: 38px;\n}\n\n.vs-input--has-icon ~ .vs-input__label {\n  left: 44px;\n}\n\n.vs-input--has-icon--after {\n  padding-left: 7px;\n  padding-right: 38px;\n}\n\n.vs-input--has-icon--after ~ .vs-input__label {\n  left: 13px;\n}\n\n.vs-input--has-icon--after.vs-input__label--label {\n  -webkit-transform: translate(calc(-3px - 22px), -80%) !important;\n  transform: translate(calc(-3px - 22px), -80%) !important;\n}\n\n.vs-input--has-icon:focus--has-icon--after ~ .vs-input__label {\n  left: 44px;\n}\n\n.vs-input--has-icon:focus--has-icon--after ~ .vs-input__label--placeholder {\n  -webkit-transform: translate(calc(-3px - 22px), -80%) !important;\n  transform: translate(calc(-3px - 22px), -80%) !important;\n}\n\n.vs-input--has-icon:focus--has-icon--after ~ .vs-input__label {\n  left: 44px;\n}\n\n.vs-input__icon {\n  position: absolute;\n  right: auto;\n  width: 36px;\n  height: 36px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-shadow: 12px 0px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 12px 0px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  border-radius: inherit;\n  background: rgba(var(--vs-gray-2), 1);\n  pointer-events: none;\n  left: 0px;\n}\n\n.vs-input__icon--after {\n  left: auto;\n  right: 0px;\n  -webkit-box-shadow: -12px 0px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: -12px 0px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-input__icon--click {\n  pointer-events: auto !important;\n  cursor: pointer;\n}\n\n.vs-input__icon--click:hover {\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: -15px 10px 10px -10px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(-6px, -6px);\n  transform: translate(-6px, -6px);\n  background: rgba(var(--vs-gray-1), 1);\n}\n\n.vs-input__icon--click:hover.vs-input__icon--after {\n  -webkit-transform: translate(6px, -6px);\n  transform: translate(6px, -6px);\n}\n\n.vs-input__message {\n  font-size: 0.7rem;\n  position: relative;\n  padding: 0px 7px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  overflow: hidden;\n}\n\n.vs-input__message--success {\n  color: rgba(var(--vs-success), 1);\n}\n\n.vs-input__message--danger {\n  color: rgba(var(--vs-danger), 1);\n}\n\n.vs-input__message--warn {\n  color: rgba(var(--vs-warn), 1);\n}\n\n.vs-input__message--dark {\n  color: rgba(var(--vs-dark), 1);\n}\n\n.vs-input__message--primary {\n  color: rgba(var(--vs-primary), 1);\n}\n\n.vs-input__progress {\n  width: 95%;\n  left: 2.5%;\n  position: relative;\n  height: 2px;\n  background: rgba(var(--vs-gray-2), 1);\n  margin-top: 5px;\n  overflow: hidden;\n  border-radius: 5px;\n}\n\n.vs-input__progress--danger .vs-input__progress__bar {\n  background: rgba(var(--vs-danger), 1);\n}\n\n.vs-input__progress--warn .vs-input__progress__bar {\n  background: rgba(var(--vs-warn), 1);\n}\n\n.vs-input__progress--success .vs-input__progress__bar {\n  background: rgba(var(--vs-success), 1);\n}\n\n.vs-input__progress__bar {\n  width: 32%;\n  height: 2px;\n  max-width: 100%;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  border-radius: 5px;\n}\n\n.vs-input__loading {\n  position: absolute;\n  width: 22px;\n  height: 22px;\n  right: 7px;\n  pointer-events: none;\n  border-radius: 50%;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  background: inherit;\n  cursor: default;\n}\n\n.vs-input__loading:after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px solid rgba(var(--vs-primary), 1);\n  border-radius: inherit;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n  -webkit-animation: rotateInputLoading 0.8s ease infinite;\n  animation: rotateInputLoading 0.8s ease infinite;\n  top: 0px;\n  content: \"\";\n}\n\n.vs-input__loading:before {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  top: 0px;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px dashed rgba(var(--vs-primary), 1);\n  border-radius: inherit;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n  -webkit-animation: rotateInputLoading 0.8s linear infinite;\n  animation: rotateInputLoading 0.8s linear infinite;\n  opacity: 0.2;\n  content: \"\";\n}\n\n.vs-input-parent--border .vs-input__icon {\n  background: transparent !important;\n  -webkit-box-shadow: none !important;\n  box-shadow: none !important;\n}\n\n.vs-input-parent--border .vs-input-content {\n  border-radius: 0px;\n}\n\n.vs-input-parent--border .vs-input-content .vs-input__affects {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  pointer-events: none;\n}\n\n.vs-input-parent--border .vs-input-content .vs-input__affects__1 {\n  border-bottom: 2px solid rgba(var(--vs-gray-3), 1);\n  width: 100%;\n  height: 2px;\n  position: absolute;\n  bottom: 0px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-input-parent--border .vs-input-content .vs-input__affects__2 {\n  border-bottom: 2px solid rgba(var(--vs-color), 1);\n  width: 0%;\n  height: 2px;\n  position: absolute;\n  bottom: 0px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  left: 50%;\n  -webkit-transform: translate(-50%);\n  transform: translate(-50%);\n}\n\n.vs-input-parent--border .vs-input-content .vs-input {\n  background: transparent;\n  border-radius: 0px;\n}\n\n.vs-input-parent--border .vs-input-content .vs-input:focus ~ .vs-input__affects .vs-input__affects__2 {\n  width: 100%;\n}\n\n.vs-input-parent--shadow .vs-input__icon {\n  background: transparent;\n  z-index: 100;\n}\n\n.vs-input-parent--shadow .vs-input-content .vs-input__affects {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  border-radius: inherit;\n  pointer-events: none;\n  z-index: 10;\n}\n\n.vs-input-parent--shadow .vs-input-content .vs-input__affects__1 {\n  -webkit-box-shadow: 0px 6px 25px -6px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 6px 25px -6px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  z-index: 200;\n  border-radius: inherit;\n}\n\n.vs-input-parent--shadow .vs-input-content .vs-input {\n  background: transparent;\n  border-radius: 0px;\n  border: 2px solid transparent;\n}\n\n.vs-input-parent--shadow .vs-input-content .vs-input:focus {\n  -webkit-transform: translate(0, 3px);\n  transform: translate(0, 3px);\n}\n\n.vs-input-parent--shadow .vs-input-content .vs-input:focus ~ .vs-input__icon {\n  background: rgba(var(--vs-background), 1) !important;\n  opacity: 1;\n  -webkit-box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, var(--vs-shadow-opacity)) !important;\n  box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, var(--vs-shadow-opacity)) !important;\n}\n\n.vs-input-parent--shadow .vs-input-content .vs-input:focus ~ .vs-input__affects .vs-input__affects__1 {\n  -webkit-transform: translate(0, 3px);\n  transform: translate(0, 3px);\n  -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n@-webkit-keyframes rotateInputLoading {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes rotateInputLoading {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n.vs-checkbox-content {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-checkbox-content {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n}\n\n.vs-checkbox-con {\n  width: 23px;\n  height: 23px;\n  border-radius: 9px;\n  position: relative;\n  z-index: 1;\n}\n\n.vs-checkbox-mask {\n  border-radius: 32%;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  z-index: 50;\n  cursor: pointer;\n  pointer-events: none;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  z-index: -1;\n  box-sizing: border-box;\n}\n\n.vs-checkbox-mask i:not(.vs-icon-check) {\n  opacity: 0;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  color: #fff;\n  font-size: 1.1em;\n  -webkit-transform: scale(0.5);\n  transform: scale(0.5);\n}\n\n.vs-checkbox-mask:after {\n  content: \"\";\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  background: rgba(var(--vs-color), 1);\n  -webkit-transform: scale(0.5);\n  transform: scale(0.5);\n  border-radius: inherit;\n  opacity: 0;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  z-index: -1;\n}\n\n.vs-checkbox-mask:before {\n  content: \"\";\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  z-index: -1;\n  border: 2px solid rgba(var(--vs-gray-4), 1);\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.vs-checkbox-mask .vs-icon-check {\n  opacity: 0;\n  z-index: 200;\n}\n\n.vs-checkbox {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n  margin: 0px;\n  padding: 0px;\n  opacity: 0;\n  z-index: 100;\n  cursor: pointer;\n}\n\n.vs-checkbox:disabled {\n  opacity: 0;\n  pointer-events: none;\n}\n\n.vs-checkbox:active ~ .vs-checkbox-mask {\n  background: rgba(var(--vs-gray-4), 1) !important;\n}\n\n.vs-checkbox:hover ~ .vs-checkbox-mask {\n  background: rgba(var(--vs-gray-3), 1);\n}\n\n.vs-checkbox:hover ~ .vs-checkbox-mask:before {\n  border: 2px solid rgba(var(--vs-gray-4), 0);\n}\n\n.vs-checkbox:checked:hover ~ .vs-checkbox-mask {\n  -webkit-box-shadow: 0px 3px 15px 0px rgba(var(--vs-color), 0.35);\n  box-shadow: 0px 3px 15px 0px rgba(var(--vs-color), 0.35);\n}\n\n.vs-checkbox:checked ~ .vs-checkbox-mask {\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.35);\n  box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.35);\n}\n\n.vs-checkbox:checked ~ .vs-checkbox-mask i:not(.vs-icon-check) {\n  opacity: 1;\n  -webkit-transform: scale(1);\n  transform: scale(1);\n  -webkit-transition: all 0.25s ease 0.15s;\n  transition: all 0.25s ease 0.15s;\n}\n\n.vs-checkbox:checked ~ .vs-checkbox-mask .vs-icon-check {\n  opacity: 1;\n}\n\n.vs-checkbox:checked ~ .vs-checkbox-mask .vs-icon-check span .line1:after {\n  width: 100%;\n  -webkit-transition: all 0.25s ease 0.1s;\n  transition: all 0.25s ease 0.1s;\n}\n\n.vs-checkbox:checked ~ .vs-checkbox-mask .vs-icon-check span .line2:after {\n  -webkit-transition: all 0.2s ease 0.3s;\n  transition: all 0.2s ease 0.3s;\n  height: 100%;\n}\n\n.vs-checkbox:checked ~ .vs-checkbox-mask:after {\n  opacity: 1;\n  -webkit-transform: scale(1);\n  transform: scale(1);\n}\n\n.vs-checkbox:checked ~ .vs-checkbox-mask:before {\n  opacity: 0;\n  -webkit-transform: scale(1.2);\n  transform: scale(1.2);\n}\n\n.vs-checkbox-label {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  cursor: pointer;\n  padding: 7px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  font-size: 0.9rem;\n}\n\n.vs-checkbox-label:before {\n  position: absolute;\n  width: 0px;\n  height: 2px;\n  background: rgba(var(--vs-text), 0.6);\n  content: \"\";\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-checkbox--disabled {\n  pointer-events: none;\n}\n\n.vs-checkbox--disabled .vs-checkbox-label {\n  opacity: 0.5;\n}\n\n.vs-checkbox--disabled .vs-checkbox-mask {\n  opacity: 0.6;\n  background: transparent !important;\n}\n\n.vs-checkbox--checked .lineThrough {\n  opacity: 0.4;\n}\n\n.vs-checkbox--checked .lineThrough:before {\n  width: calc(100% - 10px);\n}\n\n.vs-checkbox--loading {\n  pointer-events: none;\n}\n\n.vs-checkbox--loading.vs-checkbox--checked .vs-checkbox-mask {\n  background: transparent !important;\n}\n\n.vs-checkbox--loading.vs-checkbox--checked .vs-checkbox-mask:before {\n  border-radius: 50%;\n  border: 2px solid rgba(var(--vs-color), 1) !important;\n  border-top: 2px solid transparent !important;\n  -webkit-animation: rotateCheckboxLoading 0.6s linear infinite;\n  animation: rotateCheckboxLoading 0.6s linear infinite;\n  opacity: 1 !important;\n}\n\n.vs-checkbox--loading.vs-checkbox--checked .vs-checkbox-mask:after {\n  opacity: 0;\n  -webkit-transform: scale(0.5);\n  transform: scale(0.5);\n}\n\n.vs-checkbox--loading .vs-checkbox-mask {\n  background: transparent !important;\n}\n\n.vs-checkbox--loading .vs-checkbox-mask:before {\n  border-radius: 50%;\n  border: 2px solid rgba(var(--vs-gray-4), 1) !important;\n  border-top: 2px solid transparent !important;\n  -webkit-animation: rotateCheckboxLoading 0.6s linear infinite;\n  animation: rotateCheckboxLoading 0.6s linear infinite;\n}\n\n@-webkit-keyframes rotateCheckboxLoading {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes rotateCheckboxLoading {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n.vs-checkbox--label-before .vs-checkbox-label {\n  -webkit-box-ordinal-group: 0;\n  -ms-flex-order: -1;\n  order: -1;\n}\n\n.vs-switch {\n  --vs-color: var(--vs-primary);\n}\n\n@-webkit-keyframes rotateSwitch {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes rotateSwitch {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n.vs-switch {\n  color: #fff;\n  padding: 5px;\n  border-radius: 20px;\n  min-width: 48px;\n  height: 28px;\n  border: 0px;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  background: rgba(var(--vs-gray-3), 1);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  overflow: hidden;\n}\n\n.vs-switch--icon .vs-switch__input:checked ~ .vs-switch__circle {\n  color: #fff !important;\n}\n\n.vs-switch--icon .vs-switch__circle {\n  background: transparent !important;\n  -webkit-box-shadow: none !important;\n  box-shadow: none !important;\n}\n\n.vs-switch--icon .vs-switch__circle i {\n  opacity: 1;\n  font-size: 1.3rem;\n}\n\n.vs-switch--indeterminate .vs-switch__input {\n  pointer-events: none;\n}\n\n.vs-switch--indeterminate .vs-switch__circle {\n  left: 50% !important;\n  -webkit-transform: translate(-50%);\n  transform: translate(-50%);\n}\n\n.vs-switch--square {\n  border-radius: 5px;\n}\n\n.vs-switch--square .vs-switch__background {\n  border-radius: 5px !important;\n}\n\n.vs-switch--square .vs-switch__circle {\n  border-radius: 5px !important;\n}\n\n.vs-switch:after {\n  -webkit-transition: all 0s ease 0s;\n  transition: all 0s ease 0s;\n  opacity: 0;\n  visibility: hidden;\n  content: \"\";\n  position: absolute;\n  width: calc(100% - 8px);\n  height: calc(100% - 8px);\n  border: 3px dashed rgba(var(--vs-color), 1);\n  z-index: 200;\n  border-radius: 50%;\n  border-top: 3px solid transparent;\n  border-right: 3px solid transparent;\n  -webkit-animation: rotateSwitch 0.6s linear infinite 0.25s;\n  animation: rotateSwitch 0.6s linear infinite 0.25s;\n  pointer-events: none;\n}\n\n.vs-switch:before {\n  pointer-events: none;\n  -webkit-transition: all 0s ease 0s;\n  transition: all 0s ease 0s;\n  opacity: 0;\n  visibility: hidden;\n  content: \"\";\n  position: absolute;\n  width: calc(100% - 8px);\n  height: calc(100% - 8px);\n  border: 3px solid rgba(var(--vs-color), 1);\n  z-index: 200;\n  border-radius: 50%;\n  border-top: 3px solid transparent;\n  border-right: 3px solid transparent;\n  -webkit-animation: rotateSwitch 0.6s ease infinite 0.25s;\n  animation: rotateSwitch 0.6s ease infinite 0.25s;\n}\n\n.vs-switch--loading {\n  width: 28px !important;\n  min-width: 28px !important;\n  pointer-events: none;\n  border-radius: 20px !important;\n}\n\n.vs-switch--loading .vs-switch__circle {\n  border-radius: 50% !important;\n}\n\n.vs-switch--loading .vs-switch__background {\n  opacity: 0 !important;\n}\n\n.vs-switch--loading:after {\n  opacity: 1;\n  visibility: visible;\n  -webkit-transition: all 0.25s ease 0.3s;\n  transition: all 0.25s ease 0.3s;\n}\n\n.vs-switch--loading:before {\n  opacity: 1;\n  visibility: visible;\n  -webkit-transition: all 0.25s ease 0.3s;\n  transition: all 0.25s ease 0.3s;\n}\n\n.vs-switch:hover {\n  background: rgba(var(--vs-gray-4), 1);\n}\n\n.vs-switch:active {\n  -webkit-transform: scale(0.9);\n  transform: scale(0.9);\n}\n\n.vs-switch__background {\n  width: 100%;\n  height: auto;\n  position: absolute;\n  background: rgba(var(--vs-color), 1);\n  border-radius: inherit;\n  z-index: 2;\n  -webkit-transition: all 0.25s ease-out;\n  transition: all 0.25s ease-out;\n  -webkit-transform: scale(1);\n  transform: scale(1);\n  left: -100%;\n  border-radius: 50%;\n  padding-bottom: 100%;\n}\n\n.vs-switch__text {\n  font-size: 0.7rem;\n  padding: 5px;\n  padding-left: 25px;\n  -webkit-transition: all 0.25s ease 0.05s;\n  transition: all 0.25s ease 0.05s;\n  color: rgba(var(--vs-text), 1);\n  z-index: 9;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  position: relative;\n  overflow: hidden;\n  white-space: nowrap;\n}\n\n.vs-switch__text.on {\n  -webkit-transform: translate(-100%);\n  transform: translate(-100%);\n  position: absolute;\n  opacity: 0;\n}\n\n.vs-switch__text i {\n  font-size: 1rem;\n  opacity: 0.7;\n}\n\n.vs-switch__circle {\n  width: 20px;\n  height: 20px;\n  background: rgba(var(--vs-background), 1);\n  border-radius: 20px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  position: absolute;\n  z-index: 10;\n  left: 4px;\n  color: rgba(var(--vs-text), 1);\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-switch__circle i {\n  font-size: 0.8rem;\n}\n\n.vs-switch__input {\n  position: absolute;\n  width: 100%;\n  opacity: 0 !important;\n  height: 100%;\n  border-radius: inherit;\n  z-index: 100;\n  top: 0px;\n  left: 0px;\n  margin: 0px;\n  cursor: pointer;\n}\n\n.vs-switch__input:active:checked ~ .vs-switch__circle {\n  left: calc(100% - 30px);\n}\n\n.vs-switch__input:active ~ .vs-switch__circle {\n  width: 25px;\n}\n\n.vs-switch__input:checked ~ .vs-switch__background {\n  opacity: 1;\n  -webkit-transform: scale(1);\n  transform: scale(1);\n  width: 100%;\n  padding-bottom: 100%;\n  left: 0px;\n  border-radius: 50%;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-switch__input:checked ~ .vs-switch__text {\n  padding-left: 5px;\n  padding-right: 25px;\n  color: #fff;\n}\n\n.vs-switch__input:checked ~ .vs-switch__text i {\n  opacity: 1;\n}\n\n.vs-switch__input:checked ~ .vs-switch__text.on {\n  -webkit-transform: translate(0);\n  transform: translate(0);\n  position: relative;\n  opacity: 1;\n}\n\n.vs-switch__input:checked ~ .vs-switch__text.off {\n  -webkit-transform: translate(100%);\n  transform: translate(100%);\n  position: absolute;\n  opacity: 0;\n}\n\n.vs-switch__input:checked ~ .vs-switch__circle {\n  left: calc(100% - 24px);\n  -webkit-box-shadow: -5px 0px 25px 0px rgba(var(--vs-background), 0.6);\n  box-shadow: -5px 0px 25px 0px rgba(var(--vs-background), 0.6);\n  color: rgba(var(--vs-color), 1);\n}\n\n.vs-select {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-select__options .vs-checkbox-content {\n  --vs-color: inherit;\n}\n\n.vs-select-enter-active {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-select-enter {\n  opacity: 0;\n  -webkit-transform: translate(0, -10px);\n  transform: translate(0, -10px);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-select-enter:after {\n  opacity: 0 !important;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-select-leave-active {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-select-leave-to {\n  opacity: 0;\n  -webkit-transform: translate(0, -10px);\n  transform: translate(0, -10px);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-select-leave-to.top {\n  -webkit-transform: translate(0, 10px) !important;\n  transform: translate(0, 10px) !important;\n}\n\n.vs-select-leave-to:after {\n  opacity: 0 !important;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-select-content {\n  width: 100%;\n  max-width: 200px;\n}\n\n.vs-select-content.block.block {\n  max-width: 100%;\n}\n\n.vs-select {\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  min-height: 38px;\n  width: 100%;\n}\n\n.vs-select--state-success .vs-select__input {\n  background: rgba(var(--vs-success), 0.05);\n  color: rgba(var(--vs-success), 1);\n}\n\n.vs-select--state-success .vs-select__input:hover {\n  color: rgba(var(--vs-text), 1);\n}\n\n.vs-select--state-success .vs-select__chips {\n  background: rgba(var(--vs-success), 0.05);\n  color: rgba(var(--vs-success), 1);\n}\n\n.vs-select--state-success .vs-select__chips:hover:after {\n  opacity: 0;\n}\n\n.vs-select--state-success .vs-select__chips:after {\n  width: calc(100% - 4px);\n  height: calc(100% - 4px);\n  content: \"\";\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  border: 2px solid rgba(var(--vs-success), 0.5);\n  border-radius: inherit;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-select--state-success .vs-select__label {\n  color: rgba(var(--vs-success), 1);\n}\n\n.vs-select--state-success .vs-select__icon {\n  color: rgba(var(--vs-success), 1);\n  background: rgba(var(--vs-success), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-success), 0.1);\n  box-shadow: -15px 10px 10px -10px rgba(var(--vs-success), 0.1);\n}\n\n.vs-select--state-success .vs-icon-arrow:after {\n  background: rgba(var(--vs-success), 1);\n}\n\n.vs-select--state-success .vs-icon-arrow:before {\n  background: rgba(var(--vs-success), 1);\n}\n\n.vs-select--state-danger .vs-select__input {\n  background: rgba(var(--vs-danger), 0.05);\n  color: rgba(var(--vs-danger), 1);\n}\n\n.vs-select--state-danger .vs-select__input:hover {\n  color: rgba(var(--vs-text), 1);\n}\n\n.vs-select--state-danger .vs-select__chips {\n  background: rgba(var(--vs-danger), 0.05);\n  color: rgba(var(--vs-danger), 1);\n}\n\n.vs-select--state-danger .vs-select__chips:hover:after {\n  opacity: 0;\n}\n\n.vs-select--state-danger .vs-select__chips:after {\n  width: calc(100% - 4px);\n  height: calc(100% - 4px);\n  content: \"\";\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  border: 2px solid rgba(var(--vs-danger), 0.5);\n  border-radius: inherit;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-select--state-danger .vs-select__label {\n  color: rgba(var(--vs-danger), 1);\n}\n\n.vs-select--state-danger .vs-select__icon {\n  color: rgba(var(--vs-danger), 1);\n  background: rgba(var(--vs-danger), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-danger), 0.1);\n  box-shadow: -15px 10px 10px -10px rgba(var(--vs-danger), 0.1);\n}\n\n.vs-select--state-danger .vs-icon-arrow:after {\n  background: rgba(var(--vs-danger), 1);\n}\n\n.vs-select--state-danger .vs-icon-arrow:before {\n  background: rgba(var(--vs-danger), 1);\n}\n\n.vs-select--state-warn .vs-select__input {\n  background: rgba(var(--vs-warn), 0.05);\n  color: rgba(var(--vs-warn), 1);\n}\n\n.vs-select--state-warn .vs-select__input:hover {\n  color: rgba(var(--vs-text), 1);\n}\n\n.vs-select--state-warn .vs-select__chips {\n  background: rgba(var(--vs-warn), 0.05);\n  color: rgba(var(--vs-warn), 1);\n}\n\n.vs-select--state-warn .vs-select__chips:hover:after {\n  opacity: 0;\n}\n\n.vs-select--state-warn .vs-select__chips:after {\n  width: calc(100% - 4px);\n  height: calc(100% - 4px);\n  content: \"\";\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  border: 2px solid rgba(var(--vs-warn), 0.5);\n  border-radius: inherit;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-select--state-warn .vs-select__label {\n  color: rgba(var(--vs-warn), 1);\n}\n\n.vs-select--state-warn .vs-select__icon {\n  color: rgba(var(--vs-warn), 1);\n  background: rgba(var(--vs-warn), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-warn), 0.1);\n  box-shadow: -15px 10px 10px -10px rgba(var(--vs-warn), 0.1);\n}\n\n.vs-select--state-warn .vs-icon-arrow:after {\n  background: rgba(var(--vs-warn), 1);\n}\n\n.vs-select--state-warn .vs-icon-arrow:before {\n  background: rgba(var(--vs-warn), 1);\n}\n\n.vs-select--state-dark .vs-select__input {\n  background: rgba(var(--vs-dark), 0.05);\n  color: rgba(var(--vs-dark), 1);\n}\n\n.vs-select--state-dark .vs-select__input:hover {\n  color: rgba(var(--vs-text), 1);\n}\n\n.vs-select--state-dark .vs-select__chips {\n  background: rgba(var(--vs-dark), 0.05);\n  color: rgba(var(--vs-dark), 1);\n}\n\n.vs-select--state-dark .vs-select__chips:hover:after {\n  opacity: 0;\n}\n\n.vs-select--state-dark .vs-select__chips:after {\n  width: calc(100% - 4px);\n  height: calc(100% - 4px);\n  content: \"\";\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  border: 2px solid rgba(var(--vs-dark), 0.5);\n  border-radius: inherit;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-select--state-dark .vs-select__label {\n  color: rgba(var(--vs-dark), 1);\n}\n\n.vs-select--state-dark .vs-select__icon {\n  color: rgba(var(--vs-dark), 1);\n  background: rgba(var(--vs-dark), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-dark), 0.1);\n  box-shadow: -15px 10px 10px -10px rgba(var(--vs-dark), 0.1);\n}\n\n.vs-select--state-dark .vs-icon-arrow:after {\n  background: rgba(var(--vs-dark), 1);\n}\n\n.vs-select--state-dark .vs-icon-arrow:before {\n  background: rgba(var(--vs-dark), 1);\n}\n\n.vs-select--state-primary .vs-select__input {\n  background: rgba(var(--vs-primary), 0.05);\n  color: rgba(var(--vs-primary), 1);\n}\n\n.vs-select--state-primary .vs-select__input:hover {\n  color: rgba(var(--vs-text), 1);\n}\n\n.vs-select--state-primary .vs-select__chips {\n  background: rgba(var(--vs-primary), 0.05);\n  color: rgba(var(--vs-primary), 1);\n}\n\n.vs-select--state-primary .vs-select__chips:hover:after {\n  opacity: 0;\n}\n\n.vs-select--state-primary .vs-select__chips:after {\n  width: calc(100% - 4px);\n  height: calc(100% - 4px);\n  content: \"\";\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  border: 2px solid rgba(var(--vs-primary), 0.5);\n  border-radius: inherit;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-select--state-primary .vs-select__label {\n  color: rgba(var(--vs-primary), 1);\n}\n\n.vs-select--state-primary .vs-select__icon {\n  color: rgba(var(--vs-primary), 1);\n  background: rgba(var(--vs-primary), 0.1);\n  -webkit-box-shadow: -15px 10px 10px -10px rgba(var(--vs-primary), 0.1);\n  box-shadow: -15px 10px 10px -10px rgba(var(--vs-primary), 0.1);\n}\n\n.vs-select--state-primary .vs-icon-arrow:after {\n  background: rgba(var(--vs-primary), 1);\n}\n\n.vs-select--state-primary .vs-icon-arrow:before {\n  background: rgba(var(--vs-primary), 1);\n}\n\n.vs-select.loading {\n  pointer-events: none;\n}\n\n.vs-select.loading *:not(.vs-select__loading):not(.vs-select__label) {\n  opacity: 0.6;\n}\n\n.vs-select.loading .vs-select__label {\n  pointer-events: none !important;\n}\n\n.vs-select.top.activeOptions .vs-select__input, .vs-select.top.activeOptions .vs-select__chips {\n  border-radius: 0px 0px 12px 12px !important;\n  -webkit-box-shadow: 0px -5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity)) !important;\n  box-shadow: 0px -5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity)) !important;\n}\n\n.vs-select--disabled {\n  opacity: 0.6;\n  pointer-events: none;\n}\n\n.vs-select--disabled label {\n  pointer-events: none;\n}\n\n.vs-select .vs-icon-arrow {\n  z-index: 600;\n  position: absolute;\n  right: 15px;\n  margin-top: -2px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  pointer-events: auto;\n  cursor: pointer;\n}\n\n.vs-select.activeOptions .vs-icon-arrow {\n  -webkit-transform: rotate(45deg);\n  transform: rotate(45deg);\n  margin-top: -2px !important;\n}\n\n.vs-select.activeOptions .vs-select__input {\n  border-radius: 12px 12px 0px 0px;\n  background: rgba(var(--vs-background), 1);\n  -webkit-box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(0, -4px);\n  transform: translate(0, -4px);\n  -webkit-transition: all 0.25s ease, height 0s;\n  transition: all 0.25s ease, height 0s;\n  border: 2px solid transparent;\n  color: rgba(var(--vs-text), 1);\n}\n\n.vs-select.activeOptions .vs-select__chips {\n  border-radius: 12px 12px 0px 0px;\n  background: rgba(var(--vs-background), 1);\n  -webkit-box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(0, -4px);\n  transform: translate(0, -4px);\n  -webkit-transition: all 0.25s ease, height 0s;\n  transition: all 0.25s ease, height 0s;\n}\n\n.vs-select.activeOptions .vs-select__chips:after {\n  opacity: 0;\n}\n\n.vs-select.activeOptions .vs-select__label--placeholder {\n  opacity: 1;\n  visibility: visible;\n  pointer-events: auto;\n  -webkit-transform: translate(-3%, -28px) !important;\n  transform: translate(-3%, -28px) !important;\n  font-size: 0.75rem;\n  margin-top: 0px !important;\n}\n\n.vs-select.activeOptions .vs-select__label {\n  margin-top: -4px;\n}\n\n.vs-select__input {\n  opacity: 1;\n  background: transparent;\n  padding: 7px 13px;\n  border: 2px solid transparent;\n  border-radius: 12px;\n  cursor: pointer;\n  -webkit-transition: all 0.25s ease, height 0s;\n  transition: all 0.25s ease, height 0s;\n  background: rgba(var(--vs-gray-2), 1);\n  color: rgba(var(--vs-text), 1);\n  min-height: 38px;\n  padding-right: 30px;\n  width: 100%;\n}\n\n.vs-select__input.multiple {\n  color: transparent;\n  background: transparent;\n  pointer-events: none;\n}\n\n.vs-select__input.simple {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n.vs-select__input:focus {\n  border-radius: 12px 12px 0px 0px;\n  background: rgba(var(--vs-background), 1);\n  -webkit-box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(0, -4px);\n  transform: translate(0, -4px);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-select__input:focus ~ .vs-select__label--placeholder {\n  opacity: 1;\n  visibility: visible;\n  pointer-events: auto;\n  -webkit-transform: translate(-3%, -28px) !important;\n  transform: translate(-3%, -28px) !important;\n  font-size: 0.75rem;\n  margin-top: 0px !important;\n}\n\n.vs-select__input:hover {\n  background: rgba(var(--vs-background), 1);\n  -webkit-box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(0, -4px);\n  transform: translate(0, -4px);\n}\n\n.vs-select__input:hover ~ .vs-select__label {\n  margin-top: -4px;\n}\n\n.vs-select__input:hover ~ .vs-icon-arrow {\n  margin-top: -6px;\n}\n\n.vs-select__chips {\n  width: 100%;\n  height: auto;\n  position: absolute;\n  left: 0px;\n  background: rgba(var(--vs-gray-2), 1);\n  z-index: 300;\n  border-radius: 12px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  border: 0px;\n  display: flex;\n  -webkit-box-align: start;\n  -ms-flex-align: start;\n  align-items: flex-start;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  -ms-flex-wrap: wrap;\n  flex-wrap: wrap;\n  padding: 5px;\n  min-height: 38px;\n  -webkit-transition: all 0.25s ease, height 0s;\n  transition: all 0.25s ease, height 0s;\n  padding-right: 26px;\n}\n\n.vs-select__chips:focus {\n  border-radius: 12px 12px 0px 0px;\n  background: rgba(var(--vs-background), 1);\n  -webkit-box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(0, -4px);\n  transform: translate(0, -4px);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-select__chips:hover {\n  background: rgba(var(--vs-background), 1);\n  -webkit-box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(0, -4px);\n  transform: translate(0, -4px);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-select__chips:hover ~ .vs-icon-arrow {\n  margin-top: -6px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-select__chips__input {\n  width: auto;\n  -webkit-box-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  max-width: 100%;\n  position: relative;\n  min-width: 0px;\n  border: 0px solid transparent;\n  background: transparent;\n  margin: 2px 3px;\n  min-width: 30px;\n}\n\n.vs-select__chips__input::-webkit-input-placeholder {\n  color: rgba(var(--vs-text), 0.4);\n}\n\n.vs-select__chips__input::-moz-placeholder {\n  color: rgba(var(--vs-text), 0.4);\n}\n\n.vs-select__chips__input:-ms-input-placeholder {\n  color: rgba(var(--vs-text), 0.4);\n}\n\n.vs-select__chips__input::-ms-input-placeholder {\n  color: rgba(var(--vs-text), 0.4);\n}\n\n.vs-select__chips__input::placeholder {\n  color: rgba(var(--vs-text), 0.4);\n}\n\n.vs-select__chips__chip {\n  -webkit-box-flex: 0;\n  -ms-flex: 0 1 auto;\n  flex: 0 1 auto;\n  position: relative;\n  background: rgba(var(--vs-background), 1);\n  border-radius: 10px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  padding: 0px 6px;\n  margin: 2px 3px;\n  padding-right: 10px;\n  font-size: 0.84rem;\n  border: 2px solid rgba(var(--vs-gray-2), 1);\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  color: rgba(var(--vs-text), 1);\n}\n\n.vs-select__chips__chip.isCollapse {\n  padding-right: 6px !important;\n}\n\n.vs-select__chips__chip__close {\n  position: absolute;\n  top: -4px;\n  right: -4px;\n  width: 15px;\n  height: 15px;\n  background: rgba(var(--vs-gray-4), 1);\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  border-radius: 50%;\n  font-size: 0.75rem;\n  cursor: pointer;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-select__chips__chip__close:hover {\n  background: rgba(var(--vs-danger), 1);\n}\n\n.vs-select__chips__chip__close:hover .vs-icon-close {\n  --vs-color: var(--vs-background);\n}\n\n.vs-select__chips__chip__close:hover .vs-icon-close:after {\n  width: 12px;\n  -webkit-transform: rotate(180deg);\n  transform: rotate(180deg);\n}\n\n.vs-select__chips__chip__close:hover .vs-icon-close:before {\n  width: 12px;\n  -webkit-transform: rotate(180deg);\n  transform: rotate(180deg);\n}\n\n.vs-select__chips__chip__close .vs-icon-close {\n  --vs-color: var(--vs-text);\n  -webkit-transform: scale(0.5);\n  transform: scale(0.5);\n}\n\n.vs-select__options {\n  --vs-color: var(--vs-primary);\n  position: absolute;\n  z-index: 99999;\n  background: rgba(var(--vs-background), 1);\n  padding: 5px;\n  border-radius: 0px 0px 12px 12px;\n  overflow: hidden;\n  -webkit-box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-select__options.top {\n  border-radius: 12px 12px 0px 0px;\n  -webkit-box-shadow: 0px -10px 20px -5px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px -10px 20px -5px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-select__options.top:after {\n  top: auto;\n  bottom: -10px;\n}\n\n.vs-select__options:after {\n  content: \"\";\n  position: absolute;\n  top: -10px;\n  width: 80%;\n  margin-left: 10%;\n  left: 0px;\n  height: 10px;\n  background: rgba(var(--vs-background), 1);\n  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  z-index: 200;\n  -webkit-transition: all 0.25s ease 0.05s;\n  transition: all 0.25s ease 0.05s;\n  opacity: 1;\n}\n\n.vs-select__options__content {\n  max-height: 200px;\n  overflow: auto;\n  height: auto;\n  z-index: 100;\n  -webkit-transform: scale(1);\n  transform: scale(1);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  position: relative;\n  scroll-behavior: smooth;\n}\n\n.vs-select__options__content__not-data {\n  font-size: 0.8rem;\n  text-align: center;\n  padding: 6px 10px;\n}\n\n.vs-select__options__content::-webkit-scrollbar {\n  width: 5px;\n  height: 5px;\n  display: block;\n  background: transparent;\n}\n\n.vs-select__options__content::-webkit-scrollbar-thumb {\n  background: rgba(var(--vs-gray-3), 1);\n  border-radius: 5px;\n}\n\n.vs-select__label {\n  position: absolute;\n  left: 14px;\n  font-size: 0.8rem;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  cursor: text;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  pointer-events: none;\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  opacity: 0.4;\n  z-index: 500;\n}\n\n.vs-select__label--hidden {\n  opacity: 0;\n  visibility: hidden;\n}\n\n.vs-select__label--hidden.vs-select__label--placeholder {\n  opacity: 1;\n  visibility: visible;\n  pointer-events: auto;\n  -webkit-transform: translate(-3%, -28px) !important;\n  transform: translate(-3%, -28px) !important;\n  font-size: 0.75rem;\n  margin-top: 0px !important;\n}\n\n.vs-select__label--label {\n  opacity: 1;\n  visibility: visible;\n  pointer-events: auto;\n  -webkit-transform: translate(-3%, -28px) !important;\n  transform: translate(-3%, -28px) !important;\n  font-size: 0.75rem;\n  margin-top: 0px !important;\n}\n\n.vs-select__loading {\n  position: absolute;\n  width: 22px;\n  height: 22px;\n  right: 7px;\n  pointer-events: none;\n  border-radius: 50%;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  background: inherit;\n  cursor: default;\n  z-index: 600;\n}\n\n.vs-select__loading:after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px solid rgba(var(--vs-primary), 1);\n  border-radius: inherit;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n  -webkit-animation: rotateInputLoading 0.8s ease infinite;\n  animation: rotateInputLoading 0.8s ease infinite;\n  top: 0px;\n  content: \"\";\n}\n\n.vs-select__loading:before {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  top: 0px;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px dashed rgba(var(--vs-primary), 1);\n  border-radius: inherit;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n  -webkit-animation: rotateInputLoading 0.8s linear infinite;\n  animation: rotateInputLoading 0.8s linear infinite;\n  opacity: 0.2;\n  content: \"\";\n}\n\n.vs-select__loading ~ .vs-icon-arrow {\n  opacity: 0 !important;\n}\n\n.vs-select__message {\n  font-size: 0.7rem;\n  position: relative;\n  padding: 0px 7px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  overflow: hidden;\n}\n\n.vs-select__message--success {\n  color: rgba(var(--vs-success), 1);\n}\n\n.vs-select__message--danger {\n  color: rgba(var(--vs-danger), 1);\n}\n\n.vs-select__message--warn {\n  color: rgba(var(--vs-warn), 1);\n}\n\n.vs-select__message--dark {\n  color: rgba(var(--vs-dark), 1);\n}\n\n.vs-select__message--primary {\n  color: rgba(var(--vs-primary), 1);\n}\n\n.vs-darken .vs-select__options.isColorDark {\n  --vs-color: 0, 0, 0 !important;\n}\n\n.vs-darken .vs-select__options.isColorDark .vs-select__option:hover {\n  background: rgba(var(--vs-color), 0.2);\n  color: rgba(var(--vs-text), 1);\n}\n\n.vs-darken .vs-select__options.isColorDark .activeOption {\n  color: rgba(var(--vs-text), 1);\n  background: rgba(var(--vs-color), 0.6);\n}\n\n.vs-select__option {\n  border: 0px;\n  width: 100%;\n  padding: 6px 10px;\n  text-align: left;\n  background: transparent;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  color: rgba(var(--vs-text), 1);\n  border-radius: 5px;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  margin: 2px 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: cneter;\n  -ms-flex-align: cneter;\n  align-items: cneter;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  overflow: hidden;\n  opacity: 1;\n  visibility: visible;\n  max-height: 40px;\n}\n\n.vs-select__option.hiddenOption {\n  opacity: 0;\n  visibility: hidden;\n  max-height: 0px;\n  padding-top: 0px;\n  padding-bottom: 0px;\n  border: 0px;\n  margin: 0px;\n}\n\n.vs-select__option.isMultiple {\n  padding: 0px;\n  padding-left: 5px;\n}\n\n.vs-select__option.isMultiple .vs-select__option-group {\n  padding-left: 0px;\n}\n\n.vs-select__option.isMultiple.isHover {\n  background: rgba(var(--vs-gray-2), 1) !important;\n}\n\n.vs-select__option.isMultiple:disabled .vs-checkbox-content {\n  pointer-events: none;\n}\n\n.vs-select__option.isMultiple:hover {\n  padding-left: 5px !important;\n}\n\n.vs-select__option.isMultiple .vs-checkbox-content {\n  width: 100%;\n  pointer-events: none;\n}\n\n.vs-select__option.isMultiple .vs-checkbox-content .vs-checkbox-con {\n  -webkit-transform: scale(0.85);\n  transform: scale(0.85);\n}\n\n.vs-select__option.isMultiple .vs-checkbox-content .vs-checkbox-label {\n  width: calc(100% - 23px);\n  text-align: left;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n}\n\n.vs-select__option.isMultiple.activeOption {\n  pointer-events: auto !important;\n}\n\n.vs-select__option.isHover {\n  background: rgba(var(--vs-gray-2), 1);\n}\n\n.vs-select__option.activeOption {\n  background: rgba(var(--vs-color), 0.05);\n  color: rgba(var(--vs-color), 1);\n  pointer-events: none;\n}\n\n.vs-select__option:hover:not(:disabled) {\n  color: rgba(var(--vs-color), 1);\n  padding-left: 14px;\n}\n\n.vs-select__option-group {\n  padding-left: 10px;\n  border-bottom: 2px solid rgba(var(--vs-gray-1), 1);\n  position: relative;\n  overflow: hidden;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-select__option-group:last-child {\n  border: 0px;\n}\n\n.vs-select__option-group.hiddenOptionGroup {\n  border-bottom: 0px solid rgba(var(--vs-gray-1), 1);\n}\n\n.vs-select__option-group.hiddenOptionGroup h5 {\n  padding: 0px;\n  max-height: 0px;\n}\n\n.vs-select__option-group h5 {\n  max-height: 28px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  opacity: 0.5;\n  margin: 0px;\n  padding: 0px;\n  padding: 7px 0px;\n  font-size: 0.7rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  overflow: hidden;\n}\n\n.vs-select__option-group h5 * {\n  pointer-events: none;\n}\n\n.vs-avatar-content {\n  --vs-color: var(--vs-gray-2);\n  --vs-badge: var(--vs-primary);\n}\n\n.vs-avatar-content {\n  border-radius: 35%;\n  z-index: 1;\n  width: 44px;\n  height: 44px;\n  position: relative;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n.vs-avatar-content.vs-change-color-badge .vs-avatar__badge .vs-avatar__points__point {\n  background: rgba(var(--vs-background), 1);\n}\n\n.vs-avatar-content.vs-change-color:hover .vs-avatar {\n  -webkit-box-shadow: inset 0px 0px 40px 0px rgba(0, 0, 0, 0.1);\n  box-shadow: inset 0px 0px 40px 0px rgba(0, 0, 0, 0.1);\n}\n\n.vs-avatar-content:hover .vs-avatar {\n  -webkit-box-shadow: inset 0px 0px 40px 0px rgba(0, 0, 0, 0.04);\n  box-shadow: inset 0px 0px 40px 0px rgba(0, 0, 0, 0.04);\n}\n\n.vs-avatar-content:hover img {\n  -webkit-transform: scale(1.1);\n  transform: scale(1.1);\n}\n\n.vs-avatar-content--size.history:after {\n  top: -2px !important;\n}\n\n.vs-avatar-content--hasIcons {\n  margin-right: 20px;\n}\n\n.vs-avatar-content--hidden {\n  display: none;\n}\n\n.vs-avatar-content--circle {\n  border-radius: 50% !important;\n}\n\n.vs-avatar-content--circle .vs-avatar__badge {\n  right: -2px;\n  bottom: -2px;\n}\n\n.vs-avatar-content--circle .vs-avatar__badge.top-right {\n  top: -2px;\n  bottom: auto;\n}\n\n.vs-avatar-content--circle .vs-avatar__badge.top-left {\n  top: -2px;\n  left: -2px;\n  bottom: auto;\n  right: auto;\n}\n\n.vs-avatar-content--circle .vs-avatar__badge.bottom-left {\n  left: -2px;\n  right: auto;\n}\n\n.vs-avatar-content--square {\n  border-radius: 0% !important;\n}\n\n.vs-avatar-content.history--gradient:after {\n  background-image: linear-gradient(40deg, #f99b4a 0%, #df376b 74%, #c52d91 74%) !important;\n}\n\n.vs-avatar-content.history .vs-avatar {\n  width: calc(100% - 4px);\n  height: calc(100% - 4px);\n  border: 2px solid rgba(var(--vs-background), 1);\n  margin: 2px;\n}\n\n.vs-avatar-content.history:after {\n  content: \"\";\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  background-color: #FFE53B;\n  z-index: -1;\n  background: rgba(var(--vs-color), 1);\n}\n\n.vs-avatar-content.vs-component--is-color .vs-avatar {\n  color: rgba(var(--vs-background), 1);\n}\n\n.vs-avatar-content.vs-component--is-color .vs-avatar__points .vs-avatar__points__point {\n  background: rgba(var(--vs-background), 1);\n}\n\n.vs-avatar {\n  background: rgba(var(--vs-color), 1);\n  color: #fff;\n  overflow: hidden;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  color: rgba(var(--vs-text), 1);\n  border-radius: inherit;\n  width: 100%;\n  height: 100%;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.05);\n  box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.05);\n}\n\n.vs-avatar i {\n  font-size: 1.4rem;\n}\n\n.vs-avatar img {\n  width: 100%;\n  height: auto;\n  display: block;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  border-radius: inherit;\n}\n\n.vs-avatar__loading {\n  position: absolute;\n  width: 100%;\n  top: 0px;\n  left: 0px;\n  background: rgba(0, 0, 0, 0.5);\n  z-index: 100;\n  height: 100%;\n  border-radius: inherit;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-avatar__loading__animate {\n  height: 60%;\n  width: 60%;\n  border-radius: 50%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  position: relative;\n}\n\n.vs-avatar__loading__animate:after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px solid #fff;\n  border-radius: inherit;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n  -webkit-animation: rotateInputLoading 0.8s ease infinite;\n  animation: rotateInputLoading 0.8s ease infinite;\n  top: 0px;\n  content: \"\";\n}\n\n.vs-avatar__loading__animate:before {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  top: 0px;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px dashed #fff;\n  border-radius: inherit;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n  -webkit-animation: rotateInputLoading 0.8s linear infinite;\n  animation: rotateInputLoading 0.8s linear infinite;\n  opacity: 0.2;\n  content: \"\";\n}\n\n.vs-avatar--letter--3 {\n  font-size: 0.9rem;\n}\n\n.vs-avatar--letter--4 {\n  font-size: 0.8rem;\n}\n\n.vs-avatar--letter--5 {\n  font-size: 0.7rem;\n}\n\n.vs-avatar--letter--6 {\n  font-size: 0.6rem;\n}\n\n.vs-avatar__badge {\n  position: absolute;\n  width: 13px;\n  height: 13px;\n  background: rgba(var(--vs-badge), 1);\n  border-radius: 50%;\n  border: 2px solid rgba(var(--vs-background), 1) !important;\n  right: -4px;\n  bottom: -4px;\n  font-size: 0.6rem;\n  font-weight: bold;\n  z-index: 200;\n  color: rgba(var(--vs-text), 1);\n}\n\n.vs-avatar__badge.isSlot, .vs-avatar__badge.writing {\n  width: auto;\n  height: auto;\n  border-radius: 7px;\n  min-width: 18px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  color: rgba(var(--vs-background), 1);\n  line-height: 0.9rem;\n  padding: 0px 3px;\n  min-height: 18px;\n}\n\n.vs-avatar__badge.top-right {\n  top: -4px;\n  bottom: auto;\n}\n\n.vs-avatar__badge.top-left {\n  top: -4px;\n  left: -4px;\n  bottom: auto;\n  right: auto;\n}\n\n.vs-avatar__badge.bottom-left {\n  left: -4px;\n  right: auto;\n}\n\n.vs-avatar__points {\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-avatar__points__point {\n  width: 5px;\n  height: 5px;\n  background: rgba(var(--vs-text), 1);\n  margin: 0px 2px;\n  border-radius: 50%;\n}\n\n.vs-avatar__points__point:nth-child(1) {\n  -webkit-animation: point 1.2s ease infinite;\n  animation: point 1.2s ease infinite;\n}\n\n.vs-avatar__points__point:nth-child(2) {\n  -webkit-animation: point 1.2s ease infinite 0.4s;\n  animation: point 1.2s ease infinite 0.4s;\n}\n\n.vs-avatar__points__point:nth-child(3) {\n  -webkit-animation: point 1.2s ease infinite 0.8s;\n  animation: point 1.2s ease infinite 0.8s;\n}\n\n.vs-avatar__latest {\n  background: rgba(0, 0, 0, 0.5);\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  z-index: 300;\n  border-radius: inherit;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  color: #fff;\n  font-weight: 600;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n.vs-avatar__icons {\n  position: absolute;\n  width: auto;\n  height: auto;\n  min-height: 90%;\n  background: rgba(var(--vs-gray-3), 1);\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n  transform: translate(0, -50%);\n  right: -20px;\n  padding: 3px;\n  padding-left: 5px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: end;\n  -ms-flex-align: end;\n  align-items: flex-end;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  z-index: -1;\n  border-radius: 5px 5px 5px 5px;\n  font-size: 1rem;\n}\n\n.vs-avatar__icons i {\n  cursor: pointer;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-avatar__icons i:hover {\n  opacity: 0.7;\n}\n\n@-webkit-keyframes point {\n  0% {\n    opacity: 1;\n  }\n\n  50% {\n    opacity: 0.4;\n    -webkit-transform: scale(0.5);\n    transform: scale(0.5);\n  }\n\n  100% {\n    opacity: 1;\n  }\n}\n\n@keyframes point {\n  0% {\n    opacity: 1;\n  }\n\n  50% {\n    opacity: 0.4;\n    -webkit-transform: scale(0.5);\n    transform: scale(0.5);\n  }\n\n  100% {\n    opacity: 1;\n  }\n}\n\n.vs-avatar__group {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  padding-left: 18px;\n}\n\n.vs-avatar__group.float {\n  -ms-flex-wrap: wrap;\n  flex-wrap: wrap;\n  -webkit-box-align: start;\n  -ms-flex-align: start;\n  align-items: flex-start;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  padding-left: 0px;\n}\n\n.vs-avatar__group.float .vs-avatar-content {\n  position: relative;\n  z-index: 2;\n  border: 3px solid vs-color(\"background\");\n  margin: 0px;\n}\n\n.vs-avatar__group:not(.float) .vs-avatar-content {\n  margin-left: -18px;\n  position: relative;\n  z-index: 2;\n}\n\n.vs-avatar__group:not(.float) .vs-avatar-content:hover .vs-avatar {\n  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.1);\n  box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.1);\n}\n\n.vs-avatar__group:not(.float) .vs-avatar-content:hover img {\n  -webkit-transform: scale(1);\n  transform: scale(1);\n}\n\n.vs-avatar__group:not(.float) .vs-avatar-content .vs-avatar__latest {\n  width: calc(100% - 6px);\n  height: calc(100% - 6px);\n  margin: 3px;\n}\n\n.vs-avatar__group:not(.float) .vs-avatar-content:not(.vs-change-color) .vs-avatar {\n  background: vs-color(\"background\");\n}\n\n.vs-avatar__group:not(.float) .vs-avatar-content img {\n  width: calc(100% - 6px);\n}\n\n.vs-avatar__group:not(.float) .vs-avatar-content:hover:not(.vs-avatar-content--hasIcons) {\n  -webkit-transform: translate(-10px);\n  transform: translate(-10px);\n}\n\n.vs-avatar__group:not(.float) .vs-avatar-content:hover:not(.vs-avatar-content--hasIcons) .vs-avatar {\n  -webkit-transform: scale(1);\n  transform: scale(1);\n}\n\n.vs-avatar__group:not(.float) .vs-avatar-content--hasIcons {\n  margin-right: 0px;\n}\n\n.vs-avatar__group:not(.float) .vs-avatar-content--hasIcons:hover {\n  -webkit-transform: translate(-34px) !important;\n  transform: translate(-34px) !important;\n}\n\n.vs-radio-content {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-radio-content {\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-radio-content.active .vs-radio__effect__icon {\n  opacity: 0;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-transform: scale(1.3);\n  transform: scale(1.3);\n}\n\n.vs-radio-content.active .vs-radio__effect:after {\n  border: 7px solid rgba(var(--vs-color), 1);\n  -webkit-box-shadow: 0px 3px 12px 0px rgba(var(--vs-color), 0.3);\n  box-shadow: 0px 3px 12px 0px rgba(var(--vs-color), 0.3);\n}\n\n.vs-radio-content:not(.active) .vs-radio input:hover ~ .vs-radio__effect .vs-radio__effect__icon {\n  opacity: 0.7;\n}\n\n.vs-radio-content:not(.active) .vs-radio input:hover ~ .vs-radio__effect::after {\n  border: 2px solid rgba(var(--vs-text), 0.2);\n}\n\n.vs-radio-content.loading {\n  pointer-events: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n.vs-radio-content.loading .vs-radio__effect:after {\n  opacity: 0.1;\n}\n\n.vs-radio-content.loading .vs-radio__effect__loading {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n}\n\n.vs-radio-content.loading .vs-radio__effect__loading:after {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  border: 2px solid rgba(var(--vs-text), 0.4);\n  border-top: 2px solid rgba(var(--vs-text), 0);\n  border-left: 2px solid rgba(var(--vs-text), 0);\n  border-bottom: 2px solid rgba(var(--vs-text), 0);\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.4);\n  box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.4);\n  -webkit-animation: loadingRadio 0.6s ease infinite;\n  animation: loadingRadio 0.6s ease infinite;\n}\n\n.vs-radio-content.loading .vs-radio__effect__loading:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  border: 2px dashed rgba(var(--vs-text), 0.4);\n  border-top: 2px solid rgba(var(--vs-text), 0);\n  border-left: 2px solid rgba(var(--vs-text), 0);\n  border-bottom: 2px solid rgba(var(--vs-text), 0);\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.4);\n  box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.4);\n  -webkit-animation: loadingRadio 0.6s linear infinite;\n  animation: loadingRadio 0.6s linear infinite;\n}\n\n.vs-radio-content label {\n  cursor: pointer;\n}\n\n.vs-radio-content.disabled {\n  opacity: 0.5;\n  pointer-events: none;\n}\n\n.vs-radio-content.disabled .vs-radio__effect {\n  background: rgba(var(--vs-gray-3), 1);\n}\n\n.vs-radio-content.disabled label {\n  pointer-events: none;\n}\n\n.vs-radio {\n  width: 20px;\n  height: 20px;\n  min-width: 20px;\n  min-height: 20px;\n  margin: 0px;\n  padding: 0px;\n  border-radius: 50%;\n  position: relative;\n  z-index: 10;\n}\n\n.vs-radio__label {\n  margin: 0px 6px;\n}\n\n.vs-radio__effect {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  left: 0px;\n  top: 0px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  z-index: 10;\n}\n\n.vs-radio__effect__icon {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-radio__effect__icon i {\n  font-size: 0.75rem;\n}\n\n.vs-radio__effect:after {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  border: 2px solid rgba(var(--vs-text), 0.4);\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.4);\n  box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 0.4);\n}\n\n.vs-radio input {\n  margin: 0px;\n  padding: 0px;\n  width: 100%;\n  height: 100%;\n  position: relative;\n  z-index: 100;\n  opacity: 0;\n  cursor: pointer;\n}\n\n.vs-radio input:active ~ .vs-radio__effect:after {\n  -webkit-transform: scale(0.9);\n  transform: scale(0.9);\n}\n\n@-webkit-keyframes loadingRadio {\n  0% {\n    -webkit-transform: rotate(0);\n    transform: rotate(0);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes loadingRadio {\n  0% {\n    -webkit-transform: rotate(0);\n    transform: rotate(0);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n.vs-tooltip {\n  --vs-color: var(--vs-text);\n}\n\n.vs-tooltip-enter-active, .vs-tooltip-leave-active {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-tooltip-enter, .vs-tooltip-leave-to {\n  opacity: 0;\n}\n\n.vs-tooltip-enter.top, .vs-tooltip-leave-to.top {\n  -webkit-transform: translate(0, 5px);\n  transform: translate(0, 5px);\n}\n\n.vs-tooltip-enter.bottom, .vs-tooltip-leave-to.bottom {\n  -webkit-transform: translate(0, -5px);\n  transform: translate(0, -5px);\n}\n\n.vs-tooltip-enter.left, .vs-tooltip-leave-to.left {\n  -webkit-transform: translate(5px);\n  transform: translate(5px);\n}\n\n.vs-tooltip-enter.right, .vs-tooltip-leave-to.right {\n  -webkit-transform: translate(-5px);\n  transform: translate(-5px);\n}\n\n.darken .vs-tooltip {\n  --vs-color: var(--vs-gray-3);\n  color: #fff;\n}\n\n.darken .vs-tooltip:not(.vs-change-color) {\n  color: #fff !important;\n}\n\n.vs-tooltip {\n  background: rgba(var(--vs-color), 1);\n  color: rgba(var(--vs-background), 1);\n  position: absolute;\n  z-index: 1000000;\n  text-align: center;\n  padding: 5px 10px;\n  border-radius: 12px;\n  font-size: 0.85rem;\n  max-width: 350px;\n  min-width: 30px;\n  min-height: 30px;\n}\n\n.vs-tooltip.loading {\n  color: rgba(var(--vs-background), 0.2);\n}\n\n.vs-tooltip.loading * {\n  opacity: 0.5;\n  pointer-events: none;\n}\n\n.vs-tooltip__loading {\n  width: 22px;\n  height: 22px;\n  position: absolute;\n  display: block;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  border-radius: 50%;\n  opacity: 1 !important;\n}\n\n.vs-tooltip__loading:after {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  border: 2px solid rgba(var(--vs-background), 1);\n  border-top: 2px solid rgba(var(--vs-background), 0);\n  border-left: 2px solid rgba(var(--vs-background), 0);\n  border-bottom: 2px solid rgba(var(--vs-background), 0);\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  -webkit-animation: loadingTooltip 0.6s ease infinite;\n  animation: loadingTooltip 0.6s ease infinite;\n}\n\n.vs-tooltip__loading:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  border: 2px dashed rgba(var(--vs-background), 1);\n  border-top: 2px solid rgba(var(--vs-background), 0);\n  border-left: 2px solid rgba(var(--vs-background), 0);\n  border-bottom: 2px solid rgba(var(--vs-background), 0);\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  -webkit-animation: loadingTooltip 0.6s linear infinite;\n  animation: loadingTooltip 0.6s linear infinite;\n}\n\n.vs-tooltip.borderThick {\n  background: rgba(var(--vs-background), 1);\n  color: rgba(var(--vs-color), 1);\n  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-tooltip.borderThick.top {\n  border-bottom: 4px solid rgba(var(--vs-color), 1);\n}\n\n.vs-tooltip.borderThick.top:after {\n  bottom: -7px;\n}\n\n.vs-tooltip.borderThick.left {\n  border-right: 4px solid rgba(var(--vs-color), 1);\n}\n\n.vs-tooltip.borderThick.left:after {\n  right: -7px;\n}\n\n.vs-tooltip.borderThick.right {\n  border-left: 4px solid rgba(var(--vs-color), 1);\n}\n\n.vs-tooltip.borderThick.right:after {\n  left: -7px;\n}\n\n.vs-tooltip.borderThick.bottom {\n  border-top: 4px solid rgba(var(--vs-color), 1);\n}\n\n.vs-tooltip.borderThick.bottom:after {\n  top: -7px;\n}\n\n.vs-tooltip.borderThick:before {\n  width: 100%;\n  height: 100%;\n  z-index: -1;\n  background: inherit;\n  border-radius: inherit;\n  top: 0px;\n  left: 0px;\n  content: \"\";\n  position: absolute;\n}\n\n.vs-tooltip.borderThick:after {\n  background: rgba(var(--vs-color), 1) !important;\n}\n\n.vs-tooltip.border {\n  background: rgba(var(--vs-background), 1);\n  color: rgba(var(--vs-color), 1);\n  border: 2px solid rgba(var(--vs-color), 1);\n}\n\n.vs-tooltip.border:before {\n  width: 100%;\n  height: 100%;\n  z-index: -1;\n  background: inherit;\n  border-radius: inherit;\n  top: 0px;\n  left: 0px;\n  content: \"\";\n  position: absolute;\n}\n\n.vs-tooltip.border:after {\n  border: 2px solid rgba(var(--vs-color), 1);\n  width: 12px !important;\n  height: 12px !important;\n}\n\n.vs-tooltip.circle {\n  border-radius: 20px;\n}\n\n.vs-tooltip.square {\n  border-radius: 0px;\n}\n\n.vs-tooltip.notArrow:after {\n  display: none;\n}\n\n.vs-tooltip.shadow {\n  background: rgba(var(--vs-background), 1);\n  color: rgba(var(--vs-color), 1);\n  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-tooltip.shadow:before {\n  width: 100%;\n  height: 100%;\n  z-index: -1;\n  background: inherit;\n  border-radius: inherit;\n  top: 0px;\n  left: 0px;\n  content: \"\";\n  position: absolute;\n}\n\n.vs-tooltip.shadow:after {\n  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-tooltip.isDark {\n  --vs-color: var(--vs-gray-3);\n  color: #fff;\n}\n\n.vs-tooltip.top:after {\n  content: \"\";\n  position: absolute;\n  bottom: -3px;\n  background: inherit;\n  width: 10px;\n  height: 10px;\n  left: 50%;\n  -webkit-transform: translate(-50%) rotate(45deg);\n  transform: translate(-50%) rotate(45deg);\n  z-index: -2;\n  border-radius: 0px 0px 2px 0px;\n}\n\n.vs-tooltip.bottom:after {\n  content: \"\";\n  position: absolute;\n  top: -3px;\n  background: inherit;\n  width: 10px;\n  height: 10px;\n  left: 50%;\n  -webkit-transform: translate(-50%) rotate(45deg);\n  transform: translate(-50%) rotate(45deg);\n  z-index: -2;\n  border-radius: 2px 0px 0px 0px;\n}\n\n.vs-tooltip.left:after {\n  content: \"\";\n  position: absolute;\n  right: -3px;\n  background: inherit;\n  width: 10px;\n  height: 10px;\n  top: 50%;\n  -webkit-transform: translate(0, -50%) rotate(45deg);\n  transform: translate(0, -50%) rotate(45deg);\n  z-index: -2;\n  border-radius: 0px 2px 0px 0px;\n}\n\n.vs-tooltip.right:after {\n  content: \"\";\n  position: absolute;\n  left: -3px;\n  background: inherit;\n  width: 10px;\n  height: 10px;\n  top: 50%;\n  -webkit-transform: translate(0, -50%) rotate(45deg);\n  transform: translate(0, -50%) rotate(45deg);\n  z-index: -2;\n  border-radius: 0px 0px 0px 2px;\n}\n\n@-webkit-keyframes loadingTooltip {\n  0% {\n    -webkit-transform: rotate(0);\n    transform: rotate(0);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes loadingTooltip {\n  0% {\n    -webkit-transform: rotate(0);\n    transform: rotate(0);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n.vs-dialog-content {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-dialog-enter-active {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-dialog-enter-active .vs-dialog:not(.vs-dialog--fullScreen) {\n  -webkit-animation: rebound 0.4s;\n  animation: rebound 0.4s;\n}\n\n.vs-dialog-leave-active {\n  -webkit-transition: all 0.15s ease;\n  transition: all 0.15s ease;\n}\n\n.vs-dialog-leave-active .vs-dialog {\n  -webkit-transition: all 0.15s ease;\n  transition: all 0.15s ease;\n}\n\n.vs-dialog-enter, .vs-dialog-leave-to {\n  opacity: 0;\n}\n\n.vs-dialog-enter .vs-dialog, .vs-dialog-leave-to .vs-dialog {\n  -webkit-transform: scale(0.7);\n  transform: scale(0.7);\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-dialog-enter .vs-dialog--fullScreen, .vs-dialog-leave-to .vs-dialog--fullScreen {\n  -webkit-transform: translate(0, 8%) !important;\n  transform: translate(0, 8%) !important;\n}\n\n@-webkit-keyframes rebound {\n  0% {\n    -webkit-transform: scale(0.8);\n    transform: scale(0.8);\n  }\n\n  40% {\n    -webkit-transform: scale(1.08);\n    transform: scale(1.08);\n  }\n\n  80% {\n    -webkit-transform: scale(0.98);\n    transform: scale(0.98);\n  }\n\n  100% {\n    -webkit-transform: scale(1);\n    transform: scale(1);\n  }\n}\n\n@keyframes rebound {\n  0% {\n    -webkit-transform: scale(0.8);\n    transform: scale(0.8);\n  }\n\n  40% {\n    -webkit-transform: scale(1.08);\n    transform: scale(1.08);\n  }\n\n  80% {\n    -webkit-transform: scale(0.98);\n    transform: scale(0.98);\n  }\n\n  100% {\n    -webkit-transform: scale(1);\n    transform: scale(1);\n  }\n}\n\n@-webkit-keyframes reboundClick {\n  0% {\n    -webkit-transform: scale(1);\n    transform: scale(1);\n  }\n\n  40% {\n    -webkit-transform: scale(1.05);\n    transform: scale(1.05);\n  }\n\n  80% {\n    -webkit-transform: scale(0.96);\n    transform: scale(0.96);\n  }\n\n  100% {\n    -webkit-transform: scale(1);\n    transform: scale(1);\n  }\n}\n\n@keyframes reboundClick {\n  0% {\n    -webkit-transform: scale(1);\n    transform: scale(1);\n  }\n\n  40% {\n    -webkit-transform: scale(1.05);\n    transform: scale(1.05);\n  }\n\n  80% {\n    -webkit-transform: scale(0.96);\n    transform: scale(0.96);\n  }\n\n  100% {\n    -webkit-transform: scale(1);\n    transform: scale(1);\n  }\n}\n\n.vs-dialog-content {\n  background: rgba(0, 0, 0, var(--vs-background-opacity));\n  position: fixed;\n  left: 0px;\n  top: 0px;\n  z-index: var(--vs-zindex-2);\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: start;\n  -ms-flex-align: start;\n  align-items: flex-start;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 100%;\n  height: 100%;\n  max-height: 100vh;\n  overflow-y: auto;\n  overflow-x: hidden;\n  padding-top: 80px;\n  padding-bottom: 80px;\n}\n\n.vs-dialog-content.fullScreen {\n  padding: 0px;\n  overflow: hidden;\n}\n\n.vs-dialog-content.blur {\n  -webkit-backdrop-filter: saturate(180%) blur(15px);\n  backdrop-filter: saturate(180%) blur(15px);\n}\n\n.vs-dialog {\n  background: rgba(var(--vs-background), 1);\n  color: rgba(var(--vs-text), 1);\n  position: relative;\n  min-width: 400px;\n  border-radius: var(--vs-radius);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  max-width: 800px;\n  margin: auto;\n}\n\n.vs-dialog--notCenter .vs-dialog__header {\n  display: block;\n}\n\n.vs-dialog__loading {\n  width: 100%;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  height: 100%;\n  border-radius: inherit;\n  background: rgba(var(--vs-background), 0.8);\n  z-index: 100;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-dialog__loading:after {\n  content: \"\";\n  position: absolute;\n  width: 30px;\n  height: 30px;\n  border-radius: inherit;\n  border: 2px solid rgba(var(--vs-color), 1);\n  border-top: 2px solid rgba(var(--vs-color), 0);\n  border-left: 2px solid rgba(var(--vs-color), 0);\n  border-bottom: 2px solid rgba(var(--vs-color), 0);\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  -webkit-animation: loadingDialog 0.6s ease infinite;\n  animation: loadingDialog 0.6s ease infinite;\n}\n\n.vs-dialog__loading:before {\n  content: \"\";\n  position: absolute;\n  width: 30px;\n  height: 30px;\n  border-radius: inherit;\n  border: 2px dashed rgba(var(--vs-color), 1);\n  border-top: 2px solid rgba(var(--vs-color), 0);\n  border-left: 2px solid rgba(var(--vs-color), 0);\n  border-bottom: 2px solid rgba(var(--vs-color), 0);\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  -webkit-animation: loadingDialog 0.6s linear infinite;\n  animation: loadingDialog 0.6s linear infinite;\n}\n\n.vs-dialog--scroll .vs-dialog__content {\n  max-height: calc(80vh - 200px);\n  overflow: auto;\n}\n\n.vs-dialog--autoWidth {\n  width: auto !important;\n  min-width: auto !important;\n  max-width: auto !important;\n}\n\n.vs-dialog--square {\n  border-radius: 0px;\n}\n\n.vs-dialog--square .vs-dialog__close {\n  border-radius: 0px;\n}\n\n.vs-dialog--notPadding .vs-dialog__footer {\n  padding: 0px;\n}\n\n.vs-dialog--notPadding .vs-dialog__content {\n  padding: 0px;\n  margin-bottom: 0px !important;\n}\n\n.vs-dialog--notPadding .vs-dialog__header {\n  padding: 0px;\n}\n\n.vs-dialog--rebound {\n  -webkit-animation: reboundClick 0.3s !important;\n  animation: reboundClick 0.3s !important;\n}\n\n.vs-dialog--fullScreen {\n  width: calc(100% - 30px) !important;\n  height: calc(100% - 30px) !important;\n  max-width: none !important;\n  max-height: none !important;\n}\n\n.vs-dialog__footer {\n  padding: 10px 16px;\n  padding-top: 0px;\n}\n\n.vs-dialog__header {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  padding: 10px 16px;\n}\n\n.vs-dialog__content {\n  padding: 10px 16px;\n  width: 100%;\n  position: relative;\n  border-radius: inherit;\n}\n\n.vs-dialog__content.notFooter {\n  margin-bottom: 20px;\n}\n\n.vs-dialog__close {\n  --vs-color: var(--vs-text);\n  position: absolute;\n  top: -6px;\n  right: -6px;\n  padding: 0px;\n  margin: 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  background: inherit;\n  border-radius: 12px;\n  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  z-index: 200;\n  border: 0px;\n}\n\n.vs-dialog__close i {\n  width: 34px;\n  height: 34px;\n  opacity: 0.7;\n}\n\n.vs-dialog__close i:after {\n  width: 14px;\n}\n\n.vs-dialog__close i:before {\n  width: 14px;\n}\n\n.vs-dialog__close:hover {\n  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(-2px, 2px);\n  transform: translate(-2px, 2px);\n}\n\n.vs-dialog__close:hover i {\n  opacity: 1;\n}\n\n@-webkit-keyframes loadingDialog {\n  0% {\n    -webkit-transform: rotate(0);\n    transform: rotate(0);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes loadingDialog {\n  0% {\n    -webkit-transform: rotate(0);\n    transform: rotate(0);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@media (max-width: 600px) {\n  .vs-dialog {\n    min-width: calc(100vw - 20px);\n    max-width: calc(100vw - 20px);\n    margin: auto 10px;\n  }\n}\n\n.vs-pagination-content {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-pagination-content {\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-item-align: center;\n  align-self: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-pagination-content.notMargin .vs-pagination__dotted {\n  background: rgba(var(--vs-gray-3), 1);\n  margin: 0px;\n}\n\n.vs-pagination-content.notMargin .vs-pagination__arrow {\n  margin: 0px !important;\n  border-radius: 0px;\n}\n\n.vs-pagination-content.notMargin .vs-pagination__arrow:first-of-type {\n  border-radius: 12px 0px 0px 12px;\n}\n\n.vs-pagination-content.notMargin .vs-pagination__arrow:last-of-type {\n  border-radius: 0px 12px 12px 0px;\n}\n\n.vs-pagination-content.notMargin .vs-pagination__button {\n  border-radius: 0px;\n  margin: 0px !important;\n}\n\n.vs-pagination-content.disabled {\n  opacity: 0.5;\n  pointer-events: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n.vs-pagination-content.square .vs-pagination__active {\n  border-radius: 0px;\n}\n\n.vs-pagination-content.square .vs-pagination__button {\n  border-radius: 0px;\n}\n\n.vs-pagination-content.square .vs-pagination__arrow {\n  border-radius: 0px;\n}\n\n.vs-pagination-content.circle .vs-pagination__active {\n  border-radius: 50%;\n}\n\n.vs-pagination-content.circle .vs-pagination__button {\n  border-radius: 50%;\n}\n\n.vs-pagination-content.circle .vs-pagination__arrow {\n  border-radius: 50%;\n}\n\n.vs-pagination-content.buttonsDotted .vs-pagination__arrow {\n  width: 15px;\n  height: 12px;\n  min-width: 15px;\n  padding: 0px;\n  background: transparent;\n}\n\n.vs-pagination-content.buttonsDotted .vs-pagination__arrow i {\n  width: 6px;\n  height: 6px;\n}\n\n.vs-pagination-content.buttonsDotted .vs-pagination__arrow i:before {\n  width: 1px;\n}\n\n.vs-pagination-content.buttonsDotted .vs-pagination__arrow i:after {\n  height: 1px;\n}\n\n.vs-pagination-content.buttonsDotted .vs-pagination__dotted {\n  width: 12px;\n  height: 12px;\n  font-size: 0.9rem;\n  letter-spacing: 1px;\n}\n\n.vs-pagination-content.buttonsDotted .vs-pagination__button {\n  width: 12px;\n  height: 12px;\n}\n\n.vs-pagination-content.buttonsDotted .vs-pagination__button.active {\n  -webkit-transform: scale(1);\n  transform: scale(1);\n}\n\n.vs-pagination-content.buttonsDotted .vs-pagination__active {\n  width: 12px;\n  height: 12px;\n  -webkit-box-shadow: 0px 2px 10px 0px rgba(var(--vs-color), 0.4);\n  box-shadow: 0px 2px 10px 0px rgba(var(--vs-color), 0.4);\n  -webkit-transform: scale(1);\n  transform: scale(1);\n}\n\n.vs-pagination-content.buttonsDotted .vs-pagination__active.move {\n  -webkit-transform: scale(1.2);\n  transform: scale(1.2);\n}\n\n.vs-pagination {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-item-align: center;\n  align-self: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  position: relative;\n}\n\n.vs-pagination__progress {\n  width: calc(100% - 16px);\n  height: 3px;\n  background: rgba(var(--vs-gray-3), 1);\n  position: absolute;\n  bottom: -8px;\n  border-radius: 10px;\n}\n\n.vs-pagination__progress .progress {\n  width: 0px;\n  background: rgba(var(--vs-color), 1);\n  height: 100%;\n  position: relative;\n  border-radius: inherit;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  max-width: 100%;\n}\n\n.vs-pagination__slot {\n  min-height: 36px;\n  min-width: 36px;\n  position: relative;\n  display: block;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-pagination__arrow {\n  position: relative;\n  width: auto;\n  height: 36px;\n  min-width: 36px;\n  border-radius: 12px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  margin: 0px 2px;\n  background: rgba(var(--vs-gray-3), 1);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  border: 0px;\n}\n\n.vs-pagination__arrow:disabled {\n  opacity: 0.4;\n  pointer-events: none;\n}\n\n.vs-pagination__arrow:hover {\n  background: rgba(var(--vs-gray-4), 1);\n}\n\n.vs-pagination__arrow i {\n  width: 10px;\n  height: 10px;\n  position: relative;\n  display: block;\n  margin-left: 4px;\n  -webkit-transform: rotate(-45deg) scale(0.8);\n  transform: rotate(-45deg) scale(0.8);\n}\n\n.vs-pagination__arrow i:before {\n  width: 2px;\n}\n\n.vs-pagination__arrow i:after {\n  height: 2px;\n}\n\n.vs-pagination__arrow.next i {\n  margin-left: -4px;\n  -webkit-transform: rotate(135deg) scale(0.8);\n  transform: rotate(135deg) scale(0.8);\n}\n\n.vs-pagination__active {\n  position: absolute;\n  left: 50%;\n  top: 0px;\n  width: 36px;\n  height: 36px;\n  background: rgba(var(--vs-color), 1);\n  border-radius: 12px;\n  z-index: 100;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  font-size: 0.9rem;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  color: #fff;\n  -webkit-box-shadow: 0px 5px 20px 0px rgba(var(--vs-color), 0.3);\n  box-shadow: 0px 5px 20px 0px rgba(var(--vs-color), 0.3);\n  cursor: default;\n}\n\n.vs-pagination__active.move {\n  -webkit-transform: scale(1.1);\n  transform: scale(1.1);\n}\n\n.vs-pagination__dotted {\n  width: 36px;\n  height: 36px;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  font-size: 1.4rem;\n  letter-spacing: 2px;\n  margin: 0px 2px;\n  cursor: pointer;\n}\n\n.vs-pagination__dotted:hover span.dotted {\n  opacity: 0;\n  margin-left: -1px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-pagination__dotted:hover .con-arrows {\n  opacity: 1;\n  margin-left: -1px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-pagination__dotted.next:hover span.dotted {\n  opacity: 0;\n  margin-left: 1px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-pagination__dotted.next:hover .con-arrows {\n  opacity: 1;\n  margin-left: 1px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-pagination__dotted span.dotted {\n  margin-right: -2px;\n  text-align: center;\n}\n\n.vs-pagination__dotted.next .con-arrows {\n  -webkit-transform: rotate(180deg);\n  transform: rotate(180deg);\n  margin-left: -5px;\n}\n\n.vs-pagination__dotted .con-arrows {\n  width: 10px;\n  height: 10px;\n  position: absolute;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  margin-left: 5px;\n  opacity: 0;\n  -webkit-transition: all 0.1s ease;\n  transition: all 0.1s ease;\n}\n\n.vs-pagination__dotted .con-arrows i {\n  width: 10px;\n  height: 10px;\n  position: relative;\n  display: block;\n  -webkit-transform: rotate(-45deg) scale(0.8);\n  transform: rotate(-45deg) scale(0.8);\n}\n\n.vs-pagination__dotted .con-arrows i:before {\n  width: 2px;\n}\n\n.vs-pagination__dotted .con-arrows i:after {\n  height: 2px;\n}\n\n.vs-pagination__dotted .con-arrows i:last-child {\n  position: absolute;\n  top: 0px;\n  margin-left: 6px;\n}\n\n.vs-pagination__button {\n  width: 36px;\n  height: 36px;\n  border-radius: 12px;\n  padding: 0px;\n  background: rgba(var(--vs-gray-3), 1);\n  margin: 0px 2px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  font-size: 0.9rem;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  color: rgba(var(--vs-text), 1);\n  position: relative;\n  border: 0px;\n}\n\n.vs-pagination__button.loading {\n  border-radius: 50%;\n  opacity: 0.5;\n  pointer-events: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n.vs-pagination__button.loading:after {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  border: 2px solid rgba(var(--vs-color), 1);\n  border-top: 2px solid rgba(var(--vs-background), 0);\n  border-left: 2px solid rgba(var(--vs-background), 0);\n  border-bottom: 2px solid rgba(var(--vs-background), 0);\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  -webkit-animation: loadingPagination 0.6s ease infinite;\n  animation: loadingPagination 0.6s ease infinite;\n}\n\n.vs-pagination__button.loading:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  border: 2px dashed rgba(var(--vs-color), 1);\n  border-top: 2px solid rgba(var(--vs-background), 0);\n  border-left: 2px solid rgba(var(--vs-background), 0);\n  border-bottom: 2px solid rgba(var(--vs-background), 0);\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: block;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  box-shadow: 0px 0px 0px 0px rgba(var(--vs-color), 1);\n  -webkit-animation: loadingPagination 0.6s linear infinite;\n  animation: loadingPagination 0.6s linear infinite;\n}\n\n.vs-pagination__button.disabled {\n  opacity: 0.4;\n  pointer-events: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n.vs-pagination__button:hover {\n  background: rgba(var(--vs-gray-4), 1);\n}\n\n.vs-pagination__button:active {\n  -webkit-transform: scale(0.9);\n  transform: scale(0.9);\n}\n\n@-webkit-keyframes loadingPagination {\n  0% {\n    -webkit-transform: rotate(0);\n    transform: rotate(0);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes loadingPagination {\n  0% {\n    -webkit-transform: rotate(0);\n    transform: rotate(0);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n.vs-table-content {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-table-content {\n  width: 100%;\n  border-radius: 16px;\n}\n\n.vs-table {\n  width: 100%;\n  font-size: 0.9rem;\n  margin: 0px;\n  overflow: auto;\n}\n\n.vs-table table {\n  margin: 0px;\n  border-collapse: collapse;\n  width: 100%;\n  min-width: 500px;\n  border: 0px;\n}\n\n.vs-table.striped .vs-table__tr:nth-child(2n) {\n  background: rgba(var(--vs-gray-1), 1) !important;\n}\n\n.vs-table_not-found {\n  display: none;\n  padding: 20px;\n  text-align: center;\n  width: 100%;\n}\n\n.vs-table_not-found tr {\n  text-align: center;\n}\n\n.vs-table_not-found tr td {\n  padding: 20px;\n  border: 0px;\n}\n\n.vs-table__tbody:empty {\n  display: none;\n  background: #000;\n}\n\n.vs-table__tbody:empty ~ .vs-table_not-found {\n  display: table-row-group;\n}\n\n.vs-table.isSelectedValue tr {\n  cursor: pointer;\n}\n\n.vs-table__footer {\n  padding: 8px 10px;\n  background: rgba(var(--vs-gray-2), 1);\n  border-radius: 0px 0px 14px 14px;\n}\n\n.vs-table__header {\n  width: 100%;\n  padding: 10px;\n  background: rgba(var(--vs-gray-2), 1);\n  border-radius: 14px 14px 0px 0px;\n}\n\n.vs-table__header ~ .vs-table .vs-table__th:first-child {\n  border-radius: 0px;\n}\n\n.vs-table__header ~ .vs-table .vs-table__th:last-child {\n  border-radius: 0px;\n}\n\n.vs-table__thead {\n  width: 100%;\n}\n\n.vs-table__thead .vs-table__th {\n  background: rgba(var(--vs-gray-2), 1);\n}\n\n.vs-table__thead .vs-table__th:first-child {\n  border-radius: 14px 0px 0px 0px;\n}\n\n.vs-table__thead .vs-table__th:last-child {\n  border-radius: 0px 14px 0px 0px;\n}\n\n.isMultipleSelected .vs-table__tr .vs-table__td {\n  border-radius: 0px !important;\n}\n\n.vs-table__tr {\n  padding: 5px;\n  border: 0px;\n}\n\n.vs-table__tr.expand {\n  cursor: pointer;\n}\n\n.vs-table__tr.vs-change-color .vs-table__td {\n  background: rgba(var(--vs-color), 0.1) !important;\n  color: rgba(var(--vs-color), 1) !important;\n}\n\n.vs-table__tr.vs-change-color .vs-table__td:hover {\n  background: rgba(var(--vs-color), 0.2) !important;\n}\n\n.vs-table__tr:first-of-type .vs-table__td:last-child {\n  border-radius: 0px 0px 15px 0px;\n}\n\n.vs-table__tr:first-of-type .vs-table__td:first-child {\n  border-radius: 0px 0px 0px 15px;\n}\n\n.vs-table__tr.isExpand:first-of-type .vs-table__td {\n  background: rgba(var(--vs-gray-1), 1) !important;\n  border-radius: 0px;\n}\n\n.vs-table__tr.isExpand:not(:first-of-type) .vs-table__td {\n  background: rgba(var(--vs-gray-1), 1) !important;\n}\n\n.vs-table__tr.isExpand:not(:first-of-type) .vs-table__td:last-child {\n  border-radius: 0px 15px 0px 0px;\n}\n\n.vs-table__tr.isExpand:not(:first-of-type) .vs-table__td:first-child {\n  border-radius: 15px 0px 0px 0px;\n}\n\n.vs-table__tr.isExpand:not(:first-of-type) + .vs-table__tr__expand td {\n  border-radius: 0px 0px 15px 15px !important;\n}\n\n.vs-table__tr.selected .vs-table__td {\n  background: rgba(var(--vs-color), 0.1) !important;\n  color: rgba(var(--vs-color), 1) !important;\n}\n\n.vs-table__tr .vs-table__td {\n  background: rgba(var(--vs-bg), 0.1);\n  color: rgba(var(--vs-bg), 1);\n}\n\n.vs-table__tr.vs-change-color:hover .vs-table__td {\n  background: rgba(var(--vs-color), 0.2) !important;\n}\n\n.vs-table__tr:hover .vs-table__td {\n  background: rgba(var(--vs-gray-1), 1);\n}\n\n.vs-table__tr__expand {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  border: 0px;\n}\n\n.vs-table__tr__expand td {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  padding: 0px;\n  background: rgba(var(--vs-gray-1), 1) !important;\n  border: 0px;\n}\n\n.vs-table__tr__expand td .vs-table__expand__td__content {\n  overflow: hidden;\n  display: block;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-table__tr__expand td .vs-table__expand__td__content__sub {\n  padding: 10px 15px;\n  z-index: 1;\n  position: relative;\n}\n\n.fade-expand-enter-active, .fade-expand-leave-active {\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.fade-expand-enter, .fade-expand-leave-to {\n  opacity: 0;\n}\n\n.fade-expand-enter td .vs-table__expand__td__content, .fade-expand-leave-to td .vs-table__expand__td__content {\n  height: 0px !important;\n}\n\n.vs-table__th {\n  padding: 10px 12px;\n  text-align: left;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  font-size: 0.8rem;\n  border: 0px;\n}\n\n.vs-table__th.sort .vs-table__th__content {\n  pointer-events: none;\n}\n\n.vs-table__th.sort:hover {\n  background: rgba(var(--vs-gray-3), 1);\n}\n\n.vs-table__th[data-sort-type=asc] .icon-sort-2 {\n  margin-top: -7px;\n  -webkit-transform: rotate(45deg) !important;\n  transform: rotate(45deg) !important;\n}\n\n.vs-table__th[data-sort-type=asc] .icon-sort-1 {\n  margin-top: -1px;\n  -webkit-transform: rotate(45deg) !important;\n  transform: rotate(45deg) !important;\n}\n\n.vs-table__th[data-sort-type=desc] .icon-sort-2 {\n  margin-top: -7px;\n}\n\n.vs-table__th[data-sort-type=desc] .icon-sort-1 {\n  margin-top: -1px;\n  -webkit-transform: rotate(-135deg) !important;\n  transform: rotate(-135deg) !important;\n}\n\n.vs-table__th__content {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-table__th__content__icons {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  margin-left: 7px;\n  -webkit-transform: scale(0.8);\n  transform: scale(0.8);\n}\n\n.vs-table__th__content .vs-icon-arrow {\n  position: relative;\n  display: block;\n}\n\n.vs-table__th__content .vs-icon-arrow.icon-sort-1 {\n  -webkit-transform: rotate(45deg);\n  transform: rotate(45deg);\n}\n\n.vs-table__th__content .vs-icon-arrow.icon-sort-2 {\n  -webkit-transform: rotate(-135deg);\n  transform: rotate(-135deg);\n}\n\n.vs-table__td {\n  padding: 10px 12px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  font-size: 0.8rem;\n  border: 0px;\n}\n\n.vs-table__td:last-child {\n  border-radius: 0px 15px 15px 0px;\n}\n\n.vs-table__td:first-child {\n  border-radius: 15px 0px 0px 15px;\n}\n\n.vs-table__td.isCheckbox {\n  width: 23px;\n}\n\n.vs-table__td.isEdit {\n  text-decoration: underline;\n  cursor: pointer;\n}\n\n.vs-navbar-content {\n  --vs-color: var(--vs-background);\n}\n\n.vs-navbar-content {\n  width: 100%;\n  position: absolute;\n  z-index: 9000;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  border-radius: 0px 0px 15px 15px;\n  background: rgba(var(--vs-color), 1);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  color: rgba(var(--vs-text), 1);\n}\n\n.vs-navbar-content.paddingScroll:not(.paddingScrollActive) {\n  padding-top: 20px;\n  padding-bottom: 20px;\n}\n\n.vs-navbar-content.paddingScroll:not(.paddingScrollActive) .vs-navbar__group__items {\n  margin-bottom: -30px;\n}\n\n.vs-navbar-content.vsNavbarSquare {\n  border-radius: 0px;\n}\n\n.vs-navbar-content.textWhite {\n  color: #fff;\n}\n\n.vs-navbar-content.textWhite .vs-navbar__line {\n  background: #fff;\n}\n\n.vs-navbar-content.textWhite .vs-navbar__item:before {\n  background: #fff;\n}\n\n.vs-navbar-content.fixed {\n  position: fixed !important;\n}\n\n.vs-navbar-content.shadow, .vs-navbar-content.shadowActive {\n  -webkit-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-navbar-content.hidden {\n  -webkit-transform: translate(0, -100%);\n  transform: translate(0, -100%);\n}\n\n.vs-navbar {\n  width: 100%;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: justify;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  padding: 0px 15px;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  min-height: 44px;\n}\n\n.vs-navbar__left {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n}\n\n.vs-navbar__right {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: end;\n  -ms-flex-pack: end;\n  justify-content: flex-end;\n}\n\n.vs-navbar__center {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-navbar__line {\n  position: absolute;\n  left: 0px;\n  bottom: 0px;\n  width: 100px;\n  background: rgba(var(--vs-text), 1);\n  height: 3px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-navbar__line.notTransition {\n  -webkit-transition: none !important;\n  transition: none !important;\n}\n\n.vs-navbar__item {\n  padding: 10px 15px;\n  margin: 0px;\n  border: 0px;\n  background: transparent;\n  font-size: 0.85rem;\n  opacity: 0.7;\n  -webkit-transition: all 0.25s ease, color 0s;\n  transition: all 0.25s ease, color 0s;\n  font-weight: bold;\n  color: inherit;\n}\n\n.vs-navbar__item.active {\n  opacity: 1;\n}\n\n.vs-navbar__item:hover {\n  opacity: 1;\n}\n\n.vs-navbar__group {\n  position: relative;\n}\n\n.vs-navbar__group:hover .vs-navbar__group__item {\n  opacity: 1;\n}\n\n.vs-navbar__group:hover .vs-navbar__group__items {\n  opacity: 1;\n  visibility: visible;\n  -webkit-transform: translate(0, 100%);\n  transform: translate(0, 100%);\n}\n\n.vs-navbar__group__item {\n  padding: 10px 15px;\n  background: transparent;\n  color: inherit;\n  font-weight: bold;\n  -webkit-transition: all 0.25s ease, color 0s;\n  transition: all 0.25s ease, color 0s;\n  opacity: 0.7;\n  border: 0px;\n}\n\n.vs-navbar__group__items {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  margin-bottom: -12px;\n  -webkit-transform: translate(0, 90%);\n  transform: translate(0, 90%);\n  background: rgba(var(--vs-color), 1);\n  border-radius: 5px 18px 18px 18px;\n  padding: 10px;\n  min-width: 160px;\n  opacity: 0;\n  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  color: inherit;\n  visibility: hidden;\n}\n\n.vs-navbar__group__items:after {\n  content: \"\";\n  left: 0px;\n  top: -13px;\n  background: transparent;\n  width: 100%;\n  height: 14px;\n  position: absolute;\n  z-index: -1;\n}\n\n.vs-navbar__group__items .vs-navbar__item {\n  text-align: left;\n  width: 100%;\n  position: relative;\n  padding: 5px 10px;\n}\n\n.vs-navbar__group__items .vs-navbar__item:before {\n  content: \"\";\n  left: 0px;\n  top: 0px;\n  width: 4px;\n  height: 4px;\n  background: rgba(var(--vs-text), 1);\n  position: absolute;\n  border-radius: 50%;\n  top: calc(50% - 2px);\n  opacity: 0;\n  -webkit-transform: translate(-10px);\n  transform: translate(-10px);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-navbar__group__items .vs-navbar__item.active:before {\n  opacity: 1;\n  -webkit-transform: translate(0px);\n  transform: translate(0px);\n}\n\n.vs-sidebar-content {\n  --vs-color: var(--vs-primary);\n}\n\n@-webkit-keyframes delayOpacity {\n  0% {\n    opacity: 0;\n  }\n\n  100% {\n    opacity: 1;\n  }\n}\n\n@keyframes delayOpacity {\n  0% {\n    opacity: 0;\n  }\n\n  100% {\n    opacity: 1;\n  }\n}\n\n.vs-sidebar-content {\n  position: fixed;\n  left: 0px;\n  top: 0px;\n  width: calc(100% - 50px);\n  max-width: 260px;\n  height: 100vh;\n  border-radius: 0px 30px 30px 0px;\n  color: rgba(var(--vs-text), 1);\n  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: start;\n  -ms-flex-align: start;\n  align-items: flex-start;\n  -webkit-box-pack: justify;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  z-index: 21000;\n  background: rgba(var(--vs-background), 1);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-transform: translate(-110%);\n  transform: translate(-110%);\n}\n\n.vs-sidebar-content.right {\n  left: auto;\n  right: 0px;\n  -webkit-transform: translate(110%);\n  transform: translate(110%);\n}\n\n.vs-sidebar-content.right.open {\n  -webkit-transform: translate(0);\n  transform: translate(0);\n}\n\n.vs-sidebar-content.right.reduce .vs-sidebar__item:hover .vs-sidebar__item__text-tooltip {\n  opacity: 1;\n  left: auto !important;\n  right: 60px !important;\n}\n\n.vs-sidebar-content.absolute {\n  position: absolute !important;\n  z-index: 9001;\n  height: 100%;\n}\n\n.vs-sidebar-content.relative {\n  position: relative !important;\n  z-index: 9001;\n  height: 100%;\n}\n\n.vs-sidebar-content.textWhite .vs-sidebar__group__content:after {\n  background: rgba(255, 255, 255, 0.4);\n}\n\n.vs-sidebar-content.textWhite .vs-sidebar__item:after {\n  background: #fff !important;\n}\n\n.vs-sidebar-content.textWhite .vs-sidebar__item.active {\n  color: #fff !important;\n}\n\n.vs-sidebar-content.notShadow {\n  -webkit-box-shadow: none !important;\n  box-shadow: none !important;\n}\n\n.vs-sidebar-content.square {\n  border-radius: 0px;\n}\n\n.vs-sidebar-content.notLineActive .vs-sidebar .vs-sidebar__item:after {\n  display: none;\n}\n\n.vs-sidebar-content.open {\n  -webkit-transform: translate(0%);\n  transform: translate(0%);\n}\n\n.vs-sidebar-content.reduce .vs-sidebar__footer {\n  padding: 10px 0px;\n}\n\n.vs-sidebar-content.reduce .vs-sidebar__header .vs-avatar-content {\n  width: 44px !important;\n  height: 44px !important;\n}\n\n.vs-sidebar-content.reduce .vs-sidebar__logo img {\n  width: 80%;\n}\n\n.vs-sidebar-content.reduce .vs-sidebar__item {\n  padding-left: 16px !important;\n  min-height: 47px;\n}\n\n.vs-sidebar-content.reduce .vs-sidebar__item:not(.hasIcon) .vs-sidebar__item__text {\n  font-size: 0.5rem;\n}\n\n.vs-sidebar-content.reduce .vs-sidebar__item.hasIcon .vs-sidebar__item__text {\n  -webkit-transform: translate(-10px);\n  transform: translate(-10px);\n  margin-left: -50px;\n}\n\n.vs-sidebar-content.reduce .vs-sidebar__item__arrow {\n  position: absolute;\n  left: 36px;\n  top: 10px;\n  -webkit-animation: delayOpacity 0.6s ease;\n  animation: delayOpacity 0.6s ease;\n  width: 5px;\n  height: 5px;\n}\n\n.vs-sidebar-content.reduce .vs-sidebar__item:hover .vs-sidebar__item__text-tooltip {\n  opacity: 1;\n  left: 60px;\n}\n\n.vs-sidebar-content.reduce .vs-sidebar__item.hasIcon {\n  padding: 0px !important;\n}\n\n.vs-sidebar-content.reduce .vs-sidebar__item.hasIcon:after {\n  left: -6px;\n}\n\n.vs-sidebar-content .vs-sidebar__logo {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 100%;\n  padding: 25px 0px;\n  min-height: 80px;\n}\n\n.vs-sidebar-content .vs-sidebar__logo img {\n  max-width: 120px;\n  max-height: 35px;\n}\n\n.vs-sidebar-content .vs-sidebar {\n  overflow-x: hidden;\n  width: 100%;\n  -webkit-box-flex: 1;\n  -ms-flex-positive: 1;\n  flex-grow: 1;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: start;\n  -ms-flex-align: start;\n  align-items: flex-start;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: column;\n  flex-direction: column;\n}\n\n.vs-sidebar-content .vs-sidebar::-webkit-scrollbar {\n  width: 0px;\n}\n\n.vs-sidebar-content .vs-sidebar__header {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 100%;\n  padding: 10px;\n}\n\n.vs-sidebar-content .vs-sidebar__footer {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  justify-self: flex-start;\n  width: 100%;\n  padding: 10px;\n}\n\n.vs-sidebar__item {\n  width: 100%;\n  padding: 14px 16px;\n  padding-top: 15px;\n  text-align: left;\n  background: transparent;\n  font-size: 1rem;\n  font-weight: bold;\n  opacity: 0.7;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  position: relative;\n  color: rgba(var(--vs-text), 1);\n  border: 0px;\n}\n\n.vs-sidebar__item.hasIcon {\n  padding: 0px;\n}\n\n.vs-sidebar__item.hasIcon.active {\n  padding-left: 8px;\n}\n\n.vs-sidebar__item.hasIcon:hover {\n  padding-left: 8px;\n  opacity: 1;\n}\n\n.vs-sidebar__item:after {\n  content: \"\";\n  position: absolute;\n  left: -4px;\n  top: 0px;\n  width: 10px;\n  height: 100%;\n  background: rgba(var(--vs-color), 1);\n  border-radius: 0px 20px 20px 0px;\n  -webkit-transform: translate(-6px);\n  transform: translate(-6px);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  z-index: 60;\n}\n\n.vs-sidebar__item.active:not(.hasIcon) {\n  padding-left: 25px;\n}\n\n.vs-sidebar__item.active {\n  opacity: 1;\n  color: rgba(var(--vs-color), 1);\n}\n\n.vs-sidebar__item.active:after {\n  -webkit-transform: translate(0px);\n  transform: translate(0px);\n}\n\n.vs-sidebar__item__icon {\n  min-width: 50px;\n  height: 47px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  font-size: 1.2rem;\n  z-index: 50;\n  background: rgba(var(--vs-background), 1);\n}\n\n.vs-sidebar__item:hover:not(.hasIcon) {\n  opacity: 1;\n  padding-left: 25px;\n}\n\n.vs-sidebar__item__text {\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  z-index: 10;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  font-size: 0.9rem;\n}\n\n.vs-sidebar__item__arrow {\n  width: 7px;\n  height: 7px;\n  position: relative;\n  justify-self: flex-end;\n  margin-left: auto;\n  margin-right: 15px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-transform: rotate(-135deg) !important;\n  transform: rotate(-135deg) !important;\n  z-index: 80;\n}\n\n.vs-sidebar__item__arrow .vs-icon-arrow:before {\n  width: 2px;\n}\n\n.vs-sidebar__item__arrow .vs-icon-arrow:after {\n  height: 2px;\n}\n\n.vs-sidebar__item__text-tooltip {\n  position: fixed;\n  left: 50px;\n  opacity: 0;\n  pointer-events: none;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  font-size: 0.85rem;\n  white-space: nowrap;\n}\n\n.vs-sidebar__group {\n  padding: 0px;\n  width: 100%;\n  min-width: 260px;\n  position: relative;\n}\n\n.vs-sidebar__group.open .vs-sidebar__group__content:after {\n  -webkit-transform: translate(0);\n  transform: translate(0);\n  opacity: 1;\n}\n\n.vs-sidebar__group.open > .vs-sidebar__group__header .vs-sidebar__item {\n  opacity: 1;\n}\n\n.vs-sidebar__group.open > .vs-sidebar__group__header .vs-sidebar__item__arrow {\n  -webkit-transform: rotate(45deg) !important;\n  transform: rotate(45deg) !important;\n}\n\n.vs-sidebar__group__header {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-sidebar__group__content {\n  overflow: hidden;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  position: relative;\n}\n\n.vs-sidebar__group__content:after {\n  content: \"\";\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  background: rgba(var(--vs-color), 0.3);\n  width: 4px;\n  height: 100%;\n  opacity: 0;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-transform: translate(-100%);\n  transform: translate(-100%);\n  border-radius: 0px 10px 10px 0px;\n  z-index: 60;\n}\n\n.vs-sidebar__group__content .vs-sidebar__item {\n  background: rgba(var(--vs-background), 1);\n}\n\n.vs-sidebar__group > .vs-sidebar__group__header .vs-sidebar__item:hover {\n  padding-left: 0px;\n}\n\n.vs-card-content {\n  --vs-color: var(--vs-primary);\n}\n\n.vs-card-content.type-5 .vs-card {\n  -webkit-box-shadow: none;\n  box-shadow: none;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: column;\n  flex-direction: column;\n}\n\n.vs-card-content.type-5 .vs-card:hover .vs-card__interactions {\n  bottom: 50px;\n}\n\n.vs-card-content.type-5 .vs-card:hover .vs-card__text {\n  -webkit-transform: translate(0);\n  transform: translate(0);\n  opacity: 1;\n  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n}\n\n.vs-card-content.type-5 .vs-card:hover .vs-card__img {\n  border-radius: 6px 40px 6px 40px;\n}\n\n.vs-card-content.type-5 .vs-card:hover .vs-card__img img {\n  -webkit-transform: scale(1.1);\n  transform: scale(1.1);\n}\n\n.vs-card-content.type-5 .vs-card__img {\n  border-radius: 6px 20px 6px 20px;\n}\n\n.vs-card-content.type-5 .vs-card__interactions {\n  bottom: 6px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  z-index: 20;\n}\n\n.vs-card-content.type-5 .vs-card__text {\n  background: rgba(var(--vs-background), 1);\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  border-radius: 6px 20px 6px 20px;\n  margin-top: -50px;\n  z-index: 10;\n  position: relative;\n  width: calc(100% - 30px);\n  padding-top: 10px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  -webkit-transform: translate(0, 25px);\n  transform: translate(0, 25px);\n  opacity: 0;\n}\n\n.vs-card-content.type-4 .vs-card {\n  -webkit-box-shadow: none;\n  box-shadow: none;\n  max-width: 300px;\n}\n\n.vs-card-content.type-4 .vs-card:hover {\n  -webkit-transform: translate(0, -5px);\n  transform: translate(0, -5px);\n}\n\n.vs-card-content.type-4 .vs-card:hover .vs-card__img img {\n  -webkit-transform: scale(1);\n  transform: scale(1);\n}\n\n.vs-card-content.type-4 .vs-card:hover .vs-card__text {\n  padding-top: 15px;\n  padding-bottom: 25px;\n}\n\n.vs-card-content.type-4 .vs-card__img {\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  max-height: 600px;\n}\n\n.vs-card-content.type-4 .vs-card__img img {\n  -webkit-transform: scale(1.2);\n  transform: scale(1.2);\n}\n\n.vs-card-content.type-4 .vs-card__interactions {\n  top: 0px;\n  bottom: auto;\n}\n\n.vs-card-content.type-4 .vs-card__text {\n  background: rgba(var(--vs-background), 0.8);\n  position: absolute;\n  bottom: 0px;\n  -webkit-backdrop-filter: saturate(180%) blur(20px);\n  backdrop-filter: saturate(180%) blur(20px);\n  border-radius: 0px 0px 20px 20px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-card-content.type-4 .vs-card__text p {\n  opacity: 1;\n}\n\n.vs-card-content.type-3 .vs-card {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  max-width: 400px;\n}\n\n.vs-card-content.type-3 .vs-card:hover {\n  -webkit-transform: scale(1.04);\n  transform: scale(1.04);\n}\n\n.vs-card-content.type-3 .vs-card__img img {\n  min-width: 200px;\n}\n\n.vs-card-content.type-3 .vs-card__text {\n  padding-top: 15px;\n}\n\n.vs-card-content.type-3 .vs-card__title h2, .vs-card-content.type-3 .vs-card__title h3, .vs-card-content.type-3 .vs-card__title h4, .vs-card-content.type-3 .vs-card__title h5, .vs-card-content.type-3 .vs-card__title h6 {\n  padding: 0px;\n}\n\n.vs-card-content.type-2 .vs-card {\n  -webkit-box-shadow: none;\n  box-shadow: none;\n  overflow: hidden;\n}\n\n.vs-card-content.type-2 .vs-card:hover {\n  -webkit-transform: scale(0.95);\n  transform: scale(0.95);\n}\n\n.vs-card-content.type-2 .vs-card:hover .vs-card__img img {\n  -webkit-transform: scale(1.15);\n  transform: scale(1.15);\n}\n\n.vs-card-content.type-2 .vs-card:hover .vs-card__text {\n  -webkit-transform: translate(0);\n  transform: translate(0);\n  opacity: 1;\n  color: #fff;\n}\n\n.vs-card-content.type-2 .vs-card__interactions {\n  right: 0px;\n  top: 0px;\n  left: auto;\n  bottom: auto;\n  -webkit-box-align: end;\n  -ms-flex-align: end;\n  align-items: flex-end;\n}\n\n.vs-card-content.type-2 .vs-card__title {\n  position: relative;\n  color: inherit;\n  padding: 0px;\n}\n\n.vs-card-content.type-2 .vs-card__title h2, .vs-card-content.type-2 .vs-card__title h3, .vs-card-content.type-2 .vs-card__title h4, .vs-card-content.type-2 .vs-card__title h5, .vs-card-content.type-2 .vs-card__title h6 {\n  padding: 0px;\n  padding-bottom: 5px;\n}\n\n.vs-card-content.type-2 .vs-card__text {\n  position: absolute;\n  bottom: 0px;\n  background: rgba(var(--vs-background), 0.9);\n  padding-top: 30px;\n  border-radiu: 0px 0px 20px 20px;\n  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5)));\n  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.5) 100%);\n  color: transparent;\n  font-size: 0.9rem;\n  -webkit-transform: translate(0, 45%);\n  transform: translate(0, 45%);\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-card-content.type-2 .vs-card__text p {\n  opacity: 1;\n}\n\n.vs-card-content.type-1 .vs-card:hover {\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(0, 5px);\n  transform: translate(0, 5px);\n}\n\n.vs-card-content.type-1 .vs-card:hover .vs-card__img img {\n  -webkit-transform: scale(1.15);\n  transform: scale(1.15);\n}\n\n.vs-card {\n  background: rgba(var(--vs-background), 1);\n  color: rgba(var(--vs-text), 1);\n  width: 100%;\n  max-width: 350px;\n  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  border-radius: 20px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  cursor: pointer;\n  position: relative;\n}\n\n.vs-card__text {\n  font-size: 0.85rem;\n  padding: 0px 15px;\n  padding-bottom: 15px;\n}\n\n.vs-card__text p {\n  font-size: inherit;\n  margin: 0px;\n  opacity: 0.8;\n}\n\n.vs-card__title {\n  padding-top: 10px;\n  padding-bottom: 5px;\n}\n\n.vs-card__title h2, .vs-card__title h3, .vs-card__title h4, .vs-card__title h5, .vs-card__title h6 {\n  padding: 0px;\n  margin: 0px;\n  font-size: 1.1rem;\n}\n\n.vs-card__interactions {\n  position: absolute;\n  bottom: 0px;\n  padding: 5px 10px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  left: 0px;\n}\n\n.vs-card__img {\n  position: relative;\n  max-height: 250px;\n  overflow: hidden;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  border-radius: 20px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-card__img img {\n  width: 100%;\n  border-radius: 20px;\n  display: block;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-card__group {\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  position: relative;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n}\n\n.vs-card__group-space {\n  min-width: 20px;\n  position: relative;\n  height: 20px;\n}\n\n.vs-card__group .vs-card__group-cards {\n  position: relative;\n  z-index: 1;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  overflow: hidden;\n  overflow-x: auto;\n  scroll-behavior: smooth;\n  padding-top: 20px;\n  padding-bottom: 20px;\n  border-radius: 20px;\n}\n\n.vs-card__group .vs-card__group-cards .vs-card-content {\n  min-width: 350px;\n  margin-left: 20px;\n}\n\n.vs-card__group .vs-card__group-prev {\n  z-index: 2;\n  position: relative;\n  left: 0px;\n  width: 50px;\n  height: 50px;\n  min-width: 50px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  background: transparent;\n  border: 0px;\n}\n\n.vs-card__group .vs-card__group-prev .vs-icon-arrow {\n  width: 15px;\n  height: 15px;\n  display: block;\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n}\n\n.vs-card__group .vs-card__group-prev .vs-icon-arrow:before {\n  width: 2px;\n}\n\n.vs-card__group .vs-card__group-prev .vs-icon-arrow:after {\n  height: 2px;\n}\n\n.vs-card__group .vs-card__group-next {\n  border: 0px;\n  z-index: 2;\n  position: relative;\n  left: 0px;\n  width: 50px;\n  height: 50px;\n  min-width: 50px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  background: transparent;\n}\n\n.vs-card__group .vs-card__group-next .vs-icon-arrow {\n  width: 15px;\n  height: 15px;\n  display: block;\n  -webkit-transform: rotate(135deg);\n  transform: rotate(135deg);\n}\n\n.vs-card__group .vs-card__group-next .vs-icon-arrow:before {\n  width: 2px;\n}\n\n.vs-card__group .vs-card__group-next .vs-icon-arrow:after {\n  height: 2px;\n}\n\n.loading-enter-active, .loading-leave-active {\n  -webkit-transition: opacity 0.5s;\n  transition: opacity 0.5s;\n}\n\n.loading-enter, .loading-leave-to {\n  opacity: 0;\n}\n\n.vs-loading {\n  --vs-color: var(--vs-primary);\n  --vs-background: 255,255,255;\n  --vs-opacity: .6;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  z-index: 100000;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  background: rgba(var(--vs-background), var(--vs-opacity));\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n  padding: 20px;\n  border-radius: inherit;\n}\n\n.vs-loading--target {\n  position: absolute;\n}\n\n.vs-loading__load {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: column;\n  flex-direction: column;\n}\n\n.vs-loading__load__text {\n  font-size: 0.75em;\n  margin: 7px;\n  font-weight: bold;\n  color: rgba(var(--vs-color), 1);\n}\n\n.vs-loading__load__percent {\n  position: relative;\n  font-size: 0.65rem;\n  font-weight: bold;\n  color: rgba(var(--vs-color), 1);\n  margin-top: 1px;\n  z-index: 200;\n}\n\n.vs-loading__load__animation {\n  width: 40px;\n  height: 40px;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-loading__progress {\n  width: 100%;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  height: 4px;\n  background: rgba(var(--vs-color), 0.2);\n}\n\n.vs-loading__progress__bar {\n  background: rgba(var(--vs-color), 1);\n  height: 100%;\n  position: relative;\n  border-radius: 0px 10px 10px 0px;\n}\n\n.vs-loading--default .vs-loading__load__animation {\n  border-radius: 50%;\n}\n\n.vs-loading--default .vs-loading__load__animation__1 {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 3px solid rgba(var(--vs-color), 1);\n  border-radius: inherit;\n  border-top: 3px solid transparent;\n  border-left: 3px solid transparent;\n  border-right: 3px solid transparent;\n  -webkit-animation: rotate 0.8s ease infinite;\n  animation: rotate 0.8s ease infinite;\n  top: 0px;\n}\n\n.vs-loading--default .vs-loading__load__animation__2 {\n  top: 0px;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 3px dashed rgba(var(--vs-color), 1);\n  border-radius: inherit;\n  border-top: 3px solid transparent;\n  border-left: 3px solid transparent;\n  border-right: 3px solid transparent;\n  -webkit-animation: rotate 0.8s linear infinite;\n  animation: rotate 0.8s linear infinite;\n  opacity: 0.2;\n}\n\n.vs-loading--default .vs-loading__load__animation__3 {\n  display: none;\n}\n\n@-webkit-keyframes rotate {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes rotate {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n.vs-loading--waves .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-loading--waves .vs-loading__load__animation__1 {\n  width: 0px;\n  background: transparent;\n  height: 0px;\n  position: absolute;\n  -webkit-animation: waves 0.7s ease infinite;\n  animation: waves 0.7s ease infinite;\n  -webkit-box-shadow: 0px 0px 10px 0px rgba(var(--vs-color), 0.5);\n  box-shadow: 0px 0px 10px 0px rgba(var(--vs-color), 0.5);\n  border-radius: 50%;\n}\n\n.vs-loading--waves .vs-loading__load__animation__2 {\n  width: 0px;\n  background: transparent;\n  height: 0px;\n  position: absolute;\n  -webkit-animation: waves 1.4s linear infinite;\n  animation: waves 1.4s linear infinite;\n  -webkit-box-shadow: 0px 0px 10px 0px rgba(var(--vs-color), 0.5);\n  box-shadow: 0px 0px 10px 0px rgba(var(--vs-color), 0.5);\n  border-radius: 50%;\n}\n\n.vs-loading--waves .vs-loading__load__animation__3 {\n  width: 0px;\n  background: transparent;\n  height: 0px;\n  position: absolute;\n  -webkit-animation: waves 1.75s ease infinite;\n  animation: waves 1.75s ease infinite;\n  -webkit-box-shadow: 0px 0px 10px 0px rgba(var(--vs-color), 0.5);\n  box-shadow: 0px 0px 10px 0px rgba(var(--vs-color), 0.5);\n  border-radius: 50%;\n}\n\n@-webkit-keyframes waves {\n  0% {\n    width: 0px;\n    height: 0px;\n  }\n\n  100% {\n    height: 50px;\n    width: 50px;\n    opacity: 0;\n  }\n}\n\n@keyframes waves {\n  0% {\n    width: 0px;\n    height: 0px;\n  }\n\n  100% {\n    height: 50px;\n    width: 50px;\n    opacity: 0;\n  }\n}\n\n.vs-loading--corners .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-loading--corners .vs-loading__load__animation__1 {\n  width: 100%;\n  background: transparent;\n  height: 100%;\n  position: absolute;\n  -webkit-animation: corners 1s ease infinite;\n  animation: corners 1s ease infinite;\n  border-radius: 50%;\n  border: 2px solid rgba(var(--vs-color), 1);\n}\n\n.vs-loading--corners .vs-loading__load__animation__2 {\n  display: none;\n}\n\n.vs-loading--corners .vs-loading__load__animation__3 {\n  display: none;\n}\n\n@-webkit-keyframes corners {\n  0% {\n    border-radius: 50%;\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  25% {\n    border-radius: 50% 50% 50% 15%;\n  }\n\n  50% {\n    border-radius: 50% 50% 15% 30%;\n  }\n\n  75% {\n    border-radius: 50% 15% 30% 30%;\n  }\n\n  100% {\n    border-radius: 50%;\n    -webkit-transform: rotate(-180deg);\n    transform: rotate(-180deg);\n  }\n}\n\n@keyframes corners {\n  0% {\n    border-radius: 50%;\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  25% {\n    border-radius: 50% 50% 50% 15%;\n  }\n\n  50% {\n    border-radius: 50% 50% 15% 30%;\n  }\n\n  75% {\n    border-radius: 50% 15% 30% 30%;\n  }\n\n  100% {\n    border-radius: 50%;\n    -webkit-transform: rotate(-180deg);\n    transform: rotate(-180deg);\n  }\n}\n\n.vs-loading--border .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  border-radius: 50%;\n}\n\n.vs-loading--border .vs-loading__load__animation__1 {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 1px solid rgba(var(--vs-color), 1);\n  border-radius: inherit;\n  border-top: 1px solid transparent;\n  border-left: 1px solid transparent;\n  border-right: 1px solid transparent;\n  -webkit-animation: rotate 1s linear infinite;\n  animation: rotate 1s linear infinite;\n  top: 0px;\n}\n\n.vs-loading--border .vs-loading__load__animation__2 {\n  top: 0px;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 1px dashed rgba(var(--vs-color), 1);\n  border-radius: inherit;\n  border-top: 1px solid transparent;\n  border-left: 1px solid transparent;\n  border-right: 1px solid transparent;\n  -webkit-animation: rotate 1s linear infinite 0.2s;\n  animation: rotate 1s linear infinite 0.2s;\n}\n\n.vs-loading--border .vs-loading__load__animation__3 {\n  top: 0px;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 1px dashed rgba(var(--vs-color), 1);\n  border-radius: inherit;\n  -webkit-animation: rotate 1s linear infinite 0.4s;\n  animation: rotate 1s linear infinite 0.4s;\n  opacity: 0.2;\n}\n\n.vs-loading--points .vs-loading__load__percent {\n  position: absolute;\n  top: -10px;\n}\n\n.vs-loading--points .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: end;\n  -ms-flex-align: end;\n  align-items: flex-end;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: auto;\n}\n\n.vs-loading--points .vs-loading__load__animation__1 {\n  width: 8px;\n  height: 8px;\n  background: rgba(var(--vs-color), 1);\n  border-radius: 50%;\n  margin: 3px;\n  -webkit-animation: points 0.75s ease infinite;\n  animation: points 0.75s ease infinite;\n}\n\n.vs-loading--points .vs-loading__load__animation__2 {\n  width: 8px;\n  height: 8px;\n  background: rgba(var(--vs-color), 1);\n  border-radius: 50%;\n  margin: 3px;\n  -webkit-animation: points 0.75s ease infinite 0.25s;\n  animation: points 0.75s ease infinite 0.25s;\n}\n\n.vs-loading--points .vs-loading__load__animation__3 {\n  width: 8px;\n  height: 8px;\n  background: rgba(var(--vs-color), 1);\n  border-radius: 50%;\n  margin: 3px;\n  -webkit-animation: points 0.75s ease infinite 0.5s;\n  animation: points 0.75s ease infinite 0.5s;\n}\n\n@-webkit-keyframes points {\n  0% {\n    -webkit-transform: translate(0px, 0px);\n    transform: translate(0px, 0px);\n  }\n\n  50% {\n    -webkit-transform: translate(0, -15px);\n    transform: translate(0, -15px);\n  }\n\n  100% {\n    -webkit-transform: translate(0px, 0px);\n    transform: translate(0px, 0px);\n  }\n}\n\n@keyframes points {\n  0% {\n    -webkit-transform: translate(0px, 0px);\n    transform: translate(0px, 0px);\n  }\n\n  50% {\n    -webkit-transform: translate(0, -15px);\n    transform: translate(0, -15px);\n  }\n\n  100% {\n    -webkit-transform: translate(0px, 0px);\n    transform: translate(0px, 0px);\n  }\n}\n\n.vs-loading--square .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-loading--square .vs-loading__load__animation__1 {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px solid rgba(var(--vs-color), 1);\n  border-radius: inherit;\n  -webkit-animation: rotateSquare 4s ease infinite;\n  animation: rotateSquare 4s ease infinite;\n  top: 0px;\n}\n\n.vs-loading--square .vs-loading__load__animation__2 {\n  top: 0px;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px solid rgba(var(--vs-color), 1);\n  border-radius: inherit;\n  animation: rotateSquare 4s ease infinite reverse;\n  background: rgba(var(--vs-background), 1);\n}\n\n.vs-loading--square .vs-loading__load__animation__3 {\n  display: none;\n}\n\n@-webkit-keyframes rotateSquare {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  50% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n}\n\n@keyframes rotateSquare {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  50% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n}\n\n.vs-loading--gradient .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 60px;\n  height: 60px;\n}\n\n.vs-loading--gradient .vs-loading__load__animation__1 {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 0px;\n  border-radius: inherit;\n  -webkit-animation: rotate 1s linear infinite;\n  animation: rotate 1s linear infinite;\n  top: 0px;\n  background: -webkit-gradient(linear, left bottom, left top, color-stop(33%, rgba(var(--vs-background), 0)), to(rgba(var(--vs-color), 1)));\n  background: linear-gradient(0deg, rgba(var(--vs-background), 0) 33%, rgba(var(--vs-color), 1) 100%);\n  border-radius: 50%;\n}\n\n.vs-loading--gradient .vs-loading__load__animation__2 {\n  top: 2px;\n  position: absolute;\n  width: calc(100% - 4px);\n  height: calc(100% - 4px);\n  border: 0px;\n  border-radius: inherit;\n  background: rgba(var(--vs-background), 1);\n  border-radius: 50%;\n}\n\n.vs-loading--gradient .vs-loading__load__animation__3 {\n  display: none;\n}\n\n.vs-loading--rectangle .vs-loading__load__percent {\n  position: absolute;\n  bottom: -2px;\n}\n\n.vs-loading--rectangle .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: end;\n  -ms-flex-align: end;\n  align-items: flex-end;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-loading--rectangle .vs-loading__load__animation__1 {\n  position: absolute;\n  width: 15px;\n  height: 15px;\n  border: 0px;\n  border-radius: inherit;\n  -webkit-animation: rectangle 1s ease infinite;\n  animation: rectangle 1s ease infinite;\n  background: rgba(var(--vs-color), 1);\n}\n\n.vs-loading--rectangle .vs-loading__load__animation__2 {\n  position: absolute;\n  width: 15px;\n  height: 15px;\n  border: 0px;\n  border-radius: inherit;\n  -webkit-animation: rectangle 1s ease-out infinite;\n  animation: rectangle 1s ease-out infinite;\n  background: rgba(var(--vs-color), 0.2);\n}\n\n.vs-loading--rectangle .vs-loading__load__animation__3 {\n  display: none;\n}\n\n@-webkit-keyframes rectangle {\n  0% {\n    -webkit-transform: translate(-50px);\n    transform: translate(-50px);\n  }\n\n  50% {\n    -webkit-transform: translate(50px);\n    transform: translate(50px);\n  }\n\n  100% {\n    -webkit-transform: translate(-50px);\n    transform: translate(-50px);\n  }\n}\n\n@keyframes rectangle {\n  0% {\n    -webkit-transform: translate(-50px);\n    transform: translate(-50px);\n  }\n\n  50% {\n    -webkit-transform: translate(50px);\n    transform: translate(50px);\n  }\n\n  100% {\n    -webkit-transform: translate(-50px);\n    transform: translate(-50px);\n  }\n}\n\n.vs-loading--circles .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 60px;\n  height: 60px;\n}\n\n.vs-loading--circles .vs-loading__load__animation__1 {\n  position: absolute;\n  width: 40px;\n  height: 40px;\n  -webkit-animation: rotate 1s ease infinite;\n  animation: rotate 1s ease infinite;\n  border-radius: 50%;\n  border: 2px solid rgba(var(--vs-color), 1);\n  border-top: 3px solid transparent;\n  border-left: 3px solid transparent;\n  border-right: 3px solid transparent;\n}\n\n.vs-loading--circles .vs-loading__load__animation__2 {\n  position: absolute;\n  width: 50px;\n  height: 50px;\n  -webkit-animation: rotate 1s ease-in-out infinite;\n  animation: rotate 1s ease-in-out infinite;\n  border-radius: 50%;\n  border: 2px dashed rgba(var(--vs-color), 1);\n  border-top: 3px solid transparent;\n  border-left: 3px solid transparent;\n  border-right: 3px solid transparent;\n}\n\n.vs-loading--circles .vs-loading__load__animation__3 {\n  position: absolute;\n  width: 60px;\n  height: 60px;\n  animation: rotate 1s linear infinite reverse;\n  border-radius: 50%;\n  border: 2px solid rgba(var(--vs-color), 1);\n  border-top: 3px solid transparent;\n  border-left: 3px solid transparent;\n  border-right: 3px solid transparent;\n}\n\n.vs-loading--square-rotate .vs-loading__load__percent {\n  position: absolute;\n  bottom: 30px;\n}\n\n.vs-loading--square-rotate .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: end;\n  -ms-flex-align: end;\n  align-items: flex-end;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 60px;\n  height: 60px;\n}\n\n.vs-loading--square-rotate .vs-loading__load__animation__1 {\n  position: absolute;\n  width: 25px;\n  height: 25px;\n  -webkit-animation: squareRotate 3s ease infinite;\n  animation: squareRotate 3s ease infinite;\n  background: rgba(var(--vs-color), 1);\n}\n\n.vs-loading--square-rotate .vs-loading__load__animation__2 {\n  display: none;\n}\n\n.vs-loading--square-rotate .vs-loading__load__animation__3 {\n  display: none;\n}\n\n@-webkit-keyframes squareRotate {\n  0% {\n    -webkit-transform: rotateX(0deg) rotateY(0deg);\n    transform: rotateX(0deg) rotateY(0deg);\n  }\n\n  25% {\n    -webkit-transform: rotateX(180deg) rotateY(0deg);\n    transform: rotateX(180deg) rotateY(0deg);\n  }\n\n  50% {\n    -webkit-transform: rotateX(180deg) rotateY(180deg);\n    transform: rotateX(180deg) rotateY(180deg);\n  }\n\n  75% {\n    -webkit-transform: rotateX(0deg) rotateY(180deg);\n    transform: rotateX(0deg) rotateY(180deg);\n  }\n\n  100% {\n    -webkit-transform: rotateX(0deg) rotateY(0deg);\n    transform: rotateX(0deg) rotateY(0deg);\n  }\n}\n\n@keyframes squareRotate {\n  0% {\n    -webkit-transform: rotateX(0deg) rotateY(0deg);\n    transform: rotateX(0deg) rotateY(0deg);\n  }\n\n  25% {\n    -webkit-transform: rotateX(180deg) rotateY(0deg);\n    transform: rotateX(180deg) rotateY(0deg);\n  }\n\n  50% {\n    -webkit-transform: rotateX(180deg) rotateY(180deg);\n    transform: rotateX(180deg) rotateY(180deg);\n  }\n\n  75% {\n    -webkit-transform: rotateX(0deg) rotateY(180deg);\n    transform: rotateX(0deg) rotateY(180deg);\n  }\n\n  100% {\n    -webkit-transform: rotateX(0deg) rotateY(0deg);\n    transform: rotateX(0deg) rotateY(0deg);\n  }\n}\n\n.vs-loading--scale .vs-loading__load__percent {\n  position: absolute;\n  bottom: 40px;\n}\n\n.vs-loading--scale .vs-loading__load__animation {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: cneter;\n  -ms-flex-align: cneter;\n  align-items: cneter;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 40px;\n  height: 40px;\n}\n\n.vs-loading--scale .vs-loading__load__animation__1 {\n  position: relative;\n  width: 5px;\n  height: 5px;\n  background: rgba(var(--vs-color), 1);\n  margin: 3px;\n  -webkit-animation: scale 0.8s ease infinite;\n  animation: scale 0.8s ease infinite;\n  border-radius: 5px;\n}\n\n.vs-loading--scale .vs-loading__load__animation__2 {\n  position: relative;\n  width: 5px;\n  height: 5px;\n  background: rgba(var(--vs-color), 1);\n  margin: 3px;\n  -webkit-animation: scale 0.8s ease infinite 0.2s;\n  animation: scale 0.8s ease infinite 0.2s;\n  border-radius: 5px;\n}\n\n.vs-loading--scale .vs-loading__load__animation__3 {\n  position: relative;\n  width: 5px;\n  height: 5px;\n  background: rgba(var(--vs-color), 1);\n  margin: 3px;\n  -webkit-animation: scale 0.8s ease infinite 0.4s;\n  animation: scale 0.8s ease infinite 0.4s;\n  border-radius: 5px;\n}\n\n@-webkit-keyframes scale {\n  0% {\n    height: 5px;\n  }\n\n  50% {\n    height: 25px;\n  }\n\n  0% {\n    height: 5px;\n  }\n}\n\n@keyframes scale {\n  0% {\n    height: 5px;\n  }\n\n  50% {\n    height: 25px;\n  }\n\n  0% {\n    height: 5px;\n  }\n}\n\n.notification-enter-active {\n  -webkit-transition: all 0.3s ease 0.05s, margin 0.25s ease, -webkit-transform 0.3s ease, -webkit-clip-path 8s ease 0.8s;\n  transition: all 0.3s ease 0.05s, margin 0.25s ease, -webkit-transform 0.3s ease, -webkit-clip-path 8s ease 0.8s;\n  transition: all 0.3s ease 0.05s, transform 0.3s ease, margin 0.25s ease, clip-path 8s ease 0.8s;\n  transition: all 0.3s ease 0.05s, transform 0.3s ease, margin 0.25s ease, clip-path 8s ease 0.8s, -webkit-transform 0.3s ease, -webkit-clip-path 8s ease 0.8s;\n}\n\n.notification-leave-to {\n  max-height: 0px !important;\n  padding-top: 0px !important;\n  padding-bottom: 0px !important;\n  margin-top: 0px !important;\n  margin-bottom: 0px !important;\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);\n  opacity: 0 !important;\n  -webkit-clip-path: circle(0% at 80% 35%) !important;\n  clip-path: circle(0% at 80% 35%) !important;\n}\n\n.notification-enter {\n  -webkit-transform: translate(25%);\n  transform: translate(25%);\n  -webkit-clip-path: circle(0% at 80% 35%) !important;\n  clip-path: circle(0% at 80% 35%) !important;\n}\n\n.notification-enter .vs-notification__content {\n  opacity: 0;\n  -webkit-transform: translate(10%);\n  transform: translate(10%);\n}\n\n.vs-notification-parent {\n  position: fixed;\n  right: 0px;\n  bottom: 0px;\n  z-index: 200000;\n  -webkit-transition: all 25s ease;\n  transition: all 25s ease;\n  padding: 10px 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: end;\n  -ms-flex-align: end;\n  align-items: flex-end;\n  -webkit-box-pack: end;\n  -ms-flex-pack: end;\n  justify-content: flex-end;\n}\n\n.vs-notification-parent--top-right {\n  bottom: auto;\n  top: 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: reverse;\n  -ms-flex-direction: column-reverse;\n  flex-direction: column-reverse;\n}\n\n.vs-notification-parent--top-center {\n  bottom: auto;\n  top: 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: reverse;\n  -ms-flex-direction: column-reverse;\n  flex-direction: column-reverse;\n  left: 50%;\n  right: auto;\n  -webkit-transform: translate(-50%);\n  transform: translate(-50%);\n}\n\n.vs-notification-parent--top-center .vs-notification--sticky {\n  margin: 3px 20px;\n  border-radius: 20px;\n}\n\n.vs-notification-parent--top-center .vs-notification--sticky:last-child {\n  border-radius: 0px 0px 20px 20px;\n  margin-top: -10px;\n}\n\n.vs-notification-parent--top-center .vs-notification {\n  -webkit-clip-path: circle(120% at 50% 0%);\n  clip-path: circle(120% at 50% 0%);\n  -webkit-transition: all 0.25s ease, max-height 0.25s ease, -webkit-transform 0.3s ease, -webkit-clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, max-height 0.25s ease, -webkit-transform 0.3s ease, -webkit-clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, transform 0.3s ease, max-height 0.25s ease, clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, transform 0.3s ease, max-height 0.25s ease, clip-path 0.5s ease 0.1s, -webkit-transform 0.3s ease, -webkit-clip-path 0.5s ease 0.1s;\n}\n\n.vs-notification-parent--top-center .vs-notification.vs-notification--border {\n  border: 3px solid transparent;\n  border-top: 3px solid rgba(var(--vs-border), 1);\n}\n\n.vs-notification-parent--top-center .notification-enter {\n  -webkit-transform: translate(0, -25%);\n  transform: translate(0, -25%);\n  -webkit-clip-path: circle(0% at 50% 0%) !important;\n  clip-path: circle(0% at 50% 0%) !important;\n}\n\n.vs-notification-parent--top-center .notification-enter .vs-notification__content {\n  opacity: 0;\n  -webkit-transform: translate(0, -10%);\n  transform: translate(0, -10%);\n}\n\n.vs-notification-parent--bottom-center {\n  left: 50%;\n  right: auto;\n  -webkit-transform: translate(-50%);\n  transform: translate(-50%);\n}\n\n.vs-notification-parent--bottom-center .vs-notification--sticky {\n  margin: 3px 20px;\n  border-radius: 20px;\n}\n\n.vs-notification-parent--bottom-center .vs-notification--sticky:last-child {\n  border-radius: 20px 20px 0px 0px;\n  margin-bottom: -10px;\n}\n\n.vs-notification-parent--bottom-center .vs-notification {\n  -webkit-clip-path: circle(120% at 50% 100%);\n  clip-path: circle(120% at 50% 100%);\n  -webkit-transition: all 0.25s ease, max-height 0.25s ease, -webkit-transform 0.3s ease, -webkit-clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, max-height 0.25s ease, -webkit-transform 0.3s ease, -webkit-clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, transform 0.3s ease, max-height 0.25s ease, clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, transform 0.3s ease, max-height 0.25s ease, clip-path 0.5s ease 0.1s, -webkit-transform 0.3s ease, -webkit-clip-path 0.5s ease 0.1s;\n}\n\n.vs-notification-parent--bottom-center .vs-notification.vs-notification--border {\n  border: 3px solid transparent;\n  border-bottom: 3px solid rgba(var(--vs-border), 1);\n}\n\n.vs-notification-parent--bottom-center .notification-enter {\n  -webkit-transform: translate(0, 25%);\n  transform: translate(0, 25%);\n  -webkit-clip-path: circle(0% at 50% 100%) !important;\n  clip-path: circle(0% at 50% 100%) !important;\n}\n\n.vs-notification-parent--bottom-center .notification-enter .vs-notification__content {\n  opacity: 0;\n  -webkit-transform: translate(0, 10%);\n  transform: translate(0, 10%);\n}\n\n.vs-notification-parent--top-left {\n  bottom: auto;\n  top: 0px;\n  left: 0px;\n  right: auto;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: reverse;\n  -ms-flex-direction: column-reverse;\n  flex-direction: column-reverse;\n  -webkit-box-align: start;\n  -ms-flex-align: start;\n  align-items: flex-start;\n  -webkit-box-pack: end;\n  -ms-flex-pack: end;\n  justify-content: flex-end;\n}\n\n.vs-notification-parent--top-left .vs-notification--sticky {\n  margin-left: 0px;\n  border-radius: 0px 20px 20px 0px;\n}\n\n.vs-notification-parent--top-left .vs-notification {\n  -webkit-clip-path: circle(145% at 0% 50%);\n  clip-path: circle(145% at 0% 50%);\n}\n\n.vs-notification-parent--top-left .vs-notification.vs-notification--border {\n  border: 3px solid transparent;\n  border-left: 3px solid rgba(var(--vs-border), 1);\n}\n\n.vs-notification-parent--top-left .notification-enter {\n  -webkit-transform: translate(-25%);\n  transform: translate(-25%);\n  -webkit-clip-path: circle(0% at 20% 35%) !important;\n  clip-path: circle(0% at 20% 35%) !important;\n}\n\n.vs-notification-parent--top-left .notification-enter .vs-notification__content {\n  opacity: 0;\n  -webkit-transform: translate(-10%);\n  transform: translate(-10%);\n}\n\n.vs-notification-parent--bottom-left {\n  left: 0px;\n  right: auto;\n}\n\n.vs-notification-parent--bottom-left .vs-notification--sticky {\n  margin-left: 0px;\n  border-radius: 0px 20px 20px 0px;\n}\n\n.vs-notification-parent--bottom-left .vs-notification {\n  -webkit-clip-path: circle(145% at 0% 50%);\n  clip-path: circle(145% at 0% 50%);\n}\n\n.vs-notification-parent--bottom-left .vs-notification.vs-notification--border {\n  border: 3px solid transparent;\n  border-left: 3px solid rgba(var(--vs-border), 1);\n}\n\n.vs-notification-parent--bottom-left .notification-enter {\n  -webkit-transform: translate(-25%);\n  transform: translate(-25%);\n  -webkit-clip-path: circle(0% at 20% 35%) !important;\n  clip-path: circle(0% at 20% 35%) !important;\n}\n\n.vs-notification-parent--bottom-left .notification-enter .vs-notification__content {\n  opacity: 0;\n  -webkit-transform: translate(-10%);\n  transform: translate(-10%);\n}\n\n.vs-notification {\n  --vs-color: var(--vs-background);\n  --vs-border: var(--vs-background);\n  --vs-opacity: .6;\n  position: relative;\n  max-width: 340px;\n  width: 100%;\n  height: auto;\n  border-radius: 20px;\n  -webkit-box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  overflow: hidden;\n  -webkit-clip-path: circle(145% at 100% 50%);\n  clip-path: circle(145% at 100% 50%);\n  background: rgba(var(--vs-color), 1);\n  color: rgba(var(--vs-text), 1);\n  margin: 3px 10px;\n  -webkit-transition: all 0.25s ease, max-height 0.25s ease, -webkit-transform 0.3s ease 0.1s, -webkit-clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, max-height 0.25s ease, -webkit-transform 0.3s ease 0.1s, -webkit-clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, transform 0.3s ease 0.1s, max-height 0.25s ease, clip-path 0.5s ease 0.1s;\n  transition: all 0.25s ease, transform 0.3s ease 0.1s, max-height 0.25s ease, clip-path 0.5s ease 0.1s, -webkit-transform 0.3s ease 0.1s, -webkit-clip-path 0.5s ease 0.1s;\n}\n\n.vs-notification:hover:not(.vs-notification--flat) {\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  -webkit-transform: translate(0, 3px);\n  transform: translate(0, 3px);\n}\n\n.vs-notification--notPadding {\n  padding: 0px !important;\n}\n\n.vs-notification.vs-notification--icon {\n  padding-left: 50px !important;\n}\n\n.vs-notification.vs-notification--loading {\n  width: 100px !important;\n  max-height: 100px !important;\n  min-height: 100px !important;\n  padding: 0px !important;\n  padding-left: 0px !important;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-notification--width-auto {\n  width: auto;\n  max-width: none;\n}\n\n.vs-notification--width-all {\n  max-width: calc(100vw - 50px);\n  width: calc(100vw - 50px);\n}\n\n.vs-notification--square {\n  border-radius: 0px !important;\n}\n\n.vs-notification--sticky {\n  margin-right: 0px;\n  margin-bottom: 0px;\n  border-radius: 20px 0px 0px 20px;\n}\n\n.vs-notification--flat {\n  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, var(--vs-shadow-opacity));\n  background: rgba(var(--vs-background), 1);\n  color: rgba(var(--vs-color), 1) !important;\n}\n\n.vs-notification--flat:hover::after {\n  background: rgba(var(--vs-color), 0.15);\n}\n\n.vs-notification--flat .vs-notification__progress {\n  background: rgba(var(--vs-color), 1);\n}\n\n.vs-notification--flat .vs-notification__close {\n  --vs-color: inherit;\n}\n\n.vs-notification--flat .vs-notification__content {\n  color: rgba(var(--vs-color), 1) !important;\n}\n\n.vs-notification--flat.vs-notification--border {\n  border: 0px solid transparent !important;\n  border-right: 3px solid rgba(var(--vs-border), 1) !important;\n}\n\n.vs-notification--flat:after {\n  content: \"\";\n  background: rgba(var(--vs-color), 0.1);\n  width: 100%;\n  height: 100%;\n  border-radius: inherit;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  z-index: -1;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-notification.vs-notification--onClick {\n  cursor: pointer;\n}\n\n.vs-notification.vs-notification--color:not(.vs-notification--flat) {\n  color: #fff;\n}\n\n.vs-notification.vs-notification--color:not(.vs-notification--flat) .vs-notification__progress {\n  background: #fff;\n}\n\n.vs-notification.vs-notification--color:not(.vs-notification--flat) .vs-notification__close {\n  --vs-color: 255,255,255;\n}\n\n.vs-notification.vs-notification--color:not(.vs-notification--flat) .vs-notification__loading:after {\n  border: 2px solid #fff;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n}\n\n.vs-notification.vs-notification--color:not(.vs-notification--flat) .vs-notification__loading:before {\n  border: 2px dashed #fff;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n}\n\n.vs-notification.vs-notification--border {\n  border: 3px solid transparent;\n  border-right: 3px solid rgba(var(--vs-border), 1);\n}\n\n.vs-notification__progress {\n  width: 0%;\n  height: 3px;\n  background: rgba(var(--vs-text), 1);\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  -webkit-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n}\n\n.vs-notification__loading {\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  position: absolute;\n}\n\n.vs-notification__loading:after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px solid rgba(var(--vs-text), 1);\n  border-radius: inherit;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n  -webkit-animation: loadingNoti 0.8s ease infinite;\n  animation: loadingNoti 0.8s ease infinite;\n  top: 0px;\n  content: \"\";\n}\n\n.vs-notification__loading:before {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  top: 0px;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px dashed rgba(var(--vs-text), 1);\n  border-radius: inherit;\n  border-top: 2px solid transparent;\n  border-left: 2px solid transparent;\n  border-right: 2px solid transparent;\n  -webkit-animation: loadingNoti 0.8s linear infinite;\n  animation: loadingNoti 0.8s linear infinite;\n  opacity: 0.2;\n  content: \"\";\n}\n\n.vs-notification__close {\n  --vs-color: var(--vs-text);\n  position: absolute;\n  border: 0px;\n  background: transparent;\n  top: 2px;\n  right: 2px;\n  -webkit-transform: scale(0.75);\n  transform: scale(0.75);\n  padding: 0px;\n}\n\n.vs-notification__icon {\n  position: absolute;\n  top: calc(50% - 22px);\n  background: transparent;\n  width: 45px;\n  height: 45px;\n  left: 2px;\n  border-radius: 0px 35% 35% 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n}\n\n.vs-notification__icon i {\n  font-size: 1.2rem;\n}\n\n.vs-notification__content {\n  position: relative;\n  width: auto;\n  height: auto;\n  -webkit-transition: all 0.25s ease 0.2s;\n  transition: all 0.25s ease 0.2s;\n  opacity: 1;\n}\n\n.vs-notification__content__text {\n  width: 100%;\n}\n\n.vs-notification__content__text p {\n  margin: 0px;\n  padding: 0px;\n  font-size: 0.75rem;\n  line-height: 1rem;\n}\n\n.vs-notification__content__header {\n  width: 100%;\n  margin: 0px;\n  padding: 0px;\n  padding-bottom: 6px;\n}\n\n.vs-notification__content__header h4 {\n  width: 100%;\n  margin: 0px;\n  padding: 0px;\n  font-size: 0.9rem;\n}\n\n.darken .vs-notification--dark {\n  color: #fff !important;\n}\n\n.darken .vs-notification--dark .vs-notification__close {\n  --vs-color: 255,255,255 !important;\n}\n\n.darken .vs-notification--dark h4 {\n  color: #fff !important;\n}\n\n.darken .vs-notification--dark p {\n  color: #fff !important;\n}\n\n@-webkit-keyframes loadingNoti {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes loadingNoti {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@-webkit-keyframes progressNoti {\n  0% {\n    width: 0%;\n  }\n\n  100% {\n    width: 100%;\n  }\n}\n\n@keyframes progressNoti {\n  0% {\n    width: 0%;\n  }\n\n  100% {\n    width: 100%;\n  }\n}\n\n@media (max-width: 600px) {\n  .vs-notification {\n    margin: 3px 0px !important;\n    border-radius: 0px !important;\n    width: 100% !important;\n    max-width: 100% !important;\n    min-width: 100% !important;\n  }\n\n  .vs-notification:hover {\n    -webkit-transform: translate(0) !important;\n    transform: translate(0) !important;\n  }\n\n  .vs-notification:last-child {\n    margin-bottom: 0px !important;\n  }\n\n  .vs-notification-parent {\n    padding: 0px;\n    width: 100% !important;\n    max-width: 100% !important;\n  }\n\n  .vs-notification-parent .vs-notification--sticky {\n    margin-bottom: 0px !important;\n  }\n\n  .vs-notification-parent.vs-notification-parent--top-center .vs-notification:last-child {\n    margin-bottom: 3px;\n    margin-top: 0px !important;\n  }\n}\n\n.vs-row {\n  width: 100%;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: start;\n  -ms-flex-align: start;\n  align-items: flex-start;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  -ms-flex-wrap: wrap;\n  flex-wrap: wrap;\n}\n\n.vs-col {\n  width: 100%;\n  position: relative;\n}\n\n.vs-col--w-1 {\n  width: 8.33%;\n}\n\n.vs-col--w-2 {\n  width: 16.66%;\n}\n\n.vs-col--w-3 {\n  width: 25%;\n}\n\n.vs-col--w-4 {\n  width: 33.33%;\n}\n\n.vs-col--w-5 {\n  width: 41.66%;\n}\n\n.vs-col--w-6 {\n  width: 50%;\n}\n\n.vs-col--w-7 {\n  width: 58.33%;\n}\n\n.vs-col--w-8 {\n  width: 66.66%;\n}\n\n.vs-col--w-9 {\n  width: 75%;\n}\n\n.vs-col--w-10 {\n  width: 83.33%;\n}\n\n.vs-col--w-11 {\n  width: 91.66%;\n}\n\n.vs-col--w-12 {\n  width: 100%;\n}\n\n.vs-col--offset-1 {\n  margin-left: 8.33%;\n}\n\n.vs-col--offset-2 {\n  margin-left: 16.66%;\n}\n\n.vs-col--offset-3 {\n  margin-left: 25%;\n}\n\n.vs-col--offset-4 {\n  margin-left: 33.33%;\n}\n\n.vs-col--offset-5 {\n  margin-left: 41.66%;\n}\n\n.vs-col--offset-6 {\n  margin-left: 50%;\n}\n\n.vs-col--offset-7 {\n  margin-left: 58.33%;\n}\n\n.vs-col--offset-8 {\n  margin-left: 66.66%;\n}\n\n.vs-col--offset-9 {\n  margin-left: 75%;\n}\n\n.vs-col--offset-10 {\n  margin-left: 83.33%;\n}\n\n.vs-col--offset-11 {\n  margin-left: 91.66%;\n}\n\n.vs-col--offset-12 {\n  margin-left: 100%;\n}\n\n.vs-col--lg-1 {\n  width: 8.33%;\n}\n\n.vs-col--lg-2 {\n  width: 16.66%;\n}\n\n.vs-col--lg-3 {\n  width: 25%;\n}\n\n.vs-col--lg-4 {\n  width: 33.33%;\n}\n\n.vs-col--lg-5 {\n  width: 41.66%;\n}\n\n.vs-col--lg-6 {\n  width: 50%;\n}\n\n.vs-col--lg-7 {\n  width: 58.33%;\n}\n\n.vs-col--lg-8 {\n  width: 66.66%;\n}\n\n.vs-col--lg-9 {\n  width: 75%;\n}\n\n.vs-col--lg-10 {\n  width: 83.33%;\n}\n\n.vs-col--lg-11 {\n  width: 91.66%;\n}\n\n.vs-col--lg-12 {\n  width: 100%;\n}\n\n@media (max-width: 900px) {\n  .vs-col--sm-1 {\n    width: 8.33%;\n  }\n\n  .vs-col--sm-2 {\n    width: 16.66%;\n  }\n\n  .vs-col--sm-3 {\n    width: 25%;\n  }\n\n  .vs-col--sm-4 {\n    width: 33.33%;\n  }\n\n  .vs-col--sm-5 {\n    width: 41.66%;\n  }\n\n  .vs-col--sm-6 {\n    width: 50%;\n  }\n\n  .vs-col--sm-7 {\n    width: 58.33%;\n  }\n\n  .vs-col--sm-8 {\n    width: 66.66%;\n  }\n\n  .vs-col--sm-9 {\n    width: 75%;\n  }\n\n  .vs-col--sm-10 {\n    width: 83.33%;\n  }\n\n  .vs-col--sm-11 {\n    width: 91.66%;\n  }\n\n  .vs-col--sm-12 {\n    width: 100%;\n  }\n}\n\n@media (max-width: 600px) {\n  .vs-col--xs-1 {\n    width: 8.33%;\n  }\n\n  .vs-col--xs-2 {\n    width: 16.66%;\n  }\n\n  .vs-col--xs-3 {\n    width: 25%;\n  }\n\n  .vs-col--xs-4 {\n    width: 33.33%;\n  }\n\n  .vs-col--xs-5 {\n    width: 41.66%;\n  }\n\n  .vs-col--xs-6 {\n    width: 50%;\n  }\n\n  .vs-col--xs-7 {\n    width: 58.33%;\n  }\n\n  .vs-col--xs-8 {\n    width: 66.66%;\n  }\n\n  .vs-col--xs-9 {\n    width: 75%;\n  }\n\n  .vs-col--xs-10 {\n    width: 83.33%;\n  }\n\n  .vs-col--xs-11 {\n    width: 91.66%;\n  }\n\n  .vs-col--xs-12 {\n    width: 100%;\n  }\n}\n\n:root {\n  --vs-primary: 25, 91, 255;\n  --vs-warn: 255, 186, 0;\n  --vs-danger: 255,71,87;\n  --vs-success: 70,201,58;\n  --vs-dark: 30,30,30;\n  --vs-light: 244,247,248;\n  --vs-color: 17,18,20;\n  --vs-facebook: 59, 89, 153;\n  --vs-twitter: 29, 161, 242;\n  --vs-youtube: 255, 0, 0;\n  --vs-pinterest: 189, 8, 28;\n  --vs-linkedin: 0, 119, 181;\n  --vs-snapchat: 255, 252, 0;\n  --vs-whatsapp: 37, 211, 102;\n  --vs-tumblr: 54, 70, 93;\n  --vs-reddit: 255, 69, 0;\n  --vs-spotify: 30, 215, 96;\n  --vs-amazon: 255, 153, 0;\n  --vs-medium: 2, 184, 117;\n  --vs-vimeo: 26, 183, 234;\n  --vs-skype: 0, 175, 240;\n  --vs-dribbble: 234, 76, 137;\n  --vs-slack: 74, 21, 75;\n  --vs-yahoo: 67, 2, 151;\n  --vs-twitch: 100, 65, 164;\n  --vs-discord: 114, 137, 218;\n  --vs-telegram: 0, 136, 204;\n  --vs-google-plus: 219, 68, 55;\n  --vs-messenger: 0, 132, 255;\n  --vs-background: 255, 255, 255;\n  --vs-text: 44, 62, 80;\n  --vs-gray-1: 249, 252, 253;\n  --vs-gray-2: 244, 247, 248;\n  --vs-gray-3: 240, 243, 244;\n  --vs-gray-4: 230, 233, 234;\n}\n\n[class*=\"--primary\"] {\n  --vs-color: var(--vs-primary);\n}\n\n[class*=\"--default\"] {\n  --vs-color: var(--vs-primary);\n}\n\n[class*=\"--danger\"] {\n  --vs-color: var(--vs-danger);\n}\n\n[class*=\"--success\"] {\n  --vs-color: var(--vs-success);\n}\n\n[class*=\"--dark\"] {\n  --vs-color: var(--vs-dark);\n}\n\n[class*=\"--warn\"] {\n  --vs-color: var(--vs-warn);\n}\n\n:root {\n  --vs-shadow-opacity: .05;\n  --vs-radius: 20px;\n  --vs-zindex-1: 100000;\n  --vs-zindex-2: 99000;\n  --vs-zindex-3: 98000;\n  --vs-zindex-4: 97000;\n  --vs-background-opacity: .2;\n}\n\n[vs-theme=dark] {\n  --vs-background: 30, 32, 35;\n  --vs-text: 255, 255, 255;\n  --vs-gray-1: 24, 25, 28;\n  --vs-gray-2: 20, 20, 23;\n  --vs-gray-3: 15, 16, 19;\n  --vs-gray-4: 10, 11, 14;\n  --vs-shadow-opacity: .3;\n  --vs-dark: 0, 0, 0;\n  --vs-background-opacity: .6;\n}\n\n[vs-theme=dark] .vs-pagination-content.vs-component-dark .vs-pagination__active {\n  --vs-color: 255, 255, 255;\n  color: rgba(var(--vs-gray-3), 1);\n}\n\n[vs-theme=dark] .vs-button.vs-component-dark.vs-button--transparent {\n  color: rgba(var(--vs-text), 1) !important;\n}\n\n[vs-theme=dark] .vs-button.vs-component-dark.vs-button--transparent:hover:before {\n  background: rgba(var(--vs-color), 0.2);\n}\n\n[vs-theme=dark] .vs-button.vs-component-dark.vs-button--transparent.vs-button--active:before {\n  background: rgba(var(--vs-color), var(--vs-background-opacity));\n}\n\n[vs-theme=dark] .vs-ripple, [vs-theme=dark] .vs-ripple-invert, [vs-theme=dark] .vs-ripple-content {\n  --vs-color: 0,0,0;\n}\n\n[vs-theme=dark] .vs-loading {\n  --vs-background: 0, 0, 0;\n}\n\n[vs-theme=dark] .vs-input-parent--state-dark {\n  --vs-dark: 255, 255, 255 !important;\n}\n\n[vs-theme=dark] .vs-input-parent--state-dark .vs-input {\n  background: #000 !important;\n}\n\n[vs-theme=dark] .vs-component-dark {\n  --vs-color: 0, 0, 0 !important;\n}\n\n[vs-theme=dark] .vs-component-dark .vs-avatar {\n  color: #fff !important;\n}\n\n[vs-theme=dark] .vs-component-dark.vs-alert {\n  --vs-color: 0, 0, 0 !important;\n  background: rgba(var(--vs-color), 1) !important;\n  color: rgba(var(--vs-text), 1) !important;\n}\n\nbutton {\n  cursor: pointer;\n  outline: none;\n}\n\n[disabled] {\n  opacity: 0.6;\n}\n\ninput {\n  outline: none;\n}\n\ninput, textarea, button, select, a {\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n}\n\n[class*=vs-] {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  outline: none;\n  list-style: none;\n}\n\n.vs-ripple-content {\n  --vs-color: inherit;\n  width: 100px;\n  height: 100px;\n  position: absolute;\n  width: 100%;\n  pointer-events: none;\n  overflow: hidden;\n  height: 100%;\n  top: 0px;\n  right: 0px;\n  border-radius: inherit;\n  z-index: -1;\n}\n\n.vs-ripple-content .vs-ripple {\n  width: 0px;\n  height: 0px;\n  border-radius: 50%;\n  opacity: 0;\n  position: absolute;\n  -webkit-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  -webkit-transition: all 0.5s ease;\n  transition: all 0.5s ease;\n  background: radial-gradient(circle, rgba(var(--vs-color), 0.05), rgba(var(--vs-color), 0.6));\n}\n\n.vs-ripple-content .vs-ripple--solid {\n  background: rgba(var(--vs-color), 1);\n  opacity: 1;\n}\n\n.vs-ripple-content .vs-ripple-invert {\n  width: 0px;\n  height: 0px;\n  border-radius: 50%;\n  opacity: 0;\n  position: absolute;\n  -webkit-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  -webkit-transition: all 0.5s ease;\n  transition: all 0.5s ease;\n  background-image: radial-gradient(circle, rgba(var(--vs-color), 0.5), rgba(var(--vs-color), 0));\n}\n\n.vs-ripple-content .vs-ripple-cut-1 {\n  width: 0px;\n  height: 0px;\n  opacity: 0;\n  position: absolute;\n  -webkit-transform: translate(-100%, -50%) skew(20deg);\n  transform: translate(-100%, -50%) skew(20deg);\n  -webkit-transition: all 0.6s ease;\n  transition: all 0.6s ease;\n  background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));\n  background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);\n}\n\n.vs-ripple-content .vs-ripple-cut-2 {\n  width: 0px;\n  height: 0px;\n  opacity: 0;\n  position: absolute;\n  -webkit-transform: translate(0%, -50%) skew(20deg);\n  transform: translate(0%, -50%) skew(20deg);\n  -webkit-transition: all 0.6s ease;\n  transition: all 0.6s ease;\n  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));\n  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);\n}\n\n.vs-remove-transition *, .vs-remove-transition *:after, .vs-remove-transition *:before {\n  -webkit-transition: all 0s !important;\n  transition: all 0s !important;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Home.vue?vue&type=style&index=0&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Home.vue?vue&type=style&index=0&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".ml1 .letter {\n  display: inline-block;\n  font-family: \"Poppins\", sans-serif;\n}\n.ml1 .text-wrapper {\n  position: relative;\n  display: inline-block;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n}\n.ml1 .line {\n  opacity: 0;\n  position: absolute;\n  left: 0;\n  height: 1px;\n  width: 100%;\n  background-color: #fff;\n  transform-origin: 0 0;\n}\n.ml1 .line1 {\n  top: 0;\n}\n.ml1 .line2 {\n  bottom: 0;\n}\n.ml12 .letter {\n  display: inline-block;\n  line-height: 1em;\n}\n", ""]);
 
 // exports
 
@@ -19686,6 +20092,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Home.vue?vue&type=style&index=0&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Home.vue?vue&type=style&index=0&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Home.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Home.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/lib/addStyles.js":
 /*!****************************************************!*\
   !*** ./node_modules/style-loader/lib/addStyles.js ***!
@@ -20285,7 +20721,604 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "app" })
+  return _c(
+    "div",
+    { staticClass: "app" },
+    [
+      _c(
+        "transition",
+        { attrs: { name: "fade" } },
+        [_vm.active ? _c("router-view") : _vm._e()],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/LoginForm.vue?vue&type=template&id=12a98f72&":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/LoginForm.vue?vue&type=template&id=12a98f72& ***!
+  \************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "vs-dialog",
+    {
+      attrs: { blur: "", "overflow-hidden": "" },
+      scopedSlots: _vm._u([
+        {
+          key: "header",
+          fn: function() {
+            return [
+              _c("h4", { staticClass: "not-margin" }, [
+                _vm._v("Welcome to "),
+                _c("b", [_vm._v("TEDxUniversitasBrawijaya")])
+              ])
+            ]
+          },
+          proxy: true
+        },
+        {
+          key: "footer",
+          fn: function() {
+            return [
+              _c(
+                "div",
+                { staticClass: "footer-dialog" },
+                [
+                  _c(
+                    "vs-button",
+                    { staticClass: "focus:outline-none", attrs: { block: "" } },
+                    [_vm._v(" Login ")]
+                  )
+                ],
+                1
+              )
+            ]
+          },
+          proxy: true
+        }
+      ]),
+      model: {
+        value: _vm.loginDialog,
+        callback: function($$v) {
+          _vm.loginDialog = $$v
+        },
+        expression: "loginDialog"
+      }
+    },
+    [
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "con-form" },
+        [
+          _c("vs-input", {
+            attrs: { type: "email", placeholder: "Email" },
+            scopedSlots: _vm._u([
+              {
+                key: "icon",
+                fn: function() {
+                  return [_vm._v("\n        @\n      ")]
+                },
+                proxy: true
+              }
+            ]),
+            model: {
+              value: _vm.loginForm.email,
+              callback: function($$v) {
+                _vm.$set(_vm.loginForm, "email", $$v)
+              },
+              expression: "loginForm.email"
+            }
+          }),
+          _vm._v(" "),
+          _c("vs-input", {
+            attrs: { type: "password", placeholder: "Password" },
+            scopedSlots: _vm._u([
+              {
+                key: "icon",
+                fn: function() {
+                  return [_c("i", { staticClass: "bx bxs-lock" })]
+                },
+                proxy: true
+              }
+            ]),
+            model: {
+              value: _vm.loginForm.password,
+              callback: function($$v) {
+                _vm.$set(_vm.loginForm, "password", $$v)
+              },
+              expression: "loginForm.password"
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "flex" },
+            [
+              _c(
+                "vs-checkbox",
+                {
+                  model: {
+                    value: _vm.loginForm.remember,
+                    callback: function($$v) {
+                      _vm.$set(_vm.loginForm, "remember", $$v)
+                    },
+                    expression: "loginForm.remember"
+                  }
+                },
+                [_c("small", [_vm._v("Remember me")])]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Navbar.vue?vue&type=template&id=6dde423b&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Navbar.vue?vue&type=template&id=6dde423b& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "center absolute left-0 top-0 w-full" },
+    [
+      _c(
+        "vs-navbar",
+        {
+          staticClass: "p-4",
+          attrs: {
+            "center-collapsed": "",
+            color: "dark",
+            "text-white": "",
+            "not-line": ""
+          },
+          scopedSlots: _vm._u([
+            {
+              key: "left",
+              fn: function() {
+                return [
+                  _c("img", {
+                    staticClass: "w-24 md:w-48",
+                    attrs: { src: "/img/tedx.png" }
+                  })
+                ]
+              },
+              proxy: true
+            },
+            {
+              key: "right",
+              fn: function() {
+                return [
+                  _c(
+                    "vs-button",
+                    {
+                      staticClass: "focus:outline-none",
+                      attrs: { flat: "" },
+                      on: {
+                        click: function($event) {
+                          return _vm.openDialog("loginDialog")
+                        }
+                      }
+                    },
+                    [_vm._v("Login")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "vs-button",
+                    {
+                      staticClass: "focus:outline-none",
+                      attrs: { gradient: "" },
+                      on: {
+                        click: function($event) {
+                          return _vm.openDialog("registerDialog")
+                        }
+                      }
+                    },
+                    [_vm._v("Register")]
+                  )
+                ]
+              },
+              proxy: true
+            }
+          ]),
+          model: {
+            value: _vm.navbar,
+            callback: function($$v) {
+              _vm.navbar = $$v
+            },
+            expression: "navbar"
+          }
+        },
+        [
+          _vm._v(" "),
+          _c(
+            "vs-navbar-item",
+            {
+              staticClass: "focus:outline-none",
+              attrs: { active: _vm.navbar == "guide", id: "guide" }
+            },
+            [_vm._v("\n      Home\n    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "vs-navbar-item",
+            {
+              staticClass: "focus:outline-none",
+              attrs: { active: _vm.navbar == "about", id: "about" }
+            },
+            [_vm._v("\n      About\n    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "vs-navbar-item",
+            {
+              staticClass: "focus:outline-none",
+              attrs: { active: _vm.navbar == "store", id: "store" }
+            },
+            [_vm._v("\n      Store\n    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "vs-navbar-item",
+            {
+              staticClass: "focus:outline-none",
+              attrs: { active: _vm.navbar == "faqs", id: "faqs" }
+            },
+            [_vm._v("\n      FAQs\n    ")]
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _vm._m(0)
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "square" }, [
+      _c("div", { staticClass: "child" }, [_vm._v("child 1")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "child" }, [_vm._v("child 2")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "child" }, [_vm._v("child 3")])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RegisterForm.vue?vue&type=template&id=7942be72&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/RegisterForm.vue?vue&type=template&id=7942be72& ***!
+  \***************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "vs-dialog",
+    {
+      attrs: { blur: "", "overflow-hidden": "" },
+      scopedSlots: _vm._u([
+        {
+          key: "header",
+          fn: function() {
+            return [
+              _c("h4", { staticClass: "not-margin" }, [
+                _vm._v("Welcome to "),
+                _c("b", [_vm._v("TEDxUniversitasBrawijaya")])
+              ])
+            ]
+          },
+          proxy: true
+        },
+        {
+          key: "footer",
+          fn: function() {
+            return [
+              _c(
+                "div",
+                { staticClass: "footer-dialog" },
+                [
+                  _c(
+                    "vs-button",
+                    { staticClass: "focus:outline-none", attrs: { block: "" } },
+                    [_vm._v(" Register ")]
+                  )
+                ],
+                1
+              )
+            ]
+          },
+          proxy: true
+        }
+      ]),
+      model: {
+        value: _vm.registerDialog,
+        callback: function($$v) {
+          _vm.registerDialog = $$v
+        },
+        expression: "registerDialog"
+      }
+    },
+    [
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "con-form" },
+        [
+          _c("vs-input", {
+            attrs: { type: "text", placeholder: "Username" },
+            scopedSlots: _vm._u([
+              {
+                key: "icon",
+                fn: function() {
+                  return [_c("i", { staticClass: "bx bxs-user" })]
+                },
+                proxy: true
+              }
+            ]),
+            model: {
+              value: _vm.registerForm.username,
+              callback: function($$v) {
+                _vm.$set(_vm.registerForm, "username", $$v)
+              },
+              expression: "registerForm.username"
+            }
+          }),
+          _vm._v(" "),
+          _c("vs-input", {
+            attrs: { type: "email", placeholder: "Email" },
+            scopedSlots: _vm._u([
+              {
+                key: "icon",
+                fn: function() {
+                  return [_vm._v("\n        @\n      ")]
+                },
+                proxy: true
+              }
+            ]),
+            model: {
+              value: _vm.registerForm.email,
+              callback: function($$v) {
+                _vm.$set(_vm.registerForm, "email", $$v)
+              },
+              expression: "registerForm.email"
+            }
+          }),
+          _vm._v(" "),
+          _c("vs-input", {
+            attrs: { type: "password", placeholder: "Password" },
+            scopedSlots: _vm._u([
+              {
+                key: "icon",
+                fn: function() {
+                  return [_c("i", { staticClass: "bx bxs-lock" })]
+                },
+                proxy: true
+              }
+            ]),
+            model: {
+              value: _vm.registerForm.password,
+              callback: function($$v) {
+                _vm.$set(_vm.registerForm, "password", $$v)
+              },
+              expression: "registerForm.password"
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "flex" },
+            [
+              _c(
+                "vs-checkbox",
+                {
+                  model: {
+                    value: _vm.registerForm.remember,
+                    callback: function($$v) {
+                      _vm.$set(_vm.registerForm, "remember", $$v)
+                    },
+                    expression: "registerForm.remember"
+                  }
+                },
+                [_c("small", [_vm._v("I agree with the terms & conditions")])]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/layouts/default.vue?vue&type=template&id=06bc2b2d&":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/layouts/default.vue?vue&type=template&id=06bc2b2d& ***!
+  \*******************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "header",
+      { staticClass: "h-screen relative" },
+      [_c("Navbar"), _vm._v(" "), _vm._t("default")],
+      2
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Home.vue?vue&type=template&id=b3c5cf30&":
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Home.vue?vue&type=template&id=b3c5cf30& ***!
+  \**************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "default-layout",
+    [
+      _c("LoginForm"),
+      _vm._v(" "),
+      _c("RegisterForm"),
+      _vm._v(" "),
+      _c("main", { staticClass: "h-screen flex items-center justify-center" }, [
+        _c("div", { staticClass: "md:w-full lg:w-1/2 text-center" }, [
+          _c("div", { staticClass: "my-8 px-8 md:px-0 md:w-3/4 mx-auto" }, [
+            _c(
+              "h1",
+              {
+                staticClass:
+                  "ml1 text-4xl md:text-8xl text-white font-extralight"
+              },
+              [
+                _c("span", { staticClass: "text-wrapper w-full" }, [
+                  _c("span", { staticClass: "line line1" }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "letters" }, [
+                    _vm._v("Gerai Sorai")
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "line line2" })
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "my-4 px-8 md:px-0 md:w-3/4 mx-auto" }, [
+            _c(
+              "p",
+              {
+                staticClass: "ml12 text-xs md:text-base text-white font-light"
+              },
+              [
+                _vm._v(
+                  "\n          Keinginan kami untuk terkoneksi denganmu kami wujudkan dalam Gerai\n          Sorai. Ramaikan perayaan ini dengan membeli Merchandise\n          TEDxUniversitasBrawijaya!\n        "
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "flex justify-center" },
+            [
+              _c(
+                "transition",
+                { attrs: { name: "fade" } },
+                [
+                  _c(
+                    "vs-button",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.animationDone,
+                          expression: "animationDone"
+                        }
+                      ],
+                      staticClass: "focus:outline-none cursor-pointer",
+                      attrs: { gradient: "" }
+                    },
+                    [_vm._v("\n            Beli Sekarang!\n          ")]
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ])
+      ])
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -20402,6 +21435,3157 @@ function normalizeComponent (
     options: options
   }
 }
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-router/dist/vue-router.esm.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vue-router/dist/vue-router.esm.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/*!
+  * vue-router v3.5.1
+  * (c) 2021 Evan You
+  * @license MIT
+  */
+/*  */
+
+function assert (condition, message) {
+  if (!condition) {
+    throw new Error(("[vue-router] " + message))
+  }
+}
+
+function warn (condition, message) {
+  if ( true && !condition) {
+    typeof console !== 'undefined' && console.warn(("[vue-router] " + message));
+  }
+}
+
+function extend (a, b) {
+  for (var key in b) {
+    a[key] = b[key];
+  }
+  return a
+}
+
+/*  */
+
+var encodeReserveRE = /[!'()*]/g;
+var encodeReserveReplacer = function (c) { return '%' + c.charCodeAt(0).toString(16); };
+var commaRE = /%2C/g;
+
+// fixed encodeURIComponent which is more conformant to RFC3986:
+// - escapes [!'()*]
+// - preserve commas
+var encode = function (str) { return encodeURIComponent(str)
+    .replace(encodeReserveRE, encodeReserveReplacer)
+    .replace(commaRE, ','); };
+
+function decode (str) {
+  try {
+    return decodeURIComponent(str)
+  } catch (err) {
+    if (true) {
+      warn(false, ("Error decoding \"" + str + "\". Leaving it intact."));
+    }
+  }
+  return str
+}
+
+function resolveQuery (
+  query,
+  extraQuery,
+  _parseQuery
+) {
+  if ( extraQuery === void 0 ) extraQuery = {};
+
+  var parse = _parseQuery || parseQuery;
+  var parsedQuery;
+  try {
+    parsedQuery = parse(query || '');
+  } catch (e) {
+     true && warn(false, e.message);
+    parsedQuery = {};
+  }
+  for (var key in extraQuery) {
+    var value = extraQuery[key];
+    parsedQuery[key] = Array.isArray(value)
+      ? value.map(castQueryParamValue)
+      : castQueryParamValue(value);
+  }
+  return parsedQuery
+}
+
+var castQueryParamValue = function (value) { return (value == null || typeof value === 'object' ? value : String(value)); };
+
+function parseQuery (query) {
+  var res = {};
+
+  query = query.trim().replace(/^(\?|#|&)/, '');
+
+  if (!query) {
+    return res
+  }
+
+  query.split('&').forEach(function (param) {
+    var parts = param.replace(/\+/g, ' ').split('=');
+    var key = decode(parts.shift());
+    var val = parts.length > 0 ? decode(parts.join('=')) : null;
+
+    if (res[key] === undefined) {
+      res[key] = val;
+    } else if (Array.isArray(res[key])) {
+      res[key].push(val);
+    } else {
+      res[key] = [res[key], val];
+    }
+  });
+
+  return res
+}
+
+function stringifyQuery (obj) {
+  var res = obj
+    ? Object.keys(obj)
+      .map(function (key) {
+        var val = obj[key];
+
+        if (val === undefined) {
+          return ''
+        }
+
+        if (val === null) {
+          return encode(key)
+        }
+
+        if (Array.isArray(val)) {
+          var result = [];
+          val.forEach(function (val2) {
+            if (val2 === undefined) {
+              return
+            }
+            if (val2 === null) {
+              result.push(encode(key));
+            } else {
+              result.push(encode(key) + '=' + encode(val2));
+            }
+          });
+          return result.join('&')
+        }
+
+        return encode(key) + '=' + encode(val)
+      })
+      .filter(function (x) { return x.length > 0; })
+      .join('&')
+    : null;
+  return res ? ("?" + res) : ''
+}
+
+/*  */
+
+var trailingSlashRE = /\/?$/;
+
+function createRoute (
+  record,
+  location,
+  redirectedFrom,
+  router
+) {
+  var stringifyQuery = router && router.options.stringifyQuery;
+
+  var query = location.query || {};
+  try {
+    query = clone(query);
+  } catch (e) {}
+
+  var route = {
+    name: location.name || (record && record.name),
+    meta: (record && record.meta) || {},
+    path: location.path || '/',
+    hash: location.hash || '',
+    query: query,
+    params: location.params || {},
+    fullPath: getFullPath(location, stringifyQuery),
+    matched: record ? formatMatch(record) : []
+  };
+  if (redirectedFrom) {
+    route.redirectedFrom = getFullPath(redirectedFrom, stringifyQuery);
+  }
+  return Object.freeze(route)
+}
+
+function clone (value) {
+  if (Array.isArray(value)) {
+    return value.map(clone)
+  } else if (value && typeof value === 'object') {
+    var res = {};
+    for (var key in value) {
+      res[key] = clone(value[key]);
+    }
+    return res
+  } else {
+    return value
+  }
+}
+
+// the starting route that represents the initial state
+var START = createRoute(null, {
+  path: '/'
+});
+
+function formatMatch (record) {
+  var res = [];
+  while (record) {
+    res.unshift(record);
+    record = record.parent;
+  }
+  return res
+}
+
+function getFullPath (
+  ref,
+  _stringifyQuery
+) {
+  var path = ref.path;
+  var query = ref.query; if ( query === void 0 ) query = {};
+  var hash = ref.hash; if ( hash === void 0 ) hash = '';
+
+  var stringify = _stringifyQuery || stringifyQuery;
+  return (path || '/') + stringify(query) + hash
+}
+
+function isSameRoute (a, b, onlyPath) {
+  if (b === START) {
+    return a === b
+  } else if (!b) {
+    return false
+  } else if (a.path && b.path) {
+    return a.path.replace(trailingSlashRE, '') === b.path.replace(trailingSlashRE, '') && (onlyPath ||
+      a.hash === b.hash &&
+      isObjectEqual(a.query, b.query))
+  } else if (a.name && b.name) {
+    return (
+      a.name === b.name &&
+      (onlyPath || (
+        a.hash === b.hash &&
+      isObjectEqual(a.query, b.query) &&
+      isObjectEqual(a.params, b.params))
+      )
+    )
+  } else {
+    return false
+  }
+}
+
+function isObjectEqual (a, b) {
+  if ( a === void 0 ) a = {};
+  if ( b === void 0 ) b = {};
+
+  // handle null value #1566
+  if (!a || !b) { return a === b }
+  var aKeys = Object.keys(a).sort();
+  var bKeys = Object.keys(b).sort();
+  if (aKeys.length !== bKeys.length) {
+    return false
+  }
+  return aKeys.every(function (key, i) {
+    var aVal = a[key];
+    var bKey = bKeys[i];
+    if (bKey !== key) { return false }
+    var bVal = b[key];
+    // query values can be null and undefined
+    if (aVal == null || bVal == null) { return aVal === bVal }
+    // check nested equality
+    if (typeof aVal === 'object' && typeof bVal === 'object') {
+      return isObjectEqual(aVal, bVal)
+    }
+    return String(aVal) === String(bVal)
+  })
+}
+
+function isIncludedRoute (current, target) {
+  return (
+    current.path.replace(trailingSlashRE, '/').indexOf(
+      target.path.replace(trailingSlashRE, '/')
+    ) === 0 &&
+    (!target.hash || current.hash === target.hash) &&
+    queryIncludes(current.query, target.query)
+  )
+}
+
+function queryIncludes (current, target) {
+  for (var key in target) {
+    if (!(key in current)) {
+      return false
+    }
+  }
+  return true
+}
+
+function handleRouteEntered (route) {
+  for (var i = 0; i < route.matched.length; i++) {
+    var record = route.matched[i];
+    for (var name in record.instances) {
+      var instance = record.instances[name];
+      var cbs = record.enteredCbs[name];
+      if (!instance || !cbs) { continue }
+      delete record.enteredCbs[name];
+      for (var i$1 = 0; i$1 < cbs.length; i$1++) {
+        if (!instance._isBeingDestroyed) { cbs[i$1](instance); }
+      }
+    }
+  }
+}
+
+var View = {
+  name: 'RouterView',
+  functional: true,
+  props: {
+    name: {
+      type: String,
+      default: 'default'
+    }
+  },
+  render: function render (_, ref) {
+    var props = ref.props;
+    var children = ref.children;
+    var parent = ref.parent;
+    var data = ref.data;
+
+    // used by devtools to display a router-view badge
+    data.routerView = true;
+
+    // directly use parent context's createElement() function
+    // so that components rendered by router-view can resolve named slots
+    var h = parent.$createElement;
+    var name = props.name;
+    var route = parent.$route;
+    var cache = parent._routerViewCache || (parent._routerViewCache = {});
+
+    // determine current view depth, also check to see if the tree
+    // has been toggled inactive but kept-alive.
+    var depth = 0;
+    var inactive = false;
+    while (parent && parent._routerRoot !== parent) {
+      var vnodeData = parent.$vnode ? parent.$vnode.data : {};
+      if (vnodeData.routerView) {
+        depth++;
+      }
+      if (vnodeData.keepAlive && parent._directInactive && parent._inactive) {
+        inactive = true;
+      }
+      parent = parent.$parent;
+    }
+    data.routerViewDepth = depth;
+
+    // render previous view if the tree is inactive and kept-alive
+    if (inactive) {
+      var cachedData = cache[name];
+      var cachedComponent = cachedData && cachedData.component;
+      if (cachedComponent) {
+        // #2301
+        // pass props
+        if (cachedData.configProps) {
+          fillPropsinData(cachedComponent, data, cachedData.route, cachedData.configProps);
+        }
+        return h(cachedComponent, data, children)
+      } else {
+        // render previous empty view
+        return h()
+      }
+    }
+
+    var matched = route.matched[depth];
+    var component = matched && matched.components[name];
+
+    // render empty node if no matched route or no config component
+    if (!matched || !component) {
+      cache[name] = null;
+      return h()
+    }
+
+    // cache component
+    cache[name] = { component: component };
+
+    // attach instance registration hook
+    // this will be called in the instance's injected lifecycle hooks
+    data.registerRouteInstance = function (vm, val) {
+      // val could be undefined for unregistration
+      var current = matched.instances[name];
+      if (
+        (val && current !== vm) ||
+        (!val && current === vm)
+      ) {
+        matched.instances[name] = val;
+      }
+    }
+
+    // also register instance in prepatch hook
+    // in case the same component instance is reused across different routes
+    ;(data.hook || (data.hook = {})).prepatch = function (_, vnode) {
+      matched.instances[name] = vnode.componentInstance;
+    };
+
+    // register instance in init hook
+    // in case kept-alive component be actived when routes changed
+    data.hook.init = function (vnode) {
+      if (vnode.data.keepAlive &&
+        vnode.componentInstance &&
+        vnode.componentInstance !== matched.instances[name]
+      ) {
+        matched.instances[name] = vnode.componentInstance;
+      }
+
+      // if the route transition has already been confirmed then we weren't
+      // able to call the cbs during confirmation as the component was not
+      // registered yet, so we call it here.
+      handleRouteEntered(route);
+    };
+
+    var configProps = matched.props && matched.props[name];
+    // save route and configProps in cache
+    if (configProps) {
+      extend(cache[name], {
+        route: route,
+        configProps: configProps
+      });
+      fillPropsinData(component, data, route, configProps);
+    }
+
+    return h(component, data, children)
+  }
+};
+
+function fillPropsinData (component, data, route, configProps) {
+  // resolve props
+  var propsToPass = data.props = resolveProps(route, configProps);
+  if (propsToPass) {
+    // clone to prevent mutation
+    propsToPass = data.props = extend({}, propsToPass);
+    // pass non-declared props as attrs
+    var attrs = data.attrs = data.attrs || {};
+    for (var key in propsToPass) {
+      if (!component.props || !(key in component.props)) {
+        attrs[key] = propsToPass[key];
+        delete propsToPass[key];
+      }
+    }
+  }
+}
+
+function resolveProps (route, config) {
+  switch (typeof config) {
+    case 'undefined':
+      return
+    case 'object':
+      return config
+    case 'function':
+      return config(route)
+    case 'boolean':
+      return config ? route.params : undefined
+    default:
+      if (true) {
+        warn(
+          false,
+          "props in \"" + (route.path) + "\" is a " + (typeof config) + ", " +
+          "expecting an object, function or boolean."
+        );
+      }
+  }
+}
+
+/*  */
+
+function resolvePath (
+  relative,
+  base,
+  append
+) {
+  var firstChar = relative.charAt(0);
+  if (firstChar === '/') {
+    return relative
+  }
+
+  if (firstChar === '?' || firstChar === '#') {
+    return base + relative
+  }
+
+  var stack = base.split('/');
+
+  // remove trailing segment if:
+  // - not appending
+  // - appending to trailing slash (last segment is empty)
+  if (!append || !stack[stack.length - 1]) {
+    stack.pop();
+  }
+
+  // resolve relative path
+  var segments = relative.replace(/^\//, '').split('/');
+  for (var i = 0; i < segments.length; i++) {
+    var segment = segments[i];
+    if (segment === '..') {
+      stack.pop();
+    } else if (segment !== '.') {
+      stack.push(segment);
+    }
+  }
+
+  // ensure leading slash
+  if (stack[0] !== '') {
+    stack.unshift('');
+  }
+
+  return stack.join('/')
+}
+
+function parsePath (path) {
+  var hash = '';
+  var query = '';
+
+  var hashIndex = path.indexOf('#');
+  if (hashIndex >= 0) {
+    hash = path.slice(hashIndex);
+    path = path.slice(0, hashIndex);
+  }
+
+  var queryIndex = path.indexOf('?');
+  if (queryIndex >= 0) {
+    query = path.slice(queryIndex + 1);
+    path = path.slice(0, queryIndex);
+  }
+
+  return {
+    path: path,
+    query: query,
+    hash: hash
+  }
+}
+
+function cleanPath (path) {
+  return path.replace(/\/\//g, '/')
+}
+
+var isarray = Array.isArray || function (arr) {
+  return Object.prototype.toString.call(arr) == '[object Array]';
+};
+
+/**
+ * Expose `pathToRegexp`.
+ */
+var pathToRegexp_1 = pathToRegexp;
+var parse_1 = parse;
+var compile_1 = compile;
+var tokensToFunction_1 = tokensToFunction;
+var tokensToRegExp_1 = tokensToRegExp;
+
+/**
+ * The main path matching regexp utility.
+ *
+ * @type {RegExp}
+ */
+var PATH_REGEXP = new RegExp([
+  // Match escaped characters that would otherwise appear in future matches.
+  // This allows the user to escape special characters that won't transform.
+  '(\\\\.)',
+  // Match Express-style parameters and un-named parameters with a prefix
+  // and optional suffixes. Matches appear as:
+  //
+  // "/:test(\\d+)?" => ["/", "test", "\d+", undefined, "?", undefined]
+  // "/route(\\d+)"  => [undefined, undefined, undefined, "\d+", undefined, undefined]
+  // "/*"            => ["/", undefined, undefined, undefined, undefined, "*"]
+  '([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))'
+].join('|'), 'g');
+
+/**
+ * Parse a string for the raw tokens.
+ *
+ * @param  {string}  str
+ * @param  {Object=} options
+ * @return {!Array}
+ */
+function parse (str, options) {
+  var tokens = [];
+  var key = 0;
+  var index = 0;
+  var path = '';
+  var defaultDelimiter = options && options.delimiter || '/';
+  var res;
+
+  while ((res = PATH_REGEXP.exec(str)) != null) {
+    var m = res[0];
+    var escaped = res[1];
+    var offset = res.index;
+    path += str.slice(index, offset);
+    index = offset + m.length;
+
+    // Ignore already escaped sequences.
+    if (escaped) {
+      path += escaped[1];
+      continue
+    }
+
+    var next = str[index];
+    var prefix = res[2];
+    var name = res[3];
+    var capture = res[4];
+    var group = res[5];
+    var modifier = res[6];
+    var asterisk = res[7];
+
+    // Push the current path onto the tokens.
+    if (path) {
+      tokens.push(path);
+      path = '';
+    }
+
+    var partial = prefix != null && next != null && next !== prefix;
+    var repeat = modifier === '+' || modifier === '*';
+    var optional = modifier === '?' || modifier === '*';
+    var delimiter = res[2] || defaultDelimiter;
+    var pattern = capture || group;
+
+    tokens.push({
+      name: name || key++,
+      prefix: prefix || '',
+      delimiter: delimiter,
+      optional: optional,
+      repeat: repeat,
+      partial: partial,
+      asterisk: !!asterisk,
+      pattern: pattern ? escapeGroup(pattern) : (asterisk ? '.*' : '[^' + escapeString(delimiter) + ']+?')
+    });
+  }
+
+  // Match any characters still remaining.
+  if (index < str.length) {
+    path += str.substr(index);
+  }
+
+  // If the path exists, push it onto the end.
+  if (path) {
+    tokens.push(path);
+  }
+
+  return tokens
+}
+
+/**
+ * Compile a string to a template function for the path.
+ *
+ * @param  {string}             str
+ * @param  {Object=}            options
+ * @return {!function(Object=, Object=)}
+ */
+function compile (str, options) {
+  return tokensToFunction(parse(str, options), options)
+}
+
+/**
+ * Prettier encoding of URI path segments.
+ *
+ * @param  {string}
+ * @return {string}
+ */
+function encodeURIComponentPretty (str) {
+  return encodeURI(str).replace(/[\/?#]/g, function (c) {
+    return '%' + c.charCodeAt(0).toString(16).toUpperCase()
+  })
+}
+
+/**
+ * Encode the asterisk parameter. Similar to `pretty`, but allows slashes.
+ *
+ * @param  {string}
+ * @return {string}
+ */
+function encodeAsterisk (str) {
+  return encodeURI(str).replace(/[?#]/g, function (c) {
+    return '%' + c.charCodeAt(0).toString(16).toUpperCase()
+  })
+}
+
+/**
+ * Expose a method for transforming tokens into the path function.
+ */
+function tokensToFunction (tokens, options) {
+  // Compile all the tokens into regexps.
+  var matches = new Array(tokens.length);
+
+  // Compile all the patterns before compilation.
+  for (var i = 0; i < tokens.length; i++) {
+    if (typeof tokens[i] === 'object') {
+      matches[i] = new RegExp('^(?:' + tokens[i].pattern + ')$', flags(options));
+    }
+  }
+
+  return function (obj, opts) {
+    var path = '';
+    var data = obj || {};
+    var options = opts || {};
+    var encode = options.pretty ? encodeURIComponentPretty : encodeURIComponent;
+
+    for (var i = 0; i < tokens.length; i++) {
+      var token = tokens[i];
+
+      if (typeof token === 'string') {
+        path += token;
+
+        continue
+      }
+
+      var value = data[token.name];
+      var segment;
+
+      if (value == null) {
+        if (token.optional) {
+          // Prepend partial segment prefixes.
+          if (token.partial) {
+            path += token.prefix;
+          }
+
+          continue
+        } else {
+          throw new TypeError('Expected "' + token.name + '" to be defined')
+        }
+      }
+
+      if (isarray(value)) {
+        if (!token.repeat) {
+          throw new TypeError('Expected "' + token.name + '" to not repeat, but received `' + JSON.stringify(value) + '`')
+        }
+
+        if (value.length === 0) {
+          if (token.optional) {
+            continue
+          } else {
+            throw new TypeError('Expected "' + token.name + '" to not be empty')
+          }
+        }
+
+        for (var j = 0; j < value.length; j++) {
+          segment = encode(value[j]);
+
+          if (!matches[i].test(segment)) {
+            throw new TypeError('Expected all "' + token.name + '" to match "' + token.pattern + '", but received `' + JSON.stringify(segment) + '`')
+          }
+
+          path += (j === 0 ? token.prefix : token.delimiter) + segment;
+        }
+
+        continue
+      }
+
+      segment = token.asterisk ? encodeAsterisk(value) : encode(value);
+
+      if (!matches[i].test(segment)) {
+        throw new TypeError('Expected "' + token.name + '" to match "' + token.pattern + '", but received "' + segment + '"')
+      }
+
+      path += token.prefix + segment;
+    }
+
+    return path
+  }
+}
+
+/**
+ * Escape a regular expression string.
+ *
+ * @param  {string} str
+ * @return {string}
+ */
+function escapeString (str) {
+  return str.replace(/([.+*?=^!:${}()[\]|\/\\])/g, '\\$1')
+}
+
+/**
+ * Escape the capturing group by escaping special characters and meaning.
+ *
+ * @param  {string} group
+ * @return {string}
+ */
+function escapeGroup (group) {
+  return group.replace(/([=!:$\/()])/g, '\\$1')
+}
+
+/**
+ * Attach the keys as a property of the regexp.
+ *
+ * @param  {!RegExp} re
+ * @param  {Array}   keys
+ * @return {!RegExp}
+ */
+function attachKeys (re, keys) {
+  re.keys = keys;
+  return re
+}
+
+/**
+ * Get the flags for a regexp from the options.
+ *
+ * @param  {Object} options
+ * @return {string}
+ */
+function flags (options) {
+  return options && options.sensitive ? '' : 'i'
+}
+
+/**
+ * Pull out keys from a regexp.
+ *
+ * @param  {!RegExp} path
+ * @param  {!Array}  keys
+ * @return {!RegExp}
+ */
+function regexpToRegexp (path, keys) {
+  // Use a negative lookahead to match only capturing groups.
+  var groups = path.source.match(/\((?!\?)/g);
+
+  if (groups) {
+    for (var i = 0; i < groups.length; i++) {
+      keys.push({
+        name: i,
+        prefix: null,
+        delimiter: null,
+        optional: false,
+        repeat: false,
+        partial: false,
+        asterisk: false,
+        pattern: null
+      });
+    }
+  }
+
+  return attachKeys(path, keys)
+}
+
+/**
+ * Transform an array into a regexp.
+ *
+ * @param  {!Array}  path
+ * @param  {Array}   keys
+ * @param  {!Object} options
+ * @return {!RegExp}
+ */
+function arrayToRegexp (path, keys, options) {
+  var parts = [];
+
+  for (var i = 0; i < path.length; i++) {
+    parts.push(pathToRegexp(path[i], keys, options).source);
+  }
+
+  var regexp = new RegExp('(?:' + parts.join('|') + ')', flags(options));
+
+  return attachKeys(regexp, keys)
+}
+
+/**
+ * Create a path regexp from string input.
+ *
+ * @param  {string}  path
+ * @param  {!Array}  keys
+ * @param  {!Object} options
+ * @return {!RegExp}
+ */
+function stringToRegexp (path, keys, options) {
+  return tokensToRegExp(parse(path, options), keys, options)
+}
+
+/**
+ * Expose a function for taking tokens and returning a RegExp.
+ *
+ * @param  {!Array}          tokens
+ * @param  {(Array|Object)=} keys
+ * @param  {Object=}         options
+ * @return {!RegExp}
+ */
+function tokensToRegExp (tokens, keys, options) {
+  if (!isarray(keys)) {
+    options = /** @type {!Object} */ (keys || options);
+    keys = [];
+  }
+
+  options = options || {};
+
+  var strict = options.strict;
+  var end = options.end !== false;
+  var route = '';
+
+  // Iterate over the tokens and create our regexp string.
+  for (var i = 0; i < tokens.length; i++) {
+    var token = tokens[i];
+
+    if (typeof token === 'string') {
+      route += escapeString(token);
+    } else {
+      var prefix = escapeString(token.prefix);
+      var capture = '(?:' + token.pattern + ')';
+
+      keys.push(token);
+
+      if (token.repeat) {
+        capture += '(?:' + prefix + capture + ')*';
+      }
+
+      if (token.optional) {
+        if (!token.partial) {
+          capture = '(?:' + prefix + '(' + capture + '))?';
+        } else {
+          capture = prefix + '(' + capture + ')?';
+        }
+      } else {
+        capture = prefix + '(' + capture + ')';
+      }
+
+      route += capture;
+    }
+  }
+
+  var delimiter = escapeString(options.delimiter || '/');
+  var endsWithDelimiter = route.slice(-delimiter.length) === delimiter;
+
+  // In non-strict mode we allow a slash at the end of match. If the path to
+  // match already ends with a slash, we remove it for consistency. The slash
+  // is valid at the end of a path match, not in the middle. This is important
+  // in non-ending mode, where "/test/" shouldn't match "/test//route".
+  if (!strict) {
+    route = (endsWithDelimiter ? route.slice(0, -delimiter.length) : route) + '(?:' + delimiter + '(?=$))?';
+  }
+
+  if (end) {
+    route += '$';
+  } else {
+    // In non-ending mode, we need the capturing groups to match as much as
+    // possible by using a positive lookahead to the end or next path segment.
+    route += strict && endsWithDelimiter ? '' : '(?=' + delimiter + '|$)';
+  }
+
+  return attachKeys(new RegExp('^' + route, flags(options)), keys)
+}
+
+/**
+ * Normalize the given path string, returning a regular expression.
+ *
+ * An empty array can be passed in for the keys, which will hold the
+ * placeholder key descriptions. For example, using `/user/:id`, `keys` will
+ * contain `[{ name: 'id', delimiter: '/', optional: false, repeat: false }]`.
+ *
+ * @param  {(string|RegExp|Array)} path
+ * @param  {(Array|Object)=}       keys
+ * @param  {Object=}               options
+ * @return {!RegExp}
+ */
+function pathToRegexp (path, keys, options) {
+  if (!isarray(keys)) {
+    options = /** @type {!Object} */ (keys || options);
+    keys = [];
+  }
+
+  options = options || {};
+
+  if (path instanceof RegExp) {
+    return regexpToRegexp(path, /** @type {!Array} */ (keys))
+  }
+
+  if (isarray(path)) {
+    return arrayToRegexp(/** @type {!Array} */ (path), /** @type {!Array} */ (keys), options)
+  }
+
+  return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)
+}
+pathToRegexp_1.parse = parse_1;
+pathToRegexp_1.compile = compile_1;
+pathToRegexp_1.tokensToFunction = tokensToFunction_1;
+pathToRegexp_1.tokensToRegExp = tokensToRegExp_1;
+
+/*  */
+
+// $flow-disable-line
+var regexpCompileCache = Object.create(null);
+
+function fillParams (
+  path,
+  params,
+  routeMsg
+) {
+  params = params || {};
+  try {
+    var filler =
+      regexpCompileCache[path] ||
+      (regexpCompileCache[path] = pathToRegexp_1.compile(path));
+
+    // Fix #2505 resolving asterisk routes { name: 'not-found', params: { pathMatch: '/not-found' }}
+    // and fix #3106 so that you can work with location descriptor object having params.pathMatch equal to empty string
+    if (typeof params.pathMatch === 'string') { params[0] = params.pathMatch; }
+
+    return filler(params, { pretty: true })
+  } catch (e) {
+    if (true) {
+      // Fix #3072 no warn if `pathMatch` is string
+      warn(typeof params.pathMatch === 'string', ("missing param for " + routeMsg + ": " + (e.message)));
+    }
+    return ''
+  } finally {
+    // delete the 0 if it was added
+    delete params[0];
+  }
+}
+
+/*  */
+
+function normalizeLocation (
+  raw,
+  current,
+  append,
+  router
+) {
+  var next = typeof raw === 'string' ? { path: raw } : raw;
+  // named target
+  if (next._normalized) {
+    return next
+  } else if (next.name) {
+    next = extend({}, raw);
+    var params = next.params;
+    if (params && typeof params === 'object') {
+      next.params = extend({}, params);
+    }
+    return next
+  }
+
+  // relative params
+  if (!next.path && next.params && current) {
+    next = extend({}, next);
+    next._normalized = true;
+    var params$1 = extend(extend({}, current.params), next.params);
+    if (current.name) {
+      next.name = current.name;
+      next.params = params$1;
+    } else if (current.matched.length) {
+      var rawPath = current.matched[current.matched.length - 1].path;
+      next.path = fillParams(rawPath, params$1, ("path " + (current.path)));
+    } else if (true) {
+      warn(false, "relative params navigation requires a current route.");
+    }
+    return next
+  }
+
+  var parsedPath = parsePath(next.path || '');
+  var basePath = (current && current.path) || '/';
+  var path = parsedPath.path
+    ? resolvePath(parsedPath.path, basePath, append || next.append)
+    : basePath;
+
+  var query = resolveQuery(
+    parsedPath.query,
+    next.query,
+    router && router.options.parseQuery
+  );
+
+  var hash = next.hash || parsedPath.hash;
+  if (hash && hash.charAt(0) !== '#') {
+    hash = "#" + hash;
+  }
+
+  return {
+    _normalized: true,
+    path: path,
+    query: query,
+    hash: hash
+  }
+}
+
+/*  */
+
+// work around weird flow bug
+var toTypes = [String, Object];
+var eventTypes = [String, Array];
+
+var noop = function () {};
+
+var warnedCustomSlot;
+var warnedTagProp;
+var warnedEventProp;
+
+var Link = {
+  name: 'RouterLink',
+  props: {
+    to: {
+      type: toTypes,
+      required: true
+    },
+    tag: {
+      type: String,
+      default: 'a'
+    },
+    custom: Boolean,
+    exact: Boolean,
+    exactPath: Boolean,
+    append: Boolean,
+    replace: Boolean,
+    activeClass: String,
+    exactActiveClass: String,
+    ariaCurrentValue: {
+      type: String,
+      default: 'page'
+    },
+    event: {
+      type: eventTypes,
+      default: 'click'
+    }
+  },
+  render: function render (h) {
+    var this$1 = this;
+
+    var router = this.$router;
+    var current = this.$route;
+    var ref = router.resolve(
+      this.to,
+      current,
+      this.append
+    );
+    var location = ref.location;
+    var route = ref.route;
+    var href = ref.href;
+
+    var classes = {};
+    var globalActiveClass = router.options.linkActiveClass;
+    var globalExactActiveClass = router.options.linkExactActiveClass;
+    // Support global empty active class
+    var activeClassFallback =
+      globalActiveClass == null ? 'router-link-active' : globalActiveClass;
+    var exactActiveClassFallback =
+      globalExactActiveClass == null
+        ? 'router-link-exact-active'
+        : globalExactActiveClass;
+    var activeClass =
+      this.activeClass == null ? activeClassFallback : this.activeClass;
+    var exactActiveClass =
+      this.exactActiveClass == null
+        ? exactActiveClassFallback
+        : this.exactActiveClass;
+
+    var compareTarget = route.redirectedFrom
+      ? createRoute(null, normalizeLocation(route.redirectedFrom), null, router)
+      : route;
+
+    classes[exactActiveClass] = isSameRoute(current, compareTarget, this.exactPath);
+    classes[activeClass] = this.exact || this.exactPath
+      ? classes[exactActiveClass]
+      : isIncludedRoute(current, compareTarget);
+
+    var ariaCurrentValue = classes[exactActiveClass] ? this.ariaCurrentValue : null;
+
+    var handler = function (e) {
+      if (guardEvent(e)) {
+        if (this$1.replace) {
+          router.replace(location, noop);
+        } else {
+          router.push(location, noop);
+        }
+      }
+    };
+
+    var on = { click: guardEvent };
+    if (Array.isArray(this.event)) {
+      this.event.forEach(function (e) {
+        on[e] = handler;
+      });
+    } else {
+      on[this.event] = handler;
+    }
+
+    var data = { class: classes };
+
+    var scopedSlot =
+      !this.$scopedSlots.$hasNormal &&
+      this.$scopedSlots.default &&
+      this.$scopedSlots.default({
+        href: href,
+        route: route,
+        navigate: handler,
+        isActive: classes[activeClass],
+        isExactActive: classes[exactActiveClass]
+      });
+
+    if (scopedSlot) {
+      if ( true && !this.custom) {
+        !warnedCustomSlot && warn(false, 'In Vue Router 4, the v-slot API will by default wrap its content with an <a> element. Use the custom prop to remove this warning:\n<router-link v-slot="{ navigate, href }" custom></router-link>\n');
+        warnedCustomSlot = true;
+      }
+      if (scopedSlot.length === 1) {
+        return scopedSlot[0]
+      } else if (scopedSlot.length > 1 || !scopedSlot.length) {
+        if (true) {
+          warn(
+            false,
+            ("<router-link> with to=\"" + (this.to) + "\" is trying to use a scoped slot but it didn't provide exactly one child. Wrapping the content with a span element.")
+          );
+        }
+        return scopedSlot.length === 0 ? h() : h('span', {}, scopedSlot)
+      }
+    }
+
+    if (true) {
+      if ('tag' in this.$options.propsData && !warnedTagProp) {
+        warn(
+          false,
+          "<router-link>'s tag prop is deprecated and has been removed in Vue Router 4. Use the v-slot API to remove this warning: https://next.router.vuejs.org/guide/migration/#removal-of-event-and-tag-props-in-router-link."
+        );
+        warnedTagProp = true;
+      }
+      if ('event' in this.$options.propsData && !warnedEventProp) {
+        warn(
+          false,
+          "<router-link>'s event prop is deprecated and has been removed in Vue Router 4. Use the v-slot API to remove this warning: https://next.router.vuejs.org/guide/migration/#removal-of-event-and-tag-props-in-router-link."
+        );
+        warnedEventProp = true;
+      }
+    }
+
+    if (this.tag === 'a') {
+      data.on = on;
+      data.attrs = { href: href, 'aria-current': ariaCurrentValue };
+    } else {
+      // find the first <a> child and apply listener and href
+      var a = findAnchor(this.$slots.default);
+      if (a) {
+        // in case the <a> is a static node
+        a.isStatic = false;
+        var aData = (a.data = extend({}, a.data));
+        aData.on = aData.on || {};
+        // transform existing events in both objects into arrays so we can push later
+        for (var event in aData.on) {
+          var handler$1 = aData.on[event];
+          if (event in on) {
+            aData.on[event] = Array.isArray(handler$1) ? handler$1 : [handler$1];
+          }
+        }
+        // append new listeners for router-link
+        for (var event$1 in on) {
+          if (event$1 in aData.on) {
+            // on[event] is always a function
+            aData.on[event$1].push(on[event$1]);
+          } else {
+            aData.on[event$1] = handler;
+          }
+        }
+
+        var aAttrs = (a.data.attrs = extend({}, a.data.attrs));
+        aAttrs.href = href;
+        aAttrs['aria-current'] = ariaCurrentValue;
+      } else {
+        // doesn't have <a> child, apply listener to self
+        data.on = on;
+      }
+    }
+
+    return h(this.tag, data, this.$slots.default)
+  }
+};
+
+function guardEvent (e) {
+  // don't redirect with control keys
+  if (e.metaKey || e.altKey || e.ctrlKey || e.shiftKey) { return }
+  // don't redirect when preventDefault called
+  if (e.defaultPrevented) { return }
+  // don't redirect on right click
+  if (e.button !== undefined && e.button !== 0) { return }
+  // don't redirect if `target="_blank"`
+  if (e.currentTarget && e.currentTarget.getAttribute) {
+    var target = e.currentTarget.getAttribute('target');
+    if (/\b_blank\b/i.test(target)) { return }
+  }
+  // this may be a Weex event which doesn't have this method
+  if (e.preventDefault) {
+    e.preventDefault();
+  }
+  return true
+}
+
+function findAnchor (children) {
+  if (children) {
+    var child;
+    for (var i = 0; i < children.length; i++) {
+      child = children[i];
+      if (child.tag === 'a') {
+        return child
+      }
+      if (child.children && (child = findAnchor(child.children))) {
+        return child
+      }
+    }
+  }
+}
+
+var _Vue;
+
+function install (Vue) {
+  if (install.installed && _Vue === Vue) { return }
+  install.installed = true;
+
+  _Vue = Vue;
+
+  var isDef = function (v) { return v !== undefined; };
+
+  var registerInstance = function (vm, callVal) {
+    var i = vm.$options._parentVnode;
+    if (isDef(i) && isDef(i = i.data) && isDef(i = i.registerRouteInstance)) {
+      i(vm, callVal);
+    }
+  };
+
+  Vue.mixin({
+    beforeCreate: function beforeCreate () {
+      if (isDef(this.$options.router)) {
+        this._routerRoot = this;
+        this._router = this.$options.router;
+        this._router.init(this);
+        Vue.util.defineReactive(this, '_route', this._router.history.current);
+      } else {
+        this._routerRoot = (this.$parent && this.$parent._routerRoot) || this;
+      }
+      registerInstance(this, this);
+    },
+    destroyed: function destroyed () {
+      registerInstance(this);
+    }
+  });
+
+  Object.defineProperty(Vue.prototype, '$router', {
+    get: function get () { return this._routerRoot._router }
+  });
+
+  Object.defineProperty(Vue.prototype, '$route', {
+    get: function get () { return this._routerRoot._route }
+  });
+
+  Vue.component('RouterView', View);
+  Vue.component('RouterLink', Link);
+
+  var strats = Vue.config.optionMergeStrategies;
+  // use the same hook merging strategy for route hooks
+  strats.beforeRouteEnter = strats.beforeRouteLeave = strats.beforeRouteUpdate = strats.created;
+}
+
+/*  */
+
+var inBrowser = typeof window !== 'undefined';
+
+/*  */
+
+function createRouteMap (
+  routes,
+  oldPathList,
+  oldPathMap,
+  oldNameMap,
+  parentRoute
+) {
+  // the path list is used to control path matching priority
+  var pathList = oldPathList || [];
+  // $flow-disable-line
+  var pathMap = oldPathMap || Object.create(null);
+  // $flow-disable-line
+  var nameMap = oldNameMap || Object.create(null);
+
+  routes.forEach(function (route) {
+    addRouteRecord(pathList, pathMap, nameMap, route, parentRoute);
+  });
+
+  // ensure wildcard routes are always at the end
+  for (var i = 0, l = pathList.length; i < l; i++) {
+    if (pathList[i] === '*') {
+      pathList.push(pathList.splice(i, 1)[0]);
+      l--;
+      i--;
+    }
+  }
+
+  if (true) {
+    // warn if routes do not include leading slashes
+    var found = pathList
+    // check for missing leading slash
+      .filter(function (path) { return path && path.charAt(0) !== '*' && path.charAt(0) !== '/'; });
+
+    if (found.length > 0) {
+      var pathNames = found.map(function (path) { return ("- " + path); }).join('\n');
+      warn(false, ("Non-nested routes must include a leading slash character. Fix the following routes: \n" + pathNames));
+    }
+  }
+
+  return {
+    pathList: pathList,
+    pathMap: pathMap,
+    nameMap: nameMap
+  }
+}
+
+function addRouteRecord (
+  pathList,
+  pathMap,
+  nameMap,
+  route,
+  parent,
+  matchAs
+) {
+  var path = route.path;
+  var name = route.name;
+  if (true) {
+    assert(path != null, "\"path\" is required in a route configuration.");
+    assert(
+      typeof route.component !== 'string',
+      "route config \"component\" for path: " + (String(
+        path || name
+      )) + " cannot be a " + "string id. Use an actual component instead."
+    );
+
+    warn(
+      // eslint-disable-next-line no-control-regex
+      !/[^\u0000-\u007F]+/.test(path),
+      "Route with path \"" + path + "\" contains unencoded characters, make sure " +
+        "your path is correctly encoded before passing it to the router. Use " +
+        "encodeURI to encode static segments of your path."
+    );
+  }
+
+  var pathToRegexpOptions =
+    route.pathToRegexpOptions || {};
+  var normalizedPath = normalizePath(path, parent, pathToRegexpOptions.strict);
+
+  if (typeof route.caseSensitive === 'boolean') {
+    pathToRegexpOptions.sensitive = route.caseSensitive;
+  }
+
+  var record = {
+    path: normalizedPath,
+    regex: compileRouteRegex(normalizedPath, pathToRegexpOptions),
+    components: route.components || { default: route.component },
+    alias: route.alias
+      ? typeof route.alias === 'string'
+        ? [route.alias]
+        : route.alias
+      : [],
+    instances: {},
+    enteredCbs: {},
+    name: name,
+    parent: parent,
+    matchAs: matchAs,
+    redirect: route.redirect,
+    beforeEnter: route.beforeEnter,
+    meta: route.meta || {},
+    props:
+      route.props == null
+        ? {}
+        : route.components
+          ? route.props
+          : { default: route.props }
+  };
+
+  if (route.children) {
+    // Warn if route is named, does not redirect and has a default child route.
+    // If users navigate to this route by name, the default child will
+    // not be rendered (GH Issue #629)
+    if (true) {
+      if (
+        route.name &&
+        !route.redirect &&
+        route.children.some(function (child) { return /^\/?$/.test(child.path); })
+      ) {
+        warn(
+          false,
+          "Named Route '" + (route.name) + "' has a default child route. " +
+            "When navigating to this named route (:to=\"{name: '" + (route.name) + "'\"), " +
+            "the default child route will not be rendered. Remove the name from " +
+            "this route and use the name of the default child route for named " +
+            "links instead."
+        );
+      }
+    }
+    route.children.forEach(function (child) {
+      var childMatchAs = matchAs
+        ? cleanPath((matchAs + "/" + (child.path)))
+        : undefined;
+      addRouteRecord(pathList, pathMap, nameMap, child, record, childMatchAs);
+    });
+  }
+
+  if (!pathMap[record.path]) {
+    pathList.push(record.path);
+    pathMap[record.path] = record;
+  }
+
+  if (route.alias !== undefined) {
+    var aliases = Array.isArray(route.alias) ? route.alias : [route.alias];
+    for (var i = 0; i < aliases.length; ++i) {
+      var alias = aliases[i];
+      if ( true && alias === path) {
+        warn(
+          false,
+          ("Found an alias with the same value as the path: \"" + path + "\". You have to remove that alias. It will be ignored in development.")
+        );
+        // skip in dev to make it work
+        continue
+      }
+
+      var aliasRoute = {
+        path: alias,
+        children: route.children
+      };
+      addRouteRecord(
+        pathList,
+        pathMap,
+        nameMap,
+        aliasRoute,
+        parent,
+        record.path || '/' // matchAs
+      );
+    }
+  }
+
+  if (name) {
+    if (!nameMap[name]) {
+      nameMap[name] = record;
+    } else if ( true && !matchAs) {
+      warn(
+        false,
+        "Duplicate named routes definition: " +
+          "{ name: \"" + name + "\", path: \"" + (record.path) + "\" }"
+      );
+    }
+  }
+}
+
+function compileRouteRegex (
+  path,
+  pathToRegexpOptions
+) {
+  var regex = pathToRegexp_1(path, [], pathToRegexpOptions);
+  if (true) {
+    var keys = Object.create(null);
+    regex.keys.forEach(function (key) {
+      warn(
+        !keys[key.name],
+        ("Duplicate param keys in route with path: \"" + path + "\"")
+      );
+      keys[key.name] = true;
+    });
+  }
+  return regex
+}
+
+function normalizePath (
+  path,
+  parent,
+  strict
+) {
+  if (!strict) { path = path.replace(/\/$/, ''); }
+  if (path[0] === '/') { return path }
+  if (parent == null) { return path }
+  return cleanPath(((parent.path) + "/" + path))
+}
+
+/*  */
+
+
+
+function createMatcher (
+  routes,
+  router
+) {
+  var ref = createRouteMap(routes);
+  var pathList = ref.pathList;
+  var pathMap = ref.pathMap;
+  var nameMap = ref.nameMap;
+
+  function addRoutes (routes) {
+    createRouteMap(routes, pathList, pathMap, nameMap);
+  }
+
+  function addRoute (parentOrRoute, route) {
+    var parent = (typeof parentOrRoute !== 'object') ? nameMap[parentOrRoute] : undefined;
+    // $flow-disable-line
+    createRouteMap([route || parentOrRoute], pathList, pathMap, nameMap, parent);
+
+    // add aliases of parent
+    if (parent) {
+      createRouteMap(
+        // $flow-disable-line route is defined if parent is
+        parent.alias.map(function (alias) { return ({ path: alias, children: [route] }); }),
+        pathList,
+        pathMap,
+        nameMap,
+        parent
+      );
+    }
+  }
+
+  function getRoutes () {
+    return pathList.map(function (path) { return pathMap[path]; })
+  }
+
+  function match (
+    raw,
+    currentRoute,
+    redirectedFrom
+  ) {
+    var location = normalizeLocation(raw, currentRoute, false, router);
+    var name = location.name;
+
+    if (name) {
+      var record = nameMap[name];
+      if (true) {
+        warn(record, ("Route with name '" + name + "' does not exist"));
+      }
+      if (!record) { return _createRoute(null, location) }
+      var paramNames = record.regex.keys
+        .filter(function (key) { return !key.optional; })
+        .map(function (key) { return key.name; });
+
+      if (typeof location.params !== 'object') {
+        location.params = {};
+      }
+
+      if (currentRoute && typeof currentRoute.params === 'object') {
+        for (var key in currentRoute.params) {
+          if (!(key in location.params) && paramNames.indexOf(key) > -1) {
+            location.params[key] = currentRoute.params[key];
+          }
+        }
+      }
+
+      location.path = fillParams(record.path, location.params, ("named route \"" + name + "\""));
+      return _createRoute(record, location, redirectedFrom)
+    } else if (location.path) {
+      location.params = {};
+      for (var i = 0; i < pathList.length; i++) {
+        var path = pathList[i];
+        var record$1 = pathMap[path];
+        if (matchRoute(record$1.regex, location.path, location.params)) {
+          return _createRoute(record$1, location, redirectedFrom)
+        }
+      }
+    }
+    // no match
+    return _createRoute(null, location)
+  }
+
+  function redirect (
+    record,
+    location
+  ) {
+    var originalRedirect = record.redirect;
+    var redirect = typeof originalRedirect === 'function'
+      ? originalRedirect(createRoute(record, location, null, router))
+      : originalRedirect;
+
+    if (typeof redirect === 'string') {
+      redirect = { path: redirect };
+    }
+
+    if (!redirect || typeof redirect !== 'object') {
+      if (true) {
+        warn(
+          false, ("invalid redirect option: " + (JSON.stringify(redirect)))
+        );
+      }
+      return _createRoute(null, location)
+    }
+
+    var re = redirect;
+    var name = re.name;
+    var path = re.path;
+    var query = location.query;
+    var hash = location.hash;
+    var params = location.params;
+    query = re.hasOwnProperty('query') ? re.query : query;
+    hash = re.hasOwnProperty('hash') ? re.hash : hash;
+    params = re.hasOwnProperty('params') ? re.params : params;
+
+    if (name) {
+      // resolved named direct
+      var targetRecord = nameMap[name];
+      if (true) {
+        assert(targetRecord, ("redirect failed: named route \"" + name + "\" not found."));
+      }
+      return match({
+        _normalized: true,
+        name: name,
+        query: query,
+        hash: hash,
+        params: params
+      }, undefined, location)
+    } else if (path) {
+      // 1. resolve relative redirect
+      var rawPath = resolveRecordPath(path, record);
+      // 2. resolve params
+      var resolvedPath = fillParams(rawPath, params, ("redirect route with path \"" + rawPath + "\""));
+      // 3. rematch with existing query and hash
+      return match({
+        _normalized: true,
+        path: resolvedPath,
+        query: query,
+        hash: hash
+      }, undefined, location)
+    } else {
+      if (true) {
+        warn(false, ("invalid redirect option: " + (JSON.stringify(redirect))));
+      }
+      return _createRoute(null, location)
+    }
+  }
+
+  function alias (
+    record,
+    location,
+    matchAs
+  ) {
+    var aliasedPath = fillParams(matchAs, location.params, ("aliased route with path \"" + matchAs + "\""));
+    var aliasedMatch = match({
+      _normalized: true,
+      path: aliasedPath
+    });
+    if (aliasedMatch) {
+      var matched = aliasedMatch.matched;
+      var aliasedRecord = matched[matched.length - 1];
+      location.params = aliasedMatch.params;
+      return _createRoute(aliasedRecord, location)
+    }
+    return _createRoute(null, location)
+  }
+
+  function _createRoute (
+    record,
+    location,
+    redirectedFrom
+  ) {
+    if (record && record.redirect) {
+      return redirect(record, redirectedFrom || location)
+    }
+    if (record && record.matchAs) {
+      return alias(record, location, record.matchAs)
+    }
+    return createRoute(record, location, redirectedFrom, router)
+  }
+
+  return {
+    match: match,
+    addRoute: addRoute,
+    getRoutes: getRoutes,
+    addRoutes: addRoutes
+  }
+}
+
+function matchRoute (
+  regex,
+  path,
+  params
+) {
+  var m = path.match(regex);
+
+  if (!m) {
+    return false
+  } else if (!params) {
+    return true
+  }
+
+  for (var i = 1, len = m.length; i < len; ++i) {
+    var key = regex.keys[i - 1];
+    if (key) {
+      // Fix #1994: using * with props: true generates a param named 0
+      params[key.name || 'pathMatch'] = typeof m[i] === 'string' ? decode(m[i]) : m[i];
+    }
+  }
+
+  return true
+}
+
+function resolveRecordPath (path, record) {
+  return resolvePath(path, record.parent ? record.parent.path : '/', true)
+}
+
+/*  */
+
+// use User Timing api (if present) for more accurate key precision
+var Time =
+  inBrowser && window.performance && window.performance.now
+    ? window.performance
+    : Date;
+
+function genStateKey () {
+  return Time.now().toFixed(3)
+}
+
+var _key = genStateKey();
+
+function getStateKey () {
+  return _key
+}
+
+function setStateKey (key) {
+  return (_key = key)
+}
+
+/*  */
+
+var positionStore = Object.create(null);
+
+function setupScroll () {
+  // Prevent browser scroll behavior on History popstate
+  if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual';
+  }
+  // Fix for #1585 for Firefox
+  // Fix for #2195 Add optional third attribute to workaround a bug in safari https://bugs.webkit.org/show_bug.cgi?id=182678
+  // Fix for #2774 Support for apps loaded from Windows file shares not mapped to network drives: replaced location.origin with
+  // window.location.protocol + '//' + window.location.host
+  // location.host contains the port and location.hostname doesn't
+  var protocolAndPath = window.location.protocol + '//' + window.location.host;
+  var absolutePath = window.location.href.replace(protocolAndPath, '');
+  // preserve existing history state as it could be overriden by the user
+  var stateCopy = extend({}, window.history.state);
+  stateCopy.key = getStateKey();
+  window.history.replaceState(stateCopy, '', absolutePath);
+  window.addEventListener('popstate', handlePopState);
+  return function () {
+    window.removeEventListener('popstate', handlePopState);
+  }
+}
+
+function handleScroll (
+  router,
+  to,
+  from,
+  isPop
+) {
+  if (!router.app) {
+    return
+  }
+
+  var behavior = router.options.scrollBehavior;
+  if (!behavior) {
+    return
+  }
+
+  if (true) {
+    assert(typeof behavior === 'function', "scrollBehavior must be a function");
+  }
+
+  // wait until re-render finishes before scrolling
+  router.app.$nextTick(function () {
+    var position = getScrollPosition();
+    var shouldScroll = behavior.call(
+      router,
+      to,
+      from,
+      isPop ? position : null
+    );
+
+    if (!shouldScroll) {
+      return
+    }
+
+    if (typeof shouldScroll.then === 'function') {
+      shouldScroll
+        .then(function (shouldScroll) {
+          scrollToPosition((shouldScroll), position);
+        })
+        .catch(function (err) {
+          if (true) {
+            assert(false, err.toString());
+          }
+        });
+    } else {
+      scrollToPosition(shouldScroll, position);
+    }
+  });
+}
+
+function saveScrollPosition () {
+  var key = getStateKey();
+  if (key) {
+    positionStore[key] = {
+      x: window.pageXOffset,
+      y: window.pageYOffset
+    };
+  }
+}
+
+function handlePopState (e) {
+  saveScrollPosition();
+  if (e.state && e.state.key) {
+    setStateKey(e.state.key);
+  }
+}
+
+function getScrollPosition () {
+  var key = getStateKey();
+  if (key) {
+    return positionStore[key]
+  }
+}
+
+function getElementPosition (el, offset) {
+  var docEl = document.documentElement;
+  var docRect = docEl.getBoundingClientRect();
+  var elRect = el.getBoundingClientRect();
+  return {
+    x: elRect.left - docRect.left - offset.x,
+    y: elRect.top - docRect.top - offset.y
+  }
+}
+
+function isValidPosition (obj) {
+  return isNumber(obj.x) || isNumber(obj.y)
+}
+
+function normalizePosition (obj) {
+  return {
+    x: isNumber(obj.x) ? obj.x : window.pageXOffset,
+    y: isNumber(obj.y) ? obj.y : window.pageYOffset
+  }
+}
+
+function normalizeOffset (obj) {
+  return {
+    x: isNumber(obj.x) ? obj.x : 0,
+    y: isNumber(obj.y) ? obj.y : 0
+  }
+}
+
+function isNumber (v) {
+  return typeof v === 'number'
+}
+
+var hashStartsWithNumberRE = /^#\d/;
+
+function scrollToPosition (shouldScroll, position) {
+  var isObject = typeof shouldScroll === 'object';
+  if (isObject && typeof shouldScroll.selector === 'string') {
+    // getElementById would still fail if the selector contains a more complicated query like #main[data-attr]
+    // but at the same time, it doesn't make much sense to select an element with an id and an extra selector
+    var el = hashStartsWithNumberRE.test(shouldScroll.selector) // $flow-disable-line
+      ? document.getElementById(shouldScroll.selector.slice(1)) // $flow-disable-line
+      : document.querySelector(shouldScroll.selector);
+
+    if (el) {
+      var offset =
+        shouldScroll.offset && typeof shouldScroll.offset === 'object'
+          ? shouldScroll.offset
+          : {};
+      offset = normalizeOffset(offset);
+      position = getElementPosition(el, offset);
+    } else if (isValidPosition(shouldScroll)) {
+      position = normalizePosition(shouldScroll);
+    }
+  } else if (isObject && isValidPosition(shouldScroll)) {
+    position = normalizePosition(shouldScroll);
+  }
+
+  if (position) {
+    // $flow-disable-line
+    if ('scrollBehavior' in document.documentElement.style) {
+      window.scrollTo({
+        left: position.x,
+        top: position.y,
+        // $flow-disable-line
+        behavior: shouldScroll.behavior
+      });
+    } else {
+      window.scrollTo(position.x, position.y);
+    }
+  }
+}
+
+/*  */
+
+var supportsPushState =
+  inBrowser &&
+  (function () {
+    var ua = window.navigator.userAgent;
+
+    if (
+      (ua.indexOf('Android 2.') !== -1 || ua.indexOf('Android 4.0') !== -1) &&
+      ua.indexOf('Mobile Safari') !== -1 &&
+      ua.indexOf('Chrome') === -1 &&
+      ua.indexOf('Windows Phone') === -1
+    ) {
+      return false
+    }
+
+    return window.history && typeof window.history.pushState === 'function'
+  })();
+
+function pushState (url, replace) {
+  saveScrollPosition();
+  // try...catch the pushState call to get around Safari
+  // DOM Exception 18 where it limits to 100 pushState calls
+  var history = window.history;
+  try {
+    if (replace) {
+      // preserve existing history state as it could be overriden by the user
+      var stateCopy = extend({}, history.state);
+      stateCopy.key = getStateKey();
+      history.replaceState(stateCopy, '', url);
+    } else {
+      history.pushState({ key: setStateKey(genStateKey()) }, '', url);
+    }
+  } catch (e) {
+    window.location[replace ? 'replace' : 'assign'](url);
+  }
+}
+
+function replaceState (url) {
+  pushState(url, true);
+}
+
+/*  */
+
+function runQueue (queue, fn, cb) {
+  var step = function (index) {
+    if (index >= queue.length) {
+      cb();
+    } else {
+      if (queue[index]) {
+        fn(queue[index], function () {
+          step(index + 1);
+        });
+      } else {
+        step(index + 1);
+      }
+    }
+  };
+  step(0);
+}
+
+// When changing thing, also edit router.d.ts
+var NavigationFailureType = {
+  redirected: 2,
+  aborted: 4,
+  cancelled: 8,
+  duplicated: 16
+};
+
+function createNavigationRedirectedError (from, to) {
+  return createRouterError(
+    from,
+    to,
+    NavigationFailureType.redirected,
+    ("Redirected when going from \"" + (from.fullPath) + "\" to \"" + (stringifyRoute(
+      to
+    )) + "\" via a navigation guard.")
+  )
+}
+
+function createNavigationDuplicatedError (from, to) {
+  var error = createRouterError(
+    from,
+    to,
+    NavigationFailureType.duplicated,
+    ("Avoided redundant navigation to current location: \"" + (from.fullPath) + "\".")
+  );
+  // backwards compatible with the first introduction of Errors
+  error.name = 'NavigationDuplicated';
+  return error
+}
+
+function createNavigationCancelledError (from, to) {
+  return createRouterError(
+    from,
+    to,
+    NavigationFailureType.cancelled,
+    ("Navigation cancelled from \"" + (from.fullPath) + "\" to \"" + (to.fullPath) + "\" with a new navigation.")
+  )
+}
+
+function createNavigationAbortedError (from, to) {
+  return createRouterError(
+    from,
+    to,
+    NavigationFailureType.aborted,
+    ("Navigation aborted from \"" + (from.fullPath) + "\" to \"" + (to.fullPath) + "\" via a navigation guard.")
+  )
+}
+
+function createRouterError (from, to, type, message) {
+  var error = new Error(message);
+  error._isRouter = true;
+  error.from = from;
+  error.to = to;
+  error.type = type;
+
+  return error
+}
+
+var propertiesToLog = ['params', 'query', 'hash'];
+
+function stringifyRoute (to) {
+  if (typeof to === 'string') { return to }
+  if ('path' in to) { return to.path }
+  var location = {};
+  propertiesToLog.forEach(function (key) {
+    if (key in to) { location[key] = to[key]; }
+  });
+  return JSON.stringify(location, null, 2)
+}
+
+function isError (err) {
+  return Object.prototype.toString.call(err).indexOf('Error') > -1
+}
+
+function isNavigationFailure (err, errorType) {
+  return (
+    isError(err) &&
+    err._isRouter &&
+    (errorType == null || err.type === errorType)
+  )
+}
+
+/*  */
+
+function resolveAsyncComponents (matched) {
+  return function (to, from, next) {
+    var hasAsync = false;
+    var pending = 0;
+    var error = null;
+
+    flatMapComponents(matched, function (def, _, match, key) {
+      // if it's a function and doesn't have cid attached,
+      // assume it's an async component resolve function.
+      // we are not using Vue's default async resolving mechanism because
+      // we want to halt the navigation until the incoming component has been
+      // resolved.
+      if (typeof def === 'function' && def.cid === undefined) {
+        hasAsync = true;
+        pending++;
+
+        var resolve = once(function (resolvedDef) {
+          if (isESModule(resolvedDef)) {
+            resolvedDef = resolvedDef.default;
+          }
+          // save resolved on async factory in case it's used elsewhere
+          def.resolved = typeof resolvedDef === 'function'
+            ? resolvedDef
+            : _Vue.extend(resolvedDef);
+          match.components[key] = resolvedDef;
+          pending--;
+          if (pending <= 0) {
+            next();
+          }
+        });
+
+        var reject = once(function (reason) {
+          var msg = "Failed to resolve async component " + key + ": " + reason;
+           true && warn(false, msg);
+          if (!error) {
+            error = isError(reason)
+              ? reason
+              : new Error(msg);
+            next(error);
+          }
+        });
+
+        var res;
+        try {
+          res = def(resolve, reject);
+        } catch (e) {
+          reject(e);
+        }
+        if (res) {
+          if (typeof res.then === 'function') {
+            res.then(resolve, reject);
+          } else {
+            // new syntax in Vue 2.3
+            var comp = res.component;
+            if (comp && typeof comp.then === 'function') {
+              comp.then(resolve, reject);
+            }
+          }
+        }
+      }
+    });
+
+    if (!hasAsync) { next(); }
+  }
+}
+
+function flatMapComponents (
+  matched,
+  fn
+) {
+  return flatten(matched.map(function (m) {
+    return Object.keys(m.components).map(function (key) { return fn(
+      m.components[key],
+      m.instances[key],
+      m, key
+    ); })
+  }))
+}
+
+function flatten (arr) {
+  return Array.prototype.concat.apply([], arr)
+}
+
+var hasSymbol =
+  typeof Symbol === 'function' &&
+  typeof Symbol.toStringTag === 'symbol';
+
+function isESModule (obj) {
+  return obj.__esModule || (hasSymbol && obj[Symbol.toStringTag] === 'Module')
+}
+
+// in Webpack 2, require.ensure now also returns a Promise
+// so the resolve/reject functions may get called an extra time
+// if the user uses an arrow function shorthand that happens to
+// return that Promise.
+function once (fn) {
+  var called = false;
+  return function () {
+    var args = [], len = arguments.length;
+    while ( len-- ) args[ len ] = arguments[ len ];
+
+    if (called) { return }
+    called = true;
+    return fn.apply(this, args)
+  }
+}
+
+/*  */
+
+var History = function History (router, base) {
+  this.router = router;
+  this.base = normalizeBase(base);
+  // start with a route object that stands for "nowhere"
+  this.current = START;
+  this.pending = null;
+  this.ready = false;
+  this.readyCbs = [];
+  this.readyErrorCbs = [];
+  this.errorCbs = [];
+  this.listeners = [];
+};
+
+History.prototype.listen = function listen (cb) {
+  this.cb = cb;
+};
+
+History.prototype.onReady = function onReady (cb, errorCb) {
+  if (this.ready) {
+    cb();
+  } else {
+    this.readyCbs.push(cb);
+    if (errorCb) {
+      this.readyErrorCbs.push(errorCb);
+    }
+  }
+};
+
+History.prototype.onError = function onError (errorCb) {
+  this.errorCbs.push(errorCb);
+};
+
+History.prototype.transitionTo = function transitionTo (
+  location,
+  onComplete,
+  onAbort
+) {
+    var this$1 = this;
+
+  var route;
+  // catch redirect option https://github.com/vuejs/vue-router/issues/3201
+  try {
+    route = this.router.match(location, this.current);
+  } catch (e) {
+    this.errorCbs.forEach(function (cb) {
+      cb(e);
+    });
+    // Exception should still be thrown
+    throw e
+  }
+  var prev = this.current;
+  this.confirmTransition(
+    route,
+    function () {
+      this$1.updateRoute(route);
+      onComplete && onComplete(route);
+      this$1.ensureURL();
+      this$1.router.afterHooks.forEach(function (hook) {
+        hook && hook(route, prev);
+      });
+
+      // fire ready cbs once
+      if (!this$1.ready) {
+        this$1.ready = true;
+        this$1.readyCbs.forEach(function (cb) {
+          cb(route);
+        });
+      }
+    },
+    function (err) {
+      if (onAbort) {
+        onAbort(err);
+      }
+      if (err && !this$1.ready) {
+        // Initial redirection should not mark the history as ready yet
+        // because it's triggered by the redirection instead
+        // https://github.com/vuejs/vue-router/issues/3225
+        // https://github.com/vuejs/vue-router/issues/3331
+        if (!isNavigationFailure(err, NavigationFailureType.redirected) || prev !== START) {
+          this$1.ready = true;
+          this$1.readyErrorCbs.forEach(function (cb) {
+            cb(err);
+          });
+        }
+      }
+    }
+  );
+};
+
+History.prototype.confirmTransition = function confirmTransition (route, onComplete, onAbort) {
+    var this$1 = this;
+
+  var current = this.current;
+  this.pending = route;
+  var abort = function (err) {
+    // changed after adding errors with
+    // https://github.com/vuejs/vue-router/pull/3047 before that change,
+    // redirect and aborted navigation would produce an err == null
+    if (!isNavigationFailure(err) && isError(err)) {
+      if (this$1.errorCbs.length) {
+        this$1.errorCbs.forEach(function (cb) {
+          cb(err);
+        });
+      } else {
+        warn(false, 'uncaught error during route navigation:');
+        console.error(err);
+      }
+    }
+    onAbort && onAbort(err);
+  };
+  var lastRouteIndex = route.matched.length - 1;
+  var lastCurrentIndex = current.matched.length - 1;
+  if (
+    isSameRoute(route, current) &&
+    // in the case the route map has been dynamically appended to
+    lastRouteIndex === lastCurrentIndex &&
+    route.matched[lastRouteIndex] === current.matched[lastCurrentIndex]
+  ) {
+    this.ensureURL();
+    return abort(createNavigationDuplicatedError(current, route))
+  }
+
+  var ref = resolveQueue(
+    this.current.matched,
+    route.matched
+  );
+    var updated = ref.updated;
+    var deactivated = ref.deactivated;
+    var activated = ref.activated;
+
+  var queue = [].concat(
+    // in-component leave guards
+    extractLeaveGuards(deactivated),
+    // global before hooks
+    this.router.beforeHooks,
+    // in-component update hooks
+    extractUpdateHooks(updated),
+    // in-config enter guards
+    activated.map(function (m) { return m.beforeEnter; }),
+    // async components
+    resolveAsyncComponents(activated)
+  );
+
+  var iterator = function (hook, next) {
+    if (this$1.pending !== route) {
+      return abort(createNavigationCancelledError(current, route))
+    }
+    try {
+      hook(route, current, function (to) {
+        if (to === false) {
+          // next(false) -> abort navigation, ensure current URL
+          this$1.ensureURL(true);
+          abort(createNavigationAbortedError(current, route));
+        } else if (isError(to)) {
+          this$1.ensureURL(true);
+          abort(to);
+        } else if (
+          typeof to === 'string' ||
+          (typeof to === 'object' &&
+            (typeof to.path === 'string' || typeof to.name === 'string'))
+        ) {
+          // next('/') or next({ path: '/' }) -> redirect
+          abort(createNavigationRedirectedError(current, route));
+          if (typeof to === 'object' && to.replace) {
+            this$1.replace(to);
+          } else {
+            this$1.push(to);
+          }
+        } else {
+          // confirm transition and pass on the value
+          next(to);
+        }
+      });
+    } catch (e) {
+      abort(e);
+    }
+  };
+
+  runQueue(queue, iterator, function () {
+    // wait until async components are resolved before
+    // extracting in-component enter guards
+    var enterGuards = extractEnterGuards(activated);
+    var queue = enterGuards.concat(this$1.router.resolveHooks);
+    runQueue(queue, iterator, function () {
+      if (this$1.pending !== route) {
+        return abort(createNavigationCancelledError(current, route))
+      }
+      this$1.pending = null;
+      onComplete(route);
+      if (this$1.router.app) {
+        this$1.router.app.$nextTick(function () {
+          handleRouteEntered(route);
+        });
+      }
+    });
+  });
+};
+
+History.prototype.updateRoute = function updateRoute (route) {
+  this.current = route;
+  this.cb && this.cb(route);
+};
+
+History.prototype.setupListeners = function setupListeners () {
+  // Default implementation is empty
+};
+
+History.prototype.teardown = function teardown () {
+  // clean up event listeners
+  // https://github.com/vuejs/vue-router/issues/2341
+  this.listeners.forEach(function (cleanupListener) {
+    cleanupListener();
+  });
+  this.listeners = [];
+
+  // reset current history route
+  // https://github.com/vuejs/vue-router/issues/3294
+  this.current = START;
+  this.pending = null;
+};
+
+function normalizeBase (base) {
+  if (!base) {
+    if (inBrowser) {
+      // respect <base> tag
+      var baseEl = document.querySelector('base');
+      base = (baseEl && baseEl.getAttribute('href')) || '/';
+      // strip full URL origin
+      base = base.replace(/^https?:\/\/[^\/]+/, '');
+    } else {
+      base = '/';
+    }
+  }
+  // make sure there's the starting slash
+  if (base.charAt(0) !== '/') {
+    base = '/' + base;
+  }
+  // remove trailing slash
+  return base.replace(/\/$/, '')
+}
+
+function resolveQueue (
+  current,
+  next
+) {
+  var i;
+  var max = Math.max(current.length, next.length);
+  for (i = 0; i < max; i++) {
+    if (current[i] !== next[i]) {
+      break
+    }
+  }
+  return {
+    updated: next.slice(0, i),
+    activated: next.slice(i),
+    deactivated: current.slice(i)
+  }
+}
+
+function extractGuards (
+  records,
+  name,
+  bind,
+  reverse
+) {
+  var guards = flatMapComponents(records, function (def, instance, match, key) {
+    var guard = extractGuard(def, name);
+    if (guard) {
+      return Array.isArray(guard)
+        ? guard.map(function (guard) { return bind(guard, instance, match, key); })
+        : bind(guard, instance, match, key)
+    }
+  });
+  return flatten(reverse ? guards.reverse() : guards)
+}
+
+function extractGuard (
+  def,
+  key
+) {
+  if (typeof def !== 'function') {
+    // extend now so that global mixins are applied.
+    def = _Vue.extend(def);
+  }
+  return def.options[key]
+}
+
+function extractLeaveGuards (deactivated) {
+  return extractGuards(deactivated, 'beforeRouteLeave', bindGuard, true)
+}
+
+function extractUpdateHooks (updated) {
+  return extractGuards(updated, 'beforeRouteUpdate', bindGuard)
+}
+
+function bindGuard (guard, instance) {
+  if (instance) {
+    return function boundRouteGuard () {
+      return guard.apply(instance, arguments)
+    }
+  }
+}
+
+function extractEnterGuards (
+  activated
+) {
+  return extractGuards(
+    activated,
+    'beforeRouteEnter',
+    function (guard, _, match, key) {
+      return bindEnterGuard(guard, match, key)
+    }
+  )
+}
+
+function bindEnterGuard (
+  guard,
+  match,
+  key
+) {
+  return function routeEnterGuard (to, from, next) {
+    return guard(to, from, function (cb) {
+      if (typeof cb === 'function') {
+        if (!match.enteredCbs[key]) {
+          match.enteredCbs[key] = [];
+        }
+        match.enteredCbs[key].push(cb);
+      }
+      next(cb);
+    })
+  }
+}
+
+/*  */
+
+var HTML5History = /*@__PURE__*/(function (History) {
+  function HTML5History (router, base) {
+    History.call(this, router, base);
+
+    this._startLocation = getLocation(this.base);
+  }
+
+  if ( History ) HTML5History.__proto__ = History;
+  HTML5History.prototype = Object.create( History && History.prototype );
+  HTML5History.prototype.constructor = HTML5History;
+
+  HTML5History.prototype.setupListeners = function setupListeners () {
+    var this$1 = this;
+
+    if (this.listeners.length > 0) {
+      return
+    }
+
+    var router = this.router;
+    var expectScroll = router.options.scrollBehavior;
+    var supportsScroll = supportsPushState && expectScroll;
+
+    if (supportsScroll) {
+      this.listeners.push(setupScroll());
+    }
+
+    var handleRoutingEvent = function () {
+      var current = this$1.current;
+
+      // Avoiding first `popstate` event dispatched in some browsers but first
+      // history route not updated since async guard at the same time.
+      var location = getLocation(this$1.base);
+      if (this$1.current === START && location === this$1._startLocation) {
+        return
+      }
+
+      this$1.transitionTo(location, function (route) {
+        if (supportsScroll) {
+          handleScroll(router, route, current, true);
+        }
+      });
+    };
+    window.addEventListener('popstate', handleRoutingEvent);
+    this.listeners.push(function () {
+      window.removeEventListener('popstate', handleRoutingEvent);
+    });
+  };
+
+  HTML5History.prototype.go = function go (n) {
+    window.history.go(n);
+  };
+
+  HTML5History.prototype.push = function push (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    var ref = this;
+    var fromRoute = ref.current;
+    this.transitionTo(location, function (route) {
+      pushState(cleanPath(this$1.base + route.fullPath));
+      handleScroll(this$1.router, route, fromRoute, false);
+      onComplete && onComplete(route);
+    }, onAbort);
+  };
+
+  HTML5History.prototype.replace = function replace (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    var ref = this;
+    var fromRoute = ref.current;
+    this.transitionTo(location, function (route) {
+      replaceState(cleanPath(this$1.base + route.fullPath));
+      handleScroll(this$1.router, route, fromRoute, false);
+      onComplete && onComplete(route);
+    }, onAbort);
+  };
+
+  HTML5History.prototype.ensureURL = function ensureURL (push) {
+    if (getLocation(this.base) !== this.current.fullPath) {
+      var current = cleanPath(this.base + this.current.fullPath);
+      push ? pushState(current) : replaceState(current);
+    }
+  };
+
+  HTML5History.prototype.getCurrentLocation = function getCurrentLocation () {
+    return getLocation(this.base)
+  };
+
+  return HTML5History;
+}(History));
+
+function getLocation (base) {
+  var path = window.location.pathname;
+  if (base && path.toLowerCase().indexOf(base.toLowerCase()) === 0) {
+    path = path.slice(base.length);
+  }
+  return (path || '/') + window.location.search + window.location.hash
+}
+
+/*  */
+
+var HashHistory = /*@__PURE__*/(function (History) {
+  function HashHistory (router, base, fallback) {
+    History.call(this, router, base);
+    // check history fallback deeplinking
+    if (fallback && checkFallback(this.base)) {
+      return
+    }
+    ensureSlash();
+  }
+
+  if ( History ) HashHistory.__proto__ = History;
+  HashHistory.prototype = Object.create( History && History.prototype );
+  HashHistory.prototype.constructor = HashHistory;
+
+  // this is delayed until the app mounts
+  // to avoid the hashchange listener being fired too early
+  HashHistory.prototype.setupListeners = function setupListeners () {
+    var this$1 = this;
+
+    if (this.listeners.length > 0) {
+      return
+    }
+
+    var router = this.router;
+    var expectScroll = router.options.scrollBehavior;
+    var supportsScroll = supportsPushState && expectScroll;
+
+    if (supportsScroll) {
+      this.listeners.push(setupScroll());
+    }
+
+    var handleRoutingEvent = function () {
+      var current = this$1.current;
+      if (!ensureSlash()) {
+        return
+      }
+      this$1.transitionTo(getHash(), function (route) {
+        if (supportsScroll) {
+          handleScroll(this$1.router, route, current, true);
+        }
+        if (!supportsPushState) {
+          replaceHash(route.fullPath);
+        }
+      });
+    };
+    var eventType = supportsPushState ? 'popstate' : 'hashchange';
+    window.addEventListener(
+      eventType,
+      handleRoutingEvent
+    );
+    this.listeners.push(function () {
+      window.removeEventListener(eventType, handleRoutingEvent);
+    });
+  };
+
+  HashHistory.prototype.push = function push (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    var ref = this;
+    var fromRoute = ref.current;
+    this.transitionTo(
+      location,
+      function (route) {
+        pushHash(route.fullPath);
+        handleScroll(this$1.router, route, fromRoute, false);
+        onComplete && onComplete(route);
+      },
+      onAbort
+    );
+  };
+
+  HashHistory.prototype.replace = function replace (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    var ref = this;
+    var fromRoute = ref.current;
+    this.transitionTo(
+      location,
+      function (route) {
+        replaceHash(route.fullPath);
+        handleScroll(this$1.router, route, fromRoute, false);
+        onComplete && onComplete(route);
+      },
+      onAbort
+    );
+  };
+
+  HashHistory.prototype.go = function go (n) {
+    window.history.go(n);
+  };
+
+  HashHistory.prototype.ensureURL = function ensureURL (push) {
+    var current = this.current.fullPath;
+    if (getHash() !== current) {
+      push ? pushHash(current) : replaceHash(current);
+    }
+  };
+
+  HashHistory.prototype.getCurrentLocation = function getCurrentLocation () {
+    return getHash()
+  };
+
+  return HashHistory;
+}(History));
+
+function checkFallback (base) {
+  var location = getLocation(base);
+  if (!/^\/#/.test(location)) {
+    window.location.replace(cleanPath(base + '/#' + location));
+    return true
+  }
+}
+
+function ensureSlash () {
+  var path = getHash();
+  if (path.charAt(0) === '/') {
+    return true
+  }
+  replaceHash('/' + path);
+  return false
+}
+
+function getHash () {
+  // We can't use window.location.hash here because it's not
+  // consistent across browsers - Firefox will pre-decode it!
+  var href = window.location.href;
+  var index = href.indexOf('#');
+  // empty path
+  if (index < 0) { return '' }
+
+  href = href.slice(index + 1);
+
+  return href
+}
+
+function getUrl (path) {
+  var href = window.location.href;
+  var i = href.indexOf('#');
+  var base = i >= 0 ? href.slice(0, i) : href;
+  return (base + "#" + path)
+}
+
+function pushHash (path) {
+  if (supportsPushState) {
+    pushState(getUrl(path));
+  } else {
+    window.location.hash = path;
+  }
+}
+
+function replaceHash (path) {
+  if (supportsPushState) {
+    replaceState(getUrl(path));
+  } else {
+    window.location.replace(getUrl(path));
+  }
+}
+
+/*  */
+
+var AbstractHistory = /*@__PURE__*/(function (History) {
+  function AbstractHistory (router, base) {
+    History.call(this, router, base);
+    this.stack = [];
+    this.index = -1;
+  }
+
+  if ( History ) AbstractHistory.__proto__ = History;
+  AbstractHistory.prototype = Object.create( History && History.prototype );
+  AbstractHistory.prototype.constructor = AbstractHistory;
+
+  AbstractHistory.prototype.push = function push (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    this.transitionTo(
+      location,
+      function (route) {
+        this$1.stack = this$1.stack.slice(0, this$1.index + 1).concat(route);
+        this$1.index++;
+        onComplete && onComplete(route);
+      },
+      onAbort
+    );
+  };
+
+  AbstractHistory.prototype.replace = function replace (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    this.transitionTo(
+      location,
+      function (route) {
+        this$1.stack = this$1.stack.slice(0, this$1.index).concat(route);
+        onComplete && onComplete(route);
+      },
+      onAbort
+    );
+  };
+
+  AbstractHistory.prototype.go = function go (n) {
+    var this$1 = this;
+
+    var targetIndex = this.index + n;
+    if (targetIndex < 0 || targetIndex >= this.stack.length) {
+      return
+    }
+    var route = this.stack[targetIndex];
+    this.confirmTransition(
+      route,
+      function () {
+        var prev = this$1.current;
+        this$1.index = targetIndex;
+        this$1.updateRoute(route);
+        this$1.router.afterHooks.forEach(function (hook) {
+          hook && hook(route, prev);
+        });
+      },
+      function (err) {
+        if (isNavigationFailure(err, NavigationFailureType.duplicated)) {
+          this$1.index = targetIndex;
+        }
+      }
+    );
+  };
+
+  AbstractHistory.prototype.getCurrentLocation = function getCurrentLocation () {
+    var current = this.stack[this.stack.length - 1];
+    return current ? current.fullPath : '/'
+  };
+
+  AbstractHistory.prototype.ensureURL = function ensureURL () {
+    // noop
+  };
+
+  return AbstractHistory;
+}(History));
+
+/*  */
+
+var VueRouter = function VueRouter (options) {
+  if ( options === void 0 ) options = {};
+
+  this.app = null;
+  this.apps = [];
+  this.options = options;
+  this.beforeHooks = [];
+  this.resolveHooks = [];
+  this.afterHooks = [];
+  this.matcher = createMatcher(options.routes || [], this);
+
+  var mode = options.mode || 'hash';
+  this.fallback =
+    mode === 'history' && !supportsPushState && options.fallback !== false;
+  if (this.fallback) {
+    mode = 'hash';
+  }
+  if (!inBrowser) {
+    mode = 'abstract';
+  }
+  this.mode = mode;
+
+  switch (mode) {
+    case 'history':
+      this.history = new HTML5History(this, options.base);
+      break
+    case 'hash':
+      this.history = new HashHistory(this, options.base, this.fallback);
+      break
+    case 'abstract':
+      this.history = new AbstractHistory(this, options.base);
+      break
+    default:
+      if (true) {
+        assert(false, ("invalid mode: " + mode));
+      }
+  }
+};
+
+var prototypeAccessors = { currentRoute: { configurable: true } };
+
+VueRouter.prototype.match = function match (raw, current, redirectedFrom) {
+  return this.matcher.match(raw, current, redirectedFrom)
+};
+
+prototypeAccessors.currentRoute.get = function () {
+  return this.history && this.history.current
+};
+
+VueRouter.prototype.init = function init (app /* Vue component instance */) {
+    var this$1 = this;
+
+   true &&
+    assert(
+      install.installed,
+      "not installed. Make sure to call `Vue.use(VueRouter)` " +
+        "before creating root instance."
+    );
+
+  this.apps.push(app);
+
+  // set up app destroyed handler
+  // https://github.com/vuejs/vue-router/issues/2639
+  app.$once('hook:destroyed', function () {
+    // clean out app from this.apps array once destroyed
+    var index = this$1.apps.indexOf(app);
+    if (index > -1) { this$1.apps.splice(index, 1); }
+    // ensure we still have a main app or null if no apps
+    // we do not release the router so it can be reused
+    if (this$1.app === app) { this$1.app = this$1.apps[0] || null; }
+
+    if (!this$1.app) { this$1.history.teardown(); }
+  });
+
+  // main app previously initialized
+  // return as we don't need to set up new history listener
+  if (this.app) {
+    return
+  }
+
+  this.app = app;
+
+  var history = this.history;
+
+  if (history instanceof HTML5History || history instanceof HashHistory) {
+    var handleInitialScroll = function (routeOrError) {
+      var from = history.current;
+      var expectScroll = this$1.options.scrollBehavior;
+      var supportsScroll = supportsPushState && expectScroll;
+
+      if (supportsScroll && 'fullPath' in routeOrError) {
+        handleScroll(this$1, routeOrError, from, false);
+      }
+    };
+    var setupListeners = function (routeOrError) {
+      history.setupListeners();
+      handleInitialScroll(routeOrError);
+    };
+    history.transitionTo(
+      history.getCurrentLocation(),
+      setupListeners,
+      setupListeners
+    );
+  }
+
+  history.listen(function (route) {
+    this$1.apps.forEach(function (app) {
+      app._route = route;
+    });
+  });
+};
+
+VueRouter.prototype.beforeEach = function beforeEach (fn) {
+  return registerHook(this.beforeHooks, fn)
+};
+
+VueRouter.prototype.beforeResolve = function beforeResolve (fn) {
+  return registerHook(this.resolveHooks, fn)
+};
+
+VueRouter.prototype.afterEach = function afterEach (fn) {
+  return registerHook(this.afterHooks, fn)
+};
+
+VueRouter.prototype.onReady = function onReady (cb, errorCb) {
+  this.history.onReady(cb, errorCb);
+};
+
+VueRouter.prototype.onError = function onError (errorCb) {
+  this.history.onError(errorCb);
+};
+
+VueRouter.prototype.push = function push (location, onComplete, onAbort) {
+    var this$1 = this;
+
+  // $flow-disable-line
+  if (!onComplete && !onAbort && typeof Promise !== 'undefined') {
+    return new Promise(function (resolve, reject) {
+      this$1.history.push(location, resolve, reject);
+    })
+  } else {
+    this.history.push(location, onComplete, onAbort);
+  }
+};
+
+VueRouter.prototype.replace = function replace (location, onComplete, onAbort) {
+    var this$1 = this;
+
+  // $flow-disable-line
+  if (!onComplete && !onAbort && typeof Promise !== 'undefined') {
+    return new Promise(function (resolve, reject) {
+      this$1.history.replace(location, resolve, reject);
+    })
+  } else {
+    this.history.replace(location, onComplete, onAbort);
+  }
+};
+
+VueRouter.prototype.go = function go (n) {
+  this.history.go(n);
+};
+
+VueRouter.prototype.back = function back () {
+  this.go(-1);
+};
+
+VueRouter.prototype.forward = function forward () {
+  this.go(1);
+};
+
+VueRouter.prototype.getMatchedComponents = function getMatchedComponents (to) {
+  var route = to
+    ? to.matched
+      ? to
+      : this.resolve(to).route
+    : this.currentRoute;
+  if (!route) {
+    return []
+  }
+  return [].concat.apply(
+    [],
+    route.matched.map(function (m) {
+      return Object.keys(m.components).map(function (key) {
+        return m.components[key]
+      })
+    })
+  )
+};
+
+VueRouter.prototype.resolve = function resolve (
+  to,
+  current,
+  append
+) {
+  current = current || this.history.current;
+  var location = normalizeLocation(to, current, append, this);
+  var route = this.match(location, current);
+  var fullPath = route.redirectedFrom || route.fullPath;
+  var base = this.history.base;
+  var href = createHref(base, fullPath, this.mode);
+  return {
+    location: location,
+    route: route,
+    href: href,
+    // for backwards compat
+    normalizedTo: location,
+    resolved: route
+  }
+};
+
+VueRouter.prototype.getRoutes = function getRoutes () {
+  return this.matcher.getRoutes()
+};
+
+VueRouter.prototype.addRoute = function addRoute (parentOrRoute, route) {
+  this.matcher.addRoute(parentOrRoute, route);
+  if (this.history.current !== START) {
+    this.history.transitionTo(this.history.getCurrentLocation());
+  }
+};
+
+VueRouter.prototype.addRoutes = function addRoutes (routes) {
+  if (true) {
+    warn(false, 'router.addRoutes() is deprecated and has been removed in Vue Router 4. Use router.addRoute() instead.');
+  }
+  this.matcher.addRoutes(routes);
+  if (this.history.current !== START) {
+    this.history.transitionTo(this.history.getCurrentLocation());
+  }
+};
+
+Object.defineProperties( VueRouter.prototype, prototypeAccessors );
+
+function registerHook (list, fn) {
+  list.push(fn);
+  return function () {
+    var i = list.indexOf(fn);
+    if (i > -1) { list.splice(i, 1); }
+  }
+}
+
+function createHref (base, fullPath, mode) {
+  var path = mode === 'hash' ? '#' + fullPath : fullPath;
+  return base ? cleanPath(base + '/' + path) : path
+}
+
+VueRouter.install = install;
+VueRouter.version = '3.5.1';
+VueRouter.isNavigationFailure = isNavigationFailure;
+VueRouter.NavigationFailureType = NavigationFailureType;
+VueRouter.START_LOCATION = START;
+
+if (inBrowser && window.Vue) {
+  window.Vue.use(VueRouter);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (VueRouter);
 
 
 /***/ }),
@@ -58990,6 +63174,17 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/css/app.css":
+/*!*******************************!*\
+  !*** ./resources/css/app.css ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/js/App.vue":
 /*!******************************!*\
   !*** ./resources/js/App.vue ***!
@@ -59093,9 +63288,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuesax__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuesax */ "./node_modules/vuesax/dist/vuesax.js");
 /* harmony import */ var vuesax__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vuesax__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _App_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App.vue */ "./resources/js/App.vue");
-/* harmony import */ var vuesax_dist_vuesax_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuesax/dist/vuesax.css */ "./node_modules/vuesax/dist/vuesax.css");
-/* harmony import */ var vuesax_dist_vuesax_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vuesax_dist_vuesax_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./router */ "./resources/js/router/index.js");
+/* harmony import */ var vuesax_dist_vuesax_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuesax/dist/vuesax.css */ "./node_modules/vuesax/dist/vuesax.css");
+/* harmony import */ var vuesax_dist_vuesax_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(vuesax_dist_vuesax_css__WEBPACK_IMPORTED_MODULE_5__);
 // @ts-nocheck
+
 
 
 
@@ -59103,10 +63300,12 @@ __webpack_require__.r(__webpack_exports__);
 
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vuesax__WEBPACK_IMPORTED_MODULE_2___default.a, {});
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.config.productionTip = false;
+window.$eventBus = new vue__WEBPACK_IMPORTED_MODULE_1___default.a();
 var vm = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
   render: function render(h) {
     return h(_App_vue__WEBPACK_IMPORTED_MODULE_3__["default"]);
-  }
+  },
+  router: _router__WEBPACK_IMPORTED_MODULE_4__["default"]
 }).$mount('#app');
 
 /***/ }),
@@ -59143,26 +63342,457 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./resources/js/components/LoginForm.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/components/LoginForm.vue ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _LoginForm_vue_vue_type_template_id_12a98f72___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LoginForm.vue?vue&type=template&id=12a98f72& */ "./resources/js/components/LoginForm.vue?vue&type=template&id=12a98f72&");
+/* harmony import */ var _LoginForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LoginForm.vue?vue&type=script&lang=js& */ "./resources/js/components/LoginForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _LoginForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _LoginForm_vue_vue_type_template_id_12a98f72___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _LoginForm_vue_vue_type_template_id_12a98f72___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/LoginForm.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/LoginForm.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/LoginForm.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LoginForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./LoginForm.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/LoginForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LoginForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/LoginForm.vue?vue&type=template&id=12a98f72&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/LoginForm.vue?vue&type=template&id=12a98f72& ***!
+  \******************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LoginForm_vue_vue_type_template_id_12a98f72___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./LoginForm.vue?vue&type=template&id=12a98f72& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/LoginForm.vue?vue&type=template&id=12a98f72&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LoginForm_vue_vue_type_template_id_12a98f72___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LoginForm_vue_vue_type_template_id_12a98f72___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Navbar.vue":
+/*!********************************************!*\
+  !*** ./resources/js/components/Navbar.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Navbar_vue_vue_type_template_id_6dde423b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Navbar.vue?vue&type=template&id=6dde423b& */ "./resources/js/components/Navbar.vue?vue&type=template&id=6dde423b&");
+/* harmony import */ var _Navbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Navbar.vue?vue&type=script&lang=js& */ "./resources/js/components/Navbar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Navbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Navbar_vue_vue_type_template_id_6dde423b___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Navbar_vue_vue_type_template_id_6dde423b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Navbar.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Navbar.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Navbar.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Navbar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Navbar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Navbar.vue?vue&type=template&id=6dde423b&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Navbar.vue?vue&type=template&id=6dde423b& ***!
+  \***************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_template_id_6dde423b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Navbar.vue?vue&type=template&id=6dde423b& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Navbar.vue?vue&type=template&id=6dde423b&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_template_id_6dde423b___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_template_id_6dde423b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/RegisterForm.vue":
+/*!**************************************************!*\
+  !*** ./resources/js/components/RegisterForm.vue ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _RegisterForm_vue_vue_type_template_id_7942be72___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RegisterForm.vue?vue&type=template&id=7942be72& */ "./resources/js/components/RegisterForm.vue?vue&type=template&id=7942be72&");
+/* harmony import */ var _RegisterForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RegisterForm.vue?vue&type=script&lang=js& */ "./resources/js/components/RegisterForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _RegisterForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _RegisterForm_vue_vue_type_template_id_7942be72___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _RegisterForm_vue_vue_type_template_id_7942be72___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/RegisterForm.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/RegisterForm.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/RegisterForm.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./RegisterForm.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RegisterForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/RegisterForm.vue?vue&type=template&id=7942be72&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/RegisterForm.vue?vue&type=template&id=7942be72& ***!
+  \*********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterForm_vue_vue_type_template_id_7942be72___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./RegisterForm.vue?vue&type=template&id=7942be72& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RegisterForm.vue?vue&type=template&id=7942be72&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterForm_vue_vue_type_template_id_7942be72___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterForm_vue_vue_type_template_id_7942be72___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/layouts/default.vue":
+/*!******************************************!*\
+  !*** ./resources/js/layouts/default.vue ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _default_vue_vue_type_template_id_06bc2b2d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./default.vue?vue&type=template&id=06bc2b2d& */ "./resources/js/layouts/default.vue?vue&type=template&id=06bc2b2d&");
+/* harmony import */ var _default_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./default.vue?vue&type=script&lang=js& */ "./resources/js/layouts/default.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _default_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _default_vue_vue_type_template_id_06bc2b2d___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _default_vue_vue_type_template_id_06bc2b2d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/layouts/default.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/layouts/default.vue?vue&type=script&lang=js&":
+/*!*******************************************************************!*\
+  !*** ./resources/js/layouts/default.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_default_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./default.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/layouts/default.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_default_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/layouts/default.vue?vue&type=template&id=06bc2b2d&":
+/*!*************************************************************************!*\
+  !*** ./resources/js/layouts/default.vue?vue&type=template&id=06bc2b2d& ***!
+  \*************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_default_vue_vue_type_template_id_06bc2b2d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./default.vue?vue&type=template&id=06bc2b2d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/layouts/default.vue?vue&type=template&id=06bc2b2d&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_default_vue_vue_type_template_id_06bc2b2d___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_default_vue_vue_type_template_id_06bc2b2d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/mixins/dialogMixins.js":
+/*!*********************************************!*\
+  !*** ./resources/js/mixins/dialogMixins.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// @ts-nocheck
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      loginDialog: false,
+      registerDialog: false,
+      loginForm: {
+        email: "",
+        password: "",
+        remember: false
+      },
+      registerForm: {
+        email: "",
+        password: "",
+        remember: false
+      }
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    $eventBus.$on('openDialog', function (target) {
+      return _this.openDialog(target);
+    });
+  },
+  beforeDestroy: function beforeDestroy() {
+    var _this2 = this;
+
+    $eventBus.$off('openDialog', function (target) {
+      return _this2.openDialog(target);
+    });
+  },
+  methods: {
+    openDialog: function openDialog(target) {
+      this[target] = !this[target];
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/pages/Home.vue":
+/*!*************************************!*\
+  !*** ./resources/js/pages/Home.vue ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Home_vue_vue_type_template_id_b3c5cf30___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Home.vue?vue&type=template&id=b3c5cf30& */ "./resources/js/pages/Home.vue?vue&type=template&id=b3c5cf30&");
+/* harmony import */ var _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.vue?vue&type=script&lang=js& */ "./resources/js/pages/Home.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Home_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Home.vue?vue&type=style&index=0&lang=css& */ "./resources/js/pages/Home.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Home_vue_vue_type_template_id_b3c5cf30___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Home_vue_vue_type_template_id_b3c5cf30___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/pages/Home.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/pages/Home.vue?vue&type=script&lang=js&":
+/*!**************************************************************!*\
+  !*** ./resources/js/pages/Home.vue?vue&type=script&lang=js& ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Home.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Home.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/pages/Home.vue?vue&type=style&index=0&lang=css&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/pages/Home.vue?vue&type=style&index=0&lang=css& ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Home.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Home.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/pages/Home.vue?vue&type=template&id=b3c5cf30&":
+/*!********************************************************************!*\
+  !*** ./resources/js/pages/Home.vue?vue&type=template&id=b3c5cf30& ***!
+  \********************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_b3c5cf30___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Home.vue?vue&type=template&id=b3c5cf30& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Home.vue?vue&type=template&id=b3c5cf30&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_b3c5cf30___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_b3c5cf30___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/router/index.js":
+/*!**************************************!*\
+  !*** ./resources/js/router/index.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+// @ts-nocheck
+
+
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
+var routes = [{
+  path: '/',
+  name: 'index',
+  component: __webpack_require__(/*! ../pages/Home.vue */ "./resources/js/pages/Home.vue")["default"]
+}];
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
+  mode: 'history',
+  routes: routes
+});
+/* harmony default export */ __webpack_exports__["default"] = (router);
 
 /***/ }),
 
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!***********************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/css/app.css ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/bramadl/Documents/Programming/Projects/tedxapp/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/bramadl/Documents/Programming/Projects/tedxapp/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /Users/bramadl/Documents/Programming/Projects/tedxapp/resources/css/app.css */"./resources/css/app.css");
 
 
 /***/ })
