@@ -3038,6 +3038,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -3073,19 +3101,19 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     bundleDescription: function bundleDescription() {
-      if (this.$route.query.tag.endsWith('_a')) {
+      if (this.$route.query.tag.endsWith("_a")) {
         return "Beli Bundle A untuk mendapatkan T-Shirt, Totte Bag, dan Sticker Pack sekaligus <strong>Gratis</strong> Sticker TEDx dan potongan ongkos kirim sampai dengan Rp 15.000!";
       } else {
         return "Beli Bundle B untuk mendapatkan Totte Bag, E-Money, dan Lanyard sekaligus <strong>Gratis</strong> Sticker TEDx dan potongan ongkos kirim sampai dengan Rp 15.000!";
       }
     },
     hasSizeChart: function hasSizeChart() {
-      if (this.$route.query.tag === "tshirt" || this.$route.query.tag === 'bundle_a') {
+      if (this.$route.query.tag === "tshirt" || this.$route.query.tag === "bundle_a") {
         return true;
       }
     },
     hasVariant: function hasVariant() {
-      if (this.$route.query.tag === "tshirt" || this.$route.query.tag === "totte_bag" || this.$route.query.tag.startsWith('bundle_')) {
+      if (this.$route.query.tag === "tshirt" || this.$route.query.tag === "totte_bag" || this.$route.query.tag.startsWith("bundle_")) {
         return true;
       }
     },
@@ -3097,7 +3125,7 @@ __webpack_require__.r(__webpack_exports__);
       })[0].images;
     },
     isBundle: function isBundle() {
-      return this.$route.query.tag.startsWith('bundle_') ? true : false;
+      return this.$route.query.tag.startsWith("bundle_") ? true : false;
     },
     productName: function productName() {
       var _this2 = this;
@@ -23356,471 +23384,493 @@ var render = function() {
       "main",
       { staticClass: "min-h-screen flex items-center justify-center" },
       [
-        _c(
-          "div",
-          { staticClass: "container mx-auto mt-16" },
-          [
+        _c("div", { staticClass: "container mx-auto my-36 lg:my-16" }, [
+          _c("div", { staticClass: "flex items-center flex-col lg:flex-row" }, [
             _c(
-              "vs-row",
-              { attrs: { type: "flex", align: "center" } },
+              "div",
+              { staticClass: "px-8 md:px-0 w-full md:w-6/12" },
               [
                 _c(
-                  "vs-col",
-                  { attrs: { w: "6" } },
+                  "carousel",
+                  { attrs: { "per-page": 1 } },
                   [
-                    _c(
-                      "carousel",
-                      { attrs: { "per-page": 1 } },
-                      [
-                        _vm.hasVariant
-                          ? [
-                              _vm.form.color === "black"
-                                ? _vm._l(_vm.images[0].black_variant, function(
-                                    img,
-                                    index
-                                  ) {
-                                    return _c("slide", { key: index }, [
-                                      _c("img", {
-                                        staticClass:
-                                          "w-full h-96 object-contain",
-                                        attrs: { src: "/img/products/" + img }
-                                      })
-                                    ])
+                    _vm.hasVariant
+                      ? [
+                          _vm.form.color === "black"
+                            ? _vm._l(_vm.images[0].black_variant, function(
+                                img,
+                                index
+                              ) {
+                                return _c("slide", { key: index }, [
+                                  _c("img", {
+                                    staticClass: "w-full h-96 object-contain",
+                                    attrs: { src: "/img/products/" + img }
                                   })
-                                : _vm._l(_vm.images[0].white_variant, function(
-                                    img,
-                                    index
-                                  ) {
-                                    return _c("slide", { key: index }, [
-                                      _c("img", {
-                                        staticClass:
-                                          "w-full h-96 object-contain",
-                                        attrs: { src: "/img/products/" + img }
-                                      })
-                                    ])
+                                ])
+                              })
+                            : _vm._l(_vm.images[0].white_variant, function(
+                                img,
+                                index
+                              ) {
+                                return _c("slide", { key: index }, [
+                                  _c("img", {
+                                    staticClass: "w-full h-96 object-contain",
+                                    attrs: { src: "/img/products/" + img }
                                   })
-                            ]
-                          : _vm._l(_vm.images, function(image) {
-                              return _c("slide", { key: image }, [
-                                _c("img", {
-                                  staticClass: "w-full h-96 object-contain",
-                                  attrs: { src: "/img/products/" + image }
-                                })
-                              ])
+                                ])
+                              })
+                        ]
+                      : _vm._l(_vm.images, function(image) {
+                          return _c("slide", { key: image }, [
+                            _c("img", {
+                              staticClass: "w-full h-96 object-contain",
+                              attrs: { src: "/img/products/" + image }
                             })
-                      ],
-                      2
-                    )
+                          ])
+                        })
                   ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "vs-col",
-                  { attrs: { w: "6" } },
-                  [
-                    _c("div", [
-                      _c("div", { staticClass: "my-6" }, [
-                        _c(
-                          "h1",
-                          { staticClass: "font-bold text-xl text-white mb-8" },
-                          [
-                            _vm._v(
-                              "\n                " +
-                                _vm._s(_vm.productName) +
-                                " " +
-                                _vm._s(_vm.variant) +
-                                "\n                "
-                            ),
-                            _vm.isBundle
-                              ? _c(
-                                  "p",
-                                  {
-                                    staticClass: "font-light text-sm opacity-50"
-                                  },
-                                  [
-                                    _c("span", {
-                                      domProps: {
-                                        innerHTML: _vm._s(_vm.bundleDescription)
-                                      }
-                                    })
-                                  ]
-                                )
-                              : _vm._e()
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "my-6" }, [
-                        _c(
-                          "div",
-                          { staticClass: "grid grid-cols-2 gap-4" },
-                          [
-                            _c("vs-input", {
-                              staticClass: "custom-input",
-                              attrs: {
-                                "label-placeholder": "Name",
-                                type: "text"
-                              },
-                              model: {
-                                value: _vm.form.username,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.form, "username", $$v)
-                                },
-                                expression: "form.username"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("vs-input", {
-                              staticClass: "custom-input",
-                              attrs: {
-                                "label-placeholder": "Email",
-                                type: "email"
-                              },
-                              model: {
-                                value: _vm.form.email,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.form, "email", $$v)
-                                },
-                                expression: "form.email"
-                              }
-                            })
-                          ],
-                          1
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "my-6" }, [
-                        _c(
-                          "div",
-                          { staticClass: "grid grid-cols-2 gap-3" },
-                          [
-                            _c("vs-input", {
-                              staticClass: "custom-input",
-                              attrs: {
-                                "label-placeholder": "Nomor Telepon",
-                                type: "number"
-                              },
-                              model: {
-                                value: _vm.form.nomor_telepon,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.form, "nomor_telepon", $$v)
-                                },
-                                expression: "form.nomor_telepon"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("vs-input", {
-                              staticClass: "custom-input",
-                              attrs: {
-                                "label-placeholder": "Alamat",
-                                type: "text"
-                              },
-                              model: {
-                                value: _vm.form.alamat,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.form, "alamat", $$v)
-                                },
-                                expression: "form.alamat"
-                              }
-                            })
-                          ],
-                          1
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "my-6" }, [
-                        _c(
-                          "div",
-                          { staticClass: "grid grid-cols-3 gap-4" },
-                          [
-                            _c("vs-input", {
-                              staticClass: "custom-input",
-                              attrs: {
-                                "label-placeholder": "Kelurahan",
-                                type: "text"
-                              },
-                              model: {
-                                value: _vm.form.kelurahan,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.form, "kelurahan", $$v)
-                                },
-                                expression: "form.kelurahan"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("vs-input", {
-                              staticClass: "custom-input",
-                              attrs: {
-                                "label-placeholder": "Kecamatan",
-                                type: "text"
-                              },
-                              model: {
-                                value: _vm.form.kecamatan,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.form, "kecamatan", $$v)
-                                },
-                                expression: "form.kecamatan"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("vs-input", {
-                              staticClass: "custom-input",
-                              attrs: {
-                                "label-placeholder": "Kota/Kabupaten",
-                                type: "text"
-                              },
-                              model: {
-                                value: _vm.form.kota_kabupaten,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.form, "kota_kabupaten", $$v)
-                                },
-                                expression: "form.kota_kabupaten"
-                              }
-                            })
-                          ],
-                          1
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "my-6" }, [
-                        _c(
-                          "div",
-                          { staticClass: "grid grid-cols-2 gap-4" },
-                          [
-                            _c(
-                              "vs-select",
-                              {
-                                staticClass: "custom-select",
-                                attrs: { placeholder: "Provinsi" },
-                                model: {
-                                  value: _vm.form.provinsi,
-                                  callback: function($$v) {
-                                    _vm.$set(_vm.form, "provinsi", $$v)
-                                  },
-                                  expression: "form.provinsi"
-                                }
-                              },
-                              _vm._l(_vm.provinces, function(province) {
-                                return _c(
-                                  "vs-option",
-                                  {
-                                    key: province.id,
-                                    attrs: {
-                                      label: province.label,
-                                      value: province.value
-                                    }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                    " +
-                                        _vm._s(province.label) +
-                                        "\n                  "
-                                    )
-                                  ]
-                                )
-                              }),
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c("vs-input", {
-                              staticClass: "custom-input",
-                              attrs: {
-                                "label-placeholder": "Kode Pos",
-                                type: "number"
-                              },
-                              model: {
-                                value: _vm.form.kode_pos,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.form, "kode_pos", $$v)
-                                },
-                                expression: "form.kode_pos"
-                              }
-                            })
-                          ],
-                          1
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _vm.hasSizeChart
-                        ? _c("div", { staticClass: "my-6" }, [
-                            _c(
-                              "div",
-                              { staticClass: "grid grid-cols-2 gap-4" },
+                  2
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "px-8 md:px-0 w-full md:w-6/12" },
+              [
+                _c("div", [
+                  _c("div", { staticClass: "my-6" }, [
+                    _c(
+                      "h1",
+                      {
+                        staticClass:
+                          "font-bold text-xl text-white text-center md:text-left mb-8"
+                      },
+                      [
+                        _vm._v(
+                          "\n                " +
+                            _vm._s(_vm.productName) +
+                            " " +
+                            _vm._s(_vm.variant) +
+                            "\n                "
+                        ),
+                        _vm.isBundle
+                          ? _c(
+                              "p",
+                              { staticClass: "font-light text-sm opacity-50" },
                               [
-                                _c(
-                                  "vs-button",
-                                  {
-                                    staticClass: "focus:outline-none",
-                                    attrs: { flat: "" },
-                                    on: {
-                                      click: function($event) {
-                                        _vm.sizeDialog = !_vm.sizeDialog
-                                      }
-                                    }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                  Open Size Chart\n                "
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "vs-select",
-                                  {
-                                    staticClass: "custom-select",
-                                    attrs: { placeholder: "Select Size" },
-                                    model: {
-                                      value: _vm.form.size,
-                                      callback: function($$v) {
-                                        _vm.$set(_vm.form, "size", $$v)
-                                      },
-                                      expression: "form.size"
-                                    }
-                                  },
-                                  _vm._l(_vm.sizes, function(size) {
-                                    return _c(
-                                      "vs-option",
-                                      {
-                                        key: size.value,
-                                        attrs: {
-                                          label: size.size,
-                                          value: size.value
-                                        }
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                    " +
-                                            _vm._s(size.size) +
-                                            "\n                  "
-                                        )
-                                      ]
-                                    )
-                                  }),
-                                  1
-                                )
-                              ],
-                              1
+                                _c("span", {
+                                  domProps: {
+                                    innerHTML: _vm._s(_vm.bundleDescription)
+                                  }
+                                })
+                              ]
                             )
-                          ])
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.hasVariant
-                        ? _c("div", { staticClass: "my-6" }, [
-                            _c(
-                              "div",
-                              {
-                                staticClass: "flex items-center justify-start"
+                          : _vm._e()
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "grid grid-cols-2 gap-4" }, [
+                    _c(
+                      "div",
+                      { staticClass: "my-3" },
+                      [
+                        _c("vs-input", {
+                          staticClass: "custom-input",
+                          attrs: { "label-placeholder": "Name", type: "text" },
+                          model: {
+                            value: _vm.form.username,
+                            callback: function($$v) {
+                              _vm.$set(_vm.form, "username", $$v)
+                            },
+                            expression: "form.username"
+                          }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "my-3" },
+                      [
+                        _c("vs-input", {
+                          staticClass: "custom-input",
+                          attrs: {
+                            "label-placeholder": "Email",
+                            type: "email"
+                          },
+                          model: {
+                            value: _vm.form.email,
+                            callback: function($$v) {
+                              _vm.$set(_vm.form, "email", $$v)
+                            },
+                            expression: "form.email"
+                          }
+                        })
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "grid grid-cols-2 gap-3" }, [
+                    _c(
+                      "div",
+                      { staticClass: "my-3" },
+                      [
+                        _c("vs-input", {
+                          staticClass: "custom-input",
+                          attrs: {
+                            "label-placeholder": "Nomor Telepon",
+                            type: "number"
+                          },
+                          model: {
+                            value: _vm.form.nomor_telepon,
+                            callback: function($$v) {
+                              _vm.$set(_vm.form, "nomor_telepon", $$v)
+                            },
+                            expression: "form.nomor_telepon"
+                          }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "my-3" },
+                      [
+                        _c("vs-input", {
+                          staticClass: "custom-input",
+                          attrs: {
+                            "label-placeholder": "Alamat",
+                            type: "text"
+                          },
+                          model: {
+                            value: _vm.form.alamat,
+                            callback: function($$v) {
+                              _vm.$set(_vm.form, "alamat", $$v)
+                            },
+                            expression: "form.alamat"
+                          }
+                        })
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "grid grid-cols-1  md:grid-cols-3 gap-0 md:gap-4"
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "my-3" },
+                        [
+                          _c("vs-input", {
+                            staticClass: "custom-input",
+                            attrs: {
+                              "label-placeholder": "Kelurahan",
+                              type: "text"
+                            },
+                            model: {
+                              value: _vm.form.kelurahan,
+                              callback: function($$v) {
+                                _vm.$set(_vm.form, "kelurahan", $$v)
                               },
-                              [
-                                _c(
-                                  "vs-radio",
-                                  {
-                                    attrs: { val: "white" },
-                                    model: {
-                                      value: _vm.form.color,
-                                      callback: function($$v) {
-                                        _vm.$set(_vm.form, "color", $$v)
-                                      },
-                                      expression: "form.color"
-                                    }
-                                  },
-                                  [
-                                    _c(
-                                      "span",
-                                      { staticClass: "text-sm text-white" },
-                                      [_vm._v(" White ")]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "vs-radio",
-                                  {
-                                    attrs: { val: "black" },
-                                    model: {
-                                      value: _vm.form.color,
-                                      callback: function($$v) {
-                                        _vm.$set(_vm.form, "color", $$v)
-                                      },
-                                      expression: "form.color"
-                                    }
-                                  },
-                                  [
-                                    _c(
-                                      "span",
-                                      { staticClass: "text-sm text-white" },
-                                      [_vm._v(" Black ")]
-                                    )
-                                  ]
-                                )
-                              ],
-                              1
-                            )
-                          ])
-                        : _vm._e(),
+                              expression: "form.kelurahan"
+                            }
+                          })
+                        ],
+                        1
+                      ),
                       _vm._v(" "),
                       _c(
                         "div",
-                        { staticClass: "my-6" },
+                        { staticClass: "my-3" },
                         [
-                          _c("ConfirmDialog", {
-                            attrs: { "form-data": _vm.form }
+                          _c("vs-input", {
+                            staticClass: "custom-input",
+                            attrs: {
+                              "label-placeholder": "Kecamatan",
+                              type: "text"
+                            },
+                            model: {
+                              value: _vm.form.kecamatan,
+                              callback: function($$v) {
+                                _vm.$set(_vm.form, "kecamatan", $$v)
+                              },
+                              expression: "form.kecamatan"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "my-3" },
+                        [
+                          _c("vs-input", {
+                            staticClass: "custom-input",
+                            attrs: {
+                              "label-placeholder": "Kota/Kabupaten",
+                              type: "text"
+                            },
+                            model: {
+                              value: _vm.form.kota_kabupaten,
+                              callback: function($$v) {
+                                _vm.$set(_vm.form, "kota_kabupaten", $$v)
+                              },
+                              expression: "form.kota_kabupaten"
+                            }
                           })
                         ],
                         1
                       )
-                    ]),
-                    _vm._v(" "),
-                    _vm.hasSizeChart
-                      ? _c(
-                          "vs-dialog",
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "grid grid-cols-2 gap-4" }, [
+                    _c(
+                      "div",
+                      { staticClass: "my-3" },
+                      [
+                        _c(
+                          "vs-select",
                           {
-                            attrs: { blur: "", "overflow-hidden": "" },
-                            scopedSlots: _vm._u(
-                              [
-                                {
-                                  key: "header",
-                                  fn: function() {
-                                    return [
-                                      _c(
-                                        "h4",
-                                        {
-                                          staticClass: "not-margin text-white"
-                                        },
-                                        [_vm._v("Size Chart")]
-                                      )
-                                    ]
-                                  },
-                                  proxy: true
-                                }
-                              ],
-                              null,
-                              false,
-                              2579604919
-                            ),
+                            staticClass: "custom-select",
+                            attrs: { placeholder: "Provinsi" },
                             model: {
-                              value: _vm.sizeDialog,
+                              value: _vm.form.provinsi,
                               callback: function($$v) {
-                                _vm.sizeDialog = $$v
+                                _vm.$set(_vm.form, "provinsi", $$v)
                               },
-                              expression: "sizeDialog"
+                              expression: "form.provinsi"
                             }
                           },
-                          [_vm._v(" "), _c("SizeChartTable")],
+                          _vm._l(_vm.provinces, function(province) {
+                            return _c(
+                              "vs-option",
+                              {
+                                key: province.id,
+                                attrs: {
+                                  label: province.label,
+                                  value: province.value
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                    " +
+                                    _vm._s(province.label) +
+                                    "\n                  "
+                                )
+                              ]
+                            )
+                          }),
                           1
                         )
-                      : _vm._e()
-                  ],
-                  1
-                )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "my-3" },
+                      [
+                        _c("vs-input", {
+                          staticClass: "custom-input",
+                          attrs: {
+                            "label-placeholder": "Kode Pos",
+                            type: "number"
+                          },
+                          model: {
+                            value: _vm.form.kode_pos,
+                            callback: function($$v) {
+                              _vm.$set(_vm.form, "kode_pos", $$v)
+                            },
+                            expression: "form.kode_pos"
+                          }
+                        })
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "grid grid-cols-2 gap-4" }, [
+                    _c(
+                      "div",
+                      { staticClass: "my-3" },
+                      [
+                        _c(
+                          "vs-button",
+                          {
+                            staticClass: "focus:outline-none",
+                            attrs: { flat: "", block: "" },
+                            on: {
+                              click: function($event) {
+                                _vm.sizeDialog = !_vm.sizeDialog
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(
+                              "\n                  Open Size Chart\n                "
+                            )
+                          ]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "my-3" },
+                      [
+                        _c(
+                          "vs-select",
+                          {
+                            staticClass: "custom-select",
+                            attrs: { placeholder: "Select Size" },
+                            model: {
+                              value: _vm.form.size,
+                              callback: function($$v) {
+                                _vm.$set(_vm.form, "size", $$v)
+                              },
+                              expression: "form.size"
+                            }
+                          },
+                          _vm._l(_vm.sizes, function(size) {
+                            return _c(
+                              "vs-option",
+                              {
+                                key: size.value,
+                                attrs: { label: size.size, value: size.value }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                    " +
+                                    _vm._s(size.size) +
+                                    "\n                  "
+                                )
+                              ]
+                            )
+                          }),
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _vm.hasVariant
+                    ? _c("div", { staticClass: "my-3" }, [
+                        _c(
+                          "div",
+                          { staticClass: "flex items-center justify-start" },
+                          [
+                            _c(
+                              "vs-radio",
+                              {
+                                attrs: { val: "white" },
+                                model: {
+                                  value: _vm.form.color,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.form, "color", $$v)
+                                  },
+                                  expression: "form.color"
+                                }
+                              },
+                              [
+                                _c(
+                                  "span",
+                                  { staticClass: "text-sm text-white" },
+                                  [_vm._v(" White ")]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "vs-radio",
+                              {
+                                attrs: { val: "black" },
+                                model: {
+                                  value: _vm.form.color,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.form, "color", $$v)
+                                  },
+                                  expression: "form.color"
+                                }
+                              },
+                              [
+                                _c(
+                                  "span",
+                                  { staticClass: "text-sm text-white" },
+                                  [_vm._v(" Black ")]
+                                )
+                              ]
+                            )
+                          ],
+                          1
+                        )
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "mt-6" },
+                    [_c("ConfirmDialog", { attrs: { "form-data": _vm.form } })],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _vm.hasSizeChart
+                  ? _c(
+                      "vs-dialog",
+                      {
+                        attrs: { blur: "", "overflow-hidden": "" },
+                        scopedSlots: _vm._u(
+                          [
+                            {
+                              key: "header",
+                              fn: function() {
+                                return [
+                                  _c(
+                                    "h4",
+                                    { staticClass: "not-margin text-white" },
+                                    [_vm._v("Size Chart")]
+                                  )
+                                ]
+                              },
+                              proxy: true
+                            }
+                          ],
+                          null,
+                          false,
+                          2579604919
+                        ),
+                        model: {
+                          value: _vm.sizeDialog,
+                          callback: function($$v) {
+                            _vm.sizeDialog = $$v
+                          },
+                          expression: "sizeDialog"
+                        }
+                      },
+                      [_vm._v(" "), _c("SizeChartTable")],
+                      1
+                    )
+                  : _vm._e()
               ],
               1
             )
-          ],
-          1
-        )
+          ])
+        ])
       ]
     )
   ])

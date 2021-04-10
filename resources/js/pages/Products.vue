@@ -1,33 +1,48 @@
 <template>
   <default-layout>
     <main class="min-h-screen flex items-center justify-center">
-      <div class="container mx-auto mt-16">
-        <vs-row type="flex" align="center">
-          <vs-col w="6">
+      <div class="container mx-auto my-36 lg:my-16">
+        <div class="flex items-center flex-col lg:flex-row">
+          <div class="px-8 md:px-0 w-full md:w-6/12">
             <carousel :per-page="1">
               <template v-if="hasVariant">
                 <template v-if="form.color === 'black'">
-                  <slide v-for="(img, index) in images[0].black_variant" :key="index">
-                    <img :src="`/img/products/${img}`" class="w-full h-96 object-contain">
+                  <slide
+                    v-for="(img, index) in images[0].black_variant"
+                    :key="index"
+                  >
+                    <img
+                      :src="`/img/products/${img}`"
+                      class="w-full h-96 object-contain"
+                    />
                   </slide>
                 </template>
                 <template v-else>
-                  <slide v-for="(img, index) in images[0].white_variant" :key="index">
-                    <img :src="`/img/products/${img}`" class="w-full h-96 object-contain">
+                  <slide
+                    v-for="(img, index) in images[0].white_variant"
+                    :key="index"
+                  >
+                    <img
+                      :src="`/img/products/${img}`"
+                      class="w-full h-96 object-contain"
+                    />
                   </slide>
                 </template>
               </template>
               <template v-else>
                 <slide v-for="image in images" :key="image">
-                  <img :src="`/img/products/${image}`" class="w-full h-96 object-contain" />
+                  <img
+                    :src="`/img/products/${image}`"
+                    class="w-full h-96 object-contain"
+                  />
                 </slide>
               </template>
             </carousel>
-          </vs-col>
-          <vs-col w="6">
+          </div>
+          <div class="px-8 md:px-0 w-full md:w-6/12">
             <div>
               <div class="my-6">
-                <h1 class="font-bold text-xl text-white mb-8">
+                <h1 class="font-bold text-xl text-white text-center md:text-left mb-8">
                   {{ productName }} {{ variant }}
                   <p v-if="isBundle" class="font-light text-sm opacity-50">
                     <span v-html="bundleDescription"></span>
@@ -35,14 +50,16 @@
                 </h1>
               </div>
 
-              <div class="my-6">
-                <div class="grid grid-cols-2 gap-4">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="my-3">
                   <vs-input
                     label-placeholder="Name"
                     v-model="form.username"
                     type="text"
                     class="custom-input"
                   />
+                </div>
+                <div class="my-3">
                   <vs-input
                     label-placeholder="Email"
                     v-model="form.email"
@@ -52,14 +69,16 @@
                 </div>
               </div>
 
-              <div class="my-6">
-                <div class="grid grid-cols-2 gap-3">
+              <div class="grid grid-cols-2 gap-3">
+                <div class="my-3">
                   <vs-input
                     label-placeholder="Nomor Telepon"
                     v-model="form.nomor_telepon"
                     type="number"
                     class="custom-input"
                   />
+                </div>
+                <div class="my-3">
                   <vs-input
                     label-placeholder="Alamat"
                     v-model="form.alamat"
@@ -69,20 +88,24 @@
                 </div>
               </div>
 
-              <div class="my-6">
-                <div class="grid grid-cols-3 gap-4">
+              <div class="grid grid-cols-1  md:grid-cols-3 gap-0 md:gap-4">
+                <div class="my-3">
                   <vs-input
                     label-placeholder="Kelurahan"
                     v-model="form.kelurahan"
                     type="text"
                     class="custom-input"
                   />
+                </div>
+                <div class="my-3">
                   <vs-input
                     label-placeholder="Kecamatan"
                     v-model="form.kecamatan"
                     type="text"
                     class="custom-input"
                   />
+                </div>
+                <div class="my-3">
                   <vs-input
                     label-placeholder="Kota/Kabupaten"
                     v-model="form.kota_kabupaten"
@@ -92,8 +115,8 @@
                 </div>
               </div>
 
-              <div class="my-6">
-                <div class="grid grid-cols-2 gap-4">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="my-3">
                   <vs-select
                     placeholder="Provinsi"
                     v-model="form.provinsi"
@@ -108,6 +131,8 @@
                       {{ province.label }}
                     </vs-option>
                   </vs-select>
+                </div>
+                <div class="my-3">
                   <vs-input
                     label-placeholder="Kode Pos"
                     v-model="form.kode_pos"
@@ -117,15 +142,18 @@
                 </div>
               </div>
 
-              <div v-if="hasSizeChart" class="my-6">
-                <div class="grid grid-cols-2 gap-4">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="my-3">
                   <vs-button
                     flat
                     class="focus:outline-none"
                     @click="sizeDialog = !sizeDialog"
+                    block
                   >
                     Open Size Chart
                   </vs-button>
+                </div>
+                <div class="my-3">
                   <vs-select
                     placeholder="Select Size"
                     v-model="form.size"
@@ -143,7 +171,7 @@
                 </div>
               </div>
 
-              <div v-if="hasVariant" class="my-6">
+              <div v-if="hasVariant" class="my-3">
                 <div class="flex items-center justify-start">
                   <vs-radio v-model="form.color" val="white">
                     <span class="text-sm text-white"> White </span>
@@ -154,7 +182,7 @@
                 </div>
               </div>
 
-              <div class="my-6">
+              <div class="mt-6">
                 <ConfirmDialog :form-data="form" />
               </div>
             </div>
@@ -171,8 +199,8 @@
 
               <SizeChartTable />
             </vs-dialog>
-          </vs-col>
-        </vs-row>
+          </div>
+        </div>
       </div>
     </main>
   </default-layout>
@@ -188,11 +216,7 @@ import sizesMixins from "../mixins/sizesMixins";
 
 export default {
   name: "products.detail",
-  mixins: [
-    productMixins,
-    provincesMixins,
-    sizesMixins,
-  ],
+  mixins: [productMixins, provincesMixins, sizesMixins],
   components: {
     ConfirmDialog,
     DefaultLayout,
@@ -218,17 +242,17 @@ export default {
     };
   },
   computed: {
-    bundleDescription () {
-      if (this.$route.query.tag.endsWith('_a')) {
-        return `Beli Bundle A untuk mendapatkan T-Shirt, Totte Bag, dan Sticker Pack sekaligus <strong>Gratis</strong> Sticker TEDx dan potongan ongkos kirim sampai dengan Rp 15.000!`
+    bundleDescription() {
+      if (this.$route.query.tag.endsWith("_a")) {
+        return `Beli Bundle A untuk mendapatkan T-Shirt, Totte Bag, dan Sticker Pack sekaligus <strong>Gratis</strong> Sticker TEDx dan potongan ongkos kirim sampai dengan Rp 15.000!`;
       } else {
-        return `Beli Bundle B untuk mendapatkan Totte Bag, E-Money, dan Lanyard sekaligus <strong>Gratis</strong> Sticker TEDx dan potongan ongkos kirim sampai dengan Rp 15.000!`
+        return `Beli Bundle B untuk mendapatkan Totte Bag, E-Money, dan Lanyard sekaligus <strong>Gratis</strong> Sticker TEDx dan potongan ongkos kirim sampai dengan Rp 15.000!`;
       }
     },
     hasSizeChart() {
       if (
         this.$route.query.tag === "tshirt" ||
-        this.$route.query.tag === 'bundle_a'
+        this.$route.query.tag === "bundle_a"
       ) {
         return true;
       }
@@ -237,7 +261,7 @@ export default {
       if (
         this.$route.query.tag === "tshirt" ||
         this.$route.query.tag === "totte_bag" ||
-        this.$route.query.tag.startsWith('bundle_')
+        this.$route.query.tag.startsWith("bundle_")
       ) {
         return true;
       }
@@ -247,8 +271,8 @@ export default {
         (product) => product.tag === this.$route.query.tag
       )[0].images;
     },
-    isBundle () {
-      return this.$route.query.tag.startsWith('bundle_') ? true : false
+    isBundle() {
+      return this.$route.query.tag.startsWith("bundle_") ? true : false;
     },
     productName() {
       return this.products.filter(
