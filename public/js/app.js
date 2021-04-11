@@ -2425,6 +2425,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2437,6 +2445,18 @@ __webpack_require__.r(__webpack_exports__);
     return {
       navbar: "home"
     };
+  },
+  computed: {
+    hasLoggedIn: function hasLoggedIn() {
+      var token = localStorage.getItem('_token');
+      var uid = localStorage.getItem('_uid');
+
+      if (!token && !uid) {
+        return false;
+      }
+
+      return true;
+    }
   },
   methods: {
     openDialog: function openDialog(target) {
@@ -23973,40 +23993,55 @@ var render = function() {
                   [_c("i", { staticClass: "bx bx-sm bx-menu" })]
                 ),
                 _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "hidden md:flex items-center" },
-                  [
-                    _c(
-                      "vs-button",
-                      {
-                        staticClass: "focus:outline-none",
-                        attrs: { flat: "" },
-                        on: {
-                          click: function($event) {
-                            return _vm.openDialog("loginDialog")
-                          }
-                        }
-                      },
-                      [_vm._v("Login")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "vs-button",
-                      {
-                        staticClass: "focus:outline-none",
-                        attrs: { gradient: "" },
-                        on: {
-                          click: function($event) {
-                            return _vm.openDialog("registerDialog")
-                          }
-                        }
-                      },
-                      [_vm._v("Register")]
+                !_vm.hasLoggedIn
+                  ? _c(
+                      "div",
+                      { staticClass: "hidden md:flex items-center" },
+                      [
+                        _c(
+                          "vs-button",
+                          {
+                            staticClass: "focus:outline-none",
+                            attrs: { flat: "" },
+                            on: {
+                              click: function($event) {
+                                return _vm.openDialog("loginDialog")
+                              }
+                            }
+                          },
+                          [_vm._v("Login")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "vs-button",
+                          {
+                            staticClass: "focus:outline-none",
+                            attrs: { gradient: "" },
+                            on: {
+                              click: function($event) {
+                                return _vm.openDialog("registerDialog")
+                              }
+                            }
+                          },
+                          [_vm._v("Register")]
+                        )
+                      ],
+                      1
                     )
-                  ],
-                  1
-                )
+                  : _c(
+                      "div",
+                      [
+                        _c(
+                          "vs-button",
+                          {
+                            staticClass: "focus:outline-none",
+                            attrs: { gradient: "", to: "/dashboard" }
+                          },
+                          [_vm._v("Home")]
+                        )
+                      ],
+                      1
+                    )
               ]
             },
             proxy: true
