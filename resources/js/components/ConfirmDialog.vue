@@ -124,8 +124,11 @@ export default {
         type: 'circles'
       })
       setTimeout(() => {
+        const payment_id = 1092381203981
+        const username = "bramadl"
         loading.close()
-      }, 1000)
+        this.$router.replace(`/payments/${username}?payment_id=${payment_id}`)
+      }, 3000)
     }
   }
 };

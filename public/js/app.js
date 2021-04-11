@@ -2073,14 +2073,20 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     proceedPayment: function proceedPayment() {
+      var _this = this;
+
       var loading = this.$vs.loading({
         background: '#000',
         color: '#fff',
         type: 'circles'
       });
       setTimeout(function () {
+        var payment_id = 1092381203981;
+        var username = "bramadl";
         loading.close();
-      }, 1000);
+
+        _this.$router.replace("/payments/".concat(username, "?payment_id=").concat(payment_id));
+      }, 3000);
     }
   }
 });
@@ -3111,7 +3117,125 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "payments",
+  methods: {
+    printInvoice: function printInvoice() {
+      window.print();
+    }
+  }
+});
 
 /***/ }),
 
@@ -24265,20 +24389,266 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "px-8 ld:px-0 container mx-auto" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "py-8 border-b" }, [
+      _c("div", { staticClass: "md:flex items-center justify-between" }, [
+        _vm._m(1),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "button",
+            {
+              staticClass: "px-4 py-3 border rounded text-white text-sm",
+              on: { click: _vm.printInvoice }
+            },
+            [_vm._v("\n          Download Invoice\n        ")]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(2)
+    ]),
+    _vm._v(" "),
+    _vm._m(3)
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mx-auto" }, [
-      _c("div", { staticClass: "py-8 border-b" }, [
-        _c("div", { staticClass: "flex items-center justify-between" }, [
-          _c("h1", [_vm._v("\n        Invoice Payment\n      ")]),
-          _vm._v(" "),
-          _c("div", [_vm._v("\n        Belum Dibayar\n      ")])
+    return _c("div", { staticClass: "py-8 border-b" }, [
+      _c("div", { staticClass: "md:flex items-center justify-between" }, [
+        _c("div", [
+          _c("h1", { staticClass: "font-bold text-4xl" }, [_vm._v("Invoice")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-sm" }, [
+          _c("h2", [
+            _vm._v("Payment ID: "),
+            _c("strong", [_vm._v("1092381203981")])
+          ])
         ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h1", { staticClass: "text-xl font-bold uppercase" }, [
+        _vm._v("TEDxUniversitasBrawijaya")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mt-6 text-sm text-white" }, [
+      _c("div", { staticClass: "lg:grid grid-cols-2 gap-16" }, [
+        _c("table", { staticClass: "w-full" }, [
+          _c("tr", [
+            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+              _vm._v("Nama Depan")
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+              _vm._v("Bram")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+              _vm._v("Nama Belakang")
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+              _vm._v("Adl")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+              _vm._v("Username")
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+              _vm._v("bramadl")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+              _vm._v("Email Address")
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+              _vm._v("\n              Thenamesbram@gmail.com\n            ")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+              _vm._v("Kelurahan")
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+              _vm._v("Penggilingan")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+              _vm._v("Kecamatan")
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+              _vm._v("Cakung")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+              _vm._v("Kota / Kabupaten")
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+              _vm._v("Jakarta Timur")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+              _vm._v("Provinsi")
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+              _vm._v("DKI Jakarta")
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("table", { staticClass: "w-full" }, [
+          _c("tr", [
+            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+              _vm._v("Nomor Telepon")
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+              _vm._v("081283709830")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+              _vm._v("Alamat")
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+              _vm._v(
+                "\n              Perumahan Aneka Elok, Blok GXI no 11\n            "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+              _vm._v("Kode Pos")
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+              _vm._v("19340")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+              _vm._v("Nama Produk")
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+              _vm._v("T-Shirt")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+              _vm._v("Jumlah Produk")
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+              _vm._v("1")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+              _vm._v("Warna Produk")
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+              _vm._v("Hitam")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+              _vm._v("Harga Produk")
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+              _vm._v("Rp 90.000")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+              _vm._v("Ongkos Kirim")
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+              _vm._v("Rp 40.000")
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "py-8 border-b" }, [
+      _c("div", { staticClass: "md:flex items-center justify-between" }, [
+        _c("div", [
+          _c("h1", { staticClass: "text-xl font-bold uppercase" }, [
+            _vm._v("\n          Metode Pembayaran\n        ")
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "md:inline-grid grid-cols-2 gap-10 mt-12" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "inline-block px-16 py-12 rounded border cursor-pointer hover:bg-gray-50 hover:text-gray-900 transition ease-out duration-300"
+          },
+          [_c("p", { staticClass: "text-center" }, [_vm._v("Bank Mandiri")])]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "inline-block px-16 py-12 rounded border cursor-pointer hover:bg-gray-50 hover:text-gray-900 transition ease-out duration-300"
+          },
+          [_c("p", { staticClass: "text-center" }, [_vm._v("Bank BCA")])]
+        )
       ])
     ])
   }
