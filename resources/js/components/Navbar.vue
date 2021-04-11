@@ -42,7 +42,7 @@
           </template>
         </vs-navbar-group>
 
-        <div class="hidden md:flex items-center">
+        <div v-if="!hasLoggedIn" class="hidden md:flex items-center">
           <vs-button
             class="focus:outline-none"
             flat
@@ -54,6 +54,14 @@
             gradient
             @click="openDialog('registerDialog')"
             >Register</vs-button
+          >
+        </div>
+        <div v-else>
+          <vs-button
+            class="focus:outline-none"
+            gradient
+            to="/dashboard"
+            >Home</vs-button
           >
         </div>
       </template>
@@ -74,6 +82,18 @@ export default {
   data: () => ({
     navbar: "home",
   }),
+  computed: {
+    hasLoggedIn () {
+      const token = localStorage.getItem('_token')
+      const uid = localStorage.getItem('_uid')
+      
+      if (!token && !uid) {
+        return false
+      }
+
+      return true
+    }
+  },
   methods: {
     openDialog(target) {
       $eventBus.$emit("openDialog", target);
