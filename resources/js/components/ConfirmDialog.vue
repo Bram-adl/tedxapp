@@ -10,7 +10,10 @@
       class="custom-button"
       @click="confirmDialog = !confirmDialog"
     >
-      <p class="py-2 px-3 text-md">Lanjutkan Pembayaran</p>
+      <p class="py-2 px-3 text-md">
+        {{ $store.state.user.length ? "Lanjutkan Pembayaran" : "Mohon Login Terlebih Dahulu" }}
+        {{ $store.state.user.id }}
+      </p>
       <template #animate> <i class="bx bx-mail-send"></i> Send </template>
     </vs-button>
 
@@ -116,7 +119,6 @@ export default {
       return false;
     },
     sizeChart () {
-      console.log(this.$route.query.tag)
       if (!this.$route.query.tag.startsWith('tshirt') || !this.$route.query.tag.startsWith('bundle_a')) {
         return "-"
       } else {
@@ -131,7 +133,26 @@ export default {
         color: '#fff',
         type: 'circles'
       })
-      // Send request to server
+
+      axios.post(`http://127.0.0.1:8001/api/orders`, {
+        username: this.formData.username,
+        email: this.formData.email,
+        phone_number: this.formData.nomor_telepon,
+        address: this.formData.alamat,
+        kelurahan: this.formData.kelurahan,
+        kecamatan: this.formData.kecamatan,
+        kabupaten: this.formData.kota_kabupaten,
+        provinsi: this.formData.provinsi,
+        kode_pos: this.formData.kode_pos,
+        size: this.sizeChart,
+        color: this.formData.color
+      })
+        .then(({ data }) => {
+          console.log(data)
+        })
+        .catch(({ response }) => {
+          console.log(response)
+        })
     }
   }
 };

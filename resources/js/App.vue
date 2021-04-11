@@ -17,8 +17,16 @@ export default {
   },
   mounted() {
     // this.pageLoading()
+    this.checkAuth()
   },
   methods: {
+    checkAuth() {
+      const token = localStorage.getItem('_token')
+      const uid = localStorage.getItem('_uid')
+      if (token && uid) {
+        this.storeUser(token, uid)
+      }
+    },
     pageLoading() {
       const loading = this.$vs.loading({
         background: "#000",
@@ -29,6 +37,14 @@ export default {
         loading.close();
         this.active = true;
       }, 3000);
+    },
+    storeUser(token, uid) {
+      axios.get(`http://localhost:8001/api/audiens/${uid}/verify/${token}`)
+        .then(({ data }) => {
+          if (data.success) {
+            this.$store.dispatch("storeUser", data.data)
+          }
+        })
     },
   },
 };

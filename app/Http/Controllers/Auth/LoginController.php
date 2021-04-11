@@ -52,7 +52,7 @@ class LoginController extends Controller
         return response()->json([
             "success" => true,
             "token" => $token,
-            "user" => $user_id
+            "user" => $user
         ]);
     }
 }

@@ -14,8 +14,8 @@
           @
         </template>
       </vs-input>
-      <div v-if="hasError.email" class="text-xs text-red-400 mb-2">
-        {{ hasError.email }}
+      <div v-if="hasError.email_address" class="text-xs text-red-400 mb-2">
+        {{ hasError.email_address[0] }}
       </div>
       
       <vs-input
@@ -28,7 +28,7 @@
         </template>
       </vs-input>
       <div v-if="hasError.password" class="text-xs text-red-400 mb-2">
-        {{ hasError.password }}
+        {{ hasError.password[0] }}
       </div>
       
       <div class="flex">
@@ -42,7 +42,9 @@
 
     <template #footer>
       <div class="footer-dialog">
-        <vs-button block class="focus:outline-none" @click="login"> Login </vs-button>
+        <vs-button block class="focus:outline-none" @click="login">
+          Login
+        </vs-button>
       </div>
     </template>
   </vs-dialog>
@@ -64,37 +66,36 @@ export default {
     }
   },
   methods: {
-    async login () {
+    login () {
       const loading = this.$vs.loading({
         background: "#000",
         color: "#fff",
         types: "circles"
       })
-      try {
-        const { data } = await axios.post("/auth/login", {
-          email_address: this.loginForm.email,
-          password: this.loginForm.password,
+
+      axios.post("/auth/login", {
+        email_address: this.loginForm.email,
+        password: this.loginForm.password,
+      })
+        .then(({ data }) => {
+          if (!data.success) {
+            loading.close()
+            return this.openNotification("top-right", "danger", "Login Failed!", data.message)
+          } else {
+            loading.close()
+            const token = data.token
+            const user = data.user[0]
+
+            localStorage.setItem('_token', token)
+            localStorage.setItem('_uid', user.id)
+
+            this.$store.dispatch('storeUser', user)
+            this.$router.replace('/dashboard')
+          }
         })
-
-        if (!data.success) {
-          loading.close()
-          return this.openNotification("top-right", "danger", "Login Failed!", data.message);
-        }
-
-        if (data.success) {
-          loading.close()
-          const token = data.token
-          const userId = data.user
-
-          localStorage.setItem('_token', token)
-          localStorage.setItem('_uid', userId)
-
-          this.$router.replace('/dashboard')
-        }
-      } catch ({ response }) {
-        loading.close()
-        console.log(response.data)
-      }
+        .catch(({ response }) => {
+          this.hasError = response.data.errors
+        })
     }
   }
 }

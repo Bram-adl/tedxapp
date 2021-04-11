@@ -16,6 +16,11 @@ const routes = [
     component: require('../pages/Products.vue').default
   },
   {
+    path: '/payments/bramadl',
+    name: 'product.payments',
+    component: require('../pages/Payments.vue').default
+  },
+  {
     path: '/dashboard',
     name: 'dashboard',
     component: require('../pages/Dashboard.vue').default

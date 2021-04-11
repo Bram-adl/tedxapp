@@ -10,11 +10,17 @@ const store = new Vuex.Store({
   mutations: {
     storeUser (state, user) {
       state.user = user
+    },
+    removeUser (state) {
+      state.user = {}
     }
   },
   actions: {
     storeUser (context, user) {
       context.commit('storeUser', user)
+    },
+    removeUser (context) {
+      context.commit('removeUser')
     }
   }
 })

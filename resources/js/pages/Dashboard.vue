@@ -27,15 +27,6 @@ export default {
       if (!uid) {
         return this.redirectIfUnauthenticated()
       }
-
-      const { data } = await axios.get(`http://localhost:8001/api/audiens/${uid}/verify/${token}`)
-      if (!data.success) {
-        return this.redirectIfUnauthenticated()
-      }
-
-      if (data.success) {
-        this.$store.dispatch("storeUser", data.data)
-      }
     }
   }
 };

@@ -18,7 +18,7 @@
       <template #right>
         <vs-avatar :color="getRandomColor">
           <template #text>
-            {{ $store.state.user.first_name[0] }}{{ $store.state.user.last_name[0] }}
+            {{ username }}
           </template>
         </vs-avatar>
       </template>
@@ -34,7 +34,13 @@
       <template #logo>
         <img src="/img/tedx.png" alt="TEDxLogo" />
       </template>
-      <vs-sidebar-item id="home" class="focus:outline-none">
+      <vs-sidebar-item id="dashboard" class="focus:outline-none">
+        <template #icon>
+          <i class="bx bx-grid"></i>
+        </template>
+        Dashboard
+      </vs-sidebar-item>
+      <vs-sidebar-item to="/" id="home" class="focus:outline-none">
         <template #icon>
           <i class="bx bx-home"></i>
         </template>
@@ -87,31 +93,28 @@
           <template #icon>
             <i class="bx bxl-instagram"></i>
           </template>
-          <a href="#">
-            Instagram
-          </a>
+          <a href="#"> Instagram </a>
         </vs-sidebar-item>
         <vs-sidebar-item id="twitter" class="focus:outline-none">
           <template #icon>
             <i class="bx bxl-twitter"></i>
           </template>
-          <a href="#">
-            Twitter
-          </a>
+          <a href="#"> Twitter </a>
         </vs-sidebar-item>
         <vs-sidebar-item id="Facebook" class="focus:outline-none">
           <template #icon>
             <i class="bx bxl-facebook"></i>
           </template>
-          <a href="#">
-            Facebook
-          </a>
+          <a href="#"> Facebook </a>
         </vs-sidebar-item>
       </vs-sidebar-group>
       <template #footer>
         <vs-row justify="space-between">
           <vs-avatar color="danger" class="cursor-pointer">
-            <i class="bx bx-power-off text-white w-full h-full inline-flex items-center justify-center" @click="logout" />
+            <i
+              class="bx bx-power-off text-white w-full h-full inline-flex items-center justify-center"
+              @click="logout"
+            />
           </vs-avatar>
         </vs-row>
       </template>
@@ -123,40 +126,60 @@
 export default {
   name: "Sidebar",
   data: () => ({
-    active: "home",
+    active: "dashboard",
     activeSidebar: false,
   }),
   computed: {
-    getRandomColor () {
-      let hex = "#"
+    getRandomColor() {
+      let hex = "#";
       let codes = [
-        "0", "1", "2", "3", "4", 
-        "5", "6", "7", "8", "9", 
-        "A", "B", "C", "D", "E", "F"
-      ]
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+      ];
 
       for (let i = 0; i < 6; i++) {
-        let index = Math.floor(Math.random() * codes.length)
-        hex += codes[index]
+        let index = Math.floor(Math.random() * codes.length);
+        hex += codes[index];
       }
 
-      return hex
-    }
+      return hex;
+    },
+    username() {
+      return this.$store.state.user.first_name + this.$store.state.user.last_name
+    },
   },
   methods: {
-    async logout () {
-      const token = localStorage.getItem('_token')
-      const uid = localStorage.getItem('_uid')
+    async logout() {
+      const token = localStorage.getItem("_token");
+      const uid = localStorage.getItem("_uid");
 
-      const { data } = await axios.delete(`http://localhost:8001/api/audiens/${uid}/logout/${token}`)
+      const { data } = await axios.delete(
+        `http://localhost:8001/api/audiens/${uid}/logout/${token}`
+      );
 
       if (data.success) {
-        localStorage.removeItem('_token')
-        localStorage.removeItem('_uid')
-        this.$router.replace('/')
+        localStorage.removeItem("_token");
+        localStorage.removeItem("_uid");
+
+        this.$store.dispatch("removeUser");
+        this.$router.replace("/");
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
