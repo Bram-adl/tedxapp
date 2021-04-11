@@ -18,7 +18,7 @@
       <template #right>
         <vs-avatar :color="getRandomColor">
           <template #text>
-            Bram Adl
+            {{ $store.state.user.first_name[0] }}{{ $store.state.user.last_name[0] }}
           </template>
         </vs-avatar>
       </template>
@@ -111,7 +111,7 @@
       <template #footer>
         <vs-row justify="space-between">
           <vs-avatar color="danger" class="cursor-pointer">
-            <i class="bx bx-power-off text-white" />
+            <i class="bx bx-power-off text-white w-full h-full inline-flex items-center justify-center" @click="logout" />
           </vs-avatar>
         </vs-row>
       </template>
@@ -143,6 +143,20 @@ export default {
       return hex
     }
   },
+  methods: {
+    async logout () {
+      const token = localStorage.getItem('_token')
+      const uid = localStorage.getItem('_uid')
+
+      const { data } = await axios.delete(`http://localhost:8001/api/audiens/${uid}/logout/${token}`)
+
+      if (data.success) {
+        localStorage.removeItem('_token')
+        localStorage.removeItem('_uid')
+        this.$router.replace('/')
+      }
+    }
+  }
 };
 </script>
 

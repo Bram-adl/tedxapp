@@ -6,6 +6,7 @@ import Vuesax from 'vuesax'
 import VueCarousel from 'vue-carousel'
 import App from './App.vue'
 import router from './router'
+import store from './store'
 
 import 'vuesax/dist/vuesax.css'
 
@@ -18,5 +19,6 @@ window.$eventBus = new Vue()
 
 const vm = new Vue({
   render: h => h(App),
-  router
+  router,
+  store
 }).$mount('#app')

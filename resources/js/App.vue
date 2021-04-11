@@ -12,25 +12,25 @@ export default {
   data() {
     return {
       // active: false
-      active: true
+      active: true,
     };
   },
-  mounted () {
+  mounted() {
     // this.pageLoading()
   },
   methods: {
-    pageLoading () {
+    pageLoading() {
       const loading = this.$vs.loading({
-        background: '#000',
-        color: '#fff',
-        type: 'circles'
-      })
+        background: "#000",
+        color: "#fff",
+        type: "circles",
+      });
       setTimeout(() => {
-        loading.close()
-        this.active = true
-      }, 3000)
-    }
-  }
+        loading.close();
+        this.active = true;
+      }, 3000);
+    },
+  },
 };
 </script>
 
@@ -108,7 +108,7 @@ export default {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: .4s ease-out;
+  transition: 0.4s ease-out;
 }
 
 .fade-enter,

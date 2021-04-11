@@ -69,7 +69,7 @@
           <tr>
             <td class="py-2">Size</td>
             <td class="px-4">:</td>
-            <td class="py-2">{{ formData.size }}</td>
+            <td class="py-2">{{ sizeChart }}</td>
           </tr>
           <tr>
             <td class="py-2">Color</td>
@@ -115,6 +115,14 @@ export default {
 
       return false;
     },
+    sizeChart () {
+      console.log(this.$route.query.tag)
+      if (!this.$route.query.tag.startsWith('tshirt') || !this.$route.query.tag.startsWith('bundle_a')) {
+        return "-"
+      } else {
+        return this.formData.size
+      }
+    }
   },
   methods: {
     proceedPayment () {
@@ -123,12 +131,7 @@ export default {
         color: '#fff',
         type: 'circles'
       })
-      setTimeout(() => {
-        const payment_id = 1092381203981
-        const username = "bramadl"
-        loading.close()
-        this.$router.replace(`/payments/${username}?payment_id=${payment_id}`)
-      }, 3000)
+      // Send request to server
     }
   }
 };

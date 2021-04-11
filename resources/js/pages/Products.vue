@@ -142,7 +142,7 @@
                 </div>
               </div>
 
-              <div class="grid grid-cols-2 gap-4">
+              <div v-if="hasSizeChart" class="grid grid-cols-2 gap-4">
                 <div class="my-3">
                   <vs-button
                     flat
@@ -234,7 +234,7 @@ export default {
         kota_kabupaten: "",
         provinsi: "",
         kode_pos: "",
-        size: "",
+        size: "s",
         color: "white",
       },
       sizeDialog: false,
