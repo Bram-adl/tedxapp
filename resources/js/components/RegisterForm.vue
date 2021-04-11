@@ -1,14 +1,23 @@
 <template>
   <vs-dialog v-model="registerDialog" blur overflow-hidden>
     <template #header>
-      <h4 class="not-margin">Welcome to <b>TEDxUniversitasBrawijaya</b></h4>
+      <h4 class="not-margin text-white">Welcome to <b>TEDxUniversitasBrawijaya</b></h4>
     </template>
 
     <div class="con-form">
       <vs-input
-        v-model="registerForm.username"
+        v-model="registerForm.firstName"
         type="text"
-        placeholder="Username"
+        placeholder="First Name"
+      >
+        <template #icon>
+          <i class="bx bxs-user" />
+        </template>
+      </vs-input>
+      <vs-input
+        v-model="registerForm.lastName"
+        type="text"
+        placeholder="Last Name *"
       >
         <template #icon>
           <i class="bx bxs-user" />
@@ -17,7 +26,7 @@
       <vs-input
         v-model="registerForm.email"
         type="email"
-        placeholder="Email"
+        placeholder="Email *"
       >
         <template #icon>
           @
@@ -26,7 +35,7 @@
       <vs-input
         type="password"
         v-model="registerForm.password"
-        placeholder="Password"
+        placeholder="Password *"
       >
         <template #icon>
           <i class="bx bxs-lock" />
@@ -34,9 +43,9 @@
       </vs-input>
       <div class="flex">
         <vs-checkbox
-          v-model="registerForm.remember"
+          v-model="registerForm.agree"
         >
-          <small>I agree with the terms & conditions</small>
+          <small class="text-white">I agree with the terms & conditions</small>
         </vs-checkbox>
       </div>
     </div>

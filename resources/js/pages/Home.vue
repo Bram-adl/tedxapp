@@ -38,9 +38,9 @@
                 gradient
                 square
               >
-                <p class="px-8 py-2 text-md">
+                <a href="#products" class="px-8 py-2 text-md">
                   Beli Sekarang!
-                </p>
+                </a>
               </vs-button>
             </div>
           </transition>
@@ -50,7 +50,7 @@
     <!-- ./Main Section -->
 
     <!-- Products Section -->
-    <section style="background: linear-gradient(to bottom, #0d0e0f, #18191c)">
+    <section id="products" style="background: linear-gradient(to bottom, #0d0e0f, #18191c)">
       <div class="container mx-auto">
         <vs-row class="pb-5 pt-10">
           <vs-col type="flex" justify="center" vs-align="center" w="12">

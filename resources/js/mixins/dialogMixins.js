@@ -11,9 +11,11 @@ export default {
         remember: false,
       },
       registerForm: {
+        firstName: "",
+        lastName: "",
         email: "",
         password: "",
-        remember: false,
+        agree: false,
       },
     }
   },

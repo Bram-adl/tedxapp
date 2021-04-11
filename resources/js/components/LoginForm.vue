@@ -1,7 +1,7 @@
 <template>
   <vs-dialog v-model="loginDialog" blur overflow-hidden>
     <template #header>
-      <h4 class="not-margin">Welcome to <b>TEDxUniversitasBrawijaya</b></h4>
+      <h4 class="not-margin text-white">Welcome to <b>TEDxUniversitasBrawijaya</b></h4>
     </template>
 
     <div class="con-form">
@@ -27,7 +27,7 @@
         <vs-checkbox
           v-model="loginForm.remember"
         >
-          <small>Remember me</small>
+          <small class="text-white">Remember me</small>
         </vs-checkbox>
       </div>
     </div>

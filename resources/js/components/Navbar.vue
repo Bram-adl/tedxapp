@@ -2,36 +2,62 @@
   <div class="center absolute left-0 top-0 w-full">
     <LoginForm />
     <RegisterForm />
-    
+
     <vs-navbar
       v-model="navbar"
       center-collapsed
-      class="p-4"
+      class="py-2 md:py-4"
       color="dark"
       text-white
       not-line
     >
       <template #left>
-        <img src="/img/tedx.png" class="w-24 md:w-48" />
+        <img src="/img/tedx.png" class="w-24 md:w-48 -mb-2" />
       </template>
+
       <template #right>
-        <vs-button
-          class="focus:outline-none"
-          flat
-          @click="openDialog('loginDialog')"
-        >Login</vs-button>
-        <vs-button
-          class="focus:outline-none"
-          gradient
-          @click="openDialog('registerDialog')"
-        >Register</vs-button>
+        <vs-navbar-group class="block md:hidden">
+          <i class="bx bx-sm bx-menu"></i>
+          <template #items>
+            <vs-navbar-item :active="navbar == 'home'" id="home">
+              <router-link to="/">
+                Home
+              </router-link>
+            </vs-navbar-item>
+            <vs-navbar-item :active="navbar == 'docs'" id="docs">
+              <a href="#products">
+                Products
+              </a>
+            </vs-navbar-item>
+            <vs-navbar-item :active="navbar == 'docs'" id="docs">
+              <p @click="openDialog('loginDialog')">
+                Login
+              </p>
+            </vs-navbar-item>
+            <vs-navbar-item :active="navbar == 'docs'" id="docs">
+              <p @click="openDialog('registerDialog')">
+                Register
+              </p>
+            </vs-navbar-item>
+          </template>
+        </vs-navbar-group>
+
+        <div class="hidden md:flex items-center">
+          <vs-button
+            class="focus:outline-none"
+            flat
+            @click="openDialog('loginDialog')"
+            >Login</vs-button
+          >
+          <vs-button
+            class="focus:outline-none"
+            gradient
+            @click="openDialog('registerDialog')"
+            >Register</vs-button
+          >
+        </div>
       </template>
     </vs-navbar>
-    <div class="square">
-      <div class="child">child 1</div>
-      <div class="child">child 2</div>
-      <div class="child">child 3</div>
-    </div>
   </div>
 </template>
 
@@ -40,20 +66,32 @@ import LoginForm from "../components/LoginForm";
 import RegisterForm from "../components/RegisterForm";
 
 export default {
-  name: 'Navbar',
+  name: "Navbar",
   components: {
     LoginForm,
     RegisterForm,
   },
   data: () => ({
-    navbar: "guide",
+    navbar: "home",
   }),
   methods: {
-    openDialog (target) {
-      $eventBus.$emit('openDialog', target)
-    }
-  }
+    openDialog(target) {
+      $eventBus.$emit("openDialog", target);
+    },
+  },
 };
 </script>
 
+<style>
+.vs-navbar__group__item {
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+.vs-navbar__group__items {
+  left: unset !important;
+  right: 0 !important;
+}
+</style>
     

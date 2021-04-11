@@ -14,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'index');
+Route::view('/dashboard', 'index');
 Route::view('/products/detail', 'index');
+Route::view('/payments/{user}', 'index')->where('user', '[a-zA-Z]+');
