@@ -13,6 +13,16 @@ import 'vuesax/dist/vuesax.css'
 Vue.use(Vuesax, {})
 Vue.use(VueCarousel)
 
+Vue.filter('formatPrice', function (price) {
+  if (!price) return ""
+  
+  let reverse = price.toString().split("").reverse().join("");
+  let ribuan = reverse.match(/\d{1,3}/g);
+  ribuan = ribuan.join(".").split("").reverse().join("");
+
+  return ribuan;
+})
+
 Vue.config.productionTip = false
 
 window.$eventBus = new Vue()

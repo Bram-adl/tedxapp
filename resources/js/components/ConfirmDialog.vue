@@ -11,8 +11,7 @@
       @click="confirmDialog = !confirmDialog"
     >
       <p class="py-2 px-3 text-md">
-        {{ $store.state.user.length ? "Lanjutkan Pembayaran" : "Mohon Login Terlebih Dahulu" }}
-        {{ $store.state.user.id }}
+        {{ Boolean($store.state.user.id) ? "Lanjutkan Pembayaran" : "Mohon Login Terlebih Dahulu" }}
       </p>
       <template #animate> <i class="bx bx-mail-send"></i> Send </template>
     </vs-button>
@@ -95,8 +94,11 @@
 </template>
 
 <script>
+import productMixins from "../mixins/productMixins";
+
 export default {
   name: 'ConfirmDialog',
+  mixins: [productMixins],
   props: {
     formData: {
       type: Object,
@@ -124,7 +126,12 @@ export default {
       } else {
         return this.formData.size
       }
-    }
+    },
+    productItem() {
+      return this.products.filter(
+        (product) => product.tag === this.$route.query.tag
+      )[0]
+    },
   },
   methods: {
     proceedPayment () {
@@ -135,6 +142,8 @@ export default {
       })
 
       axios.post(`http://127.0.0.1:8001/api/orders`, {
+        product: this.productItem.title,
+        price: this.productItem.price,
         username: this.formData.username,
         email: this.formData.email,
         phone_number: this.formData.nomor_telepon,
@@ -148,9 +157,16 @@ export default {
         color: this.formData.color
       })
         .then(({ data }) => {
-          console.log(data)
+          loading.close()
+          
+          const user_id = this.$store.state.user.id
+          const username = this.$store.state.user.username
+          const payment_id = data.order.id
+          
+          this.$router.replace(`/payments/${user_id}/${username}?payment_id=${payment_id}`)
         })
         .catch(({ response }) => {
+          loading.close()
           console.log(response)
         })
     }
