@@ -31832,6 +31832,12 @@ video {
   --tw-backdrop-sepia: sepia(100%);
 }
 
+html, body {
+  background: #18191c;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
