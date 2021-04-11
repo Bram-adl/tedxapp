@@ -16,7 +16,7 @@ const routes = [
     component: require('../pages/Products.vue').default
   },
   {
-    path: '/payments/bramadl',
+    path: '/payments/:id/:username',
     name: 'product.payments',
     component: require('../pages/Payments.vue').default
   },
