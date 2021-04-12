@@ -125,6 +125,6 @@ export default {
 
 .tx-vs-card {
   width: 300px;
-  margin-left: 50px;
+  margin: auto !important;
 }
 </style>

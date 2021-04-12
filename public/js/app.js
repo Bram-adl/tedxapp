@@ -4318,7 +4318,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".tx-table {\n  width: 100%;\n  text-align: center;\n}\n.tx-table th {\n  background-color: rgb(160, 8, 8);\n  padding: 1rem;\n}\n.tx-table td {\n  padding: 1rem;\n  border-bottom: 1px solid white;\n  width: 400px;\n}\n.tx-vs-card {\n  width: 300px;\n  margin-left: 50px;\n}\n", ""]);
+exports.push([module.i, ".tx-table {\n  width: 100%;\n  text-align: center;\n}\n.tx-table th {\n  background-color: rgb(160, 8, 8);\n  padding: 1rem;\n}\n.tx-table td {\n  padding: 1rem;\n  border-bottom: 1px solid white;\n  width: 400px;\n}\n.tx-vs-card {\n  width: 300px;\n  margin: auto !important;\n}\n", ""]);
 
 // exports
 
