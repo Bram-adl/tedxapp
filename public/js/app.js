@@ -26153,7 +26153,7 @@ var render = function() {
     _c("div", { staticClass: "container mx-auto" }, [
       _c(
         "div",
-        { staticClass: "grid grid-cols-3 gap-12" },
+        { staticClass: "md:grid grid-cols-3 gap-12" },
         _vm._l(_vm.merchandises, function(merchandise) {
           return _c("vs-card", {
             key: merchandise.id,

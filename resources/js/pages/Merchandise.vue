@@ -1,7 +1,7 @@
 <template>
   <div class="pt-40 pb-20 h-screen overflow-auto">
     <div class="container mx-auto">
-      <div class="grid grid-cols-3 gap-12">
+      <div class="md:grid grid-cols-3 gap-12">
         <vs-card v-for="merchandise in merchandises" :key="merchandise.id" class="tx-vs-card">
           <template #title>
             <h3>{{ merchandise.product }}</h3>
