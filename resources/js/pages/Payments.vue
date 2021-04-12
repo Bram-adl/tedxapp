@@ -90,7 +90,7 @@
             <tr>
               <td class="border-b border-gray-600 py-4">Nomor Telepon</td>
               <td class="w-3/4 border-b border-gray-600 py-4">
-                {{ order.nomor_telepon }}
+                {{ order.phone_number }}
               </td>
             </tr>
             <tr>

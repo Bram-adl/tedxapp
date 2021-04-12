@@ -25863,7 +25863,7 @@ var render = function() {
               _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
                 _vm._v(
                   "\n              " +
-                    _vm._s(_vm.order.nomor_telepon) +
+                    _vm._s(_vm.order.phone_number) +
                     "\n            "
                 )
               ])
@@ -69934,7 +69934,7 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-window.axios.defaults.baseURL = 'https://admin.tedxuniversitasbrawijaya.com:/api/';
+window.axios.defaults.baseURL = 'http://admin.tedxuniversitasbrawijaya.com:/api/';
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
