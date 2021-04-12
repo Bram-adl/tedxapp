@@ -252,7 +252,7 @@ export default {
       })
       
       axios
-        .post(`http://localhost:8001/api/payments`, {
+        .post(`/payments`, {
           user_id: this.user.id,
           order_id: this.order.id,
           payment_proof: this.payment_proof,
@@ -285,7 +285,7 @@ export default {
 
       axios
         .get(
-          `http://localhost:8001/api/orders/${uid}/${username}?payment_id=${payment_id}`
+          `/orders/${uid}/${username}?payment_id=${payment_id}`
         )
         .then(({ data }) => {
           if (!data.success) {

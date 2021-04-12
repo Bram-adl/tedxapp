@@ -1965,7 +1965,7 @@ __webpack_require__.r(__webpack_exports__);
     storeUser: function storeUser(token, uid) {
       var _this2 = this;
 
-      axios.get("http://localhost:8001/api/audiens/".concat(uid, "/verify/").concat(token)).then(function (_ref) {
+      axios.get("/audiens/".concat(uid, "/verify/").concat(token)).then(function (_ref) {
         var data = _ref.data;
 
         if (data.success) {
@@ -2083,9 +2083,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'ConfirmDialog',
+  name: "ConfirmDialog",
   mixins: [_mixins_productMixins__WEBPACK_IMPORTED_MODULE_0__["default"]],
   props: {
     formData: {
@@ -2108,8 +2114,15 @@ __webpack_require__.r(__webpack_exports__);
 
       return false;
     },
-    sizeChart: function sizeChart() {
-      if (!this.$route.query.tag.startsWith('tshirt') || !this.$route.query.tag.startsWith('bundle_a')) {
+    color: function color() {
+      if (!this.$route.query.tag.startsWith("tshirt") && !this.$route.query.tag.startsWith("bundle_")) {
+        return "-";
+      } else {
+        return this.formData.color;
+      }
+    },
+    size: function size() {
+      if (!this.$route.query.tag.startsWith("tshirt") && !this.$route.query.tag.startsWith("bundle_a")) {
         return "-";
       } else {
         return this.formData.size;
@@ -2128,11 +2141,11 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       var loading = this.$vs.loading({
-        background: '#000',
-        color: '#fff',
-        type: 'circles'
+        background: "#000",
+        color: "#fff",
+        type: "circles"
       });
-      axios.post("http://127.0.0.1:8001/api/orders", {
+      axios.post("/orders", {
         product: this.productItem.title,
         price: this.productItem.price,
         username: this.formData.username,
@@ -2144,8 +2157,8 @@ __webpack_require__.r(__webpack_exports__);
         kabupaten: this.formData.kota_kabupaten,
         provinsi: this.formData.provinsi,
         kode_pos: this.formData.kode_pos,
-        size: this.sizeChart,
-        color: this.formData.color
+        size: this.size,
+        color: this.color
       }).then(function (_ref) {
         var data = _ref.data;
         loading.close();
@@ -2320,16 +2333,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'LoginForm',
+  name: "LoginForm",
   mixins: [_mixins_dialogMixins__WEBPACK_IMPORTED_MODULE_0__["default"], _mixins_notificationMixins__WEBPACK_IMPORTED_MODULE_1__["default"]],
   data: function data() {
     return {
@@ -2345,7 +2352,7 @@ __webpack_require__.r(__webpack_exports__);
         color: "#fff",
         types: "circles"
       });
-      axios.post("/auth/login", {
+      axios.post("".concat(window.location.origin, "/auth/login"), {
         email_address: this.loginForm.email,
         password: this.loginForm.password
       }).then(function (_ref) {
@@ -2358,15 +2365,16 @@ __webpack_require__.r(__webpack_exports__);
           loading.close();
           var token = data.token;
           var user = data.user[0];
-          localStorage.setItem('_token', token);
-          localStorage.setItem('_uid', user.id);
+          localStorage.setItem("_token", token);
+          localStorage.setItem("_uid", user.id);
 
-          _this.$store.dispatch('storeUser', user);
+          _this.$store.dispatch("storeUser", user);
 
-          _this.$router.replace('/dashboard');
+          _this.$router.replace("/dashboard");
         }
       })["catch"](function (_ref2) {
         var response = _ref2.response;
+        loading.close();
         _this.hasError = response.data.errors;
       });
     }
@@ -2555,16 +2563,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _mixins_dialogMixins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../mixins/dialogMixins */ "./resources/js/mixins/dialogMixins.js");
-/* harmony import */ var _mixins_notificationMixins__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../mixins/notificationMixins */ "./resources/js/mixins/notificationMixins.js");
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
+/* harmony import */ var _mixins_dialogMixins__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../mixins/dialogMixins */ "./resources/js/mixins/dialogMixins.js");
+/* harmony import */ var _mixins_notificationMixins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../mixins/notificationMixins */ "./resources/js/mixins/notificationMixins.js");
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2638,7 +2643,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RegisterForm",
-  mixins: [_mixins_dialogMixins__WEBPACK_IMPORTED_MODULE_1__["default"], _mixins_notificationMixins__WEBPACK_IMPORTED_MODULE_2__["default"]],
+  mixins: [_mixins_dialogMixins__WEBPACK_IMPORTED_MODULE_0__["default"], _mixins_notificationMixins__WEBPACK_IMPORTED_MODULE_1__["default"]],
   data: function data() {
     return {
       hasError: {}
@@ -2648,54 +2653,29 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     register: function register() {
       var _this = this;
 
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var loading, _yield$axios$post, data, response;
+      var loading = this.$vs.loading({
+        background: "#000",
+        color: "#fff",
+        type: "circles"
+      });
+      axios.post("".concat(window.location.origin, "/auth/register"), {
+        first_name: this.registerForm.firstName,
+        last_name: this.registerForm.lastName,
+        email_address: this.registerForm.email,
+        password: this.registerForm.password
+      }).then(function (_ref) {
+        var data = _ref.data;
 
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                loading = _this.$vs.loading({
-                  background: "#000",
-                  color: "#fff",
-                  type: "circles"
-                });
-                _context.prev = 1;
-                _context.next = 4;
-                return axios.post("/auth/register", {
-                  first_name: _this.registerForm.firstName,
-                  last_name: _this.registerForm.lastName,
-                  email_address: _this.registerForm.email,
-                  password: _this.registerForm.password
-                });
+        if (data.success) {
+          loading.close();
 
-              case 4:
-                _yield$axios$post = _context.sent;
-                data = _yield$axios$post.data;
-
-                if (data.success) {
-                  loading.close();
-
-                  _this.openNotification("top-right", "primary", "Account Registered Successfully!", "Please sign in to your account!");
-                }
-
-                _context.next = 14;
-                break;
-
-              case 9:
-                _context.prev = 9;
-                _context.t0 = _context["catch"](1);
-                response = _context.t0.response;
-                loading.close();
-                _this.hasError = response.data.errors;
-
-              case 14:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, null, [[1, 9]]);
-      }))();
+          _this.openNotification("top-right", "primary", "Account Registered Successfully!", "Please sign in to your account!");
+        }
+      })["catch"](function (_ref2) {
+        var response = _ref2.response;
+        loading.close();
+        _this.hasError = response.data.errors;
+      });
     }
   }
 });
@@ -2711,14 +2691,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
 //
 //
 //
@@ -2871,38 +2843,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     logout: function logout() {
       var _this = this;
 
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var token, uid, _yield$axios$delete, data;
+      var token = localStorage.getItem("_token");
+      var uid = localStorage.getItem("_uid");
+      axios["delete"]("/audiens/".concat(uid, "/logout/").concat(token)).then(function (_ref) {
+        var data = _ref.data;
 
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                token = localStorage.getItem("_token");
-                uid = localStorage.getItem("_uid");
-                _context.next = 4;
-                return axios["delete"]("http://localhost:8001/api/audiens/".concat(uid, "/logout/").concat(token));
+        if (data.success) {
+          localStorage.removeItem("_token");
+          localStorage.removeItem("_uid");
 
-              case 4:
-                _yield$axios$delete = _context.sent;
-                data = _yield$axios$delete.data;
+          _this.$store.dispatch("removeUser");
 
-                if (data.success) {
-                  localStorage.removeItem("_token");
-                  localStorage.removeItem("_uid");
-
-                  _this.$store.dispatch("removeUser");
-
-                  _this.$router.replace("/");
-                }
-
-              case 7:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee);
-      }))();
+          _this.$router.replace("/");
+        }
+      });
     }
   }
 });
@@ -3675,7 +3629,7 @@ __webpack_require__.r(__webpack_exports__);
         color: "#fff",
         types: "circles"
       });
-      axios.post("http://localhost:8001/api/payments", {
+      axios.post("/payments", {
         user_id: this.user.id,
         order_id: this.order.id,
         payment_proof: this.payment_proof,
@@ -3704,7 +3658,7 @@ __webpack_require__.r(__webpack_exports__);
       var uid = this.$route.params.id;
       var username = this.$route.params.username;
       var payment_id = this.$route.query.payment_id;
-      axios.get("http://localhost:8001/api/orders/".concat(uid, "/").concat(username, "?payment_id=").concat(payment_id)).then(function (_ref3) {
+      axios.get("/orders/".concat(uid, "/").concat(username, "?payment_id=").concat(payment_id)).then(function (_ref3) {
         var data = _ref3.data;
 
         if (!data.success) {
@@ -23523,7 +23477,11 @@ var render = function() {
                     {
                       staticClass: "px-4 text-center text-white font-bold mt-6"
                     },
-                    [_vm._v("Mohon periksa kembali informasi anda!")]
+                    [
+                      _vm._v(
+                        "\n        Mohon periksa kembali informasi anda!\n      "
+                      )
+                    ]
                   )
                 ]
               },
@@ -23680,9 +23638,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("td", { staticClass: "px-4" }, [_vm._v(":")]),
                 _vm._v(" "),
-                _c("td", { staticClass: "py-2" }, [
-                  _vm._v(_vm._s(_vm.sizeChart))
-                ])
+                _c("td", { staticClass: "py-2" }, [_vm._v(_vm._s(_vm.size))])
               ]),
               _vm._v(" "),
               _c("tr", [
@@ -23690,9 +23646,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("td", { staticClass: "px-4" }, [_vm._v(":")]),
                 _vm._v(" "),
-                _c("td", { staticClass: "py-2" }, [
-                  _vm._v(_vm._s(_vm.formData.color))
-                ])
+                _c("td", { staticClass: "py-2" }, [_vm._v(_vm._s(_vm.color))])
               ])
             ])
           ])
@@ -24053,7 +24007,7 @@ var render = function() {
           fn: function() {
             return [
               _c("h4", { staticClass: "not-margin text-white" }, [
-                _vm._v("Welcome to "),
+                _vm._v("\n      Welcome to "),
                 _c("b", [_vm._v("TEDxUniversitasBrawijaya")])
               ])
             ]
@@ -24105,7 +24059,7 @@ var render = function() {
               {
                 key: "icon",
                 fn: function() {
-                  return [_vm._v("\n        @\n      ")]
+                  return [_vm._v(" @ ")]
                 },
                 proxy: true
               }
@@ -69980,6 +69934,7 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.baseURL = 'http://localhost:8001/api/';
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting

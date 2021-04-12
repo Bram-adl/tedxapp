@@ -19,7 +19,7 @@
       <div v-if="hasError.first_name" class="text-xs text-red-400 mb-2">
         {{ hasError.first_name }}
       </div>
-      
+
       <vs-input
         v-model="registerForm.lastName"
         type="text"
@@ -29,7 +29,7 @@
           <i class="bx bxs-user" />
         </template>
       </vs-input>
-      
+
       <vs-input v-model="registerForm.email" type="email" placeholder="Email *">
         <template #icon> @ </template>
       </vs-input>
@@ -49,7 +49,7 @@
       <div v-if="hasError.password" class="text-xs text-red-400 mb-2">
         {{ hasError.password }}
       </div>
-      
+
       <div class="flex">
         <vs-checkbox v-model="registerForm.agree">
           <small class="text-white">I agree with the terms & conditions</small>
@@ -59,7 +59,12 @@
 
     <template #footer>
       <div class="footer-dialog">
-        <vs-button :disabled="!registerForm.agree" block class="focus:outline-none" @click="register">
+        <vs-button
+          :disabled="!registerForm.agree"
+          block
+          class="focus:outline-none"
+          @click="register"
+        >
           Register
         </vs-button>
       </div>
@@ -80,28 +85,35 @@ export default {
     };
   },
   methods: {
-    async register() {
+    register() {
       const loading = this.$vs.loading({
         background: "#000",
         color: "#fff",
         type: "circles",
       });
-      try {
-        const { data } = await axios.post("/auth/register", {
+
+      axios
+        .post(`${window.location.origin}/auth/register`, {
           first_name: this.registerForm.firstName,
           last_name: this.registerForm.lastName,
           email_address: this.registerForm.email,
           password: this.registerForm.password,
-        });
-
-        if (data.success) {
+        })
+        .then(({ data }) => {
+          if (data.success) {
+            loading.close();
+            this.openNotification(
+              "top-right",
+              "primary",
+              "Account Registered Successfully!",
+              "Please sign in to your account!"
+            );
+          }
+        })
+        .catch(({ response }) => {
           loading.close();
-          this.openNotification("top-right", "primary", "Account Registered Successfully!", "Please sign in to your account!");
-        }
-      } catch ({ response }) {
-        loading.close();
-        this.hasError = response.data.errors;
-      }
+          this.hasError = response.data.errors;
+        });
     },
   },
 };
