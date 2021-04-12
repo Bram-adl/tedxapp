@@ -1,5 +1,7 @@
 <template>
-  <dashboard-layout> HALO </dashboard-layout>
+  <dashboard-layout>
+    <router-view></router-view>
+  </dashboard-layout>
 </template>
 
 <script>

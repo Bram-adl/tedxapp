@@ -20,10 +20,22 @@ const routes = [
     name: 'product.payments',
     component: require('../pages/Payments.vue').default
   },
+
   {
     path: '/dashboard',
-    name: 'dashboard',
-    component: require('../pages/Dashboard.vue').default
+    component: require('../pages/Dashboard.vue').default,
+    children: [
+      {
+        path: '',
+        name: 'dashboard',
+        component: require('../pages/DashboardIndex.vue').default
+      },
+      {
+        path: 'merchandise',
+        name: 'dashboard.merchandise',
+        component: require('../pages/Merchandise.vue').default
+      },
+    ]
   }
 ]
 

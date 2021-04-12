@@ -11,7 +11,7 @@ import Sidebar from "../components/Sidebar"
 export default {
   name: 'dashboard',
   components: {
-    Sidebar
+    Sidebar,
   }
 }
 </script>

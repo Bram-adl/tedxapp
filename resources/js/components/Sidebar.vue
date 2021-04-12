@@ -34,7 +34,7 @@
       <template #logo>
         <img src="/img/tedx.png" alt="TEDxLogo" />
       </template>
-      <vs-sidebar-item id="dashboard" class="focus:outline-none">
+      <vs-sidebar-item to="/dashboard" id="dashboard" class="focus:outline-none">
         <template #icon>
           <i class="bx bx-grid"></i>
         </template>
@@ -61,7 +61,7 @@
             Pembelian Produk
           </vs-sidebar-item>
         </template>
-        <vs-sidebar-item id="Merchandise" class="focus:outline-none">
+        <vs-sidebar-item :to="{ name: 'dashboard.merchandise' }" id="Merchandise" class="focus:outline-none">
           <template #icon>
             <i class="bx bxl-shopify"></i>
           </template>
@@ -73,12 +73,6 @@
           </template>
           Ticket
         </vs-sidebar-item>
-        <vs-sidebar-item id="History" class="focus:outline-none">
-          <template #icon>
-            <i class="bx bx-history"></i>
-          </template>
-          History
-        </vs-sidebar-item>
       </vs-sidebar-group>
       <vs-sidebar-group>
         <template #header>
@@ -89,23 +83,23 @@
             Social media
           </vs-sidebar-item>
         </template>
-        <vs-sidebar-item id="Instagram" class="focus:outline-none">
+        <vs-sidebar-item id="Instagram" class="focus:outline-none" href="https://instagram.com/tedxuniversitasbrawijaya" target="_blank">
           <template #icon>
             <i class="bx bxl-instagram"></i>
           </template>
-          <a href="#"> Instagram </a>
+           Instagram
         </vs-sidebar-item>
-        <vs-sidebar-item id="twitter" class="focus:outline-none">
+        <vs-sidebar-item id="twitter" class="focus:outline-none" href="https://twitter.com/TEDxBrawijaya" target="_blank">
           <template #icon>
             <i class="bx bxl-twitter"></i>
           </template>
-          <a href="#"> Twitter </a>
+          Twitter
         </vs-sidebar-item>
-        <vs-sidebar-item id="Facebook" class="focus:outline-none">
+        <vs-sidebar-item id="Linkedin" class="focus:outline-none" href="https://www.linkedin.com/company/tedxuniversitasbrawijaya/" target="_blank">
           <template #icon>
-            <i class="bx bxl-facebook"></i>
+            <i class="bx bxl-linkedin"></i>
           </template>
-          <a href="#"> Facebook </a>
+          Linkedin
         </vs-sidebar-item>
       </vs-sidebar-group>
       <template #footer>
@@ -163,21 +157,25 @@ export default {
     },
   },
   methods: {
-    async logout() {
+    logout() {
       const token = localStorage.getItem("_token");
       const uid = localStorage.getItem("_uid");
 
-      const { data } = await axios.delete(
+      axios.delete(
         `http://localhost:8001/api/audiens/${uid}/logout/${token}`
-      );
+      )
+        .then(({ data }) => {
+          if (data.success) {
+            localStorage.removeItem("_token");
+            localStorage.removeItem("_uid");
 
-      if (data.success) {
-        localStorage.removeItem("_token");
-        localStorage.removeItem("_uid");
-
-        this.$store.dispatch("removeUser");
-        this.$router.replace("/");
-      }
+            this.$store.dispatch("removeUser");
+            this.$router.replace("/");
+          }
+        })
+        .catch(({ response }) => {
+          console.log(response.data)
+        });
     },
   },
 };
