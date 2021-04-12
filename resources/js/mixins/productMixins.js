@@ -81,9 +81,7 @@ export default {
                     title: "Bundle A",
                     price: 160000,
                     img_urls: [
-                        "tshirt_black_front.png",
-                        "totte_bag_black_front.png",
-                        "sticker.png"
+                        "bundle_a.png"
                     ],
                     tag: "bundle_a",
                     images: [
@@ -109,11 +107,9 @@ export default {
                 {
                     id: 8,
                     title: "Bundle B",
-                    price: 125000,
+                    price: 120000,
                     img_urls: [
-                        "totte_bag_white_front.png",
-                        "e_money_front.png",
-                        "lanyard.png"
+                        "bundle_b.png"
                     ],
                     tag: "bundle_b",
                     images: [

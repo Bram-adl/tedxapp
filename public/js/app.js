@@ -3757,6 +3757,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3778,6 +3783,11 @@ __webpack_require__.r(__webpack_exports__);
       return this.provinces.filter(function (province) {
         return province.value === _this.order.provinsi;
       })[0];
+    },
+    total: function total() {
+      var orderFeeNum = this.orderFee ? +this.orderFee.ongkir : 0;
+      var priceNum = this.order.price || 0;
+      return +orderFeeNum + +priceNum;
     }
   },
   watch: {
@@ -25156,7 +25166,7 @@ var render = function() {
                 }
               ])
             },
-            [_vm._v("\n      Timeline TEDxUB\n    ")]
+            [_vm._v("\n      Agenda TEDxUB\n    ")]
           ),
           _vm._v(" "),
           _c(
@@ -26530,6 +26540,19 @@ var render = function() {
                         _vm.orderFee ? _vm.orderFee.ongkir : ""
                       )
                     ) +
+                    "\n            "
+                )
+              ])
+            ]),
+            _c("tr", [
+              _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+                _vm._v("Total")
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+                _vm._v(
+                  "\n              Rp " +
+                    _vm._s(_vm._f("formatPrice")(_vm.total)) +
                     "\n            "
                 )
               ])
@@ -71482,7 +71505,7 @@ __webpack_require__.r(__webpack_exports__);
         id: 7,
         title: "Bundle A",
         price: 160000,
-        img_urls: ["tshirt_black_front.png", "totte_bag_black_front.png", "sticker.png"],
+        img_urls: ["bundle_a.png"],
         tag: "bundle_a",
         images: [{
           black_variant: ["tshirt_black_front.png", "tshirt_black_back.png", "totte_bag_black_front.png", "totte_bag_black_back.png", "sticker.png"],
@@ -71492,8 +71515,8 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         id: 8,
         title: "Bundle B",
-        price: 125000,
-        img_urls: ["totte_bag_white_front.png", "e_money_front.png", "lanyard.png"],
+        price: 120000,
+        img_urls: ["bundle_b.png"],
         tag: "bundle_b",
         images: [{
           black_variant: ["totte_bag_black_front.png", "totte_bag_black_back.png", "e_money_front.png", "e_money_back.png", "lanyard.png"],
@@ -72318,8 +72341,8 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/bramadl/Documents/Programming/Projects/tedxapp/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/bramadl/Documents/Programming/Projects/tedxapp/resources/css/app.css */"./resources/css/app.css");
+__webpack_require__(/*! /Users/apple/Documents/DATA/Tedx/tedxapp/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/apple/Documents/DATA/Tedx/tedxapp/resources/css/app.css */"./resources/css/app.css");
 
 
 /***/ })
