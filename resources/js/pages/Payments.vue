@@ -132,6 +132,11 @@
               <td class="w-3/4 border-b border-gray-600 py-4">
                 Rp {{ orderFee ? orderFee.ongkir : "" | formatPrice }}
               </td>
+            <tr>
+              <td class="border-b border-gray-600 py-4">Total</td>
+              <td class="w-3/4 border-b border-gray-600 py-4">
+                Rp {{ total | formatPrice}}
+              </td>
             </tr>
           </table>
         </div>
@@ -230,6 +235,11 @@ export default {
         (province) => province.value === this.order.provinsi
       )[0];
     },
+    total() {
+      let orderFeeNum = this.orderFee ? +this.orderFee.ongkir : 0
+      let priceNum = this.order.price || 0
+      return +orderFeeNum + +priceNum;
+    }
   },
   watch: {
     payment_proof() {

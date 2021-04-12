@@ -50,7 +50,7 @@
         <template #icon>
           <i class="bx bx-calendar"></i>
         </template>
-        Timeline TEDxUB
+        Agenda TEDxUB
       </vs-sidebar-item>
       <vs-sidebar-group>
         <template #header>
