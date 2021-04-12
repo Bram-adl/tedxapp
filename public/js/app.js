@@ -2115,12 +2115,7 @@ __webpack_require__.r(__webpack_exports__);
       return false;
     },
     color: function color() {
-<<<<<<< HEAD
-      if (!this.$route.query.tag.startsWith("tshirt") || !this.$route.query.tag.startsWith('totte_bag') && !this.$route.query.tag.startsWith("bundle_")) {
-=======
       if (!this.$route.query.tag.startsWith("tshirt") && !this.$route.query.tag.startsWith('totte_bag') && !this.$route.query.tag.startsWith("bundle_")) {
-        console.log(this.$route.query.tag);
->>>>>>> develop
         return "-";
       } else {
         return this.formData.color;
