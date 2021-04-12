@@ -11,12 +11,12 @@ export default {
   name: "App",
   data() {
     return {
-      // active: false
-      active: true,
+      active: false
+      // active: true,
     };
   },
   mounted() {
-    // this.pageLoading()
+    this.pageLoading()
     this.checkAuth()
   },
   methods: {

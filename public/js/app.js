@@ -1932,12 +1932,12 @@ __webpack_require__.r(__webpack_exports__);
   name: "App",
   data: function data() {
     return {
-      // active: false
-      active: true
+      active: false // active: true,
+
     };
   },
   mounted: function mounted() {
-    // this.pageLoading()
+    this.pageLoading();
     this.checkAuth();
   },
   methods: {
@@ -72341,8 +72341,8 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/apple/Documents/DATA/Tedx/tedxapp/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/apple/Documents/DATA/Tedx/tedxapp/resources/css/app.css */"./resources/css/app.css");
+__webpack_require__(/*! /Users/bramadl/Documents/Programming/Projects/tedxapp/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/bramadl/Documents/Programming/Projects/tedxapp/resources/css/app.css */"./resources/css/app.css");
 
 
 /***/ })
