@@ -39,7 +39,7 @@ export default {
       }, 3000);
     },
     storeUser(token, uid) {
-      axios.get(`http://localhost:8001/api/audiens/${uid}/verify/${token}`)
+      axios.get(`/audiens/${uid}/verify/${token}`)
         .then(({ data }) => {
           if (data.success) {
             this.$store.dispatch("storeUser", data.data)

@@ -1,23 +1,19 @@
 <template>
   <vs-dialog v-model="loginDialog" blur overflow-hidden>
     <template #header>
-      <h4 class="not-margin text-white">Welcome to <b>TEDxUniversitasBrawijaya</b></h4>
+      <h4 class="not-margin text-white">
+        Welcome to <b>TEDxUniversitasBrawijaya</b>
+      </h4>
     </template>
 
     <div class="con-form">
-      <vs-input
-        v-model="loginForm.email"
-        type="email"
-        placeholder="Email"
-      >
-        <template #icon>
-          @
-        </template>
+      <vs-input v-model="loginForm.email" type="email" placeholder="Email">
+        <template #icon> @ </template>
       </vs-input>
       <div v-if="hasError.email_address" class="text-xs text-red-400 mb-2">
         {{ hasError.email_address[0] }}
       </div>
-      
+
       <vs-input
         type="password"
         v-model="loginForm.password"
@@ -30,11 +26,9 @@
       <div v-if="hasError.password" class="text-xs text-red-400 mb-2">
         {{ hasError.password[0] }}
       </div>
-      
+
       <div class="flex">
-        <vs-checkbox
-          v-model="loginForm.remember"
-        >
+        <vs-checkbox v-model="loginForm.remember">
           <small class="text-white">Remember me</small>
         </vs-checkbox>
       </div>
@@ -51,54 +45,58 @@
 </template>
 
 <script>
-import dialogMixins from "../mixins/dialogMixins"
+import dialogMixins from "../mixins/dialogMixins";
 import notificationMixins from "../mixins/notificationMixins";
 
 export default {
-  name: 'LoginForm',
-  mixins: [
-    dialogMixins,
-    notificationMixins
-  ],
-  data () {
+  name: "LoginForm",
+  mixins: [dialogMixins, notificationMixins],
+  data() {
     return {
-      hasError: {}
-    }
+      hasError: {},
+    };
   },
   methods: {
-    login () {
+    login() {
       const loading = this.$vs.loading({
         background: "#000",
         color: "#fff",
-        types: "circles"
-      })
+        types: "circles",
+      });
 
-      axios.post("/auth/login", {
-        email_address: this.loginForm.email,
-        password: this.loginForm.password,
-      })
+      axios
+        .post(`${window.location.origin}/auth/login`, {
+          email_address: this.loginForm.email,
+          password: this.loginForm.password,
+        })
         .then(({ data }) => {
           if (!data.success) {
-            loading.close()
-            return this.openNotification("top-right", "danger", "Login Failed!", data.message)
+            loading.close();
+            return this.openNotification(
+              "top-right",
+              "danger",
+              "Login Failed!",
+              data.message
+            );
           } else {
-            loading.close()
-            const token = data.token
-            const user = data.user[0]
+            loading.close();
+            const token = data.token;
+            const user = data.user[0];
 
-            localStorage.setItem('_token', token)
-            localStorage.setItem('_uid', user.id)
+            localStorage.setItem("_token", token);
+            localStorage.setItem("_uid", user.id);
 
-            this.$store.dispatch('storeUser', user)
-            this.$router.replace('/dashboard')
+            this.$store.dispatch("storeUser", user);
+            this.$router.replace("/dashboard");
           }
         })
         .catch(({ response }) => {
-          this.hasError = response.data.errors
-        })
-    }
-  }
-}
+          loading.close();
+          this.hasError = response.data.errors;
+        });
+    },
+  },
+};
 </script>
 
 <style></style>

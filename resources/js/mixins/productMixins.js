@@ -109,7 +109,7 @@ export default {
                 {
                     id: 8,
                     title: "Bundle B",
-                    price: 120000,
+                    price: 125000,
                     img_urls: [
                         "totte_bag_white_front.png",
                         "e_money_front.png",

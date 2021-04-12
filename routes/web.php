@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'index');
 Route::view('/dashboard', 'index');
 Route::view('/products/detail', 'index');
-Route::view('/payments/{username}', 'index')->where('username', '[a-zA-Z]+');
+Route::view('/payments/{id}/{username}', 'index')->where(['id' => '[0-9]+', 'username' => '[a-zA-Z]+']);
 
 Route::post("/auth/login", "Auth\LoginController@login");
 Route::post("/auth/register", "Auth\RegisterController@register");

@@ -163,21 +163,22 @@ export default {
     },
   },
   methods: {
-    async logout() {
+    logout() {
       const token = localStorage.getItem("_token");
       const uid = localStorage.getItem("_uid");
 
-      const { data } = await axios.delete(
-        `http://localhost:8001/api/audiens/${uid}/logout/${token}`
-      );
-
-      if (data.success) {
-        localStorage.removeItem("_token");
-        localStorage.removeItem("_uid");
-
-        this.$store.dispatch("removeUser");
-        this.$router.replace("/");
-      }
+      axios.delete(
+        `/audiens/${uid}/logout/${token}`
+      )
+        .then(({ data }) => {
+          if (data.success) {
+            localStorage.removeItem("_token");
+            localStorage.removeItem("_uid");
+    
+            this.$store.dispatch("removeUser");
+            this.$router.replace("/");
+          }
+        });
     },
   },
 };

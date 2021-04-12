@@ -1965,7 +1965,7 @@ __webpack_require__.r(__webpack_exports__);
     storeUser: function storeUser(token, uid) {
       var _this2 = this;
 
-      axios.get("http://localhost:8001/api/audiens/".concat(uid, "/verify/").concat(token)).then(function (_ref) {
+      axios.get("/audiens/".concat(uid, "/verify/").concat(token)).then(function (_ref) {
         var data = _ref.data;
 
         if (data.success) {
@@ -1987,6 +1987,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _mixins_productMixins__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../mixins/productMixins */ "./resources/js/mixins/productMixins.js");
 //
 //
 //
@@ -2083,8 +2084,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'ConfirmDialog',
+  name: "ConfirmDialog",
+  mixins: [_mixins_productMixins__WEBPACK_IMPORTED_MODULE_0__["default"]],
   props: {
     formData: {
       type: Object,
@@ -2106,22 +2114,40 @@ __webpack_require__.r(__webpack_exports__);
 
       return false;
     },
-    sizeChart: function sizeChart() {
-      if (!this.$route.query.tag.startsWith('tshirt') || !this.$route.query.tag.startsWith('bundle_a')) {
+    color: function color() {
+      if (!this.$route.query.tag.startsWith("tshirt") && !this.$route.query.tag.startsWith("bundle_")) {
+        return "-";
+      } else {
+        return this.formData.color;
+      }
+    },
+    size: function size() {
+      if (!this.$route.query.tag.startsWith("tshirt") && !this.$route.query.tag.startsWith("bundle_a")) {
         return "-";
       } else {
         return this.formData.size;
       }
+    },
+    productItem: function productItem() {
+      var _this = this;
+
+      return this.products.filter(function (product) {
+        return product.tag === _this.$route.query.tag;
+      })[0];
     }
   },
   methods: {
     proceedPayment: function proceedPayment() {
+      var _this2 = this;
+
       var loading = this.$vs.loading({
-        background: '#000',
-        color: '#fff',
-        type: 'circles'
+        background: "#000",
+        color: "#fff",
+        type: "circles"
       });
-      axios.post("http://127.0.0.1:8001/api/orders", {
+      axios.post("/orders", {
+        product: this.productItem.title,
+        price: this.productItem.price,
         username: this.formData.username,
         email: this.formData.email,
         phone_number: this.formData.nomor_telepon,
@@ -2131,13 +2157,19 @@ __webpack_require__.r(__webpack_exports__);
         kabupaten: this.formData.kota_kabupaten,
         provinsi: this.formData.provinsi,
         kode_pos: this.formData.kode_pos,
-        size: this.sizeChart,
-        color: this.formData.color
+        size: this.size,
+        color: this.color
       }).then(function (_ref) {
         var data = _ref.data;
-        console.log(data);
+        loading.close();
+        var user_id = _this2.$store.state.user.id;
+        var username = _this2.$store.state.user.username;
+        var payment_id = data.order.id;
+
+        _this2.$router.replace("/payments/".concat(user_id, "/").concat(username, "?payment_id=").concat(payment_id));
       })["catch"](function (_ref2) {
         var response = _ref2.response;
+        loading.close();
         console.log(response);
       });
     }
@@ -2301,16 +2333,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'LoginForm',
+  name: "LoginForm",
   mixins: [_mixins_dialogMixins__WEBPACK_IMPORTED_MODULE_0__["default"], _mixins_notificationMixins__WEBPACK_IMPORTED_MODULE_1__["default"]],
   data: function data() {
     return {
@@ -2326,7 +2352,7 @@ __webpack_require__.r(__webpack_exports__);
         color: "#fff",
         types: "circles"
       });
-      axios.post("/auth/login", {
+      axios.post("".concat(window.location.origin, "/auth/login"), {
         email_address: this.loginForm.email,
         password: this.loginForm.password
       }).then(function (_ref) {
@@ -2339,15 +2365,16 @@ __webpack_require__.r(__webpack_exports__);
           loading.close();
           var token = data.token;
           var user = data.user[0];
-          localStorage.setItem('_token', token);
-          localStorage.setItem('_uid', user.id);
+          localStorage.setItem("_token", token);
+          localStorage.setItem("_uid", user.id);
 
-          _this.$store.dispatch('storeUser', user);
+          _this.$store.dispatch("storeUser", user);
 
-          _this.$router.replace('/dashboard');
+          _this.$router.replace("/dashboard");
         }
       })["catch"](function (_ref2) {
         var response = _ref2.response;
+        loading.close();
         _this.hasError = response.data.errors;
       });
     }
@@ -2518,14 +2545,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Products",
   mixins: [_mixins_productMixins__WEBPACK_IMPORTED_MODULE_0__["default"]],
-  filters: {
-    formatPrice: function formatPrice(price) {
-      var reverse = price.toString().split("").reverse().join("");
-      var ribuan = reverse.match(/\d{1,3}/g);
-      ribuan = ribuan.join(".").split("").reverse().join("");
-      return ribuan;
-    }
-  },
   methods: {
     redirectToProductDetailPage: function redirectToProductDetailPage(link) {
       this.$router.push(link);
@@ -2544,16 +2563,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _mixins_dialogMixins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../mixins/dialogMixins */ "./resources/js/mixins/dialogMixins.js");
-/* harmony import */ var _mixins_notificationMixins__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../mixins/notificationMixins */ "./resources/js/mixins/notificationMixins.js");
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
+/* harmony import */ var _mixins_dialogMixins__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../mixins/dialogMixins */ "./resources/js/mixins/dialogMixins.js");
+/* harmony import */ var _mixins_notificationMixins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../mixins/notificationMixins */ "./resources/js/mixins/notificationMixins.js");
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2627,7 +2643,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RegisterForm",
-  mixins: [_mixins_dialogMixins__WEBPACK_IMPORTED_MODULE_1__["default"], _mixins_notificationMixins__WEBPACK_IMPORTED_MODULE_2__["default"]],
+  mixins: [_mixins_dialogMixins__WEBPACK_IMPORTED_MODULE_0__["default"], _mixins_notificationMixins__WEBPACK_IMPORTED_MODULE_1__["default"]],
   data: function data() {
     return {
       hasError: {}
@@ -2637,54 +2653,29 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     register: function register() {
       var _this = this;
 
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var loading, _yield$axios$post, data, response;
+      var loading = this.$vs.loading({
+        background: "#000",
+        color: "#fff",
+        type: "circles"
+      });
+      axios.post("".concat(window.location.origin, "/auth/register"), {
+        first_name: this.registerForm.firstName,
+        last_name: this.registerForm.lastName,
+        email_address: this.registerForm.email,
+        password: this.registerForm.password
+      }).then(function (_ref) {
+        var data = _ref.data;
 
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                loading = _this.$vs.loading({
-                  background: "#000",
-                  color: "#fff",
-                  type: "circles"
-                });
-                _context.prev = 1;
-                _context.next = 4;
-                return axios.post("/auth/register", {
-                  first_name: _this.registerForm.firstName,
-                  last_name: _this.registerForm.lastName,
-                  email_address: _this.registerForm.email,
-                  password: _this.registerForm.password
-                });
+        if (data.success) {
+          loading.close();
 
-              case 4:
-                _yield$axios$post = _context.sent;
-                data = _yield$axios$post.data;
-
-                if (data.success) {
-                  loading.close();
-
-                  _this.openNotification("top-right", "primary", "Account Registered Successfully!", "Please sign in to your account!");
-                }
-
-                _context.next = 14;
-                break;
-
-              case 9:
-                _context.prev = 9;
-                _context.t0 = _context["catch"](1);
-                response = _context.t0.response;
-                loading.close();
-                _this.hasError = response.data.errors;
-
-              case 14:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, null, [[1, 9]]);
-      }))();
+          _this.openNotification("top-right", "primary", "Account Registered Successfully!", "Please sign in to your account!");
+        }
+      })["catch"](function (_ref2) {
+        var response = _ref2.response;
+        loading.close();
+        _this.hasError = response.data.errors;
+      });
     }
   }
 });
@@ -2700,14 +2691,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
 //
 //
 //
@@ -2860,38 +2843,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     logout: function logout() {
       var _this = this;
 
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var token, uid, _yield$axios$delete, data;
+      var token = localStorage.getItem("_token");
+      var uid = localStorage.getItem("_uid");
+      axios["delete"]("/audiens/".concat(uid, "/logout/").concat(token)).then(function (_ref) {
+        var data = _ref.data;
 
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                token = localStorage.getItem("_token");
-                uid = localStorage.getItem("_uid");
-                _context.next = 4;
-                return axios["delete"]("http://localhost:8001/api/audiens/".concat(uid, "/logout/").concat(token));
+        if (data.success) {
+          localStorage.removeItem("_token");
+          localStorage.removeItem("_uid");
 
-              case 4:
-                _yield$axios$delete = _context.sent;
-                data = _yield$axios$delete.data;
+          _this.$store.dispatch("removeUser");
 
-                if (data.success) {
-                  localStorage.removeItem("_token");
-                  localStorage.removeItem("_uid");
-
-                  _this.$store.dispatch("removeUser");
-
-                  _this.$router.replace("/");
-                }
-
-              case 7:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee);
-      }))();
+          _this.$router.replace("/");
+        }
+      });
     }
   }
 });
@@ -3406,6 +3371,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _mixins_provincesMixins__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../mixins/provincesMixins */ "./resources/js/mixins/provincesMixins.js");
+/* harmony import */ var _mixins_notificationMixins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../mixins/notificationMixins */ "./resources/js/mixins/notificationMixins.js");
 //
 //
 //
@@ -3533,11 +3500,198 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "payments",
+  mixins: [_mixins_provincesMixins__WEBPACK_IMPORTED_MODULE_0__["default"], _mixins_notificationMixins__WEBPACK_IMPORTED_MODULE_1__["default"]],
+  data: function data() {
+    return {
+      user: {},
+      order: {},
+      sending: false,
+      success: false,
+      payment_proof: null
+    };
+  },
+  computed: {
+    orderFee: function orderFee() {
+      var _this = this;
+
+      return this.provinces.filter(function (province) {
+        return province.value === _this.order.provinsi;
+      })[0];
+    }
+  },
+  watch: {
+    payment_proof: function payment_proof() {
+      var _this2 = this;
+
+      this.sending = true;
+      setTimeout(function () {
+        _this2.sending = false;
+        _this2.success = !_this2.success;
+      }, 2000);
+    }
+  },
+  mounted: function mounted() {
+    this.fetchInvoice();
+  },
   methods: {
+    confirmPayment: function confirmPayment() {
+      var _this3 = this;
+
+      var loading = this.$vs.loading({
+        background: "#000",
+        color: "#fff",
+        types: "circles"
+      });
+      axios.post("/payments", {
+        user_id: this.user.id,
+        order_id: this.order.id,
+        payment_proof: this.payment_proof,
+        status: "pending",
+        total: +this.order.price + +this.orderFee.ongkir
+      }).then(function (_ref) {
+        var data = _ref.data;
+
+        if (data.success) {
+          loading.close();
+
+          _this3.openNotification("top-right", "success", "Pembayaran berhasil dilakukan!", "Mohon menunggu konfirmasi dari admin dalam waktu 1x24jam. Kamu dapat melihat status pembelian kamu di halaman dashboard kamu.");
+
+          setTimeout(function () {
+            _this3.$router.replace('/dashboard');
+          }, 1000);
+        }
+      })["catch"](function (_ref2) {
+        var response = _ref2.response;
+        loading.close();
+      });
+    },
+    fetchInvoice: function fetchInvoice() {
+      var _this4 = this;
+
+      var uid = this.$route.params.id;
+      var username = this.$route.params.username;
+      var payment_id = this.$route.query.payment_id;
+      axios.get("/orders/".concat(uid, "/").concat(username, "?payment_id=").concat(payment_id)).then(function (_ref3) {
+        var data = _ref3.data;
+
+        if (!data.success) {
+          return _this4.$router.replace("/");
+        } else {
+          _this4.user = data.data.user;
+          _this4.order = data.data.order;
+        }
+      })["catch"](function (_ref4) {
+        var response = _ref4.response;
+        console.log(response.data);
+      });
+    },
     printInvoice: function printInvoice() {
       window.print();
+    },
+    uploadPaymentProof: function uploadPaymentProof(event) {
+      var _this5 = this;
+
+      var file = event.target.files[0];
+
+      if (!file.type.startsWith("image")) {
+        this.payment_proof = null;
+        return this.openNotification("top-right", "danger", "Invalid file type!", "Please make sure to upload only images with .jpg, .jpeg, and .png extension!");
+      }
+
+      var fileReader = new FileReader();
+
+      fileReader.onloadend = function () {
+        _this5.payment_proof = fileReader.result;
+      };
+
+      fileReader.readAsDataURL(file);
     }
   }
 });
@@ -23299,12 +23453,10 @@ var render = function() {
             _vm._v(
               "\n      " +
                 _vm._s(
-                  _vm.$store.state.user.length
+                  Boolean(_vm.$store.state.user.id)
                     ? "Lanjutkan Pembayaran"
                     : "Mohon Login Terlebih Dahulu"
                 ) +
-                "\n      " +
-                _vm._s(_vm.$store.state.user.id) +
                 "\n    "
             )
           ])
@@ -23325,7 +23477,11 @@ var render = function() {
                     {
                       staticClass: "px-4 text-center text-white font-bold mt-6"
                     },
-                    [_vm._v("Mohon periksa kembali informasi anda!")]
+                    [
+                      _vm._v(
+                        "\n        Mohon periksa kembali informasi anda!\n      "
+                      )
+                    ]
                   )
                 ]
               },
@@ -23482,9 +23638,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("td", { staticClass: "px-4" }, [_vm._v(":")]),
                 _vm._v(" "),
-                _c("td", { staticClass: "py-2" }, [
-                  _vm._v(_vm._s(_vm.sizeChart))
-                ])
+                _c("td", { staticClass: "py-2" }, [_vm._v(_vm._s(_vm.size))])
               ]),
               _vm._v(" "),
               _c("tr", [
@@ -23492,9 +23646,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("td", { staticClass: "px-4" }, [_vm._v(":")]),
                 _vm._v(" "),
-                _c("td", { staticClass: "py-2" }, [
-                  _vm._v(_vm._s(_vm.formData.color))
-                ])
+                _c("td", { staticClass: "py-2" }, [_vm._v(_vm._s(_vm.color))])
               ])
             ])
           ])
@@ -23855,7 +24007,7 @@ var render = function() {
           fn: function() {
             return [
               _c("h4", { staticClass: "not-margin text-white" }, [
-                _vm._v("Welcome to "),
+                _vm._v("\n      Welcome to "),
                 _c("b", [_vm._v("TEDxUniversitasBrawijaya")])
               ])
             ]
@@ -23907,7 +24059,7 @@ var render = function() {
               {
                 key: "icon",
                 fn: function() {
-                  return [_vm._v("\n        @\n      ")]
+                  return [_vm._v(" @ ")]
                 },
                 proxy: true
               }
@@ -25543,7 +25695,18 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "px-8 ld:px-0 container mx-auto" }, [
-    _vm._m(0),
+    _c("div", { staticClass: "py-8 border-b" }, [
+      _c("div", { staticClass: "md:flex items-center justify-between" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-sm" }, [
+          _c("h2", [
+            _vm._v("\n          Payment ID: "),
+            _c("strong", [_vm._v(_vm._s(_vm.order.id))])
+          ])
+        ])
+      ])
+    ]),
     _vm._v(" "),
     _c("div", { staticClass: "py-8 border-b" }, [
       _c("div", { staticClass: "md:flex items-center justify-between" }, [
@@ -25561,10 +25724,315 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _vm._m(2)
+      _c("div", { staticClass: "mt-6 text-sm text-white" }, [
+        _c("div", { staticClass: "lg:grid grid-cols-2 gap-16" }, [
+          _c("table", { staticClass: "w-full" }, [
+            _c("tr", [
+              _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+                _vm._v("Nama Depan")
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+                _vm._v(
+                  "\n              " +
+                    _vm._s(_vm.user.first_name) +
+                    "\n            "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+                _vm._v("Nama Belakang")
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+                _vm._v(
+                  "\n              " +
+                    _vm._s(_vm.user.last_name) +
+                    "\n            "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+                _vm._v("Username Akun")
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+                _vm._v(
+                  "\n              " +
+                    _vm._s(_vm.user.username) +
+                    "\n            "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+                _vm._v("Nama Pembeli")
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+                _vm._v(
+                  "\n              " +
+                    _vm._s(_vm.order.username) +
+                    "\n            "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+                _vm._v("Email Pembeli")
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+                _vm._v(
+                  "\n              " +
+                    _vm._s(_vm.user.email_address) +
+                    "\n            "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+                _vm._v("Kelurahan")
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+                _vm._v(
+                  "\n              " +
+                    _vm._s(_vm.order.kelurahan) +
+                    "\n            "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+                _vm._v("Kecamatan")
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+                _vm._v(
+                  "\n              " +
+                    _vm._s(_vm.order.kecamatan) +
+                    "\n            "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+                _vm._v("Kota / Kabupaten")
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+                _vm._v(
+                  "\n              " +
+                    _vm._s(_vm.order.kabupaten) +
+                    "\n            "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+                _vm._v("Provinsi")
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+                _vm._v(
+                  "\n              " +
+                    _vm._s(_vm.order.provinsi) +
+                    "\n            "
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("table", { staticClass: "w-full" }, [
+            _c("tr", [
+              _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+                _vm._v("Nomor Telepon")
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+                _vm._v(
+                  "\n              " +
+                    _vm._s(_vm.order.nomor_telepon) +
+                    "\n            "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+                _vm._v("Alamat")
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+                _vm._v(
+                  "\n              " +
+                    _vm._s(_vm.order.address) +
+                    "\n            "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+                _vm._v("Kode Pos")
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+                _vm._v(
+                  "\n              " +
+                    _vm._s(_vm.order.kode_pos) +
+                    "\n            "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+                _vm._v("Nama Produk")
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+                _vm._v(
+                  "\n              " +
+                    _vm._s(_vm.order.product) +
+                    "\n            "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _vm._m(2),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+                _vm._v("Warna Produk")
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+                _vm._v(
+                  "\n              " +
+                    _vm._s(_vm.order.color) +
+                    "\n            "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+                _vm._v("Harga Produk")
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+                _vm._v(
+                  "\n              Rp " +
+                    _vm._s(_vm._f("formatPrice")(_vm.order.price)) +
+                    "\n            "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+                _vm._v("Ongkos Kirim")
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+                _vm._v(
+                  "\n              Rp " +
+                    _vm._s(
+                      _vm._f("formatPrice")(
+                        _vm.orderFee ? _vm.orderFee.ongkir : ""
+                      )
+                    ) +
+                    "\n            "
+                )
+              ])
+            ])
+          ])
+        ])
+      ])
     ]),
     _vm._v(" "),
-    _vm._m(3)
+    _c("div", { staticClass: "py-8 border-b" }, [
+      _c("div", { staticClass: "md:flex items-center justify-between" }, [
+        _vm._m(3),
+        _vm._v(" "),
+        _c(
+          "div",
+          [
+            _c(
+              "vs-button",
+              {
+                staticClass: "focus:outline-none",
+                attrs: {
+                  icon: _vm.success,
+                  upload: _vm.sending,
+                  color: _vm.success ? "success" : "primary"
+                }
+              },
+              [
+                !_vm.success
+                  ? _c("label", { attrs: { for: "payment_proof" } }, [
+                      _c("i", { staticClass: "bx bx-mail-send" }),
+                      _vm._v(
+                        "\n            Upload Bukti Pembayaran\n          "
+                      )
+                    ])
+                  : _c("i", { staticClass: "bx bx-check" })
+              ]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "hidden",
+              attrs: {
+                type: "file",
+                name: "payment_proof",
+                id: "payment_proof"
+              },
+              on: { change: _vm.uploadPaymentProof }
+            })
+          ],
+          1
+        )
+      ]),
+      _vm._v(" "),
+      _vm._m(4)
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "py-8" },
+      [
+        _c(
+          "vs-button",
+          {
+            attrs: {
+              block: "",
+              square: "",
+              border: "",
+              disabled: !_vm.success
+            },
+            on: { click: _vm.confirmPayment }
+          },
+          [
+            _c("p", { staticClass: "py-4 text-sm" }, [
+              _vm._v("Konfirmasi Pembayaran")
+            ])
+          ]
+        )
+      ],
+      1
+    )
   ])
 }
 var staticRenderFns = [
@@ -25572,19 +26040,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "py-8 border-b" }, [
-      _c("div", { staticClass: "md:flex items-center justify-between" }, [
-        _c("div", [
-          _c("h1", { staticClass: "font-bold text-4xl" }, [_vm._v("Invoice")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "text-sm" }, [
-          _c("h2", [
-            _vm._v("Payment ID: "),
-            _c("strong", [_vm._v("1092381203981")])
-          ])
-        ])
-      ])
+    return _c("div", [
+      _c("h1", { staticClass: "font-bold text-4xl" }, [_vm._v("Invoice")])
     ])
   },
   function() {
@@ -25601,173 +26058,13 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mt-6 text-sm text-white" }, [
-      _c("div", { staticClass: "lg:grid grid-cols-2 gap-16" }, [
-        _c("table", { staticClass: "w-full" }, [
-          _c("tr", [
-            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
-              _vm._v("Nama Depan")
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
-              _vm._v("Bram")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
-              _vm._v("Nama Belakang")
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
-              _vm._v("Adl")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
-              _vm._v("Username")
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
-              _vm._v("bramadl")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
-              _vm._v("Email Address")
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
-              _vm._v("\n              Thenamesbram@gmail.com\n            ")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
-              _vm._v("Kelurahan")
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
-              _vm._v("Penggilingan")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
-              _vm._v("Kecamatan")
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
-              _vm._v("Cakung")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
-              _vm._v("Kota / Kabupaten")
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
-              _vm._v("Jakarta Timur")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
-              _vm._v("Provinsi")
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
-              _vm._v("DKI Jakarta")
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("table", { staticClass: "w-full" }, [
-          _c("tr", [
-            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
-              _vm._v("Nomor Telepon")
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
-              _vm._v("081283709830")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
-              _vm._v("Alamat")
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
-              _vm._v(
-                "\n              Perumahan Aneka Elok, Blok GXI no 11\n            "
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
-              _vm._v("Kode Pos")
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
-              _vm._v("19340")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
-              _vm._v("Nama Produk")
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
-              _vm._v("T-Shirt")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
-              _vm._v("Jumlah Produk")
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
-              _vm._v("1")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
-              _vm._v("Warna Produk")
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
-              _vm._v("Hitam")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
-              _vm._v("Harga Produk")
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
-              _vm._v("Rp 90.000")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
-              _vm._v("Ongkos Kirim")
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
-              _vm._v("Rp 40.000")
-            ])
-          ])
-        ])
+    return _c("tr", [
+      _c("td", { staticClass: "border-b border-gray-600 py-4" }, [
+        _vm._v("Jumlah Produk")
+      ]),
+      _vm._v(" "),
+      _c("td", { staticClass: "w-3/4 border-b border-gray-600 py-4" }, [
+        _vm._v("1")
       ])
     ])
   },
@@ -25775,35 +26072,59 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "py-8 border-b" }, [
-      _c("div", { staticClass: "md:flex items-center justify-between" }, [
-        _c("div", [
-          _c("h1", { staticClass: "text-xl font-bold uppercase" }, [
-            _vm._v("\n          Metode Pembayaran\n        ")
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "md:inline-grid grid-cols-2 gap-10 mt-12" }, [
+    return _c("div", [
+      _c("h1", { staticClass: "text-xl font-bold uppercase" }, [
+        _vm._v("Metode Pembayaran")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "md:inline-grid grid-cols-2 gap-10 mt-12" },
+      [
         _c(
           "div",
           {
             staticClass:
-              "inline-block px-16 py-12 rounded border cursor-pointer hover:bg-gray-50 hover:text-gray-900 transition ease-out duration-300"
+              "inline-flex items-center justify-center px-4 py-6 rounded border cursor-pointer hover:bg-gray-50 hover:text-gray-900 transition ease-out duration-300"
           },
-          [_c("p", { staticClass: "text-center" }, [_vm._v("Bank Mandiri")])]
+          [
+            _c("div", { staticClass: "text-center" }, [
+              _c("p", [_vm._v("Bank Mandiri")]),
+              _vm._v(" "),
+              _c("span", { staticClass: "text-sm" }, [
+                _vm._v("A/N Sheila Istiningtyas Padmarini "),
+                _c("br"),
+                _vm._v("\n            1240007458095‬")
+              ])
+            ])
+          ]
         ),
         _vm._v(" "),
         _c(
           "div",
           {
             staticClass:
-              "inline-block px-16 py-12 rounded border cursor-pointer hover:bg-gray-50 hover:text-gray-900 transition ease-out duration-300"
+              "inline-flex items-center justify-center px-4 py-6 rounded border cursor-pointer hover:bg-gray-50 hover:text-gray-900 transition ease-out duration-300"
           },
-          [_c("p", { staticClass: "text-center" }, [_vm._v("Bank BCA")])]
+          [
+            _c("div", { staticClass: "text-center" }, [
+              _c("p", [_vm._v("Bank BCA")]),
+              _vm._v(" "),
+              _c("span", { staticClass: "text-sm" }, [
+                _vm._v("A/N Sheila Istiningtyas Padmarini "),
+                _c("br"),
+                _vm._v("\n            3151179299\n          ")
+              ])
+            ])
+          ]
         )
-      ])
-    ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -69578,6 +69899,13 @@ __webpack_require__.r(__webpack_exports__);
 
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vuesax__WEBPACK_IMPORTED_MODULE_2___default.a, {});
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_carousel__WEBPACK_IMPORTED_MODULE_3___default.a);
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.filter('formatPrice', function (price) {
+  if (!price) return "";
+  var reverse = price.toString().split("").reverse().join("");
+  var ribuan = reverse.match(/\d{1,3}/g);
+  ribuan = ribuan.join(".").split("").reverse().join("");
+  return ribuan;
+});
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.config.productionTip = false;
 window.$eventBus = new vue__WEBPACK_IMPORTED_MODULE_1___default.a();
 var vm = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
@@ -69606,6 +69934,7 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.baseURL = 'http://localhost:8001/api/';
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
@@ -70587,7 +70916,7 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         id: 8,
         title: "Bundle B",
-        price: 120000,
+        price: 125000,
         img_urls: ["totte_bag_white_front.png", "e_money_front.png", "lanyard.png"],
         tag: "bundle_b",
         images: [{
@@ -70620,45 +70949,75 @@ __webpack_require__.r(__webpack_exports__);
         value: "aceh",
         ongkir: 60000
       }, {
-        id: 1,
-        label: "Sumatera Utara",
-        value: "Sumatera Utara",
-        ongkir: 45000
-      }, {
-        id: 2,
-        label: "Sumatera Barat",
-        value: "Sumatera Barat",
-        ongkir: 45000
-      }, {
         id: 3,
         label: "Bali",
         value: "Bali",
         ongkir: 20000
       }, {
-        id: 4,
-        label: "NTB",
-        value: "NTB",
+        id: 28,
+        label: "Bangka Belitung",
+        value: "Bangka Belitung",
+        ongkir: 40000
+      }, {
+        id: 26,
+        label: "Banten",
+        value: "Banten",
+        ongkir: 25000
+      }, {
+        id: 31,
+        label: "Bengkulu",
+        value: "Bengkulu",
+        ongkir: 45000
+      }, {
+        id: 23,
+        label: "DI Yogyakarta",
+        value: "DI Yogyakarta",
+        ongkir: 15000
+      }, {
+        id: 24,
+        label: "DKI Jakarta",
+        value: "DKI Jakarta",
         ongkir: 20000
       }, {
-        id: 5,
-        label: "NTT",
-        value: "NTT",
-        ongkir: 60000
+        id: 12,
+        label: "Gorontalo",
+        value: "Gorontalo",
+        ongkir: 70000
+      }, {
+        id: 29,
+        label: "Jambi",
+        value: "Jambi",
+        ongkir: 40000
+      }, {
+        id: 25,
+        label: "Jawa Barat",
+        value: "Jawa Barat",
+        ongkir: 20000
+      }, {
+        id: 22,
+        label: "Jawa Tengah",
+        value: "Jawa Tengah",
+        ongkir: 15000
+      }, {
+        id: 21,
+        label: "Jawa Timur",
+        value: "Jawa Timur",
+        ongkir: 10000
       }, {
         id: 6,
         label: "Kalimantan Barat",
         value: "Kalimantan Barat",
         ongkir: 40000
       }, {
-        id: 7,
-        label: "Kalimantan Tengah",
-        value: "Kalimantan Tengah",
-        ongkir: 50000
-      }, {
         id: 8,
         label: "Kalimantan Selatan",
         value: "Kalimantan Selatan",
         ongkir: 30000
+      }, {
+        id: 7,
+        label: "Kalimantan Tengah",
+        value: "Kalimantan Tengah",
+        ongkir: 50000
       }, {
         id: 9,
         label: "Kalimantan Timur",
@@ -70670,19 +71029,49 @@ __webpack_require__.r(__webpack_exports__);
         value: "Kalimantan Utara",
         ongkir: 50000
       }, {
-        id: 11,
-        label: "Sulawesi Utara",
-        value: "Sulawesi Utara",
-        ongkir: 67000
+        id: 32,
+        label: "Kepulauan Riau",
+        value: "Kepulauan Riau",
+        ongkir: 50000
       }, {
-        id: 12,
-        label: "Gorontalo",
-        value: "Gorontalo",
+        id: 30,
+        label: "Lampung",
+        value: "Lampung",
+        ongkir: 40000
+      }, {
+        id: 17,
+        label: "Maluku",
+        value: "Maluku_",
         ongkir: 70000
       }, {
-        id: 13,
-        label: "Sulawesi Tengah",
-        value: "Sulawesi Tengah",
+        id: 18,
+        label: "Maluku Utara",
+        value: "Maluku Utara",
+        ongkir: 70000
+      }, {
+        id: 4,
+        label: "NTB",
+        value: "NTB",
+        ongkir: 20000
+      }, {
+        id: 5,
+        label: "NTT",
+        value: "NTT",
+        ongkir: 60000
+      }, {
+        id: 19,
+        label: "Papua Barat",
+        value: "Papua Barat",
+        ongkir: 145000
+      }, {
+        id: 20,
+        label: "Papua",
+        value: "Papua_",
+        ongkir: 115000
+      }, {
+        id: 33,
+        label: "Riau",
+        value: "Riau_",
         ongkir: 50000
       }, {
         id: 14,
@@ -70695,95 +71084,35 @@ __webpack_require__.r(__webpack_exports__);
         value: "Sulawesi Selatan",
         ongkir: 40000
       }, {
+        id: 13,
+        label: "Sulawesi Tengah",
+        value: "Sulawesi Tengah",
+        ongkir: 50000
+      }, {
         id: 16,
         label: "Sulawesi Tenggara",
         value: "Sulawesi Tenggara",
         ongkir: 60000
       }, {
-        id: 17,
-        label: "Maluku",
-        value: "Maluku_",
-        ongkir: 70000
+        id: 11,
+        label: "Sulawesi Utara",
+        value: "Sulawesi Utara",
+        ongkir: 67000
       }, {
-        id: 18,
-        label: "Maluku Utara",
-        value: "Maluku Utara",
-        ongkir: 70000
-      }, {
-        id: 19,
-        label: "Papua Barat",
-        value: "Papua Barat",
-        ongkir: 145000
-      }, {
-        id: 20,
-        label: "Papua",
-        value: "Papua_",
-        ongkir: 115000
-      }, {
-        id: 21,
-        label: "Jawa Timur",
-        value: "Jawa Timur",
-        ongkir: 10000
-      }, {
-        id: 22,
-        label: "Jawa Tengah",
-        value: "Jawa Tengah",
-        ongkir: 15000
-      }, {
-        id: 23,
-        label: "DIY",
-        value: "DIY",
-        ongkir: 15000
-      }, {
-        id: 24,
-        label: "Jakarta",
-        value: "Jakarta",
-        ongkir: 20000
-      }, {
-        id: 25,
-        label: "Jawa Barat",
-        value: "Jawa Barat",
-        ongkir: 20000
-      }, {
-        id: 26,
-        label: "Banten",
-        value: "Banten",
-        ongkir: 25000
+        id: 2,
+        label: "Sumatera Barat",
+        value: "Sumatera Barat",
+        ongkir: 45000
       }, {
         id: 27,
         label: "Sumatera Selatan",
         value: "Sumatera Selatan",
         ongkir: 40000
       }, {
-        id: 28,
-        label: "Bangka Belitung",
-        value: "Bangka Belitung",
-        ongkir: 40000
-      }, {
-        id: 29,
-        label: "Jambi",
-        value: "Jambi",
-        ongkir: 40000
-      }, {
-        id: 30,
-        label: "Lampung",
-        value: "Lampung",
-        ongkir: 40000
-      }, {
-        id: 31,
-        label: "Bengkulu",
-        value: "Bengkulu",
+        id: 1,
+        label: "Sumatera Utara",
+        value: "Sumatera Utara",
         ongkir: 45000
-      }, {
-        id: 32,
-        label: "Kepulauan Riau",
-        value: "Kepulauan Riau",
-        ongkir: 50000
-      }, {
-        id: 33,
-        label: "Riau",
-        value: "Riau_",
-        ongkir: 50000
       }]
     };
   }
@@ -71168,7 +71497,7 @@ var routes = [{
   name: 'product.details',
   component: __webpack_require__(/*! ../pages/Products.vue */ "./resources/js/pages/Products.vue")["default"]
 }, {
-  path: '/payments/bramadl',
+  path: '/payments/:id/:username',
   name: 'product.payments',
   component: __webpack_require__(/*! ../pages/Payments.vue */ "./resources/js/pages/Payments.vue")["default"]
 }, {
