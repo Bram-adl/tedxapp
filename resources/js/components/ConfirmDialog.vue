@@ -132,7 +132,6 @@ export default {
         !this.$route.query.tag.startsWith('totte_bag') &&
         !this.$route.query.tag.startsWith("bundle_")
       ) {
-        console.log(this.$route.query.tag)
         return "-";
       } else {
         return this.formData.color
