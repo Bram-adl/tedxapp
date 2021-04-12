@@ -129,8 +129,10 @@ export default {
     color() {
       if (
         !this.$route.query.tag.startsWith("tshirt") &&
+        !this.$route.query.tag.startsWith('totte_bag') &&
         !this.$route.query.tag.startsWith("bundle_")
       ) {
+        console.log(this.$route.query.tag)
         return "-";
       } else {
         return this.formData.color
