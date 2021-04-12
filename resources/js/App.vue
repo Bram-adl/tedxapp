@@ -41,8 +41,6 @@ export default {
     storeUser(token, uid) {
       axios.get(`/audiens/${uid}/verify/${token}`)
         .then(({ data }) => {
-          console.log("test")
-          console.log(data)
           if (data.success) {
             this.$store.dispatch("storeUser", data.data)
           }

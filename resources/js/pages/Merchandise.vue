@@ -2,28 +2,34 @@
   <div class="pt-40 pb-20 h-screen overflow-auto">
     <div class="container mx-auto">
       <div class="grid grid-cols-3 gap-12">
-        <vs-card class="tx-vs-card" v-for="item in 12" :key="item">
+        <vs-card v-for="merchandise in merchandises" :key="merchandise.id" class="tx-vs-card">
           <template #title>
-            <h3>Bundle 1</h3>
+            <h3>{{ merchandise.product }}</h3>
           </template>
           <template #img>
-            <img
-              src="https://images.unsplash.com/photo-1592799093260-adbec9c7abdf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHNoaXJ0fGVufDB8MnwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-              alt=""
-            />
+            <div v-for="(img, index) in getImage(merchandise.id)" :key="index">
+              <img
+                :src="img"
+              />
+              {{ img }}
+            </div>
           </template>
           <template #text>
-            <p>Rp.150.000,00</p>
+            <p>Rp {{ merchandise.price | formatPrice }}</p>
           </template>
           <template #interactions>
             <vs-button
               gradient
               style="min-width: 60px"
-              danger
+              :danger="merchandise.status === 'declined'"
+              :warn="merchandise.status === 'pending'"
+              :success="merchandise.status === 'confirmed'"
               animation-type="scale"
             >
               <span>Check Status</span>
-              <template #animate> Pending </template>
+              <template #animate>
+                {{ merchandise.status }}
+              </template>
             </vs-button>
           </template>
         </vs-card>
@@ -33,7 +39,73 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Merchandise",
+  data() {
+    return {
+      merchandises: []
+    }
+  },
+  created() {
+    this.fetchProducts()
+  },
+  methods: {
+    fetchProducts() {
+      const userId = localStorage.getItem('_uid');
+      
+      axios.get(`/audiens/${userId}/orders`)
+        .then(({ data }) => {
+          this.merchandises = data.merchandises
+        })
+        .catch(({ response }) => {
+          console.log(response.data)
+        })
+    },
+    getImage(id) {
+      const merchandise = this.merchandises.filter(merchandise => merchandise.id === id)[0]
+
+      if (merchandise.product === "T-Shirt") {
+        return merchandise.color === "black"
+          ? ['/img/products/tshirt_black_front.png']
+          : ['/img/products/tshirt_white_front.png']
+      } else if (merchandise.product === "Totte Bag") {
+        return merchandise.color === "black"
+          ? ['/img/products/totte_bag_black_front.png']
+          : ['/img/products/totte_bag_white_front.png']
+      } else if (merchandise.product === "E Money") {
+        return ['/img/products/e_money_front.png']
+      } else if (merchandise.product === "Sticker") {
+        return ['/img/products/sticker.png']
+      } else if (merchandise.product === "Lanyard") {
+        return ['/img/products/lanyard.png']
+      } else if (merchandise.product === "Bundle A") {
+        return merchandise.color === "black"
+          ? [
+              '/img/products/tshirt_black_front.png',
+              '/img/products/totte_bag_black_front.png',
+              '/img/products/sticker.png',
+            ]
+          : [
+              '/img/products/tshirt_white_front.png',
+              '/img/products/totte_bag_white_front.png',
+              '/img/products/sticker.png',
+            ]
+      } else if (merchandise.product === "Bundle B") {
+        return merchandise.color === "black"
+          ? [
+              '/img/products/totte_bag_black_front.png',
+              '/img/products/e_money_front.png',
+              '/img/products/lanyard.png',
+            ]
+          : [
+              '/img/products/totte_bag_white_front.png',
+              '/img/products/e_money_front.png',
+              '/img/products/lanyard.png',
+            ]
+      }
+    }
+  }
+};
 </script>
 
 <style>

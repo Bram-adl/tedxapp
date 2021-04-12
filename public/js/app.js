@@ -1967,8 +1967,6 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get("/audiens/".concat(uid, "/verify/").concat(token)).then(function (_ref) {
         var data = _ref.data;
-        console.log("test");
-        console.log(data);
 
         if (data.success) {
           _this2.$store.dispatch("storeUser", data.data);
@@ -3255,6 +3253,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -3481,7 +3481,58 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Merchandise",
+  data: function data() {
+    return {
+      merchandises: []
+    };
+  },
+  created: function created() {
+    this.fetchProducts();
+  },
+  methods: {
+    fetchProducts: function fetchProducts() {
+      var _this = this;
+
+      var userId = localStorage.getItem('_uid');
+      axios.get("/audiens/".concat(userId, "/orders")).then(function (_ref) {
+        var data = _ref.data;
+        _this.merchandises = data.merchandises;
+      })["catch"](function (_ref2) {
+        var response = _ref2.response;
+        console.log(response.data);
+      });
+    },
+    getImage: function getImage(id) {
+      var merchandise = this.merchandises.filter(function (merchandise) {
+        return merchandise.id === id;
+      })[0];
+
+      if (merchandise.product === "T-Shirt") {
+        return merchandise.color === "black" ? ['/img/products/tshirt_black_front.png'] : ['/img/products/tshirt_white_front.png'];
+      } else if (merchandise.product === "Totte Bag") {
+        return merchandise.color === "black" ? ['/img/products/totte_bag_black_front.png'] : ['/img/products/totte_bag_white_front.png'];
+      } else if (merchandise.product === "E Money") {
+        return ['/img/products/e_money_front.png'];
+      } else if (merchandise.product === "Sticker") {
+        return ['/img/products/sticker.png'];
+      } else if (merchandise.product === "Lanyard") {
+        return ['/img/products/lanyard.png'];
+      } else if (merchandise.product === "Bundle A") {
+        return merchandise.color === "black" ? ['/img/products/tshirt_black_front.png', '/img/products/totte_bag_black_front.png', '/img/products/sticker.png'] : ['/img/products/tshirt_white_front.png', '/img/products/totte_bag_white_front.png', '/img/products/sticker.png'];
+      } else if (merchandise.product === "Bundle B") {
+        return merchandise.color === "black" ? ['/img/products/totte_bag_black_front.png', '/img/products/e_money_front.png', '/img/products/lanyard.png'] : ['/img/products/totte_bag_white_front.png', '/img/products/e_money_front.png', '/img/products/lanyard.png'];
+      }
+    }
+  }
+});
 
 /***/ }),
 
@@ -25668,9 +25719,52 @@ var render = function() {
                 "border-2 border-gray-600 rounded-lg inline-block w-auto px-10 py-8"
             },
             [
-              _vm._m(2),
+              _c("div", { staticClass: "tx-image-profile-wrapper mb-8" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "w-20 h-20 bg-blue-900 rounded-full inline-flex items-center justify-center"
+                  },
+                  [
+                    _c("h1", { staticClass: "font-bold text-2xl" }, [
+                      _vm._v(
+                        "\n                " +
+                          _vm._s(
+                            _vm.$store.state.user.first_name
+                              ? _vm.$store.state.user.first_name[0]
+                              : _vm.$store.state.user.first_name
+                          ) +
+                          _vm._s(
+                            _vm.$store.state.user.last_name
+                              ? _vm.$store.state.user.last_name[0]
+                              : _vm.$store.state.user.last_name
+                          ) +
+                          "\n              "
+                      )
+                    ])
+                  ]
+                )
+              ]),
               _vm._v(" "),
               _c("div", { staticClass: "w-96" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "flex items-center justify-between text-sm border-b border-gray-400 py-4"
+                  },
+                  [
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "w-2/3" }, [
+                      _c("div", [
+                        _vm._v(_vm._s(_vm.$store.state.user.first_name))
+                      ])
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
                 _c(
                   "div",
                   {
@@ -25682,17 +25776,45 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "w-2/3" }, [
                       _c("div", [
-                        _vm._v(_vm._s(_vm.$store.state.user.first_name))
+                        _vm._v(_vm._s(_vm.$store.state.user.last_name))
                       ])
                     ])
                   ]
                 ),
                 _vm._v(" "),
-                _vm._m(4),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "flex items-center justify-between text-sm border-b border-gray-400 py-4"
+                  },
+                  [
+                    _vm._m(4),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "w-2/3" }, [
+                      _c("div", [
+                        _vm._v(_vm._s(_vm.$store.state.user.username))
+                      ])
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
-                _vm._m(5),
-                _vm._v(" "),
-                _vm._m(6)
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "flex items-center justify-between text-sm border-gray-400 py-4"
+                  },
+                  [
+                    _vm._m(5),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "w-2/3" }, [
+                      _c("div", [
+                        _vm._v(_vm._s(_vm.$store.state.user.email_address))
+                      ])
+                    ])
+                  ]
+                )
               ])
             ]
           )
@@ -25726,21 +25848,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "tx-image-profile-wrapper mb-8" }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "w-20 h-20 bg-blue-900 rounded-full inline-flex items-center justify-center"
-        },
-        [_c("h1", { staticClass: "font-bold text-2xl" }, [_vm._v("I")])]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "w-1/3" }, [
       _c("label", { attrs: { for: "username" } }, [_vm._v("First Name")])
     ])
@@ -25749,62 +25856,25 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "flex items-center justify-between text-sm border-b border-gray-400 py-4"
-      },
-      [
-        _c("div", { staticClass: "w-1/3" }, [
-          _c("label", { attrs: { for: "username" } }, [_vm._v("Last Name")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "w-2/3" }, [_c("div", [_vm._v("Maulana")])])
-      ]
-    )
+    return _c("div", { staticClass: "w-1/3" }, [
+      _c("label", { attrs: { for: "username" } }, [_vm._v("Last Name")])
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "flex items-center justify-between text-sm border-b border-gray-400 py-4"
-      },
-      [
-        _c("div", { staticClass: "w-1/3" }, [
-          _c("label", { attrs: { for: "username" } }, [_vm._v("Username")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "w-2/3" }, [
-          _c("div", [_vm._v("Iqbal Maulana")])
-        ])
-      ]
-    )
+    return _c("div", { staticClass: "w-1/3" }, [
+      _c("label", { attrs: { for: "username" } }, [_vm._v("Username")])
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "flex items-center justify-between text-sm border-gray-400 py-4"
-      },
-      [
-        _c("div", { staticClass: "w-1/3" }, [
-          _c("label", { attrs: { for: "username" } }, [_vm._v("Email Address")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "w-2/3" }, [
-          _c("div", [_vm._v("IqbalMaulana@gmail.cmo")])
-        ])
-      ]
-    )
+    return _c("div", { staticClass: "w-1/3" }, [
+      _c("label", { attrs: { for: "username" } }, [_vm._v("Email Address")])
+    ])
   }
 ]
 render._withStripped = true
@@ -26084,38 +26154,45 @@ var render = function() {
       _c(
         "div",
         { staticClass: "grid grid-cols-3 gap-12" },
-        _vm._l(12, function(item) {
+        _vm._l(_vm.merchandises, function(merchandise) {
           return _c("vs-card", {
-            key: item,
+            key: merchandise.id,
             staticClass: "tx-vs-card",
             scopedSlots: _vm._u(
               [
                 {
                   key: "title",
                   fn: function() {
-                    return [_c("h3", [_vm._v("Bundle 1")])]
+                    return [_c("h3", [_vm._v(_vm._s(merchandise.product))])]
                   },
                   proxy: true
                 },
                 {
                   key: "img",
                   fn: function() {
-                    return [
-                      _c("img", {
-                        attrs: {
-                          src:
-                            "https://images.unsplash.com/photo-1592799093260-adbec9c7abdf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHNoaXJ0fGVufDB8MnwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-                          alt: ""
-                        }
-                      })
-                    ]
+                    return _vm._l(_vm.getImage(merchandise.id), function(
+                      img,
+                      index
+                    ) {
+                      return _c("div", { key: index }, [
+                        _c("img", { attrs: { src: img } }),
+                        _vm._v("\n            " + _vm._s(img) + "\n          ")
+                      ])
+                    })
                   },
                   proxy: true
                 },
                 {
                   key: "text",
                   fn: function() {
-                    return [_c("p", [_vm._v("Rp.150.000,00")])]
+                    return [
+                      _c("p", [
+                        _vm._v(
+                          "Rp " +
+                            _vm._s(_vm._f("formatPrice")(merchandise.price))
+                        )
+                      ])
+                    ]
                   },
                   proxy: true
                 },
@@ -26129,7 +26206,9 @@ var render = function() {
                           staticStyle: { "min-width": "60px" },
                           attrs: {
                             gradient: "",
-                            danger: "",
+                            danger: merchandise.status === "declined",
+                            warn: merchandise.status === "pending",
+                            success: merchandise.status === "confirmed",
                             "animation-type": "scale"
                           },
                           scopedSlots: _vm._u(
@@ -26137,7 +26216,13 @@ var render = function() {
                               {
                                 key: "animate",
                                 fn: function() {
-                                  return [_vm._v(" Pending ")]
+                                  return [
+                                    _vm._v(
+                                      "\n              " +
+                                        _vm._s(merchandise.status) +
+                                        "\n            "
+                                    )
+                                  ]
                                 },
                                 proxy: true
                               }

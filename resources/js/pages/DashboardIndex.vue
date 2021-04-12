@@ -19,7 +19,9 @@
               <div
                 class="w-20 h-20 bg-blue-900 rounded-full inline-flex items-center justify-center"
               >
-                <h1 class="font-bold text-2xl">I</h1>
+                <h1 class="font-bold text-2xl">
+                  {{ $store.state.user.first_name ? $store.state.user.first_name[0] : $store.state.user.first_name  }}{{ $store.state.user.last_name ? $store.state.user.last_name[0] : $store.state.user.last_name  }}
+                </h1>
               </div>
             </div>
             <div class="w-96">
@@ -36,7 +38,7 @@
                   <label for="username">Last Name</label>
                 </div>
                 <div class="w-2/3">
-                  <div>Maulana</div>
+                  <div>{{ $store.state.user.last_name }}</div>
                 </div>
               </div>
               <div class="flex items-center justify-between text-sm border-b border-gray-400 py-4">
@@ -44,7 +46,7 @@
                   <label for="username">Username</label>
                 </div>
                 <div class="w-2/3">
-                  <div>Iqbal Maulana</div>
+                  <div>{{ $store.state.user.username }}</div>
                 </div>
               </div>
               <div class="flex items-center justify-between text-sm border-gray-400 py-4">
@@ -52,7 +54,7 @@
                   <label for="username">Email Address</label>
                 </div>
                 <div class="w-2/3">
-                  <div>IqbalMaulana@gmail.cmo</div>
+                  <div>{{ $store.state.user.email_address }}</div>
                 </div>
               </div>
             </div>
