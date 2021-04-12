@@ -28,7 +28,7 @@
                   <label for="username">First Name</label>
                 </div>
                 <div class="w-2/3">
-                  <div>Iqbal</div>
+                  <div>{{ $store.state.user.first_name }}</div>
                 </div>
               </div>
               <div class="flex items-center justify-between text-sm border-b border-gray-400 py-4">

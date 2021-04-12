@@ -22,5 +22,3 @@ Route::view('/payments/{id}/{username}', 'index')->where(['id' => '[0-9]+', 'use
 
 Route::post("/auth/login", "Auth\LoginController@login");
 Route::post("/auth/register", "Auth\RegisterController@register");
-
-Route::get("/audiens/{id}/verify/{token}", "AudiensController@verify");

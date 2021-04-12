@@ -1967,6 +1967,8 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get("/audiens/".concat(uid, "/verify/").concat(token)).then(function (_ref) {
         var data = _ref.data;
+        console.log("test");
+        console.log(data);
 
         if (data.success) {
           _this2.$store.dispatch("storeUser", data.data);
@@ -25651,136 +25653,158 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "mt-40" }, [
+    _c("div", { staticClass: "container mx-auto" }, [
+      _c("div", { staticClass: "tx-container" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", {}, [
+          _vm._m(1),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "border-2 border-gray-600 rounded-lg inline-block w-auto px-10 py-8"
+            },
+            [
+              _vm._m(2),
+              _vm._v(" "),
+              _c("div", { staticClass: "w-96" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "flex items-center justify-between text-sm border-b border-gray-400 py-4"
+                  },
+                  [
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "w-2/3" }, [
+                      _c("div", [
+                        _vm._v(_vm._s(_vm.$store.state.user.first_name))
+                      ])
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _vm._m(4),
+                _vm._v(" "),
+                _vm._m(5),
+                _vm._v(" "),
+                _vm._m(6)
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mt-40" }, [
-      _c("div", { staticClass: "container mx-auto" }, [
-        _c("div", { staticClass: "tx-container" }, [
-          _c("div", { staticClass: "mb-6" }, [
-            _c("h1", { staticClass: "text-4xl font-medium" }, [
-              _vm._v("\n            Selamat Datang di "),
-              _c("span", { staticClass: "text-red-600" }, [_vm._v("TEDx")]),
-              _vm._v("UniversitasBrawijaya\n          ")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", {}, [
-            _c("div", { staticClass: "mb-2" }, [
-              _c("h1", { staticClass: "font-light text-xl" }, [
-                _vm._v("Profile")
-              ])
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "border-2 border-gray-600 rounded-lg inline-block w-auto px-10 py-8"
-              },
-              [
-                _c("div", { staticClass: "tx-image-profile-wrapper mb-8" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "w-20 h-20 bg-blue-900 rounded-full inline-flex items-center justify-center"
-                    },
-                    [
-                      _c("h1", { staticClass: "font-bold text-2xl" }, [
-                        _vm._v("I")
-                      ])
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "w-96" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "flex items-center justify-between text-sm border-b border-gray-400 py-4"
-                    },
-                    [
-                      _c("div", { staticClass: "w-1/3" }, [
-                        _c("label", { attrs: { for: "username" } }, [
-                          _vm._v("First Name")
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "w-2/3" }, [
-                        _c("div", [_vm._v("Iqbal")])
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "flex items-center justify-between text-sm border-b border-gray-400 py-4"
-                    },
-                    [
-                      _c("div", { staticClass: "w-1/3" }, [
-                        _c("label", { attrs: { for: "username" } }, [
-                          _vm._v("Last Name")
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "w-2/3" }, [
-                        _c("div", [_vm._v("Maulana")])
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "flex items-center justify-between text-sm border-b border-gray-400 py-4"
-                    },
-                    [
-                      _c("div", { staticClass: "w-1/3" }, [
-                        _c("label", { attrs: { for: "username" } }, [
-                          _vm._v("Username")
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "w-2/3" }, [
-                        _c("div", [_vm._v("Iqbal Maulana")])
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "flex items-center justify-between text-sm border-gray-400 py-4"
-                    },
-                    [
-                      _c("div", { staticClass: "w-1/3" }, [
-                        _c("label", { attrs: { for: "username" } }, [
-                          _vm._v("Email Address")
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "w-2/3" }, [
-                        _c("div", [_vm._v("IqbalMaulana@gmail.cmo")])
-                      ])
-                    ]
-                  )
-                ])
-              ]
-            )
-          ])
-        ])
+    return _c("div", { staticClass: "mb-6" }, [
+      _c("h1", { staticClass: "text-4xl font-medium" }, [
+        _vm._v("\n            Selamat Datang di "),
+        _c("span", { staticClass: "text-red-600" }, [_vm._v("TEDx")]),
+        _vm._v("UniversitasBrawijaya\n          ")
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mb-2" }, [
+      _c("h1", { staticClass: "font-light text-xl" }, [_vm._v("Profile")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "tx-image-profile-wrapper mb-8" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "w-20 h-20 bg-blue-900 rounded-full inline-flex items-center justify-center"
+        },
+        [_c("h1", { staticClass: "font-bold text-2xl" }, [_vm._v("I")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-1/3" }, [
+      _c("label", { attrs: { for: "username" } }, [_vm._v("First Name")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "flex items-center justify-between text-sm border-b border-gray-400 py-4"
+      },
+      [
+        _c("div", { staticClass: "w-1/3" }, [
+          _c("label", { attrs: { for: "username" } }, [_vm._v("Last Name")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "w-2/3" }, [_c("div", [_vm._v("Maulana")])])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "flex items-center justify-between text-sm border-b border-gray-400 py-4"
+      },
+      [
+        _c("div", { staticClass: "w-1/3" }, [
+          _c("label", { attrs: { for: "username" } }, [_vm._v("Username")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "w-2/3" }, [
+          _c("div", [_vm._v("Iqbal Maulana")])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "flex items-center justify-between text-sm border-gray-400 py-4"
+      },
+      [
+        _c("div", { staticClass: "w-1/3" }, [
+          _c("label", { attrs: { for: "username" } }, [_vm._v("Email Address")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "w-2/3" }, [
+          _c("div", [_vm._v("IqbalMaulana@gmail.cmo")])
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -70401,7 +70425,7 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-window.axios.defaults.baseURL = 'http://admin.tedxuniversitasbrawijaya.com/api/';
+window.axios.defaults.baseURL = 'http://localhost:8001/api';
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
