@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="crsf-token" content="{{ crsf_token() }}">
 
     <title>TEDxUniversitasBrawijaya 2021</title>
 
@@ -37,6 +36,8 @@
 
 <body>
     <div id="app"></div>
+    
+    <script>window.Laravel = {csrfToken: '{{ csrf_token() }}'}</script>
 </body>
 
 </html>
