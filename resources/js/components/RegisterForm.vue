@@ -93,7 +93,7 @@ export default {
       });
 
       axios
-        .post(`${window.location.origin}/auth/register`, {
+        .post(`http://app.tedxuniversitasbrawijaya.com/auth/register`, {
           first_name: this.registerForm.firstName,
           last_name: this.registerForm.lastName,
           email_address: this.registerForm.email,

@@ -65,7 +65,7 @@ export default {
       });
 
       axios
-        .post(`${window.location.origin}/auth/login`, {
+        .post(`http://app.tedxuniversitasbrawijaya.com/auth/login`, {
           email_address: this.loginForm.email,
           password: this.loginForm.password,
         })
