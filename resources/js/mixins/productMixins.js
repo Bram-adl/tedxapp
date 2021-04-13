@@ -107,7 +107,7 @@ export default {
                 {
                     id: 8,
                     title: "Bundle B",
-                    price: 120000,
+                    price: 125000,
                     img_urls: [
                         "bundle_b.png"
                     ],
