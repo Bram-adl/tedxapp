@@ -288,6 +288,11 @@ export default {
       }
     },
   },
+  mounted () {
+    if (this.$route.query.tag === "bundle_b") {
+      return this.$router.replace('/')
+    }
+  }
 };
 </script>
 

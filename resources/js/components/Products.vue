@@ -3,7 +3,7 @@
     <vs-card
       v-for="product in products"
       :key="product.id"
-      @click="redirectToProductDetailPage(product.link_to)"
+      @click="redirectToProductDetailPage(product)"
     >
       <template #title>
         <h3>{{ product.title }}</h3>
@@ -21,9 +21,13 @@
         <p>Rp {{ product.price | formatPrice }}</p>
       </template>
       <template #interactions>
-        <vs-button gradient style="min-width: 60px" warn animation-type="scale">
+        <vs-button v-if="product.available" gradient style="min-width: 60px" warn animation-type="scale">
           <i class="bx bxs-shopping-bag"></i>
           <template #animate> Beli </template>
+        </vs-button>
+        <vs-button v-else gradient style="min-width: 60px" danger animation-type="scale">
+          <i class="bx bxs-shopping-bag"></i>
+          <template #animate> Sold Out </template>
         </vs-button>
       </template>
     </vs-card>
@@ -39,8 +43,11 @@ export default {
     productMixins
   ],
   methods: {
-    redirectToProductDetailPage(link) {
-      this.$router.push(link);
+    redirectToProductDetailPage(product) {
+      const { link_to, available } = product
+      if (available) {
+        this.$router.push(link_to);
+      }
     },
   }
 };
