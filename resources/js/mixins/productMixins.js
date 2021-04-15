@@ -20,7 +20,8 @@ export default {
                         }
                     ],
                     tag: "tshirt",
-                    link_to: "/products/detail?tag=tshirt"
+                    link_to: "/products/detail?tag=tshirt",
+                    available: true
                 },
                 {
                     id: 1,
@@ -40,7 +41,8 @@ export default {
                         }
                     ],
                     tag: "totte_bag",
-                    link_to: "/products/detail?tag=totte_bag"
+                    link_to: "/products/detail?tag=totte_bag",
+                    available: true
                 },
                 {
                     id: 2,
@@ -52,7 +54,8 @@ export default {
                         "e_money_back.png",
                     ],
                     tag: "e_money",
-                    link_to: "/products/detail?tag=e_money"
+                    link_to: "/products/detail?tag=e_money",
+                    available: true
                 },
                 {
                     id: 5,
@@ -63,7 +66,8 @@ export default {
                     images: [
                         "sticker.png"
                     ],
-                    link_to: "/products/detail?tag=sticker"
+                    link_to: "/products/detail?tag=sticker",
+                    available: true
                 },
                 {
                     id: 6,
@@ -74,7 +78,8 @@ export default {
                     images: [
                         "lanyard.png"
                     ],
-                    link_to: "/products/detail?tag=lanyard"
+                    link_to: "/products/detail?tag=lanyard",
+                    available: true
                 },
                 {
                     id: 7,
@@ -102,7 +107,8 @@ export default {
                             ]
                         }
                     ],
-                    link_to: "/products/detail?tag=bundle_a"
+                    link_to: "/products/detail?tag=bundle_a",
+                    available: true
                 },
                 {
                     id: 8,
@@ -130,7 +136,8 @@ export default {
                             ]
                         }
                     ],
-                    link_to: "/products/detail?tag=bundle_b"
+                    link_to: "/products/detail?tag=bundle_b",
+                    available: false
                 }
             ]
         };
