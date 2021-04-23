@@ -20,7 +20,8 @@ export default {
                         }
                     ],
                     tag: "tshirt",
-                    link_to: "/products/detail?tag=tshirt"
+                    link_to: "/products/detail?tag=tshirt",
+                    available: false
                 },
                 {
                     id: 1,
@@ -40,7 +41,8 @@ export default {
                         }
                     ],
                     tag: "totte_bag",
-                    link_to: "/products/detail?tag=totte_bag"
+                    link_to: "/products/detail?tag=totte_bag",
+                    available: false
                 },
                 {
                     id: 2,
@@ -52,7 +54,8 @@ export default {
                         "e_money_back.png",
                     ],
                     tag: "e_money",
-                    link_to: "/products/detail?tag=e_money"
+                    link_to: "/products/detail?tag=e_money",
+                    available: false
                 },
                 {
                     id: 5,
@@ -63,7 +66,8 @@ export default {
                     images: [
                         "sticker.png"
                     ],
-                    link_to: "/products/detail?tag=sticker"
+                    link_to: "/products/detail?tag=sticker",
+                    available: false
                 },
                 {
                     id: 6,
@@ -74,7 +78,8 @@ export default {
                     images: [
                         "lanyard.png"
                     ],
-                    link_to: "/products/detail?tag=lanyard"
+                    link_to: "/products/detail?tag=lanyard",
+                    available: false
                 },
                 {
                     id: 7,
@@ -102,12 +107,13 @@ export default {
                             ]
                         }
                     ],
-                    link_to: "/products/detail?tag=bundle_a"
+                    link_to: "/products/detail?tag=bundle_a",
+                    available: false
                 },
                 {
                     id: 8,
                     title: "Bundle B",
-                    price: 120000,
+                    price: 125000,
                     img_urls: [
                         "bundle_b.png"
                     ],
@@ -130,9 +136,11 @@ export default {
                             ]
                         }
                     ],
-                    link_to: "/products/detail?tag=bundle_b"
+                    link_to: "/products/detail?tag=bundle_b",
+                    available: false
                 }
             ]
         };
     }
-};
+  };
+  

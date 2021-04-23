@@ -2341,13 +2341,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Products",
   mixins: [_mixins_productMixins__WEBPACK_IMPORTED_MODULE_0__["default"]],
   methods: {
-    redirectToProductDetailPage: function redirectToProductDetailPage(link) {
-      this.$router.push(link);
+    redirectToProductDetailPage: function redirectToProductDetailPage(product) {
+      var link_to = product.link_to,
+          available = product.available;
+
+      if (available) {
+        this.$router.push(link_to);
+      }
     }
   }
 });
@@ -23385,7 +23394,7 @@ var render = function() {
         key: product.id,
         on: {
           click: function($event) {
-            return _vm.redirectToProductDetailPage(product.link_to)
+            return _vm.redirectToProductDetailPage(product)
           }
         },
         scopedSlots: _vm._u(
@@ -23425,31 +23434,57 @@ var render = function() {
               key: "interactions",
               fn: function() {
                 return [
-                  _c(
-                    "vs-button",
-                    {
-                      staticStyle: { "min-width": "60px" },
-                      attrs: {
-                        gradient: "",
-                        warn: "",
-                        "animation-type": "scale"
-                      },
-                      scopedSlots: _vm._u(
-                        [
-                          {
-                            key: "animate",
-                            fn: function() {
-                              return [_vm._v(" Beli ")]
-                            },
-                            proxy: true
-                          }
-                        ],
-                        null,
-                        true
+                  product.available
+                    ? _c(
+                        "vs-button",
+                        {
+                          staticStyle: { "min-width": "60px" },
+                          attrs: {
+                            gradient: "",
+                            warn: "",
+                            "animation-type": "scale"
+                          },
+                          scopedSlots: _vm._u(
+                            [
+                              {
+                                key: "animate",
+                                fn: function() {
+                                  return [_vm._v(" Beli ")]
+                                },
+                                proxy: true
+                              }
+                            ],
+                            null,
+                            true
+                          )
+                        },
+                        [_c("i", { staticClass: "bx bxs-shopping-bag" })]
                       )
-                    },
-                    [_c("i", { staticClass: "bx bxs-shopping-bag" })]
-                  )
+                    : _c(
+                        "vs-button",
+                        {
+                          staticStyle: { "min-width": "60px" },
+                          attrs: {
+                            gradient: "",
+                            danger: "",
+                            "animation-type": "scale"
+                          },
+                          scopedSlots: _vm._u(
+                            [
+                              {
+                                key: "animate",
+                                fn: function() {
+                                  return [_vm._v(" Sold Out ")]
+                                },
+                                proxy: true
+                              }
+                            ],
+                            null,
+                            true
+                          )
+                        },
+                        [_c("i", { staticClass: "bx bxs-shopping-bag" })]
+                      )
                 ]
               },
               proxy: true
@@ -68969,7 +69004,8 @@ __webpack_require__.r(__webpack_exports__);
           white_variant: ["tshirt_white_front.png", "tshirt_white_back.png"]
         }],
         tag: "tshirt",
-        link_to: "/products/detail?tag=tshirt"
+        link_to: "/products/detail?tag=tshirt",
+        available: false
       }, {
         id: 1,
         title: "Totte Bag",
@@ -68980,7 +69016,8 @@ __webpack_require__.r(__webpack_exports__);
           white_variant: ["totte_bag_white_front.png", "totte_bag_white_back.png"]
         }],
         tag: "totte_bag",
-        link_to: "/products/detail?tag=totte_bag"
+        link_to: "/products/detail?tag=totte_bag",
+        available: false
       }, {
         id: 2,
         title: "E Money",
@@ -68988,7 +69025,8 @@ __webpack_require__.r(__webpack_exports__);
         img_urls: ["e_money_front.png"],
         images: ["e_money_front.png", "e_money_back.png"],
         tag: "e_money",
-        link_to: "/products/detail?tag=e_money"
+        link_to: "/products/detail?tag=e_money",
+        available: false
       }, {
         id: 5,
         title: "Sticker",
@@ -68996,7 +69034,8 @@ __webpack_require__.r(__webpack_exports__);
         img_urls: ["sticker.png"],
         tag: "sticker",
         images: ["sticker.png"],
-        link_to: "/products/detail?tag=sticker"
+        link_to: "/products/detail?tag=sticker",
+        available: false
       }, {
         id: 6,
         title: "Lanyard",
@@ -69004,7 +69043,8 @@ __webpack_require__.r(__webpack_exports__);
         img_urls: ["lanyard.png"],
         tag: "lanyard",
         images: ["lanyard.png"],
-        link_to: "/products/detail?tag=lanyard"
+        link_to: "/products/detail?tag=lanyard",
+        available: false
       }, {
         id: 7,
         title: "Bundle A",
@@ -69015,18 +69055,20 @@ __webpack_require__.r(__webpack_exports__);
           black_variant: ["tshirt_black_front.png", "tshirt_black_back.png", "totte_bag_black_front.png", "totte_bag_black_back.png", "sticker.png"],
           white_variant: ["tshirt_white_front.png", "tshirt_white_back.png", "totte_bag_white_front.png", "totte_bag_white_back.png", "sticker.png"]
         }],
-        link_to: "/products/detail?tag=bundle_a"
+        link_to: "/products/detail?tag=bundle_a",
+        available: false
       }, {
         id: 8,
         title: "Bundle B",
-        price: 120000,
+        price: 125000,
         img_urls: ["bundle_b.png"],
         tag: "bundle_b",
         images: [{
           black_variant: ["totte_bag_black_front.png", "totte_bag_black_back.png", "e_money_front.png", "e_money_back.png", "lanyard.png"],
           white_variant: ["totte_bag_white_front.png", "totte_bag_white_back.png", "e_money_front.png", "e_money_back.png", "lanyard.png"]
         }],
-        link_to: "/products/detail?tag=bundle_b"
+        link_to: "/products/detail?tag=bundle_b",
+        available: false
       }]
     };
   }
