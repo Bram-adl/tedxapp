@@ -3259,11 +3259,6 @@ __webpack_require__.r(__webpack_exports__);
         return merchandise.color === "black" ? ['/img/products/totte_bag_black_front.png', '/img/products/e_money_front.png', '/img/products/lanyard.png'] : ['/img/products/totte_bag_white_front.png', '/img/products/e_money_front.png', '/img/products/lanyard.png'];
       }
     }
-  },
-  mounted: function mounted() {
-    if (this.$route.query.tag === "bundle_b") {
-      return this.$router.replace('/');
-    }
   }
 });
 
@@ -69009,7 +69004,7 @@ __webpack_require__.r(__webpack_exports__);
         }],
         tag: "tshirt",
         link_to: "/products/detail?tag=tshirt",
-        available: true
+        available: false
       }, {
         id: 1,
         title: "Totte Bag",
@@ -69021,7 +69016,7 @@ __webpack_require__.r(__webpack_exports__);
         }],
         tag: "totte_bag",
         link_to: "/products/detail?tag=totte_bag",
-        available: true
+        available: false
       }, {
         id: 2,
         title: "E Money",
@@ -69030,7 +69025,7 @@ __webpack_require__.r(__webpack_exports__);
         images: ["e_money_front.png", "e_money_back.png"],
         tag: "e_money",
         link_to: "/products/detail?tag=e_money",
-        available: true
+        available: false
       }, {
         id: 5,
         title: "Sticker",
@@ -69039,7 +69034,7 @@ __webpack_require__.r(__webpack_exports__);
         tag: "sticker",
         images: ["sticker.png"],
         link_to: "/products/detail?tag=sticker",
-        available: true
+        available: false
       }, {
         id: 6,
         title: "Lanyard",
@@ -69048,7 +69043,7 @@ __webpack_require__.r(__webpack_exports__);
         tag: "lanyard",
         images: ["lanyard.png"],
         link_to: "/products/detail?tag=lanyard",
-        available: true
+        available: false
       }, {
         id: 7,
         title: "Bundle A",
@@ -69060,7 +69055,7 @@ __webpack_require__.r(__webpack_exports__);
           white_variant: ["tshirt_white_front.png", "tshirt_white_back.png", "totte_bag_white_front.png", "totte_bag_white_back.png", "sticker.png"]
         }],
         link_to: "/products/detail?tag=bundle_a",
-        available: true
+        available: false
       }, {
         id: 8,
         title: "Bundle B",

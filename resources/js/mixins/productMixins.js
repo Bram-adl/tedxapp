@@ -21,7 +21,7 @@ export default {
                     ],
                     tag: "tshirt",
                     link_to: "/products/detail?tag=tshirt",
-                    available: true
+                    available: false
                 },
                 {
                     id: 1,
@@ -42,7 +42,7 @@ export default {
                     ],
                     tag: "totte_bag",
                     link_to: "/products/detail?tag=totte_bag",
-                    available: true
+                    available: false
                 },
                 {
                     id: 2,
@@ -55,7 +55,7 @@ export default {
                     ],
                     tag: "e_money",
                     link_to: "/products/detail?tag=e_money",
-                    available: true
+                    available: false
                 },
                 {
                     id: 5,
@@ -67,7 +67,7 @@ export default {
                         "sticker.png"
                     ],
                     link_to: "/products/detail?tag=sticker",
-                    available: true
+                    available: false
                 },
                 {
                     id: 6,
@@ -79,7 +79,7 @@ export default {
                         "lanyard.png"
                     ],
                     link_to: "/products/detail?tag=lanyard",
-                    available: true
+                    available: false
                 },
                 {
                     id: 7,
@@ -108,7 +108,7 @@ export default {
                         }
                     ],
                     link_to: "/products/detail?tag=bundle_a",
-                    available: true
+                    available: false
                 },
                 {
                     id: 8,
