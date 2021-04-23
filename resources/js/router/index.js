@@ -10,16 +10,16 @@ const routes = [
     name: 'index',
     component: require('../pages/Home.vue').default
   },
-  {
-    path: '/products/detail',
-    name: 'product.details',
-    component: require('../pages/Products.vue').default
-  },
-  {
-    path: '/payments/:id/:username',
-    name: 'product.payments',
-    component: require('../pages/Payments.vue').default
-  },
+  // {
+  //   path: '/products/detail',
+  //   name: 'product.details',
+  //   component: require('../pages/Products.vue').default
+  // },
+  // {
+  //   path: '/payments/:id/:username',
+  //   name: 'product.payments',
+  //   component: require('../pages/Payments.vue').default
+  // },
 
   {
     path: '/dashboard',

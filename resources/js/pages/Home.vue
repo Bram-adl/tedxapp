@@ -56,6 +56,9 @@
           <vs-col type="flex" justify="center" vs-align="center" w="12">
             <h1 class="px-8 py-4 text-4xl text-white font-bold">
               Daftar Produk Kami
+              <div class="mt-4 bg-red-800 rounded-md px-4 py-3 text-white font-bold uppercase text-center text-sm">
+                Closed Order
+              </div>
             </h1>
           </vs-col>
         </vs-row>
